@@ -1,0 +1,8670 @@
+{
+  "./Videos/Video1.mp4": {
+    "text": "Prima pensiamo...",
+    "segments": [
+      {
+        "token": "Prima",
+        "logprob": -0.7829477190971375
+      },
+      {
+        "token": " pens",
+        "logprob": -1.1929385662078857
+      },
+      {
+        "token": "iamo",
+        "logprob": -0.2607986330986023
+      },
+      {
+        "token": "...",
+        "logprob": -0.5246533751487732
+      }
+    ]
+  },
+  "./Videos/Video2.mp4": {
+    "text": "Come fare l'aspirapolvere? Avete una fetta biscottata? Bene, spaccatela in terra. In pochi secondi scomparirà tutto. Via con l'aspirapolvere.",
+    "segments": [
+      {
+        "token": "Come",
+        "logprob": -0.14914800226688385
+      },
+      {
+        "token": " fare",
+        "logprob": -5.836499985889532e-05
+      },
+      {
+        "token": " l",
+        "logprob": -2.534558552724775e-05
+      },
+      {
+        "token": "'",
+        "logprob": -0.0011705794604495168
+      },
+      {
+        "token": "asp",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "irap",
+        "logprob": -6.0629870858974755e-05
+      },
+      {
+        "token": "olver",
+        "logprob": -3.650518920039758e-06
+      },
+      {
+        "token": "e",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.3516681492328644
+      },
+      {
+        "token": " Av",
+        "logprob": -0.0004886920796707273
+      },
+      {
+        "token": "ete",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": " una",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " fet",
+        "logprob": -0.002362094121053815
+      },
+      {
+        "token": "ta",
+        "logprob": 0.0
+      },
+      {
+        "token": " bis",
+        "logprob": -0.0003362966235727072
+      },
+      {
+        "token": "cott",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "ata",
+        "logprob": 0.0
+      },
+      {
+        "token": "?",
+        "logprob": -0.0001317871210630983
+      },
+      {
+        "token": " Bene",
+        "logprob": -0.0002835040504578501
+      },
+      {
+        "token": ",",
+        "logprob": -0.012239553034305573
+      },
+      {
+        "token": " sp",
+        "logprob": -0.0004480692732613534
+      },
+      {
+        "token": "acc",
+        "logprob": -3.8889261304575484e-06
+      },
+      {
+        "token": "at",
+        "logprob": -0.16574300825595856
+      },
+      {
+        "token": "ela",
+        "logprob": -0.0009581510093994439
+      },
+      {
+        "token": " in",
+        "logprob": -0.3139066696166992
+      },
+      {
+        "token": " terra",
+        "logprob": -0.25360530614852905
+      },
+      {
+        "token": ".",
+        "logprob": -0.5931376814842224
+      },
+      {
+        "token": " In",
+        "logprob": -0.6703653931617737
+      },
+      {
+        "token": " pochi",
+        "logprob": -0.00015383612480945885
+      },
+      {
+        "token": " second",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": " s",
+        "logprob": -0.006890134885907173
+      },
+      {
+        "token": "compar",
+        "logprob": -0.0013248840114101768
+      },
+      {
+        "token": "irà",
+        "logprob": -8.7689099018462e-05
+      },
+      {
+        "token": " tutto",
+        "logprob": -0.0002146226615877822
+      },
+      {
+        "token": ".",
+        "logprob": -0.008705805987119675
+      },
+      {
+        "token": " Via",
+        "logprob": -0.0031276866793632507
+      },
+      {
+        "token": " con",
+        "logprob": -5.438573680294212e-06
+      },
+      {
+        "token": " l",
+        "logprob": -4.60414821645827e-06
+      },
+      {
+        "token": "'",
+        "logprob": -1.688212614681106e-05
+      },
+      {
+        "token": "asp",
+        "logprob": 0.0
+      },
+      {
+        "token": "irap",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "olver",
+        "logprob": 0.0
+      },
+      {
+        "token": "e",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.2831779420375824
+      }
+    ]
+  },
+  "./Videos/Video3.mp4": {
+    "text": "La persona è giusta.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.3584675788879395
+      },
+      {
+        "token": " persona",
+        "logprob": -0.44922158122062683
+      },
+      {
+        "token": " è",
+        "logprob": -1.7823361158370972
+      },
+      {
+        "token": " gi",
+        "logprob": -2.128603935241699
+      },
+      {
+        "token": "usta",
+        "logprob": -0.41970887780189514
+      },
+      {
+        "token": ".",
+        "logprob": -0.11369121819734573
+      }
+    ]
+  },
+  "./Videos/Video4.mp4": {
+    "text": "Ehi!",
+    "segments": [
+      {
+        "token": "E",
+        "logprob": -2.0930023193359375
+      },
+      {
+        "token": "hi",
+        "logprob": -0.5073878169059753
+      },
+      {
+        "token": "!",
+        "logprob": -0.5552892088890076
+      }
+    ]
+  },
+  "./Videos/Video5.mp4": {
+    "text": "Mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono in noce. Dopo circa 15-16 anni si cambia il fondo a quest'altro e dura altri 15-16 anni della vita media di una scala.",
+    "segments": [
+      {
+        "token": "M",
+        "logprob": -0.6141577363014221
+      },
+      {
+        "token": "entre",
+        "logprob": -0.000522650487255305
+      },
+      {
+        "token": " quello",
+        "logprob": -0.08146767318248749
+      },
+      {
+        "token": " che",
+        "logprob": -5.764977686339989e-05
+      },
+      {
+        "token": " manca",
+        "logprob": -0.00033153212280012667
+      },
+      {
+        "token": " qua",
+        "logprob": -2.7729658540920354e-05
+      },
+      {
+        "token": " è",
+        "logprob": -0.12066547572612762
+      },
+      {
+        "token": " ancora",
+        "logprob": -0.2118086814880371
+      },
+      {
+        "token": " più",
+        "logprob": -7.703443770878948e-06
+      },
+      {
+        "token": " legger",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": "o",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " dell",
+        "logprob": -0.3418639004230499
+      },
+      {
+        "token": "'al",
+        "logprob": -0.2166350781917572
+      },
+      {
+        "token": "ice",
+        "logprob": -0.002593969227746129
+      },
+      {
+        "token": ".",
+        "logprob": -0.009150413796305656
+      },
+      {
+        "token": " Tut",
+        "logprob": -0.0006066487403586507
+      },
+      {
+        "token": "te",
+        "logprob": -0.000799384550191462
+      },
+      {
+        "token": " le",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " corn",
+        "logprob": -0.0893377810716629
+      },
+      {
+        "token": "ici",
+        "logprob": -0.003210627008229494
+      },
+      {
+        "token": " sono",
+        "logprob": -4.127333340875339e-06
+      },
+      {
+        "token": " in",
+        "logprob": -0.017855484038591385
+      },
+      {
+        "token": " no",
+        "logprob": -0.08118028938770294
+      },
+      {
+        "token": "ce",
+        "logprob": -1.664371848164592e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.34285596013069153
+      },
+      {
+        "token": " Dopo",
+        "logprob": -0.007702575996518135
+      },
+      {
+        "token": " circa",
+        "logprob": -0.000938854762353003
+      },
+      {
+        "token": " ",
+        "logprob": -0.061997607350349426
+      },
+      {
+        "token": "15",
+        "logprob": -5.8961017202818766e-05
+      },
+      {
+        "token": "-",
+        "logprob": -0.0011792739387601614
+      },
+      {
+        "token": "16",
+        "logprob": -4.453737710718997e-05
+      },
+      {
+        "token": " anni",
+        "logprob": -4.3226136767771095e-05
+      },
+      {
+        "token": " si",
+        "logprob": -8.244413766078651e-05
+      },
+      {
+        "token": " cambia",
+        "logprob": -0.003698654705658555
+      },
+      {
+        "token": " il",
+        "logprob": -0.00017076305812224746
+      },
+      {
+        "token": " fondo",
+        "logprob": -0.009351684711873531
+      },
+      {
+        "token": " a",
+        "logprob": -0.7583324909210205
+      },
+      {
+        "token": " quest",
+        "logprob": -0.42718803882598877
+      },
+      {
+        "token": "'alt",
+        "logprob": -0.19270405173301697
+      },
+      {
+        "token": "ro",
+        "logprob": -3.292907877039397e-06
+      },
+      {
+        "token": " e",
+        "logprob": -0.7267588973045349
+      },
+      {
+        "token": " dura",
+        "logprob": -0.00873937364667654
+      },
+      {
+        "token": " altri",
+        "logprob": -0.25887614488601685
+      },
+      {
+        "token": " ",
+        "logprob": -9.162282367469743e-05
+      },
+      {
+        "token": "15",
+        "logprob": -0.0012638057814911008
+      },
+      {
+        "token": "-",
+        "logprob": -0.0010457895696163177
+      },
+      {
+        "token": "16",
+        "logprob": -7.302704761968926e-05
+      },
+      {
+        "token": " anni",
+        "logprob": -0.018384292721748352
+      },
+      {
+        "token": " della",
+        "logprob": -0.8273031711578369
+      },
+      {
+        "token": " vita",
+        "logprob": -0.0027795585338026285
+      },
+      {
+        "token": " media",
+        "logprob": -0.029431303963065147
+      },
+      {
+        "token": " di",
+        "logprob": -0.8209156394004822
+      },
+      {
+        "token": " una",
+        "logprob": -0.5766604542732239
+      },
+      {
+        "token": " scala",
+        "logprob": -1.1363272666931152
+      },
+      {
+        "token": ".",
+        "logprob": -0.016931038349866867
+      }
+    ]
+  },
+  "./Videos/Video6.mp4": {
+    "text": "Il suo cuore.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -2.3073863983154297
+      },
+      {
+        "token": " suo",
+        "logprob": -2.783043622970581
+      },
+      {
+        "token": " cuore",
+        "logprob": -1.7610167264938354
+      },
+      {
+        "token": ".",
+        "logprob": -1.0917547941207886
+      }
+    ]
+  },
+  "./Videos/Video7.mp4": {
+    "text": "La sua voce è molto bella.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.5517024993896484
+      },
+      {
+        "token": " sua",
+        "logprob": -2.9615073204040527
+      },
+      {
+        "token": " voce",
+        "logprob": -1.9859700202941895
+      },
+      {
+        "token": " è",
+        "logprob": -0.7746872305870056
+      },
+      {
+        "token": " molto",
+        "logprob": -1.8003429174423218
+      },
+      {
+        "token": " bella",
+        "logprob": -1.1426857709884644
+      },
+      {
+        "token": ".",
+        "logprob": -0.04392575845122337
+      }
+    ]
+  },
+  "./Videos/Video8.mp4": {
+    "text": "La sua voce è molto melodiosa.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.44954252243042
+      },
+      {
+        "token": " sua",
+        "logprob": -3.7096474170684814
+      },
+      {
+        "token": " voce",
+        "logprob": -2.27138614654541
+      },
+      {
+        "token": " è",
+        "logprob": -0.7969668507575989
+      },
+      {
+        "token": " molto",
+        "logprob": -1.678551435470581
+      },
+      {
+        "token": " melod",
+        "logprob": -1.8942997455596924
+      },
+      {
+        "token": "iosa",
+        "logprob": -0.47449225187301636
+      },
+      {
+        "token": ".",
+        "logprob": -0.1219470351934433
+      }
+    ]
+  },
+  "./Videos/Video9.mp4": {
+    "text": "Ciao!",
+    "segments": [
+      {
+        "token": "C",
+        "logprob": -1.3033143281936646
+      },
+      {
+        "token": "iao",
+        "logprob": -0.01400553248822689
+      },
+      {
+        "token": "!",
+        "logprob": -0.5320667624473572
+      }
+    ]
+  },
+  "./Videos/Video10.mp4": {
+    "text": "Infatti nell'angolo giunge il giardiniere.",
+    "segments": [
+      {
+        "token": "Inf",
+        "logprob": -0.1256898045539856
+      },
+      {
+        "token": "atti",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": " nell",
+        "logprob": -0.08260838687419891
+      },
+      {
+        "token": "'",
+        "logprob": -0.4571812152862549
+      },
+      {
+        "token": "ang",
+        "logprob": -0.8964407444000244
+      },
+      {
+        "token": "olo",
+        "logprob": -0.004778872709721327
+      },
+      {
+        "token": " gi",
+        "logprob": -0.08301232010126114
+      },
+      {
+        "token": "unge",
+        "logprob": -0.2692382037639618
+      },
+      {
+        "token": " il",
+        "logprob": -0.27249789237976074
+      },
+      {
+        "token": " gi",
+        "logprob": -0.07570237666368484
+      },
+      {
+        "token": "ard",
+        "logprob": -0.43332985043525696
+      },
+      {
+        "token": "ini",
+        "logprob": -0.07482936233282089
+      },
+      {
+        "token": "ere",
+        "logprob": -0.019649941474199295
+      },
+      {
+        "token": ".",
+        "logprob": -0.03915989026427269
+      }
+    ]
+  },
+  "./Videos/Video11.mp4": {
+    "text": "Peso in avanti.",
+    "segments": [
+      {
+        "token": "Peso",
+        "logprob": -0.8683730363845825
+      },
+      {
+        "token": " in",
+        "logprob": -0.00024965754710137844
+      },
+      {
+        "token": " avanti",
+        "logprob": -1.4736459888808895e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.22033126652240753
+      }
+    ]
+  },
+  "./Videos/Video12.mp4": {
+    "text": "Senza passare tra me e il cane, passa dietro e mi fa la perquisizione.",
+    "segments": [
+      {
+        "token": "S",
+        "logprob": -1.7092843055725098
+      },
+      {
+        "token": "enza",
+        "logprob": -0.0011342625366523862
+      },
+      {
+        "token": " pass",
+        "logprob": -0.0002933942887466401
+      },
+      {
+        "token": "are",
+        "logprob": -4.008129963040119e-06
+      },
+      {
+        "token": " tra",
+        "logprob": -0.030538177117705345
+      },
+      {
+        "token": " me",
+        "logprob": -0.0002694416616577655
+      },
+      {
+        "token": " e",
+        "logprob": -0.08135547488927841
+      },
+      {
+        "token": " il",
+        "logprob": -0.002582201035693288
+      },
+      {
+        "token": " cane",
+        "logprob": -3.368984107510187e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.5530250668525696
+      },
+      {
+        "token": " passa",
+        "logprob": -0.24716465175151825
+      },
+      {
+        "token": " diet",
+        "logprob": -0.00038777425652369857
+      },
+      {
+        "token": "ro",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " e",
+        "logprob": -0.014418056234717369
+      },
+      {
+        "token": " mi",
+        "logprob": -0.0021853535436093807
+      },
+      {
+        "token": " fa",
+        "logprob": -0.0005923516000621021
+      },
+      {
+        "token": " la",
+        "logprob": -0.0059014190919697285
+      },
+      {
+        "token": " per",
+        "logprob": -0.0003175889723934233
+      },
+      {
+        "token": "quis",
+        "logprob": -6.153795766294934e-06
+      },
+      {
+        "token": "izione",
+        "logprob": -8.180258191714529e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.1810605227947235
+      }
+    ]
+  },
+  "./Videos/Video13.mp4": {
+    "text": "E questo è il fiore del partigiano, morto per la libertà.",
+    "segments": [
+      {
+        "token": "E",
+        "logprob": -0.6331984400749207
+      },
+      {
+        "token": " questo",
+        "logprob": -0.6260291934013367
+      },
+      {
+        "token": " è",
+        "logprob": -0.0015871046343818307
+      },
+      {
+        "token": " il",
+        "logprob": -5.080963092041202e-06
+      },
+      {
+        "token": " fi",
+        "logprob": -9.817902173381299e-05
+      },
+      {
+        "token": "ore",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " del",
+        "logprob": -0.012574518099427223
+      },
+      {
+        "token": " part",
+        "logprob": -0.005312496796250343
+      },
+      {
+        "token": "ig",
+        "logprob": -0.00010533124441280961
+      },
+      {
+        "token": "iano",
+        "logprob": -7.64839569455944e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.7007996439933777
+      },
+      {
+        "token": " morto",
+        "logprob": -7.386147626675665e-05
+      },
+      {
+        "token": " per",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " la",
+        "logprob": -3.8219583075260743e-05
+      },
+      {
+        "token": " libert",
+        "logprob": -0.0007170771714299917
+      },
+      {
+        "token": "à",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.2058994472026825
+      }
+    ]
+  },
+  "./Videos/Video14.mp4": {
+    "text": "Leva la tira.",
+    "segments": [
+      {
+        "token": "Le",
+        "logprob": -1.1150085926055908
+      },
+      {
+        "token": "va",
+        "logprob": -0.7484467625617981
+      },
+      {
+        "token": " la",
+        "logprob": -1.3550933599472046
+      },
+      {
+        "token": " tira",
+        "logprob": -1.4388331174850464
+      },
+      {
+        "token": ".",
+        "logprob": -0.26393526792526245
+      }
+    ]
+  },
+  "./Videos/Video15.mp4": {
+    "text": "I bambini giocano nel parco.",
+    "segments": [
+      {
+        "token": "I",
+        "logprob": -2.0643632411956787
+      },
+      {
+        "token": " bambini",
+        "logprob": -0.06071929633617401
+      },
+      {
+        "token": " gioc",
+        "logprob": -0.23779337108135223
+      },
+      {
+        "token": "ano",
+        "logprob": -0.10037197172641754
+      },
+      {
+        "token": " nel",
+        "logprob": -0.4679555296897888
+      },
+      {
+        "token": " par",
+        "logprob": -0.1327972710132599
+      },
+      {
+        "token": "co",
+        "logprob": -1.8193366486229934e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.14248350262641907
+      }
+    ]
+  },
+  "./Videos/Video16.mp4": {
+    "text": "Non mi dite!",
+    "segments": [
+      {
+        "token": "Non",
+        "logprob": -1.335930585861206
+      },
+      {
+        "token": " mi",
+        "logprob": -0.5016127824783325
+      },
+      {
+        "token": " dite",
+        "logprob": -1.5703656673431396
+      },
+      {
+        "token": "!",
+        "logprob": -0.10193224996328354
+      }
+    ]
+  },
+  "./Videos/Video17.mp4": {
+    "text": "E in prima posizione non poteva che essere lui, con un tempo strepitoso perché la gara era ed è di merlatura anche per l'anno prossimo, anche se non ci sarà vento, con un vento così forte, con le salite che c'erano un'ora 11.46 per Ismail! Eccolo qua che arriva, e vi assicuro è arrivato e non era neanche sudato. Allora andiamo.",
+    "segments": [
+      {
+        "token": "E",
+        "logprob": -0.105503149330616
+      },
+      {
+        "token": " in",
+        "logprob": -1.041131854057312
+      },
+      {
+        "token": " prima",
+        "logprob": -0.03283137455582619
+      },
+      {
+        "token": " posizione",
+        "logprob": -2.3319124011322856e-05
+      },
+      {
+        "token": " non",
+        "logprob": -0.0011545089073479176
+      },
+      {
+        "token": " pote",
+        "logprob": -0.0013865471119061112
+      },
+      {
+        "token": "va",
+        "logprob": -4.008129963040119e-06
+      },
+      {
+        "token": " che",
+        "logprob": -0.00017588881019037217
+      },
+      {
+        "token": " essere",
+        "logprob": -0.00280784466303885
+      },
+      {
+        "token": " lui",
+        "logprob": -6.611323624383658e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.13766589760780334
+      },
+      {
+        "token": " con",
+        "logprob": -0.00014859484508633614
+      },
+      {
+        "token": " un",
+        "logprob": -6.153795766294934e-06
+      },
+      {
+        "token": " tempo",
+        "logprob": -0.014178323559463024
+      },
+      {
+        "token": " st",
+        "logprob": -0.00023417205375153571
+      },
+      {
+        "token": "rep",
+        "logprob": -3.333223139634356e-05
+      },
+      {
+        "token": "itos",
+        "logprob": -4.9186317482963204e-05
+      },
+      {
+        "token": "o",
+        "logprob": 0.0
+      },
+      {
+        "token": " perché",
+        "logprob": -0.1282140463590622
+      },
+      {
+        "token": " la",
+        "logprob": -1.27099974633893e-05
+      },
+      {
+        "token": " gara",
+        "logprob": -0.001206423039548099
+      },
+      {
+        "token": " era",
+        "logprob": -0.001406305585987866
+      },
+      {
+        "token": " ed",
+        "logprob": -0.11488503217697144
+      },
+      {
+        "token": " è",
+        "logprob": -0.009942012839019299
+      },
+      {
+        "token": " di",
+        "logprob": -0.46428966522216797
+      },
+      {
+        "token": " mer",
+        "logprob": -0.8035227656364441
+      },
+      {
+        "token": "l",
+        "logprob": -0.3571842908859253
+      },
+      {
+        "token": "atura",
+        "logprob": -0.0005657802103087306
+      },
+      {
+        "token": " anche",
+        "logprob": -0.06292206794023514
+      },
+      {
+        "token": " per",
+        "logprob": -1.0087516784551553e-05
+      },
+      {
+        "token": " l",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "'",
+        "logprob": -1.4617256056226324e-05
+      },
+      {
+        "token": "anno",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " prossimo",
+        "logprob": -4.246537173457909e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.16185395419597626
+      },
+      {
+        "token": " anche",
+        "logprob": -0.00021259987261146307
+      },
+      {
+        "token": " se",
+        "logprob": -1.6240566083070007e-06
+      },
+      {
+        "token": " non",
+        "logprob": -9.491498531133402e-06
+      },
+      {
+        "token": " ci",
+        "logprob": -3.3451433409936726e-05
+      },
+      {
+        "token": " sarà",
+        "logprob": -0.0006378580583259463
+      },
+      {
+        "token": " vento",
+        "logprob": -0.18239426612854004
+      },
+      {
+        "token": ",",
+        "logprob": -0.01966852881014347
+      },
+      {
+        "token": " con",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": " un",
+        "logprob": -3.845798710244708e-05
+      },
+      {
+        "token": " vento",
+        "logprob": -5.347765181795694e-05
+      },
+      {
+        "token": " così",
+        "logprob": -9.014684110297821e-06
+      },
+      {
+        "token": " forte",
+        "logprob": -1.6240566083070007e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.006068982649594545
+      },
+      {
+        "token": " con",
+        "logprob": -1.6286106983898208e-05
+      },
+      {
+        "token": " le",
+        "logprob": -0.011361154727637768
+      },
+      {
+        "token": " sal",
+        "logprob": -0.003335990710183978
+      },
+      {
+        "token": "ite",
+        "logprob": -4.572941179503687e-05
+      },
+      {
+        "token": " che",
+        "logprob": -0.0007647183374501765
+      },
+      {
+        "token": " c",
+        "logprob": -0.010094137862324715
+      },
+      {
+        "token": "'er",
+        "logprob": -0.0003849133790936321
+      },
+      {
+        "token": "ano",
+        "logprob": -4.811348480870947e-05
+      },
+      {
+        "token": " un",
+        "logprob": -0.43442267179489136
+      },
+      {
+        "token": "'",
+        "logprob": -0.00023214559769257903
+      },
+      {
+        "token": "ora",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " ",
+        "logprob": -0.37345781922340393
+      },
+      {
+        "token": "11",
+        "logprob": -4.632542913896032e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.060540128499269485
+      },
+      {
+        "token": "46",
+        "logprob": -5.466968650580384e-05
+      },
+      {
+        "token": " per",
+        "logprob": -0.012616416439414024
+      },
+      {
+        "token": " Is",
+        "logprob": -7.791440293658525e-05
+      },
+      {
+        "token": "mail",
+        "logprob": -0.026367641985416412
+      },
+      {
+        "token": "!",
+        "logprob": -1.231117844581604
+      },
+      {
+        "token": " E",
+        "logprob": -0.43026769161224365
+      },
+      {
+        "token": "cc",
+        "logprob": -0.23273161053657532
+      },
+      {
+        "token": "olo",
+        "logprob": -4.739826181321405e-05
+      },
+      {
+        "token": " qua",
+        "logprob": -0.0015419998671859503
+      },
+      {
+        "token": " che",
+        "logprob": -0.0058204797096550465
+      },
+      {
+        "token": " arriva",
+        "logprob": -0.0006348780007101595
+      },
+      {
+        "token": ",",
+        "logprob": -0.10945531725883484
+      },
+      {
+        "token": " e",
+        "logprob": -0.32500573992729187
+      },
+      {
+        "token": " vi",
+        "logprob": -0.01774505339562893
+      },
+      {
+        "token": " ass",
+        "logprob": -2.3795937522663735e-05
+      },
+      {
+        "token": "ic",
+        "logprob": 0.0
+      },
+      {
+        "token": "uro",
+        "logprob": 0.0
+      },
+      {
+        "token": " è",
+        "logprob": -0.6144013404846191
+      },
+      {
+        "token": " arriv",
+        "logprob": -0.0004689226043410599
+      },
+      {
+        "token": "ato",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " e",
+        "logprob": -0.7404842376708984
+      },
+      {
+        "token": " non",
+        "logprob": -0.00011391390580683947
+      },
+      {
+        "token": " era",
+        "logprob": -0.0006482214666903019
+      },
+      {
+        "token": " ne",
+        "logprob": -4.5252596464706585e-05
+      },
+      {
+        "token": "anche",
+        "logprob": -1.6240566083070007e-06
+      },
+      {
+        "token": " sud",
+        "logprob": -0.04933246225118637
+      },
+      {
+        "token": "ato",
+        "logprob": -0.02486720308661461
+      },
+      {
+        "token": ".",
+        "logprob": -0.3240821361541748
+      },
+      {
+        "token": " All",
+        "logprob": -0.7454925179481506
+      },
+      {
+        "token": "ora",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " and",
+        "logprob": -0.03821992501616478
+      },
+      {
+        "token": "iamo",
+        "logprob": -8.73314929776825e-05
+      },
+      {
+        "token": ".",
+        "logprob": -1.0452653169631958
+      }
+    ]
+  },
+  "./Videos/Video18.mp4": {
+    "text": "Angela e Vincenzo!",
+    "segments": [
+      {
+        "token": "Angela",
+        "logprob": -0.27253323793411255
+      },
+      {
+        "token": " e",
+        "logprob": -0.00025883622583933175
+      },
+      {
+        "token": " Vinc",
+        "logprob": -0.0009941066382452846
+      },
+      {
+        "token": "enzo",
+        "logprob": -7.107425062713446e-06
+      },
+      {
+        "token": "!",
+        "logprob": -0.04303721711039543
+      }
+    ]
+  },
+  "./Videos/Video19.mp4": {
+    "text": "Bravo!",
+    "segments": [
+      {
+        "token": "Bravo",
+        "logprob": -1.611477017402649
+      },
+      {
+        "token": "!",
+        "logprob": -0.6453723907470703
+      }
+    ]
+  },
+  "./Videos/Video20.mp4": {
+    "text": "Il mio amico è molto gentile.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -2.5807178020477295
+      },
+      {
+        "token": " mio",
+        "logprob": -2.405647039413452
+      },
+      {
+        "token": " am",
+        "logprob": -1.5791938304901123
+      },
+      {
+        "token": "ico",
+        "logprob": -0.0020273735281080008
+      },
+      {
+        "token": " è",
+        "logprob": -0.6547185778617859
+      },
+      {
+        "token": " molto",
+        "logprob": -1.1562288999557495
+      },
+      {
+        "token": " gent",
+        "logprob": -1.415766716003418
+      },
+      {
+        "token": "ile",
+        "logprob": -5.764977686339989e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.04340573772788048
+      }
+    ]
+  },
+  "./Videos/Video21.mp4": {
+    "text": "Dunque vince il cavallo scosso! Vince il cavallo scosso! Clamoroso!",
+    "segments": [
+      {
+        "token": "D",
+        "logprob": -1.298604965209961
+      },
+      {
+        "token": "unque",
+        "logprob": -0.02246120013296604
+      },
+      {
+        "token": " v",
+        "logprob": -0.010914474725723267
+      },
+      {
+        "token": "ince",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " il",
+        "logprob": -0.0019713386427611113
+      },
+      {
+        "token": " cav",
+        "logprob": -0.023265395313501358
+      },
+      {
+        "token": "allo",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " sc",
+        "logprob": -1.9743012671824545e-05
+      },
+      {
+        "token": "os",
+        "logprob": 0.0
+      },
+      {
+        "token": "so",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.5829564332962036
+      },
+      {
+        "token": " Vince",
+        "logprob": -0.5054568648338318
+      },
+      {
+        "token": " il",
+        "logprob": -0.0004462812503334135
+      },
+      {
+        "token": " cav",
+        "logprob": -2.4272752852994017e-05
+      },
+      {
+        "token": "allo",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " sc",
+        "logprob": -9.253090865968261e-06
+      },
+      {
+        "token": "os",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "so",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.027880894020199776
+      },
+      {
+        "token": " Cl",
+        "logprob": -0.5384335517883301
+      },
+      {
+        "token": "amor",
+        "logprob": -2.641841820150148e-05
+      },
+      {
+        "token": "oso",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.45393404364585876
+      }
+    ]
+  },
+  "./Videos/Video22.mp4": {
+    "text": "Vai!",
+    "segments": [
+      {
+        "token": "Vai",
+        "logprob": -0.5522884130477905
+      },
+      {
+        "token": "!",
+        "logprob": -0.02992323786020279
+      }
+    ]
+  },
+  "./Videos/Video23.mp4": {
+    "text": "Lui sai in quanti video miei sta già a farti le risate?",
+    "segments": [
+      {
+        "token": "L",
+        "logprob": -0.49441370368003845
+      },
+      {
+        "token": "ui",
+        "logprob": -7.040457421680912e-05
+      },
+      {
+        "token": " sai",
+        "logprob": -0.6255872845649719
+      },
+      {
+        "token": " in",
+        "logprob": -9.090760431718081e-05
+      },
+      {
+        "token": " quant",
+        "logprob": -1.1041145626222715e-05
+      },
+      {
+        "token": "i",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " video",
+        "logprob": -0.00263118464499712
+      },
+      {
+        "token": " miei",
+        "logprob": -0.034692101180553436
+      },
+      {
+        "token": " sta",
+        "logprob": -0.017439929768443108
+      },
+      {
+        "token": " già",
+        "logprob": -0.005052302032709122
+      },
+      {
+        "token": " a",
+        "logprob": -0.41703009605407715
+      },
+      {
+        "token": " f",
+        "logprob": -1.3856523036956787
+      },
+      {
+        "token": "arti",
+        "logprob": -0.03727356344461441
+      },
+      {
+        "token": " le",
+        "logprob": -0.0862007662653923
+      },
+      {
+        "token": " ris",
+        "logprob": -6.2729995988775045e-06
+      },
+      {
+        "token": "ate",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": "?",
+        "logprob": -0.4141995906829834
+      }
+    ]
+  },
+  "./Videos/Video24.mp4": {
+    "text": "Allora il numero 5 Pacini.",
+    "segments": [
+      {
+        "token": "All",
+        "logprob": -1.1673654317855835
+      },
+      {
+        "token": "ora",
+        "logprob": -0.01950744353234768
+      },
+      {
+        "token": " il",
+        "logprob": -0.36469513177871704
+      },
+      {
+        "token": " numero",
+        "logprob": -3.054500666621607e-06
+      },
+      {
+        "token": " ",
+        "logprob": -0.6934366226196289
+      },
+      {
+        "token": "5",
+        "logprob": -4.537180211627856e-05
+      },
+      {
+        "token": " Pac",
+        "logprob": -0.09544409811496735
+      },
+      {
+        "token": "ini",
+        "logprob": -0.04574461653828621
+      },
+      {
+        "token": ".",
+        "logprob": -0.22147585451602936
+      }
+    ]
+  },
+  "./Videos/Video25.mp4": {
+    "text": "Il gatto salta sul tavolo.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.737972617149353
+      },
+      {
+        "token": " gat",
+        "logprob": -3.441110610961914
+      },
+      {
+        "token": "to",
+        "logprob": -4.584861744660884e-05
+      },
+      {
+        "token": " sal",
+        "logprob": -1.9886443614959717
+      },
+      {
+        "token": "ta",
+        "logprob": -0.006013048812747002
+      },
+      {
+        "token": " sul",
+        "logprob": -1.0478042364120483
+      },
+      {
+        "token": " tav",
+        "logprob": -0.3885726034641266
+      },
+      {
+        "token": "olo",
+        "logprob": -0.0007354161934927106
+      },
+      {
+        "token": ".",
+        "logprob": -0.13577955961227417
+      }
+    ]
+  },
+  "./Videos/Video26.mp4": {
+    "text": "Hai messo sabbia mista, bagnata e asciutta?",
+    "segments": [
+      {
+        "token": "Hai",
+        "logprob": -0.10945285856723785
+      },
+      {
+        "token": " m",
+        "logprob": -6.511406809295295e-06
+      },
+      {
+        "token": "esso",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " sab",
+        "logprob": -0.0007027800311334431
+      },
+      {
+        "token": "bia",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " m",
+        "logprob": -0.0005060884868726134
+      },
+      {
+        "token": "ista",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.3914338946342468
+      },
+      {
+        "token": " b",
+        "logprob": -0.00011880126112373546
+      },
+      {
+        "token": "agn",
+        "logprob": 0.0
+      },
+      {
+        "token": "ata",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " e",
+        "logprob": -0.1305822730064392
+      },
+      {
+        "token": " asci",
+        "logprob": -0.0011466487776488066
+      },
+      {
+        "token": "utta",
+        "logprob": -1.5570885807392187e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.00545739009976387
+      }
+    ]
+  },
+  "./Videos/Video27.mp4": {
+    "text": "Tanti auguri a te!",
+    "segments": [
+      {
+        "token": "T",
+        "logprob": -0.07722821831703186
+      },
+      {
+        "token": "anti",
+        "logprob": -0.00016420685278717428
+      },
+      {
+        "token": " aug",
+        "logprob": -0.0004388942907098681
+      },
+      {
+        "token": "uri",
+        "logprob": -4.723352049040841e-06
+      },
+      {
+        "token": " a",
+        "logprob": -0.0024659058544784784
+      },
+      {
+        "token": " te",
+        "logprob": -7.028536492725834e-05
+      },
+      {
+        "token": "!",
+        "logprob": -0.5892277359962463
+      }
+    ]
+  },
+  "./Videos/Video28.mp4": {
+    "text": "La spiaggia è affollata.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.612367868423462
+      },
+      {
+        "token": " spi",
+        "logprob": -1.5160892009735107
+      },
+      {
+        "token": "aggia",
+        "logprob": -7.958325295476243e-05
+      },
+      {
+        "token": " è",
+        "logprob": -0.3606583774089813
+      },
+      {
+        "token": " aff",
+        "logprob": -0.37232455611228943
+      },
+      {
+        "token": "oll",
+        "logprob": -0.00035072024911642075
+      },
+      {
+        "token": "ata",
+        "logprob": -0.00036775172338820994
+      },
+      {
+        "token": ".",
+        "logprob": -0.8280417323112488
+      }
+    ]
+  },
+  "./Videos/Video29.mp4": {
+    "text": "La candidata Sara, iscritta al corso di laurea in lingue e culture per il turismo e il commercio internazionale, ha presentato un elaborato finale dal titolo \"Lo sviluppo della ricettività alberghiera sulla sponda del Garda Bresciano dalla fine dell'Ottocento ai giorni nostri\". Lo ha discusso nella presenza della commissione composta dai professori Mario Elisa Ferraro e Francesco Ricciardi.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -0.02314472757279873
+      },
+      {
+        "token": " candidata",
+        "logprob": -0.003416889812797308
+      },
+      {
+        "token": " Sara",
+        "logprob": -1.073272943496704
+      },
+      {
+        "token": ",",
+        "logprob": -0.04896077886223793
+      },
+      {
+        "token": " iscr",
+        "logprob": -0.034599751234054565
+      },
+      {
+        "token": "itta",
+        "logprob": -4.842555426876061e-06
+      },
+      {
+        "token": " al",
+        "logprob": -0.002313334261998534
+      },
+      {
+        "token": " corso",
+        "logprob": -0.5631859302520752
+      },
+      {
+        "token": " di",
+        "logprob": -0.2234508991241455
+      },
+      {
+        "token": " laure",
+        "logprob": -0.04792443662881851
+      },
+      {
+        "token": "a",
+        "logprob": -0.018230600282549858
+      },
+      {
+        "token": " in",
+        "logprob": -0.04158097133040428
+      },
+      {
+        "token": " ling",
+        "logprob": -0.25217515230178833
+      },
+      {
+        "token": "ue",
+        "logprob": -6.749814019713085e-06
+      },
+      {
+        "token": " e",
+        "logprob": -0.02429957687854767
+      },
+      {
+        "token": " culture",
+        "logprob": -0.04743298888206482
+      },
+      {
+        "token": " per",
+        "logprob": -0.05305219814181328
+      },
+      {
+        "token": " il",
+        "logprob": -0.12933753430843353
+      },
+      {
+        "token": " turismo",
+        "logprob": -0.04739433154463768
+      },
+      {
+        "token": " e",
+        "logprob": -0.1640806347131729
+      },
+      {
+        "token": " il",
+        "logprob": -0.38786858320236206
+      },
+      {
+        "token": " commerc",
+        "logprob": -0.00029112942866049707
+      },
+      {
+        "token": "io",
+        "logprob": 0.0
+      },
+      {
+        "token": " internazionale",
+        "logprob": -0.00029601677670143545
+      },
+      {
+        "token": ",",
+        "logprob": -0.002967238426208496
+      },
+      {
+        "token": " ha",
+        "logprob": -0.0005682834889739752
+      },
+      {
+        "token": " present",
+        "logprob": -0.00012535012501757592
+      },
+      {
+        "token": "ato",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " un",
+        "logprob": -0.003085613250732422
+      },
+      {
+        "token": " elabor",
+        "logprob": -0.18295800685882568
+      },
+      {
+        "token": "ato",
+        "logprob": -0.00103686039801687
+      },
+      {
+        "token": " finale",
+        "logprob": -0.21044985949993134
+      },
+      {
+        "token": " dal",
+        "logprob": -0.019415784627199173
+      },
+      {
+        "token": " titolo",
+        "logprob": -0.0021478813141584396
+      },
+      {
+        "token": " \"",
+        "logprob": -0.4310407042503357
+      },
+      {
+        "token": "Lo",
+        "logprob": -0.000204851632588543
+      },
+      {
+        "token": " sviluppo",
+        "logprob": -0.00017183588352054358
+      },
+      {
+        "token": " della",
+        "logprob": -0.14748230576515198
+      },
+      {
+        "token": " ric",
+        "logprob": -0.17335255444049835
+      },
+      {
+        "token": "ett",
+        "logprob": -0.0021736971102654934
+      },
+      {
+        "token": "ività",
+        "logprob": -6.64708495605737e-05
+      },
+      {
+        "token": " alber",
+        "logprob": -0.00861468818038702
+      },
+      {
+        "token": "gh",
+        "logprob": -0.0004237627435941249
+      },
+      {
+        "token": "iera",
+        "logprob": -1.3544423381972592e-05
+      },
+      {
+        "token": " sulla",
+        "logprob": -0.0009598199394531548
+      },
+      {
+        "token": " s",
+        "logprob": -0.02664545550942421
+      },
+      {
+        "token": "pon",
+        "logprob": -0.000329386442899704
+      },
+      {
+        "token": "da",
+        "logprob": -2.5776860184123507e-06
+      },
+      {
+        "token": " del",
+        "logprob": -0.0008378617349080741
+      },
+      {
+        "token": " Garda",
+        "logprob": -0.6473349332809448
+      },
+      {
+        "token": " B",
+        "logprob": -0.40505173802375793
+      },
+      {
+        "token": "resc",
+        "logprob": -0.0004444931691978127
+      },
+      {
+        "token": "iano",
+        "logprob": -0.008629118092358112
+      },
+      {
+        "token": " dalla",
+        "logprob": -0.08613208681344986
+      },
+      {
+        "token": " fine",
+        "logprob": -0.00010199354437645525
+      },
+      {
+        "token": " dell",
+        "logprob": -0.21548646688461304
+      },
+      {
+        "token": "'O",
+        "logprob": -0.007762196473777294
+      },
+      {
+        "token": "tt",
+        "logprob": -0.0004752367385663092
+      },
+      {
+        "token": "oc",
+        "logprob": -0.0001721934968372807
+      },
+      {
+        "token": "ento",
+        "logprob": -0.0003297440707683563
+      },
+      {
+        "token": " ai",
+        "logprob": -0.00016957100888248533
+      },
+      {
+        "token": " giorni",
+        "logprob": -4.0484450437361374e-05
+      },
+      {
+        "token": " nostri",
+        "logprob": -4.68022444692906e-05
+      },
+      {
+        "token": "\".",
+        "logprob": -0.0419192835688591
+      },
+      {
+        "token": " Lo",
+        "logprob": -0.10413869470357895
+      },
+      {
+        "token": " ha",
+        "logprob": -0.00028302724240347743
+      },
+      {
+        "token": " discus",
+        "logprob": -0.002566383685916662
+      },
+      {
+        "token": "so",
+        "logprob": 0.0
+      },
+      {
+        "token": " nella",
+        "logprob": -0.40805718302726746
+      },
+      {
+        "token": " presenza",
+        "logprob": -0.0001544321421533823
+      },
+      {
+        "token": " della",
+        "logprob": -0.31684693694114685
+      },
+      {
+        "token": " commission",
+        "logprob": -0.1732775866985321
+      },
+      {
+        "token": "e",
+        "logprob": -1.0325924449716695e-05
+      },
+      {
+        "token": " composta",
+        "logprob": -0.18387480080127716
+      },
+      {
+        "token": " dai",
+        "logprob": -0.03415965288877487
+      },
+      {
+        "token": " profess",
+        "logprob": -4.036524842376821e-05
+      },
+      {
+        "token": "ori",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " Mario",
+        "logprob": -1.7014387845993042
+      },
+      {
+        "token": " Elisa",
+        "logprob": -1.3538143634796143
+      },
+      {
+        "token": " Ferr",
+        "logprob": -0.36613011360168457
+      },
+      {
+        "token": "aro",
+        "logprob": -0.1920700967311859
+      },
+      {
+        "token": " e",
+        "logprob": -3.5597102396423e-05
+      },
+      {
+        "token": " Francesco",
+        "logprob": -0.0004485461104195565
+      },
+      {
+        "token": " Ric",
+        "logprob": -0.8454293608665466
+      },
+      {
+        "token": "ci",
+        "logprob": -0.1489052176475525
+      },
+      {
+        "token": "ardi",
+        "logprob": -0.7966313362121582
+      },
+      {
+        "token": ".",
+        "logprob": -0.005207551643252373
+      }
+    ]
+  },
+  "./Videos/Video30.mp4": {
+    "text": "Ciao!",
+    "segments": [
+      {
+        "token": "C",
+        "logprob": -2.1155242919921875
+      },
+      {
+        "token": "iao",
+        "logprob": -0.1134546622633934
+      },
+      {
+        "token": "!",
+        "logprob": -0.8435850739479065
+      }
+    ]
+  },
+  "./Videos/Video31.mp4": {
+    "text": "Chiamo la polizia.",
+    "segments": [
+      {
+        "token": "Ch",
+        "logprob": -1.0206735134124756
+      },
+      {
+        "token": "iamo",
+        "logprob": -0.31353652477264404
+      },
+      {
+        "token": " la",
+        "logprob": -0.35306715965270996
+      },
+      {
+        "token": " pol",
+        "logprob": -0.01219597551971674
+      },
+      {
+        "token": "izia",
+        "logprob": -1.1637164789135568e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.29777517914772034
+      }
+    ]
+  },
+  "./Videos/Video32.mp4": {
+    "text": "Adesso mangiamo? Cosa fai, parecchi? Ma dovresti anche sciacquare poi, eh? Ecco. Vediamo un po' questa bambina. Che brava! Ma sei bravissima! Allora mi aiuti tu, eh? Sempre! Ok? Grazie. Guardate come si fa!",
+    "segments": [
+      {
+        "token": "Ad",
+        "logprob": -0.017982879653573036
+      },
+      {
+        "token": "esso",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " mang",
+        "logprob": -9.269565634895116e-05
+      },
+      {
+        "token": "iamo",
+        "logprob": -2.8802491215174086e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.2710179090499878
+      },
+      {
+        "token": " C",
+        "logprob": -0.4810155928134918
+      },
+      {
+        "token": "osa",
+        "logprob": -6.630610641877865e-06
+      },
+      {
+        "token": " fai",
+        "logprob": -0.00018387178715784103
+      },
+      {
+        "token": ",",
+        "logprob": -0.6532924771308899
+      },
+      {
+        "token": " parec",
+        "logprob": -0.01899198442697525
+      },
+      {
+        "token": "chi",
+        "logprob": -9.364928700961173e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.008029362186789513
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.30626240372657776
+      },
+      {
+        "token": " dov",
+        "logprob": -4.036524842376821e-05
+      },
+      {
+        "token": "rest",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": " anche",
+        "logprob": -9.610702363715973e-06
+      },
+      {
+        "token": " sc",
+        "logprob": -0.001723607536405325
+      },
+      {
+        "token": "iac",
+        "logprob": -0.00013440960901789367
+      },
+      {
+        "token": "quare",
+        "logprob": -6.2729995988775045e-06
+      },
+      {
+        "token": " poi",
+        "logprob": -0.005315819755196571
+      },
+      {
+        "token": ",",
+        "logprob": -0.10057865083217621
+      },
+      {
+        "token": " eh",
+        "logprob": -0.018156850710511208
+      },
+      {
+        "token": "?",
+        "logprob": -0.04916270822286606
+      },
+      {
+        "token": " E",
+        "logprob": -0.7805819511413574
+      },
+      {
+        "token": "cco",
+        "logprob": -9.610702363715973e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.47628509998321533
+      },
+      {
+        "token": " Ved",
+        "logprob": -0.00041863700607791543
+      },
+      {
+        "token": "iamo",
+        "logprob": 0.0
+      },
+      {
+        "token": " un",
+        "logprob": 0.0
+      },
+      {
+        "token": " po",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "'",
+        "logprob": -0.0004597439547069371
+      },
+      {
+        "token": " questa",
+        "logprob": -0.00015693542081862688
+      },
+      {
+        "token": " bamb",
+        "logprob": -2.1008713702030946e-06
+      },
+      {
+        "token": "ina",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.6301969885826111
+      },
+      {
+        "token": " Che",
+        "logprob": -0.008508899249136448
+      },
+      {
+        "token": " br",
+        "logprob": -3.292907877039397e-06
+      },
+      {
+        "token": "ava",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.26935550570487976
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.00011105302110081539
+      },
+      {
+        "token": " sei",
+        "logprob": -4.263011578586884e-05
+      },
+      {
+        "token": " brav",
+        "logprob": -5.080963092041202e-06
+      },
+      {
+        "token": "issima",
+        "logprob": -9.913265239447355e-05
+      },
+      {
+        "token": "!",
+        "logprob": -0.04189184680581093
+      },
+      {
+        "token": " All",
+        "logprob": -0.00010592726175673306
+      },
+      {
+        "token": "ora",
+        "logprob": 0.0
+      },
+      {
+        "token": " mi",
+        "logprob": -0.002490045502781868
+      },
+      {
+        "token": " ai",
+        "logprob": -2.5776860184123507e-06
+      },
+      {
+        "token": "uti",
+        "logprob": 0.0
+      },
+      {
+        "token": " tu",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.0057475874200463295
+      },
+      {
+        "token": " eh",
+        "logprob": -0.014179147779941559
+      },
+      {
+        "token": "?",
+        "logprob": -0.008253795094788074
+      },
+      {
+        "token": " Sempre",
+        "logprob": -2.4391956685576588e-05
+      },
+      {
+        "token": "!",
+        "logprob": -0.4655081629753113
+      },
+      {
+        "token": " Ok",
+        "logprob": -0.12834805250167847
+      },
+      {
+        "token": "?",
+        "logprob": -0.0018846115563064814
+      },
+      {
+        "token": " Gra",
+        "logprob": -4.990154047845863e-05
+      },
+      {
+        "token": "zie",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.5831555128097534
+      },
+      {
+        "token": " Guard",
+        "logprob": -0.00013607845176011324
+      },
+      {
+        "token": "ate",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " come",
+        "logprob": -0.0036582681350409985
+      },
+      {
+        "token": " si",
+        "logprob": -0.00037895687273703516
+      },
+      {
+        "token": " fa",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.049653310328722
+      }
+    ]
+  },
+  "./Videos/Video33.mp4": {
+    "text": "Questa secondo me Stefano è la parte della frenata perché sono caduti davanti. Però, ok, io tocchi i freni. Poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche, chiaramente ora con i freni a disco che pinzano con molta più forza nel momento in cui il corridore si spaventa, frena col freno a disco.",
+    "segments": [
+      {
+        "token": "Qu",
+        "logprob": -0.9362906813621521
+      },
+      {
+        "token": "esta",
+        "logprob": -0.001285948441363871
+      },
+      {
+        "token": " secondo",
+        "logprob": -0.011385788209736347
+      },
+      {
+        "token": " me",
+        "logprob": -8.41866585687967e-06
+      },
+      {
+        "token": " Stefano",
+        "logprob": -0.040967151522636414
+      },
+      {
+        "token": " è",
+        "logprob": -0.0008958588587120175
+      },
+      {
+        "token": " la",
+        "logprob": -0.000541592831723392
+      },
+      {
+        "token": " parte",
+        "logprob": -0.00031162876985035837
+      },
+      {
+        "token": " della",
+        "logprob": -0.021008584648370743
+      },
+      {
+        "token": " fren",
+        "logprob": -1.688212614681106e-05
+      },
+      {
+        "token": "ata",
+        "logprob": 0.0
+      },
+      {
+        "token": " perché",
+        "logprob": -0.05048863962292671
+      },
+      {
+        "token": " sono",
+        "logprob": -0.01109721977263689
+      },
+      {
+        "token": " cad",
+        "logprob": -3.7697225252486533e-06
+      },
+      {
+        "token": "uti",
+        "logprob": -4.620622712536715e-05
+      },
+      {
+        "token": " davanti",
+        "logprob": -0.0001737431448418647
+      },
+      {
+        "token": ".",
+        "logprob": -0.3324930965900421
+      },
+      {
+        "token": " Però",
+        "logprob": -0.06618103384971619
+      },
+      {
+        "token": ",",
+        "logprob": -0.4463992118835449
+      },
+      {
+        "token": " ok",
+        "logprob": -0.01083498913794756
+      },
+      {
+        "token": ",",
+        "logprob": -0.07890179008245468
+      },
+      {
+        "token": " io",
+        "logprob": -0.0002655079588294029
+      },
+      {
+        "token": " toc",
+        "logprob": -0.00862426683306694
+      },
+      {
+        "token": "chi",
+        "logprob": -0.005247395019978285
+      },
+      {
+        "token": " i",
+        "logprob": -0.018240783363580704
+      },
+      {
+        "token": " fr",
+        "logprob": -4.596781946020201e-05
+      },
+      {
+        "token": "eni",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.47572165727615356
+      },
+      {
+        "token": " Poi",
+        "logprob": -0.017675837501883507
+      },
+      {
+        "token": " è",
+        "logprob": -3.650518920039758e-06
+      },
+      {
+        "token": " vero",
+        "logprob": -0.00012749579036608338
+      },
+      {
+        "token": " che",
+        "logprob": -4.008129963040119e-06
+      },
+      {
+        "token": " al",
+        "logprob": -5.676981345459353e-06
+      },
+      {
+        "token": " giorno",
+        "logprob": -0.00011248346709180623
+      },
+      {
+        "token": " d",
+        "logprob": -5.319370302458992e-06
+      },
+      {
+        "token": "'",
+        "logprob": -9.627176768844947e-05
+      },
+      {
+        "token": "oggi",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " non",
+        "logprob": -0.001368453842587769
+      },
+      {
+        "token": " è",
+        "logprob": -0.00011439072113716975
+      },
+      {
+        "token": " più",
+        "logprob": -0.00015991552209015936
+      },
+      {
+        "token": " come",
+        "logprob": -5.5577775128767826e-06
+      },
+      {
+        "token": " una",
+        "logprob": -1.2664456789934775e-06
+      },
+      {
+        "token": " volta",
+        "logprob": -1.723973582556937e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.474805623292923
+      },
+      {
+        "token": " poi",
+        "logprob": -0.0069701592437922955
+      },
+      {
+        "token": " ad",
+        "logprob": -3.173704271830502e-06
+      },
+      {
+        "token": "esso",
+        "logprob": -9.901345038088039e-05
+      },
+      {
+        "token": " magari",
+        "logprob": -0.00017588881019037217
+      },
+      {
+        "token": " potr",
+        "logprob": -8.113290095934644e-05
+      },
+      {
+        "token": "anno",
+        "logprob": 0.0
+      },
+      {
+        "token": " iniz",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": "iare",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " le",
+        "logprob": -1.580929347255733e-05
+      },
+      {
+        "token": " pole",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "m",
+        "logprob": 0.0
+      },
+      {
+        "token": "iche",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.6339428424835205
+      },
+      {
+        "token": " chiar",
+        "logprob": -0.0016916078748181462
+      },
+      {
+        "token": "amente",
+        "logprob": 0.0
+      },
+      {
+        "token": " ora",
+        "logprob": -0.002279434585943818
+      },
+      {
+        "token": " con",
+        "logprob": -1.688212614681106e-05
+      },
+      {
+        "token": " i",
+        "logprob": -0.0005535095697268844
+      },
+      {
+        "token": " fr",
+        "logprob": -0.007391402032226324
+      },
+      {
+        "token": "eni",
+        "logprob": -4.787507714354433e-05
+      },
+      {
+        "token": " a",
+        "logprob": -1.723973582556937e-05
+      },
+      {
+        "token": " disco",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " che",
+        "logprob": -0.011211925186216831
+      },
+      {
+        "token": " pin",
+        "logprob": -0.26512351632118225
+      },
+      {
+        "token": "zano",
+        "logprob": -5.0259150157216936e-05
+      },
+      {
+        "token": " con",
+        "logprob": -0.018233058974146843
+      },
+      {
+        "token": " molta",
+        "logprob": -1.688212614681106e-05
+      },
+      {
+        "token": " più",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " forza",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " nel",
+        "logprob": -0.5377012491226196
+      },
+      {
+        "token": " momento",
+        "logprob": 0.0
+      },
+      {
+        "token": " in",
+        "logprob": 0.0
+      },
+      {
+        "token": " cui",
+        "logprob": 0.0
+      },
+      {
+        "token": " il",
+        "logprob": -1.0802738870552275e-05
+      },
+      {
+        "token": " corr",
+        "logprob": -0.0008571469807066023
+      },
+      {
+        "token": "id",
+        "logprob": -5.8961017202818766e-05
+      },
+      {
+        "token": "ore",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " si",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": " sp",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "av",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": "enta",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.06863592565059662
+      },
+      {
+        "token": " fr",
+        "logprob": -0.010289670899510384
+      },
+      {
+        "token": "ena",
+        "logprob": 0.0
+      },
+      {
+        "token": " col",
+        "logprob": -0.01853606291115284
+      },
+      {
+        "token": " fr",
+        "logprob": -0.0012649978743866086
+      },
+      {
+        "token": "eno",
+        "logprob": -0.0011703446507453918
+      },
+      {
+        "token": " a",
+        "logprob": -9.984787902794778e-05
+      },
+      {
+        "token": " disco",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.42432907223701477
+      }
+    ]
+  },
+  "./Videos/Video34.mp4": {
+    "text": "Non ho mangiato questo.",
+    "segments": [
+      {
+        "token": "Non",
+        "logprob": -0.5325275659561157
+      },
+      {
+        "token": " ho",
+        "logprob": -1.1295655965805054
+      },
+      {
+        "token": " mang",
+        "logprob": -0.03979475051164627
+      },
+      {
+        "token": "i",
+        "logprob": -6.2729995988775045e-06
+      },
+      {
+        "token": "ato",
+        "logprob": -1.7120533811976202e-05
+      },
+      {
+        "token": " questo",
+        "logprob": -0.08153976500034332
+      },
+      {
+        "token": ".",
+        "logprob": -0.08227697014808655
+      }
+    ]
+  },
+  "./Videos/Video35.mp4": {
+    "text": "La sua voce è dolce e melodiosa.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.7036666870117188
+      },
+      {
+        "token": " sua",
+        "logprob": -3.392179012298584
+      },
+      {
+        "token": " voce",
+        "logprob": -1.8994005918502808
+      },
+      {
+        "token": " è",
+        "logprob": -0.8388089537620544
+      },
+      {
+        "token": " dol",
+        "logprob": -2.046588897705078
+      },
+      {
+        "token": "ce",
+        "logprob": -0.004858715459704399
+      },
+      {
+        "token": " e",
+        "logprob": -0.6160078644752502
+      },
+      {
+        "token": " melod",
+        "logprob": -0.5754725933074951
+      },
+      {
+        "token": "iosa",
+        "logprob": -0.16043493151664734
+      },
+      {
+        "token": ".",
+        "logprob": -0.1370261162519455
+      }
+    ]
+  },
+  "./Videos/Video36.mp4": {
+    "text": "Auguri a te!",
+    "segments": [
+      {
+        "token": "Aug",
+        "logprob": -0.11994621902704239
+      },
+      {
+        "token": "uri",
+        "logprob": -0.00018625585653353482
+      },
+      {
+        "token": " a",
+        "logprob": -0.37371018528938293
+      },
+      {
+        "token": " te",
+        "logprob": -0.0001426346570951864
+      },
+      {
+        "token": "!",
+        "logprob": -0.6758655309677124
+      }
+    ]
+  },
+  "./Videos/Video37.mp4": {
+    "text": "Vanessa che volo hai fatto! Ragazze, se non entriamo qua ci distruggiamo. Lei si è tagliata una mano. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? No, lo sapevo! Ma scusa, ma Anastasia! No, no, no, no! La gamba! No, no, no, no! Anastasia!",
+    "segments": [
+      {
+        "token": "Van",
+        "logprob": -0.2206653654575348
+      },
+      {
+        "token": "essa",
+        "logprob": -4.334533878136426e-05
+      },
+      {
+        "token": " che",
+        "logprob": -0.16093042492866516
+      },
+      {
+        "token": " vol",
+        "logprob": -0.0005905635771341622
+      },
+      {
+        "token": "o",
+        "logprob": -0.00129785411991179
+      },
+      {
+        "token": " hai",
+        "logprob": -3.869639476761222e-05
+      },
+      {
+        "token": " fatto",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.4048328101634979
+      },
+      {
+        "token": " Rag",
+        "logprob": -0.08375657349824905
+      },
+      {
+        "token": "az",
+        "logprob": -0.004176579415798187
+      },
+      {
+        "token": "ze",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.20180672407150269
+      },
+      {
+        "token": " se",
+        "logprob": -3.6550729419104755e-05
+      },
+      {
+        "token": " non",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": " ent",
+        "logprob": -8.180258191714529e-06
+      },
+      {
+        "token": "ri",
+        "logprob": 0.0
+      },
+      {
+        "token": "amo",
+        "logprob": 0.0
+      },
+      {
+        "token": " qua",
+        "logprob": -0.0011910604080185294
+      },
+      {
+        "token": " ci",
+        "logprob": -0.0025514080189168453
+      },
+      {
+        "token": " distr",
+        "logprob": -7.624555291840807e-05
+      },
+      {
+        "token": "ugg",
+        "logprob": -0.0015028368216007948
+      },
+      {
+        "token": "iamo",
+        "logprob": -0.0015036711702123284
+      },
+      {
+        "token": ".",
+        "logprob": -0.6283168792724609
+      },
+      {
+        "token": " Lei",
+        "logprob": -0.435173362493515
+      },
+      {
+        "token": " si",
+        "logprob": -0.0007773502147756517
+      },
+      {
+        "token": " è",
+        "logprob": -1.2664456789934775e-06
+      },
+      {
+        "token": " tag",
+        "logprob": -3.5954712075181305e-05
+      },
+      {
+        "token": "li",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "ata",
+        "logprob": -4.961759259458631e-06
+      },
+      {
+        "token": " una",
+        "logprob": -1.8624639324116288e-06
+      },
+      {
+        "token": " mano",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.3083803057670593
+      },
+      {
+        "token": " Dai",
+        "logprob": -0.9139148592948914
+      },
+      {
+        "token": ",",
+        "logprob": -0.005280126351863146
+      },
+      {
+        "token": " poi",
+        "logprob": -0.0008372656302526593
+      },
+      {
+        "token": " and",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "iamo",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.002475777640938759
+      },
+      {
+        "token": " Bro",
+        "logprob": -0.5903748869895935
+      },
+      {
+        "token": ",",
+        "logprob": -0.010241053998470306
+      },
+      {
+        "token": " dov",
+        "logprob": -0.0004307884373702109
+      },
+      {
+        "token": "'è",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " il",
+        "logprob": -0.0019288709154352546
+      },
+      {
+        "token": " mio",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " libro",
+        "logprob": -9.491498531133402e-06
+      },
+      {
+        "token": "?",
+        "logprob": -0.0002582402084954083
+      },
+      {
+        "token": " Libro",
+        "logprob": -0.019036313518881798
+      },
+      {
+        "token": "?",
+        "logprob": -0.3338797986507416
+      },
+      {
+        "token": " Libro",
+        "logprob": -0.13649001717567444
+      },
+      {
+        "token": "?",
+        "logprob": -0.6092121005058289
+      },
+      {
+        "token": " No",
+        "logprob": -0.7515989542007446
+      },
+      {
+        "token": ",",
+        "logprob": -0.08760125190019608
+      },
+      {
+        "token": " lo",
+        "logprob": -0.0013259568950161338
+      },
+      {
+        "token": " s",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": "ape",
+        "logprob": 0.0
+      },
+      {
+        "token": "vo",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.1606719046831131
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.005346651654690504
+      },
+      {
+        "token": " sc",
+        "logprob": -2.2603901015827432e-05
+      },
+      {
+        "token": "usa",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.008704986423254013
+      },
+      {
+        "token": " ma",
+        "logprob": -0.7799370288848877
+      },
+      {
+        "token": " Anast",
+        "logprob": -0.06761666387319565
+      },
+      {
+        "token": "asia",
+        "logprob": -0.6932594776153564
+      },
+      {
+        "token": "!",
+        "logprob": -0.028733432292938232
+      },
+      {
+        "token": " No",
+        "logprob": -0.7620077729225159
+      },
+      {
+        "token": ",",
+        "logprob": -0.010495662689208984
+      },
+      {
+        "token": " no",
+        "logprob": -0.4053630828857422
+      },
+      {
+        "token": ",",
+        "logprob": -0.001034595537930727
+      },
+      {
+        "token": " no",
+        "logprob": -0.01054980605840683
+      },
+      {
+        "token": ",",
+        "logprob": -0.41300636529922485
+      },
+      {
+        "token": " no",
+        "logprob": -0.03303968906402588
+      },
+      {
+        "token": "!",
+        "logprob": -0.8361709117889404
+      },
+      {
+        "token": " La",
+        "logprob": -0.1817001849412918
+      },
+      {
+        "token": " g",
+        "logprob": -0.015155312605202198
+      },
+      {
+        "token": "amba",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.001340123824775219
+      },
+      {
+        "token": " No",
+        "logprob": -0.03174111247062683
+      },
+      {
+        "token": ",",
+        "logprob": -0.0015174767468124628
+      },
+      {
+        "token": " no",
+        "logprob": -0.005597883835434914
+      },
+      {
+        "token": ",",
+        "logprob": -0.00011069540778407827
+      },
+      {
+        "token": " no",
+        "logprob": -4.215330409351736e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.03835862874984741
+      },
+      {
+        "token": " no",
+        "logprob": -5.085517113911919e-05
+      },
+      {
+        "token": "!",
+        "logprob": -0.2041282057762146
+      },
+      {
+        "token": " Anast",
+        "logprob": -0.11022062599658966
+      },
+      {
+        "token": "asia",
+        "logprob": -0.3869563639163971
+      },
+      {
+        "token": "!",
+        "logprob": -0.00035691517405211926
+      }
+    ]
+  },
+  "./Videos/Video38.mp4": {
+    "text": "La banda suona.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.6528165340423584
+      },
+      {
+        "token": " banda",
+        "logprob": -1.8163423538208008
+      },
+      {
+        "token": " su",
+        "logprob": -1.1251211166381836
+      },
+      {
+        "token": "ona",
+        "logprob": -0.20215553045272827
+      },
+      {
+        "token": ".",
+        "logprob": -0.4968858063220978
+      }
+    ]
+  },
+  "./Videos/Video39.mp4": {
+    "text": "Sopra che tonse.",
+    "segments": [
+      {
+        "token": "S",
+        "logprob": -1.7564194202423096
+      },
+      {
+        "token": "op",
+        "logprob": -1.6581974029541016
+      },
+      {
+        "token": "ra",
+        "logprob": -0.4066880941390991
+      },
+      {
+        "token": " che",
+        "logprob": -1.701806664466858
+      },
+      {
+        "token": " ton",
+        "logprob": -1.4475895166397095
+      },
+      {
+        "token": "se",
+        "logprob": -1.5227012634277344
+      },
+      {
+        "token": ".",
+        "logprob": -0.3188217282295227
+      }
+    ]
+  },
+  "./Videos/Video40.mp4": {
+    "text": "Questo è l'aperitivo. Gente che balla.",
+    "segments": [
+      {
+        "token": "Questo",
+        "logprob": -0.7028332948684692
+      },
+      {
+        "token": " è",
+        "logprob": -0.016099946573376656
+      },
+      {
+        "token": " l",
+        "logprob": -0.25641292333602905
+      },
+      {
+        "token": "'",
+        "logprob": -0.0011848729336634278
+      },
+      {
+        "token": "aper",
+        "logprob": -5.200166469876422e-06
+      },
+      {
+        "token": "itivo",
+        "logprob": -9.13388703338569e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.2710179090499878
+      },
+      {
+        "token": " G",
+        "logprob": -0.0013290488859638572
+      },
+      {
+        "token": "ente",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " che",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " ball",
+        "logprob": -0.00019257364328950644
+      },
+      {
+        "token": "a",
+        "logprob": -7.028536492725834e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.8004905581474304
+      }
+    ]
+  },
+  "./Videos/Video41.mp4": {
+    "text": "Il Presidente della Repubblica.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -2.326474666595459
+      },
+      {
+        "token": " Presidente",
+        "logprob": -2.6813037395477295
+      },
+      {
+        "token": " della",
+        "logprob": -0.2792569100856781
+      },
+      {
+        "token": " Repub",
+        "logprob": -0.04255545884370804
+      },
+      {
+        "token": "blica",
+        "logprob": -0.00015467056073248386
+      },
+      {
+        "token": ".",
+        "logprob": -0.33569732308387756
+      }
+    ]
+  },
+  "./Videos/Video42.mp4": {
+    "text": "Salve, salve!",
+    "segments": [
+      {
+        "token": "Sal",
+        "logprob": -2.226832151412964
+      },
+      {
+        "token": "ve",
+        "logprob": -1.5399434566497803
+      },
+      {
+        "token": ",",
+        "logprob": -0.7097594738006592
+      },
+      {
+        "token": " sal",
+        "logprob": -0.7298386096954346
+      },
+      {
+        "token": "ve",
+        "logprob": -0.009279042482376099
+      },
+      {
+        "token": "!",
+        "logprob": -0.5445857644081116
+      }
+    ]
+  },
+  "./Videos/Video43.mp4": {
+    "text": "Gran loggia da Istituto Nazionale Previdenza Sociale, l'Istituto Neutralizzazione Parassiti Sociali, e preventivando un risparmio di almeno due miliardi per ogni gruppo di trenta, organizzava viaggi agevolati senza ritorni.",
+    "segments": [
+      {
+        "token": "Gran",
+        "logprob": -0.9509743452072144
+      },
+      {
+        "token": " log",
+        "logprob": -0.7260106205940247
+      },
+      {
+        "token": "gia",
+        "logprob": -2.856408536899835e-05
+      },
+      {
+        "token": " da",
+        "logprob": -0.06903976947069168
+      },
+      {
+        "token": " I",
+        "logprob": -0.10082376003265381
+      },
+      {
+        "token": "stit",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "uto",
+        "logprob": 0.0
+      },
+      {
+        "token": " Naz",
+        "logprob": -0.0004309076175559312
+      },
+      {
+        "token": "ionale",
+        "logprob": 0.0
+      },
+      {
+        "token": " Previd",
+        "logprob": -0.007047117687761784
+      },
+      {
+        "token": "enza",
+        "logprob": 0.0
+      },
+      {
+        "token": " Sociale",
+        "logprob": -4.370294846012257e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.4892815351486206
+      },
+      {
+        "token": " l",
+        "logprob": -0.2765142619609833
+      },
+      {
+        "token": "'I",
+        "logprob": -0.08051299303770065
+      },
+      {
+        "token": "stit",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "uto",
+        "logprob": 0.0
+      },
+      {
+        "token": " Neutral",
+        "logprob": -0.014287851750850677
+      },
+      {
+        "token": "izzazione",
+        "logprob": -8.537868779967539e-06
+      },
+      {
+        "token": " Par",
+        "logprob": -0.0006502442411147058
+      },
+      {
+        "token": "ass",
+        "logprob": -1.981667537620524e-06
+      },
+      {
+        "token": "iti",
+        "logprob": -0.00012892624363303185
+      },
+      {
+        "token": " Social",
+        "logprob": -0.0010669894982129335
+      },
+      {
+        "token": "i",
+        "logprob": -0.00022129806166049093
+      },
+      {
+        "token": ",",
+        "logprob": -0.5149410963058472
+      },
+      {
+        "token": " e",
+        "logprob": -0.0002666999935172498
+      },
+      {
+        "token": " prevent",
+        "logprob": -0.0013917810283601284
+      },
+      {
+        "token": "iv",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "ando",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " un",
+        "logprob": 0.0
+      },
+      {
+        "token": " ris",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "parm",
+        "logprob": -3.583550642360933e-05
+      },
+      {
+        "token": "io",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": " almeno",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " due",
+        "logprob": -0.018152983859181404
+      },
+      {
+        "token": " mili",
+        "logprob": -2.4272752852994017e-05
+      },
+      {
+        "token": "ardi",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " per",
+        "logprob": -1.723973582556937e-05
+      },
+      {
+        "token": " ogni",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " gruppo",
+        "logprob": -1.6047699318733066e-05
+      },
+      {
+        "token": " di",
+        "logprob": -1.4021237802808173e-05
+      },
+      {
+        "token": " trenta",
+        "logprob": -0.06199401617050171
+      },
+      {
+        "token": ",",
+        "logprob": -0.07903486490249634
+      },
+      {
+        "token": " organizz",
+        "logprob": -7.696077227592468e-05
+      },
+      {
+        "token": "ava",
+        "logprob": 0.0
+      },
+      {
+        "token": " vi",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "aggi",
+        "logprob": 0.0
+      },
+      {
+        "token": " age",
+        "logprob": -4.7994282795116305e-05
+      },
+      {
+        "token": "vol",
+        "logprob": -1.7432603272027336e-06
+      },
+      {
+        "token": "ati",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": " senza",
+        "logprob": -0.0025970612186938524
+      },
+      {
+        "token": " ritor",
+        "logprob": -0.0007884251535870135
+      },
+      {
+        "token": "ni",
+        "logprob": -0.38693347573280334
+      },
+      {
+        "token": ".",
+        "logprob": -0.053670283406972885
+      }
+    ]
+  },
+  "./Videos/Video44.mp4": {
+    "text": "Ragazzi c'è la moglie che si è risvegliata.",
+    "segments": [
+      {
+        "token": "R",
+        "logprob": -1.093003273010254
+      },
+      {
+        "token": "ag",
+        "logprob": -0.00031258241506293416
+      },
+      {
+        "token": "azzi",
+        "logprob": -1.1398757123970427e-05
+      },
+      {
+        "token": " c",
+        "logprob": -0.48443394899368286
+      },
+      {
+        "token": "'è",
+        "logprob": -0.006181306205689907
+      },
+      {
+        "token": " la",
+        "logprob": -0.004679322708398104
+      },
+      {
+        "token": " mog",
+        "logprob": -1.1757997274398804
+      },
+      {
+        "token": "lie",
+        "logprob": -0.0013078561751171947
+      },
+      {
+        "token": " che",
+        "logprob": -0.11389664560556412
+      },
+      {
+        "token": " si",
+        "logprob": -0.03853185474872589
+      },
+      {
+        "token": " è",
+        "logprob": -0.0046844263561069965
+      },
+      {
+        "token": " ris",
+        "logprob": -0.3030060827732086
+      },
+      {
+        "token": "veg",
+        "logprob": -0.2200077772140503
+      },
+      {
+        "token": "li",
+        "logprob": -0.0001773192489054054
+      },
+      {
+        "token": "ata",
+        "logprob": -0.0032245332840830088
+      },
+      {
+        "token": ".",
+        "logprob": -0.5434811115264893
+      }
+    ]
+  },
+  "./Videos/Video45.mp4": {
+    "text": "Ma Marco continuava a dormire come un gran pigrone, non aveva ascoltato i cori e in più la sera precedente aveva visto un film alla televisione. Perciò stanco come non aveva visto.",
+    "segments": [
+      {
+        "token": "Ma",
+        "logprob": -0.6502314805984497
+      },
+      {
+        "token": " Marco",
+        "logprob": -5.347765181795694e-05
+      },
+      {
+        "token": " continu",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "ava",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " a",
+        "logprob": -0.004098227713257074
+      },
+      {
+        "token": " dorm",
+        "logprob": -0.0009583894861862063
+      },
+      {
+        "token": "ire",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": " come",
+        "logprob": -0.06535212695598602
+      },
+      {
+        "token": " un",
+        "logprob": -8.77627644513268e-06
+      },
+      {
+        "token": " gran",
+        "logprob": -0.035425540059804916
+      },
+      {
+        "token": " p",
+        "logprob": -0.1300557255744934
+      },
+      {
+        "token": "igr",
+        "logprob": -0.0001911432045744732
+      },
+      {
+        "token": "one",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.511881947517395
+      },
+      {
+        "token": " non",
+        "logprob": -3.249780638725497e-05
+      },
+      {
+        "token": " aveva",
+        "logprob": -0.0017964430153369904
+      },
+      {
+        "token": " ascol",
+        "logprob": -1.2465237379074097
+      },
+      {
+        "token": "t",
+        "logprob": -0.07915349304676056
+      },
+      {
+        "token": "ato",
+        "logprob": -0.00017267030489165336
+      },
+      {
+        "token": " i",
+        "logprob": -0.007212818134576082
+      },
+      {
+        "token": " cori",
+        "logprob": -0.4060455858707428
+      },
+      {
+        "token": " e",
+        "logprob": -0.3350561261177063
+      },
+      {
+        "token": " in",
+        "logprob": -0.0012582069030031562
+      },
+      {
+        "token": " più",
+        "logprob": -1.981667537620524e-06
+      },
+      {
+        "token": " la",
+        "logprob": -0.017697736620903015
+      },
+      {
+        "token": " sera",
+        "logprob": -0.06060037761926651
+      },
+      {
+        "token": " precedente",
+        "logprob": -1.27099974633893e-05
+      },
+      {
+        "token": " aveva",
+        "logprob": -0.0002112886286340654
+      },
+      {
+        "token": " visto",
+        "logprob": -0.00016635251813568175
+      },
+      {
+        "token": " un",
+        "logprob": -3.6789137084269896e-05
+      },
+      {
+        "token": " film",
+        "logprob": -0.00013691288768313825
+      },
+      {
+        "token": " alla",
+        "logprob": -0.0001601539261173457
+      },
+      {
+        "token": " televis",
+        "logprob": -0.00101220712531358
+      },
+      {
+        "token": "ione",
+        "logprob": -0.00019448090461082757
+      },
+      {
+        "token": ".",
+        "logprob": -0.3286426067352295
+      },
+      {
+        "token": " Per",
+        "logprob": -0.753911018371582
+      },
+      {
+        "token": "ci",
+        "logprob": -0.002916022902354598
+      },
+      {
+        "token": "ò",
+        "logprob": 0.0
+      },
+      {
+        "token": " st",
+        "logprob": -0.9867108464241028
+      },
+      {
+        "token": "anco",
+        "logprob": -0.00011129142512800172
+      },
+      {
+        "token": " come",
+        "logprob": -0.16798418760299683
+      },
+      {
+        "token": " non",
+        "logprob": -0.10534393787384033
+      },
+      {
+        "token": " aveva",
+        "logprob": -0.003864443162456155
+      },
+      {
+        "token": " visto",
+        "logprob": -1.0641189813613892
+      },
+      {
+        "token": ".",
+        "logprob": -0.03209778293967247
+      }
+    ]
+  },
+  "./Videos/Video46.mp4": {
+    "text": "Con questo bel buio potrei fare io Cappuccetto Rosso. La aiuterò a tornare a casa dalla nonna. E mentre lei è tranquilla, che si fida di me, io mi am... me la faccio! Ciao bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto lupo cattivo del bosco. Ma te sei un lupo cattivo, cattivo? Sì, cattivo! E ora ti mangio!",
+    "segments": [
+      {
+        "token": "Con",
+        "logprob": -0.1682795137166977
+      },
+      {
+        "token": " questo",
+        "logprob": -3.054500666621607e-06
+      },
+      {
+        "token": " bel",
+        "logprob": -9.794061770662665e-05
+      },
+      {
+        "token": " bu",
+        "logprob": -0.11773283034563065
+      },
+      {
+        "token": "io",
+        "logprob": -0.00034928982495330274
+      },
+      {
+        "token": " pot",
+        "logprob": -0.06841274350881577
+      },
+      {
+        "token": "rei",
+        "logprob": -0.00021069261129014194
+      },
+      {
+        "token": " fare",
+        "logprob": -0.47324278950691223
+      },
+      {
+        "token": " io",
+        "logprob": -0.001656613196246326
+      },
+      {
+        "token": " Capp",
+        "logprob": -0.48119357228279114
+      },
+      {
+        "token": "ucc",
+        "logprob": -0.0026903904508799314
+      },
+      {
+        "token": "etto",
+        "logprob": -0.00039647609810344875
+      },
+      {
+        "token": " Ros",
+        "logprob": -0.005199724342674017
+      },
+      {
+        "token": "so",
+        "logprob": -5.319370302458992e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.36703258752822876
+      },
+      {
+        "token": " La",
+        "logprob": -0.10363783687353134
+      },
+      {
+        "token": " ai",
+        "logprob": -0.003869666252285242
+      },
+      {
+        "token": "uter",
+        "logprob": -4.723352049040841e-06
+      },
+      {
+        "token": "ò",
+        "logprob": -2.165027217415627e-05
+      },
+      {
+        "token": " a",
+        "logprob": -0.009733418934047222
+      },
+      {
+        "token": " torn",
+        "logprob": -0.0009306333377026021
+      },
+      {
+        "token": "are",
+        "logprob": -2.696889623621246e-06
+      },
+      {
+        "token": " a",
+        "logprob": -0.000982435536570847
+      },
+      {
+        "token": " casa",
+        "logprob": -1.8624639324116288e-06
+      },
+      {
+        "token": " dalla",
+        "logprob": -0.03693734109401703
+      },
+      {
+        "token": " non",
+        "logprob": -0.03266225755214691
+      },
+      {
+        "token": "na",
+        "logprob": -0.0004172065819147974
+      },
+      {
+        "token": ".",
+        "logprob": -0.47594988346099854
+      },
+      {
+        "token": " E",
+        "logprob": -0.00015586259542033076
+      },
+      {
+        "token": " mentre",
+        "logprob": -1.7432603272027336e-06
+      },
+      {
+        "token": " lei",
+        "logprob": -5.9153885558771435e-06
+      },
+      {
+        "token": " è",
+        "logprob": -0.006167917046695948
+      },
+      {
+        "token": " tranqu",
+        "logprob": -0.7268694043159485
+      },
+      {
+        "token": "illa",
+        "logprob": -8.613945101387799e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.6335332989692688
+      },
+      {
+        "token": " che",
+        "logprob": -0.0002314303710591048
+      },
+      {
+        "token": " si",
+        "logprob": -0.0002788551209960133
+      },
+      {
+        "token": " f",
+        "logprob": -0.0004377022560220212
+      },
+      {
+        "token": "ida",
+        "logprob": -1.6240566083070007e-06
+      },
+      {
+        "token": " di",
+        "logprob": -6.2729995988775045e-06
+      },
+      {
+        "token": " me",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.0010731808142736554
+      },
+      {
+        "token": " io",
+        "logprob": -0.00019591135787777603
+      },
+      {
+        "token": " mi",
+        "logprob": -0.6181182265281677
+      },
+      {
+        "token": " am",
+        "logprob": -1.1686598062515259
+      },
+      {
+        "token": "...",
+        "logprob": -1.678812026977539
+      },
+      {
+        "token": " me",
+        "logprob": -0.029453299939632416
+      },
+      {
+        "token": " la",
+        "logprob": -0.06736205518245697
+      },
+      {
+        "token": " fac",
+        "logprob": -0.41957807540893555
+      },
+      {
+        "token": "cio",
+        "logprob": -0.011503408662974834
+      },
+      {
+        "token": "!",
+        "logprob": -0.25539344549179077
+      },
+      {
+        "token": " C",
+        "logprob": -0.01719682291150093
+      },
+      {
+        "token": "iao",
+        "logprob": -2.3080716346157715e-05
+      },
+      {
+        "token": " bella",
+        "logprob": -0.16105930507183075
+      },
+      {
+        "token": " bamb",
+        "logprob": -4.191489642835222e-05
+      },
+      {
+        "token": "ina",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.01149315107613802
+      },
+      {
+        "token": " bu",
+        "logprob": -0.023560717701911926
+      },
+      {
+        "token": "onas",
+        "logprob": -2.3557529857498594e-05
+      },
+      {
+        "token": "era",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.32840025424957275
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.5548579692840576
+      },
+      {
+        "token": " te",
+        "logprob": -0.28653040528297424
+      },
+      {
+        "token": " sei",
+        "logprob": -0.14842356741428375
+      },
+      {
+        "token": " un",
+        "logprob": -0.001987044233828783
+      },
+      {
+        "token": " l",
+        "logprob": -0.004432254936546087
+      },
+      {
+        "token": "upo",
+        "logprob": -0.0003421375877223909
+      },
+      {
+        "token": " vero",
+        "logprob": -0.00013738969573751092
+      },
+      {
+        "token": ",",
+        "logprob": -0.5785410404205322
+      },
+      {
+        "token": " vero",
+        "logprob": -7.465036105713807e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.006762383040040731
+      },
+      {
+        "token": " vero",
+        "logprob": -1.7432603272027336e-06
+      },
+      {
+        "token": "?",
+        "logprob": -0.0016278100665658712
+      },
+      {
+        "token": " S",
+        "logprob": -0.06246929243206978
+      },
+      {
+        "token": "ì",
+        "logprob": -2.5776860184123507e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.002210085280239582
+      },
+      {
+        "token": " mi",
+        "logprob": -0.04713064804673195
+      },
+      {
+        "token": " chiam",
+        "logprob": -0.002190233441069722
+      },
+      {
+        "token": "ano",
+        "logprob": -0.00031532408320344985
+      },
+      {
+        "token": " gi",
+        "logprob": -0.0009955333080142736
+      },
+      {
+        "token": "usto",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " l",
+        "logprob": -0.7470078468322754
+      },
+      {
+        "token": "upo",
+        "logprob": -0.0005728095420636237
+      },
+      {
+        "token": " catt",
+        "logprob": -0.0008272562408819795
+      },
+      {
+        "token": "ivo",
+        "logprob": -2.1008713702030946e-06
+      },
+      {
+        "token": " del",
+        "logprob": -0.42538896203041077
+      },
+      {
+        "token": " bos",
+        "logprob": -0.05755331739783287
+      },
+      {
+        "token": "co",
+        "logprob": -5.061676347395405e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.11763152480125427
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.004897027276456356
+      },
+      {
+        "token": " te",
+        "logprob": -0.00563829718157649
+      },
+      {
+        "token": " sei",
+        "logprob": -0.0003241414960939437
+      },
+      {
+        "token": " un",
+        "logprob": -0.07982873916625977
+      },
+      {
+        "token": " l",
+        "logprob": -0.00021176543668843806
+      },
+      {
+        "token": "upo",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " catt",
+        "logprob": -0.002745196456089616
+      },
+      {
+        "token": "ivo",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.018884019926190376
+      },
+      {
+        "token": " catt",
+        "logprob": -6.869017852295656e-06
+      },
+      {
+        "token": "ivo",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.00998567882925272
+      },
+      {
+        "token": " S",
+        "logprob": -0.0013690461637452245
+      },
+      {
+        "token": "ì",
+        "logprob": -3.173704271830502e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.00011832444579340518
+      },
+      {
+        "token": " catt",
+        "logprob": -0.000595447258092463
+      },
+      {
+        "token": "ivo",
+        "logprob": -0.00010187433508690447
+      },
+      {
+        "token": "!",
+        "logprob": -0.22269971668720245
+      },
+      {
+        "token": " E",
+        "logprob": -0.11070822924375534
+      },
+      {
+        "token": " ora",
+        "logprob": -0.05159401521086693
+      },
+      {
+        "token": " ti",
+        "logprob": -0.316058486700058
+      },
+      {
+        "token": " mang",
+        "logprob": -1.1331393718719482
+      },
+      {
+        "token": "io",
+        "logprob": -0.0026267850771546364
+      },
+      {
+        "token": "!",
+        "logprob": -0.008691507391631603
+      }
+    ]
+  },
+  "./Videos/Video47.mp4": {
+    "text": "La musica è un linguaggio universale.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.587073802947998
+      },
+      {
+        "token": " musica",
+        "logprob": -2.713599443435669
+      },
+      {
+        "token": " è",
+        "logprob": -1.140931487083435
+      },
+      {
+        "token": " un",
+        "logprob": -1.4203866720199585
+      },
+      {
+        "token": " lingu",
+        "logprob": -0.18555349111557007
+      },
+      {
+        "token": "aggio",
+        "logprob": -7.226628895296017e-06
+      },
+      {
+        "token": " univers",
+        "logprob": -0.003380783833563328
+      },
+      {
+        "token": "ale",
+        "logprob": -2.2200749754119897e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.0742931067943573
+      }
+    ]
+  },
+  "./Videos/Video48.mp4": {
+    "text": "Poi Piergigi, poi Mallorca, ma sono lì tutti vicini.",
+    "segments": [
+      {
+        "token": "Poi",
+        "logprob": -1.7798954248428345
+      },
+      {
+        "token": " Pier",
+        "logprob": -0.38272908329963684
+      },
+      {
+        "token": "g",
+        "logprob": -0.3982354700565338
+      },
+      {
+        "token": "igi",
+        "logprob": -1.04966402053833
+      },
+      {
+        "token": ",",
+        "logprob": -0.04017021507024765
+      },
+      {
+        "token": " poi",
+        "logprob": -0.006172297988086939
+      },
+      {
+        "token": " Mallorca",
+        "logprob": -0.547102153301239
+      },
+      {
+        "token": ",",
+        "logprob": -0.07002301514148712
+      },
+      {
+        "token": " ma",
+        "logprob": -0.016369232907891273
+      },
+      {
+        "token": " sono",
+        "logprob": -0.0003112711710855365
+      },
+      {
+        "token": " lì",
+        "logprob": -0.005663310177624226
+      },
+      {
+        "token": " tutti",
+        "logprob": -0.0008759701740927994
+      },
+      {
+        "token": " vic",
+        "logprob": -0.0008451257599517703
+      },
+      {
+        "token": "ini",
+        "logprob": -0.004095497075468302
+      },
+      {
+        "token": ".",
+        "logprob": -0.6866947412490845
+      }
+    ]
+  },
+  "./Videos/Video49.mp4": {
+    "text": "Ci siete? Sì? Tienila forte, Rane!",
+    "segments": [
+      {
+        "token": "Ci",
+        "logprob": -0.7188701629638672
+      },
+      {
+        "token": " siete",
+        "logprob": -0.0001329791557509452
+      },
+      {
+        "token": "?",
+        "logprob": -0.0006133131100796163
+      },
+      {
+        "token": " S",
+        "logprob": -1.2213019132614136
+      },
+      {
+        "token": "ì",
+        "logprob": -0.0068938047625124454
+      },
+      {
+        "token": "?",
+        "logprob": -0.036878637969493866
+      },
+      {
+        "token": " T",
+        "logprob": -1.0516210794448853
+      },
+      {
+        "token": "ien",
+        "logprob": -0.31403684616088867
+      },
+      {
+        "token": "ila",
+        "logprob": -0.0012948813382536173
+      },
+      {
+        "token": " forte",
+        "logprob": -3.702754474943504e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.11296915262937546
+      },
+      {
+        "token": " R",
+        "logprob": -0.9356256127357483
+      },
+      {
+        "token": "ane",
+        "logprob": -0.0003160393098369241
+      },
+      {
+        "token": "!",
+        "logprob": -0.8748963475227356
+      }
+    ]
+  },
+  "./Videos/Video50.mp4": {
+    "text": "La sua voce è melodiosa.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.24771785736084
+      },
+      {
+        "token": " sua",
+        "logprob": -2.7692103385925293
+      },
+      {
+        "token": " voce",
+        "logprob": -2.236870050430298
+      },
+      {
+        "token": " è",
+        "logprob": -0.8760042190551758
+      },
+      {
+        "token": " melod",
+        "logprob": -1.6098471879959106
+      },
+      {
+        "token": "iosa",
+        "logprob": -0.06209182366728783
+      },
+      {
+        "token": ".",
+        "logprob": -0.04341418668627739
+      }
+    ]
+  },
+  "./Videos/Video51.mp4": {
+    "text": "Mo maizzo che è lento.",
+    "segments": [
+      {
+        "token": "Mo",
+        "logprob": -0.7602807283401489
+      },
+      {
+        "token": " ma",
+        "logprob": -0.8293909430503845
+      },
+      {
+        "token": "izzo",
+        "logprob": -1.2421138286590576
+      },
+      {
+        "token": " che",
+        "logprob": -0.0906996950507164
+      },
+      {
+        "token": " è",
+        "logprob": -0.2239789366722107
+      },
+      {
+        "token": " lento",
+        "logprob": -0.2971722483634949
+      },
+      {
+        "token": ".",
+        "logprob": -0.5010183453559875
+      }
+    ]
+  },
+  "./Videos/Video52.mp4": {
+    "text": "Non mi sarebbe gioventù.",
+    "segments": [
+      {
+        "token": "Non",
+        "logprob": -0.11408184468746185
+      },
+      {
+        "token": " mi",
+        "logprob": -0.011648353189229965
+      },
+      {
+        "token": " sarebbe",
+        "logprob": -0.22102533280849457
+      },
+      {
+        "token": " gi",
+        "logprob": -1.3732020854949951
+      },
+      {
+        "token": "ov",
+        "logprob": -0.31307604908943176
+      },
+      {
+        "token": "ent",
+        "logprob": -0.6169243454933167
+      },
+      {
+        "token": "ù",
+        "logprob": -0.009170375764369965
+      },
+      {
+        "token": ".",
+        "logprob": -0.18096841871738434
+      }
+    ]
+  },
+  "./Videos/Video53.mp4": {
+    "text": "Vieni, vieni!",
+    "segments": [
+      {
+        "token": "V",
+        "logprob": -2.4371516704559326
+      },
+      {
+        "token": "ieni",
+        "logprob": -1.3259013891220093
+      },
+      {
+        "token": ",",
+        "logprob": -0.9026353359222412
+      },
+      {
+        "token": " vien",
+        "logprob": -0.19960270822048187
+      },
+      {
+        "token": "i",
+        "logprob": -0.00010211274639004841
+      },
+      {
+        "token": "!",
+        "logprob": -0.8955122232437134
+      }
+    ]
+  },
+  "./Videos/Video54.mp4": {
+    "text": "La sua voce è dolce.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.9950541257858276
+      },
+      {
+        "token": " sua",
+        "logprob": -2.9813952445983887
+      },
+      {
+        "token": " voce",
+        "logprob": -1.4134900569915771
+      },
+      {
+        "token": " è",
+        "logprob": -1.0663611888885498
+      },
+      {
+        "token": " dol",
+        "logprob": -2.2605178356170654
+      },
+      {
+        "token": "ce",
+        "logprob": -0.007749421056360006
+      },
+      {
+        "token": ".",
+        "logprob": -0.24341504275798798
+      }
+    ]
+  },
+  "./Videos/Video55.mp4": {
+    "text": "Grazie!",
+    "segments": [
+      {
+        "token": "Gra",
+        "logprob": -2.2385506629943848
+      },
+      {
+        "token": "zie",
+        "logprob": -0.00013405199570115656
+      },
+      {
+        "token": "!",
+        "logprob": -1.1387693881988525
+      }
+    ]
+  },
+  "./Videos/Video56.mp4": {
+    "text": "Viva la libertà!",
+    "segments": [
+      {
+        "token": "V",
+        "logprob": -2.1415324211120605
+      },
+      {
+        "token": "iva",
+        "logprob": -0.6320129632949829
+      },
+      {
+        "token": " la",
+        "logprob": -1.1351029872894287
+      },
+      {
+        "token": " libert",
+        "logprob": -2.3429908752441406
+      },
+      {
+        "token": "à",
+        "logprob": -0.0005171707598492503
+      },
+      {
+        "token": "!",
+        "logprob": -0.16014164686203003
+      }
+    ]
+  },
+  "./Videos/Video57.mp4": {
+    "text": "90, 100, 200 metri.",
+    "segments": [
+      {
+        "token": "90",
+        "logprob": -1.504538893699646
+      },
+      {
+        "token": ",",
+        "logprob": -0.03342114016413689
+      },
+      {
+        "token": " ",
+        "logprob": -0.023637687787413597
+      },
+      {
+        "token": "100",
+        "logprob": -0.004437955096364021
+      },
+      {
+        "token": ",",
+        "logprob": -0.6941146850585938
+      },
+      {
+        "token": " ",
+        "logprob": -0.0029491744935512543
+      },
+      {
+        "token": "200",
+        "logprob": -0.5639838576316833
+      },
+      {
+        "token": " metri",
+        "logprob": -0.01079277228564024
+      },
+      {
+        "token": ".",
+        "logprob": -0.20842872560024261
+      }
+    ]
+  },
+  "./Videos/Video58.mp4": {
+    "text": "La margherita quanto verrebbe?",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -0.04765203222632408
+      },
+      {
+        "token": " mar",
+        "logprob": -0.4748355746269226
+      },
+      {
+        "token": "gher",
+        "logprob": -2.641841820150148e-05
+      },
+      {
+        "token": "ita",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " quanto",
+        "logprob": -0.02197909541428089
+      },
+      {
+        "token": " ver",
+        "logprob": -0.014453766867518425
+      },
+      {
+        "token": "rebbe",
+        "logprob": -3.5358694731257856e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.0024075270630419254
+      }
+    ]
+  },
+  "./Videos/Video59.mp4": {
+    "text": "Vogliamo far vedere il piatto che hai preso?",
+    "segments": [
+      {
+        "token": "V",
+        "logprob": -0.7850763201713562
+      },
+      {
+        "token": "ogli",
+        "logprob": -0.13834068179130554
+      },
+      {
+        "token": "amo",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": " far",
+        "logprob": -0.7678442597389221
+      },
+      {
+        "token": " vedere",
+        "logprob": -0.01008351519703865
+      },
+      {
+        "token": " il",
+        "logprob": -0.005488567985594273
+      },
+      {
+        "token": " pi",
+        "logprob": -0.004957885481417179
+      },
+      {
+        "token": "atto",
+        "logprob": -3.054500666621607e-06
+      },
+      {
+        "token": " che",
+        "logprob": -0.09022717922925949
+      },
+      {
+        "token": " hai",
+        "logprob": -0.000215457082958892
+      },
+      {
+        "token": " preso",
+        "logprob": -0.00016587569552939385
+      },
+      {
+        "token": "?",
+        "logprob": -0.019350888207554817
+      }
+    ]
+  },
+  "./Videos/Video60.mp4": {
+    "text": "Dentro c'è la lingua?",
+    "segments": [
+      {
+        "token": "Dentro",
+        "logprob": -0.004449109081178904
+      },
+      {
+        "token": " c",
+        "logprob": -0.003110453486442566
+      },
+      {
+        "token": "'è",
+        "logprob": -0.0020618767011910677
+      },
+      {
+        "token": " la",
+        "logprob": -0.005241821985691786
+      },
+      {
+        "token": " lingua",
+        "logprob": -1.1160349458805285e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.4252297282218933
+      }
+    ]
+  },
+  "./Videos/Video61.mp4": {
+    "text": "Siamo a Firenze.",
+    "segments": [
+      {
+        "token": "S",
+        "logprob": -0.2515893280506134
+      },
+      {
+        "token": "iamo",
+        "logprob": -0.004878284875303507
+      },
+      {
+        "token": " a",
+        "logprob": -0.0628485232591629
+      },
+      {
+        "token": " Firenze",
+        "logprob": -0.002505743643268943
+      },
+      {
+        "token": ".",
+        "logprob": -0.025668084621429443
+      }
+    ]
+  },
+  "./Videos/Video62.mp4": {
+    "text": "La guerra è finita.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.9469388723373413
+      },
+      {
+        "token": " guerra",
+        "logprob": -1.8799431324005127
+      },
+      {
+        "token": " è",
+        "logprob": -1.2874945402145386
+      },
+      {
+        "token": " fin",
+        "logprob": -1.0605016946792603
+      },
+      {
+        "token": "ita",
+        "logprob": -0.0006421420839615166
+      },
+      {
+        "token": ".",
+        "logprob": -0.5249745845794678
+      }
+    ]
+  },
+  "./Videos/Video63.mp4": {
+    "text": "Ecco!",
+    "segments": [
+      {
+        "token": "E",
+        "logprob": -1.820196509361267
+      },
+      {
+        "token": "cco",
+        "logprob": -0.7443673014640808
+      },
+      {
+        "token": "!",
+        "logprob": -0.04279739782214165
+      }
+    ]
+  },
+  "./Videos/Video64.mp4": {
+    "text": "Numero dieci, Gabriella Cecilia.",
+    "segments": [
+      {
+        "token": "Numero",
+        "logprob": -0.06611320376396179
+      },
+      {
+        "token": " die",
+        "logprob": -0.3141099214553833
+      },
+      {
+        "token": "ci",
+        "logprob": -3.4121114822482923e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.09716898202896118
+      },
+      {
+        "token": " Gabri",
+        "logprob": -1.20783269405365
+      },
+      {
+        "token": "ella",
+        "logprob": -0.41554081439971924
+      },
+      {
+        "token": " Cecilia",
+        "logprob": -0.03272119536995888
+      },
+      {
+        "token": ".",
+        "logprob": -0.08581846952438354
+      }
+    ]
+  },
+  "./Videos/Video65.mp4": {
+    "text": "Il museo è aperto.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -2.515261173248291
+      },
+      {
+        "token": " museo",
+        "logprob": -2.0595407485961914
+      },
+      {
+        "token": " è",
+        "logprob": -0.34499290585517883
+      },
+      {
+        "token": " aper",
+        "logprob": -1.2067228555679321
+      },
+      {
+        "token": "to",
+        "logprob": -8.673547563375905e-05
+      },
+      {
+        "token": ".",
+        "logprob": -1.3311169147491455
+      }
+    ]
+  },
+  "./Videos/Video66.mp4": {
+    "text": "Non puoi metterti.",
+    "segments": [
+      {
+        "token": "Non",
+        "logprob": -1.513819932937622
+      },
+      {
+        "token": " puoi",
+        "logprob": -1.4502222537994385
+      },
+      {
+        "token": " met",
+        "logprob": -2.4808688163757324
+      },
+      {
+        "token": "ter",
+        "logprob": -0.003877031384035945
+      },
+      {
+        "token": "ti",
+        "logprob": -0.4876035451889038
+      },
+      {
+        "token": ".",
+        "logprob": -1.8876744508743286
+      }
+    ]
+  },
+  "./Videos/Video67.mp4": {
+    "text": "I miei figli sono bravi in italiano?",
+    "segments": [
+      {
+        "token": "I",
+        "logprob": -0.17777781188488007
+      },
+      {
+        "token": " miei",
+        "logprob": -0.20429974794387817
+      },
+      {
+        "token": " figli",
+        "logprob": -0.05202731490135193
+      },
+      {
+        "token": " sono",
+        "logprob": -0.5633573532104492
+      },
+      {
+        "token": " br",
+        "logprob": -0.1445273756980896
+      },
+      {
+        "token": "avi",
+        "logprob": -0.0002096197713399306
+      },
+      {
+        "token": " in",
+        "logprob": -0.10751837491989136
+      },
+      {
+        "token": " italiano",
+        "logprob": -0.00984438881278038
+      },
+      {
+        "token": "?",
+        "logprob": -0.5793064832687378
+      }
+    ]
+  },
+  "./Videos/Video68.mp4": {
+    "text": "O Dio beato, hai quanto mi costò l'avermi amato.",
+    "segments": [
+      {
+        "token": "O",
+        "logprob": -0.5646722316741943
+      },
+      {
+        "token": " Dio",
+        "logprob": -0.002864900976419449
+      },
+      {
+        "token": " be",
+        "logprob": -0.03311154246330261
+      },
+      {
+        "token": "ato",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.01792995072901249
+      },
+      {
+        "token": " hai",
+        "logprob": -0.8817222714424133
+      },
+      {
+        "token": " quanto",
+        "logprob": -0.029972057789564133
+      },
+      {
+        "token": " mi",
+        "logprob": -0.28761881589889526
+      },
+      {
+        "token": " cost",
+        "logprob": -0.003938529174774885
+      },
+      {
+        "token": "ò",
+        "logprob": -0.00017159747949335724
+      },
+      {
+        "token": " l",
+        "logprob": -0.1297852247953415
+      },
+      {
+        "token": "'av",
+        "logprob": -0.003655887907370925
+      },
+      {
+        "token": "ermi",
+        "logprob": -8.828512363834307e-05
+      },
+      {
+        "token": " am",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": "ato",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.37503108382225037
+      }
+    ]
+  },
+  "./Videos/Video69.mp4": {
+    "text": "La guerra è finita.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.02652645111084
+      },
+      {
+        "token": " guerra",
+        "logprob": -3.081483840942383
+      },
+      {
+        "token": " è",
+        "logprob": -1.5786488056182861
+      },
+      {
+        "token": " fin",
+        "logprob": -0.8565882444381714
+      },
+      {
+        "token": "ita",
+        "logprob": -0.0002668192028068006
+      },
+      {
+        "token": ".",
+        "logprob": -0.21580404043197632
+      }
+    ]
+  },
+  "./Videos/Video70.mp4": {
+    "text": "La scimmia randaggio non ne avevo mai vista.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -0.7717472314834595
+      },
+      {
+        "token": " sc",
+        "logprob": -0.00014096579980105162
+      },
+      {
+        "token": "imm",
+        "logprob": -1.688212614681106e-05
+      },
+      {
+        "token": "ia",
+        "logprob": -0.0001294030516874045
+      },
+      {
+        "token": " rand",
+        "logprob": -0.04011363536119461
+      },
+      {
+        "token": "aggio",
+        "logprob": -0.7627599835395813
+      },
+      {
+        "token": " non",
+        "logprob": -0.00017398154886905104
+      },
+      {
+        "token": " ne",
+        "logprob": -0.13848568499088287
+      },
+      {
+        "token": " ave",
+        "logprob": -0.038189638406038284
+      },
+      {
+        "token": "vo",
+        "logprob": -0.0005170515505596995
+      },
+      {
+        "token": " mai",
+        "logprob": -6.630610641877865e-06
+      },
+      {
+        "token": " vista",
+        "logprob": -0.5086687803268433
+      },
+      {
+        "token": ".",
+        "logprob": -0.08276192843914032
+      }
+    ]
+  },
+  "./Videos/Video71.mp4": {
+    "text": "Franco, la crisi fa sentire! Diemo con le arance! Sono buone, sono belle! Chiedetelo alle vostre sorelle! Diemo con le arance! Forza con le arance! Le arance, eh? Le arance, vai! Ma sono dolci? Sono dolci, dicevo dolci! Sono arance? Quella pasticceria, me! Diemo con le arance!",
+    "segments": [
+      {
+        "token": "Fr",
+        "logprob": -0.03308028355240822
+      },
+      {
+        "token": "anco",
+        "logprob": -8.895480277715251e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.16081055998802185
+      },
+      {
+        "token": " la",
+        "logprob": -0.00505917938426137
+      },
+      {
+        "token": " crisi",
+        "logprob": -0.0011450991732999682
+      },
+      {
+        "token": " fa",
+        "logprob": -0.0228088591247797
+      },
+      {
+        "token": " sent",
+        "logprob": -5.080963092041202e-06
+      },
+      {
+        "token": "ire",
+        "logprob": -1.8550976164988242e-05
+      },
+      {
+        "token": "!",
+        "logprob": -1.066307544708252
+      },
+      {
+        "token": " Di",
+        "logprob": -0.5468323826789856
+      },
+      {
+        "token": "emo",
+        "logprob": -0.806037962436676
+      },
+      {
+        "token": " con",
+        "logprob": -0.01348454225808382
+      },
+      {
+        "token": " le",
+        "logprob": -5.319370302458992e-06
+      },
+      {
+        "token": " ar",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "ance",
+        "logprob": -2.2127087504486553e-05
+      },
+      {
+        "token": "!",
+        "logprob": -0.031012853607535362
+      },
+      {
+        "token": " Sono",
+        "logprob": -0.527030348777771
+      },
+      {
+        "token": " bu",
+        "logprob": -0.0001375089050270617
+      },
+      {
+        "token": "one",
+        "logprob": -4.5491004129871726e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.005435931961983442
+      },
+      {
+        "token": " sono",
+        "logprob": -0.0001037815964082256
+      },
+      {
+        "token": " belle",
+        "logprob": -1.3856492842023727e-06
+      },
+      {
+        "token": "!",
+        "logprob": -0.2573678493499756
+      },
+      {
+        "token": " Ch",
+        "logprob": -0.0025487891398370266
+      },
+      {
+        "token": "ied",
+        "logprob": -6.034592388459714e-06
+      },
+      {
+        "token": "et",
+        "logprob": -0.03124489262700081
+      },
+      {
+        "token": "elo",
+        "logprob": -0.023591458797454834
+      },
+      {
+        "token": " alle",
+        "logprob": -0.0014557128306478262
+      },
+      {
+        "token": " vostre",
+        "logprob": -3.2617008400848135e-05
+      },
+      {
+        "token": " sore",
+        "logprob": -0.0013721456052735448
+      },
+      {
+        "token": "lle",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.017929835245013237
+      },
+      {
+        "token": " Di",
+        "logprob": -0.031184112653136253
+      },
+      {
+        "token": "emo",
+        "logprob": -0.0005263420753180981
+      },
+      {
+        "token": " con",
+        "logprob": -5.676981345459353e-06
+      },
+      {
+        "token": " le",
+        "logprob": -5.9153885558771435e-06
+      },
+      {
+        "token": " ar",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": "ance",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.00432176049798727
+      },
+      {
+        "token": " For",
+        "logprob": -0.6944864392280579
+      },
+      {
+        "token": "za",
+        "logprob": -4.008129963040119e-06
+      },
+      {
+        "token": " con",
+        "logprob": -0.00010032468708232045
+      },
+      {
+        "token": " le",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": " ar",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "ance",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.004426439758390188
+      },
+      {
+        "token": " Le",
+        "logprob": -0.07881443947553635
+      },
+      {
+        "token": " ar",
+        "logprob": -7.822646693966817e-06
+      },
+      {
+        "token": "ance",
+        "logprob": -0.00010115911572938785
+      },
+      {
+        "token": ",",
+        "logprob": -0.20142152905464172
+      },
+      {
+        "token": " eh",
+        "logprob": -0.08919474482536316
+      },
+      {
+        "token": "?",
+        "logprob": -0.10084434598684311
+      },
+      {
+        "token": " Le",
+        "logprob": -0.6010602712631226
+      },
+      {
+        "token": " ar",
+        "logprob": -6.988221684878226e-06
+      },
+      {
+        "token": "ance",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.0035803494974970818
+      },
+      {
+        "token": " vai",
+        "logprob": -0.0009395699598826468
+      },
+      {
+        "token": "!",
+        "logprob": -0.015531922690570354
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.7391778826713562
+      },
+      {
+        "token": " sono",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": " dol",
+        "logprob": 0.0
+      },
+      {
+        "token": "ci",
+        "logprob": -5.836499985889532e-05
+      },
+      {
+        "token": "?",
+        "logprob": -0.3884313106536865
+      },
+      {
+        "token": " Sono",
+        "logprob": -0.032985247671604156
+      },
+      {
+        "token": " dol",
+        "logprob": -0.16046570241451263
+      },
+      {
+        "token": "ci",
+        "logprob": -2.7729658540920354e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.03746258094906807
+      },
+      {
+        "token": " dice",
+        "logprob": -0.0029011627193540335
+      },
+      {
+        "token": "vo",
+        "logprob": -5.550411151489243e-05
+      },
+      {
+        "token": " dol",
+        "logprob": -0.02118086628615856
+      },
+      {
+        "token": "ci",
+        "logprob": -3.7697225252486533e-06
+      },
+      {
+        "token": "!",
+        "logprob": -0.6960922479629517
+      },
+      {
+        "token": " Sono",
+        "logprob": -0.0020105987787246704
+      },
+      {
+        "token": " ar",
+        "logprob": -8.244413766078651e-05
+      },
+      {
+        "token": "ance",
+        "logprob": -0.004112000111490488
+      },
+      {
+        "token": "?",
+        "logprob": -0.21097229421138763
+      },
+      {
+        "token": " Qu",
+        "logprob": -0.3753815293312073
+      },
+      {
+        "token": "ella",
+        "logprob": -0.00025406808708794415
+      },
+      {
+        "token": " past",
+        "logprob": -0.467302143573761
+      },
+      {
+        "token": "ic",
+        "logprob": -0.0024412893690168858
+      },
+      {
+        "token": "ceria",
+        "logprob": -0.006935236509889364
+      },
+      {
+        "token": ",",
+        "logprob": -0.24508927762508392
+      },
+      {
+        "token": " me",
+        "logprob": -1.1690022945404053
+      },
+      {
+        "token": "!",
+        "logprob": -0.48012080788612366
+      },
+      {
+        "token": " Di",
+        "logprob": -0.0020969684701412916
+      },
+      {
+        "token": "emo",
+        "logprob": -0.00010485442908247933
+      },
+      {
+        "token": " con",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " le",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " ar",
+        "logprob": 0.0
+      },
+      {
+        "token": "ance",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.0001733855315251276
+      }
+    ]
+  },
+  "./Videos/Video72.mp4": {
+    "text": "No!",
+    "segments": [
+      {
+        "token": "No",
+        "logprob": -0.03239684924483299
+      },
+      {
+        "token": "!",
+        "logprob": -0.7387915253639221
+      }
+    ]
+  },
+  "./Videos/Video73.mp4": {
+    "text": "La mia casa è molto grande.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.331721544265747
+      },
+      {
+        "token": " mia",
+        "logprob": -3.09496808052063
+      },
+      {
+        "token": " casa",
+        "logprob": -2.2549710273742676
+      },
+      {
+        "token": " è",
+        "logprob": -0.15381507575511932
+      },
+      {
+        "token": " molto",
+        "logprob": -1.0640348196029663
+      },
+      {
+        "token": " grande",
+        "logprob": -0.6599924564361572
+      },
+      {
+        "token": ".",
+        "logprob": -0.0494522862136364
+      }
+    ]
+  },
+  "./Videos/Video74.mp4": {
+    "text": "Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tuo sorello, Lays per il nonno, Lays per il portinaio e Lays per il bagnino. Papà, manca la valigia. Ah già, una volta provate non puoi più dimenticarle. Lays, life needs flavor. Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile, è nel prezzo!",
+    "segments": [
+      {
+        "token": "D",
+        "logprob": -0.10961611568927765
+      },
+      {
+        "token": "unque",
+        "logprob": -8.2994620242971e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.002388495020568371
+      },
+      {
+        "token": " pat",
+        "logprob": -0.0004605783324223012
+      },
+      {
+        "token": "atine",
+        "logprob": -0.38689500093460083
+      },
+      {
+        "token": " L",
+        "logprob": -0.8638108968734741
+      },
+      {
+        "token": "ays",
+        "logprob": -0.0001017551330733113
+      },
+      {
+        "token": " per",
+        "logprob": -2.2200749754119897e-06
+      },
+      {
+        "token": " te",
+        "logprob": -0.0025124046951532364
+      },
+      {
+        "token": ",",
+        "logprob": -0.003370319725945592
+      },
+      {
+        "token": " pat",
+        "logprob": -0.000204851632588543
+      },
+      {
+        "token": "atine",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " L",
+        "logprob": -1.6286106983898208e-05
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " me",
+        "logprob": -5.9153885558771435e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.0015058133285492659
+      },
+      {
+        "token": " L",
+        "logprob": -0.00031985383247956634
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": 0.0
+      },
+      {
+        "token": " la",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " mamma",
+        "logprob": -0.0002624086628202349
+      },
+      {
+        "token": ",",
+        "logprob": -3.309382373117842e-05
+      },
+      {
+        "token": " L",
+        "logprob": -0.00013858173042535782
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": -1.5048530030981055e-06
+      },
+      {
+        "token": " tuo",
+        "logprob": -0.13275876641273499
+      },
+      {
+        "token": " sore",
+        "logprob": -0.011059258133172989
+      },
+      {
+        "token": "llo",
+        "logprob": -0.01418442651629448
+      },
+      {
+        "token": ",",
+        "logprob": -9.722539834911004e-05
+      },
+      {
+        "token": " L",
+        "logprob": -4.429896944202483e-05
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": 0.0
+      },
+      {
+        "token": " il",
+        "logprob": -1.4021237802808173e-05
+      },
+      {
+        "token": " non",
+        "logprob": -0.0027154763229191303
+      },
+      {
+        "token": "no",
+        "logprob": -0.001935065840370953
+      },
+      {
+        "token": ",",
+        "logprob": -0.00011045700375689194
+      },
+      {
+        "token": " L",
+        "logprob": -1.5690089639974758e-05
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": 0.0
+      },
+      {
+        "token": " il",
+        "logprob": -8.590104698669165e-05
+      },
+      {
+        "token": " port",
+        "logprob": -0.004440443590283394
+      },
+      {
+        "token": "ina",
+        "logprob": -0.19035674631595612
+      },
+      {
+        "token": "io",
+        "logprob": -0.0008101018611341715
+      },
+      {
+        "token": " e",
+        "logprob": -0.011068453080952168
+      },
+      {
+        "token": " L",
+        "logprob": -5.204720582696609e-05
+      },
+      {
+        "token": "ays",
+        "logprob": 0.0
+      },
+      {
+        "token": " per",
+        "logprob": 0.0
+      },
+      {
+        "token": " il",
+        "logprob": -0.014393137767910957
+      },
+      {
+        "token": " b",
+        "logprob": -0.008226602338254452
+      },
+      {
+        "token": "agn",
+        "logprob": -0.00013619766104966402
+      },
+      {
+        "token": "ino",
+        "logprob": -0.0016306709730997682
+      },
+      {
+        "token": ".",
+        "logprob": -0.08327659219503403
+      },
+      {
+        "token": " Pap",
+        "logprob": -0.0037094582803547382
+      },
+      {
+        "token": "à",
+        "logprob": -1.5048530030981055e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.008657592348754406
+      },
+      {
+        "token": " manca",
+        "logprob": -0.0006463141762651503
+      },
+      {
+        "token": " la",
+        "logprob": -7.600714161526412e-05
+      },
+      {
+        "token": " val",
+        "logprob": -4.0126840758603066e-05
+      },
+      {
+        "token": "igia",
+        "logprob": -0.00013905855303164572
+      },
+      {
+        "token": ".",
+        "logprob": -0.05398206040263176
+      },
+      {
+        "token": " Ah",
+        "logprob": -0.0013932115398347378
+      },
+      {
+        "token": " già",
+        "logprob": -0.0003421375877223909
+      },
+      {
+        "token": ",",
+        "logprob": -0.8595471978187561
+      },
+      {
+        "token": " una",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " volta",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " prov",
+        "logprob": -0.0022059278562664986
+      },
+      {
+        "token": "ate",
+        "logprob": -0.0032805022783577442
+      },
+      {
+        "token": " non",
+        "logprob": -0.2014700472354889
+      },
+      {
+        "token": " puoi",
+        "logprob": -2.2603901015827432e-05
+      },
+      {
+        "token": " più",
+        "logprob": -8.2994620242971e-06
+      },
+      {
+        "token": " diment",
+        "logprob": -1.1875571544806007e-05
+      },
+      {
+        "token": "icar",
+        "logprob": -0.00047988566802814603
+      },
+      {
+        "token": "le",
+        "logprob": -8.41866585687967e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.017604511231184006
+      },
+      {
+        "token": " L",
+        "logprob": -0.002041890751570463
+      },
+      {
+        "token": "ays",
+        "logprob": -3.881560041918419e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.04473084956407547
+      },
+      {
+        "token": " life",
+        "logprob": -0.5822222828865051
+      },
+      {
+        "token": " needs",
+        "logprob": -0.008593414910137653
+      },
+      {
+        "token": " flavor",
+        "logprob": -0.023465123027563095
+      },
+      {
+        "token": ".",
+        "logprob": -0.041068185120821
+      },
+      {
+        "token": " Si",
+        "logprob": -0.001218451652675867
+      },
+      {
+        "token": " s",
+        "logprob": -6.869017852295656e-06
+      },
+      {
+        "token": "bloc",
+        "logprob": -5.848420551046729e-05
+      },
+      {
+        "token": "ca",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " con",
+        "logprob": 0.0
+      },
+      {
+        "token": " uno",
+        "logprob": -7.493430894101039e-05
+      },
+      {
+        "token": " s",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": "gu",
+        "logprob": 0.0
+      },
+      {
+        "token": "ardo",
+        "logprob": 0.0
+      },
+      {
+        "token": " e",
+        "logprob": -0.09586259722709656
+      },
+      {
+        "token": " si",
+        "logprob": -0.029755352064967155
+      },
+      {
+        "token": " av",
+        "logprob": -9.996708104154095e-05
+      },
+      {
+        "token": "via",
+        "logprob": -0.0002470350591465831
+      },
+      {
+        "token": " un",
+        "logprob": -2.2007883671903983e-05
+      },
+      {
+        "token": " video",
+        "logprob": -6.146429223008454e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.3675791919231415
+      },
+      {
+        "token": " sembra",
+        "logprob": -7.703443770878948e-06
+      },
+      {
+        "token": " di",
+        "logprob": -6.396757089532912e-05
+      },
+      {
+        "token": " essere",
+        "logprob": -5.7292167184641585e-05
+      },
+      {
+        "token": " al",
+        "logprob": -1.7120533811976202e-05
+      },
+      {
+        "token": " cinema",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.0006707399734295905
+      },
+      {
+        "token": " In",
+        "logprob": -0.00020747410599142313
+      },
+      {
+        "token": " cert",
+        "logprob": -1.0087516784551553e-05
+      },
+      {
+        "token": "i",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " moment",
+        "logprob": -1.8312570318812504e-05
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": " mi",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " ch",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": "iedo",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.0036853551864624023
+      },
+      {
+        "token": " ma",
+        "logprob": -6.392202976712724e-06
+      },
+      {
+        "token": " questo",
+        "logprob": -2.696889623621246e-06
+      },
+      {
+        "token": " smartphone",
+        "logprob": -3.8889261304575484e-06
+      },
+      {
+        "token": " l",
+        "logprob": -0.007267852313816547
+      },
+      {
+        "token": "'ho",
+        "logprob": -0.0016555405454710126
+      },
+      {
+        "token": " pag",
+        "logprob": -9.849109119386412e-06
+      },
+      {
+        "token": "ato",
+        "logprob": 0.0
+      },
+      {
+        "token": " proprio",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " così",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.5845619440078735
+      },
+      {
+        "token": " In",
+        "logprob": -0.22825096547603607
+      },
+      {
+        "token": "cred",
+        "logprob": -0.00018101456225849688
+      },
+      {
+        "token": "ibile",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.00997528713196516
+      },
+      {
+        "token": " è",
+        "logprob": -0.00011868205183418468
+      },
+      {
+        "token": " nel",
+        "logprob": -0.00022094044834375381
+      },
+      {
+        "token": " prezzo",
+        "logprob": -0.0007712708320468664
+      },
+      {
+        "token": "!",
+        "logprob": -0.08052883297204971
+      }
+    ]
+  },
+  "./Videos/Video75.mp4": {
+    "text": "Va bene, semplicemente si appoggia sui dentini dietro e si spinge.",
+    "segments": [
+      {
+        "token": "Va",
+        "logprob": -1.6012306213378906
+      },
+      {
+        "token": " bene",
+        "logprob": -7.576873758807778e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.76018887758255
+      },
+      {
+        "token": " semplic",
+        "logprob": -0.7062063217163086
+      },
+      {
+        "token": "emente",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " si",
+        "logprob": -0.0020082220435142517
+      },
+      {
+        "token": " app",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "ogg",
+        "logprob": -0.0007123126997612417
+      },
+      {
+        "token": "ia",
+        "logprob": -0.0002627662615850568
+      },
+      {
+        "token": " sui",
+        "logprob": -0.0006349971517920494
+      },
+      {
+        "token": " dent",
+        "logprob": -8.061054359131958e-06
+      },
+      {
+        "token": "ini",
+        "logprob": -0.003187339985743165
+      },
+      {
+        "token": " diet",
+        "logprob": -0.0045225657522678375
+      },
+      {
+        "token": "ro",
+        "logprob": -5.200166469876422e-06
+      },
+      {
+        "token": " e",
+        "logprob": -0.6545543074607849
+      },
+      {
+        "token": " si",
+        "logprob": -0.0004378214362077415
+      },
+      {
+        "token": " sp",
+        "logprob": -0.0019001978216692805
+      },
+      {
+        "token": "inge",
+        "logprob": -0.0006516746943816543
+      },
+      {
+        "token": ".",
+        "logprob": -0.07046885043382645
+      }
+    ]
+  },
+  "./Videos/Video76.mp4": {
+    "text": "La mia casa è molto bella.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.3771438598632812
+      },
+      {
+        "token": " mia",
+        "logprob": -1.9396324157714844
+      },
+      {
+        "token": " casa",
+        "logprob": -1.8513274192810059
+      },
+      {
+        "token": " è",
+        "logprob": -0.13029496371746063
+      },
+      {
+        "token": " molto",
+        "logprob": -1.2838571071624756
+      },
+      {
+        "token": " bella",
+        "logprob": -0.8622758388519287
+      },
+      {
+        "token": ".",
+        "logprob": -0.06046662479639053
+      }
+    ]
+  },
+  "./Videos/Video77.mp4": {
+    "text": "La mia casa è molto grande.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.9957839250564575
+      },
+      {
+        "token": " mia",
+        "logprob": -2.8537323474884033
+      },
+      {
+        "token": " casa",
+        "logprob": -2.272907257080078
+      },
+      {
+        "token": " è",
+        "logprob": -0.16152068972587585
+      },
+      {
+        "token": " molto",
+        "logprob": -0.9765109419822693
+      },
+      {
+        "token": " grande",
+        "logprob": -0.9825921654701233
+      },
+      {
+        "token": ".",
+        "logprob": -0.07455446571111679
+      }
+    ]
+  },
+  "./Videos/Video78.mp4": {
+    "text": "La mia casa è bella.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.8576875925064087
+      },
+      {
+        "token": " mia",
+        "logprob": -1.400469422340393
+      },
+      {
+        "token": " casa",
+        "logprob": -1.3475158214569092
+      },
+      {
+        "token": " è",
+        "logprob": -0.3987313210964203
+      },
+      {
+        "token": " bella",
+        "logprob": -0.6412359476089478
+      },
+      {
+        "token": ".",
+        "logprob": -0.027852950617671013
+      }
+    ]
+  },
+  "./Videos/Video79.mp4": {
+    "text": "Buona colazione! Ma dove siamo? Al bar da papà? E cosa vi ha preparato il papà? Cappuccino. La torta. Questa torta è uno spoiler. Non bisogna dire molto di questa torta. Abbiamo festeggiato qualcosa, vero? E tu, cappuccino? La mangi la tortina anche tu? È buono il cappuccino che fa il papà? Sì? Allora buona domenica! Grazie, ciao! Ciao, ciao!",
+    "segments": [
+      {
+        "token": "Bu",
+        "logprob": -0.0009149204124696553
+      },
+      {
+        "token": "ona",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " col",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "azione",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.025647861883044243
+      },
+      {
+        "token": " Ma",
+        "logprob": -0.005390518810600042
+      },
+      {
+        "token": " dove",
+        "logprob": -0.0001601539261173457
+      },
+      {
+        "token": " siamo",
+        "logprob": -0.023270171135663986
+      },
+      {
+        "token": "?",
+        "logprob": -0.252416729927063
+      },
+      {
+        "token": " Al",
+        "logprob": -9.901345038088039e-05
+      },
+      {
+        "token": " bar",
+        "logprob": -0.0158290583640337
+      },
+      {
+        "token": " da",
+        "logprob": -0.033301692456007004
+      },
+      {
+        "token": " pap",
+        "logprob": -0.00010783452307805419
+      },
+      {
+        "token": "à",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.0011212840909138322
+      },
+      {
+        "token": " E",
+        "logprob": -3.91732100979425e-05
+      },
+      {
+        "token": " cosa",
+        "logprob": -0.0015047440538182855
+      },
+      {
+        "token": " vi",
+        "logprob": -0.499815434217453
+      },
+      {
+        "token": " ha",
+        "logprob": -0.10040248185396194
+      },
+      {
+        "token": " prepar",
+        "logprob": -8.65707261255011e-06
+      },
+      {
+        "token": "ato",
+        "logprob": 0.0
+      },
+      {
+        "token": " il",
+        "logprob": -0.00013488641707226634
+      },
+      {
+        "token": " pap",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "à",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.002199621172621846
+      },
+      {
+        "token": " Capp",
+        "logprob": -0.00506878737360239
+      },
+      {
+        "token": "uccino",
+        "logprob": -3.047134305234067e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.8388665914535522
+      },
+      {
+        "token": " La",
+        "logprob": -0.5128664374351501
+      },
+      {
+        "token": " tort",
+        "logprob": -5.319370302458992e-06
+      },
+      {
+        "token": "a",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.29562824964523315
+      },
+      {
+        "token": " Questa",
+        "logprob": -0.00020497082732617855
+      },
+      {
+        "token": " tort",
+        "logprob": -2.176947600673884e-05
+      },
+      {
+        "token": "a",
+        "logprob": 0.0
+      },
+      {
+        "token": " è",
+        "logprob": -4.1557283111615106e-05
+      },
+      {
+        "token": " uno",
+        "logprob": -0.00010449681576574221
+      },
+      {
+        "token": " spoiler",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.3198028802871704
+      },
+      {
+        "token": " Non",
+        "logprob": -0.5874995589256287
+      },
+      {
+        "token": " bisog",
+        "logprob": -0.0005725711234845221
+      },
+      {
+        "token": "na",
+        "logprob": 0.0
+      },
+      {
+        "token": " dire",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": " molto",
+        "logprob": -2.696889623621246e-06
+      },
+      {
+        "token": " di",
+        "logprob": -0.0032089652959257364
+      },
+      {
+        "token": " questa",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " tort",
+        "logprob": 0.0
+      },
+      {
+        "token": "a",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.008746586740016937
+      },
+      {
+        "token": " Abb",
+        "logprob": -9.889424836728722e-05
+      },
+      {
+        "token": "iamo",
+        "logprob": 0.0
+      },
+      {
+        "token": " fest",
+        "logprob": -0.0003921847674064338
+      },
+      {
+        "token": "eg",
+        "logprob": 0.0
+      },
+      {
+        "token": "gi",
+        "logprob": 0.0
+      },
+      {
+        "token": "ato",
+        "logprob": 0.0
+      },
+      {
+        "token": " qualcosa",
+        "logprob": -2.5776860184123507e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.00013524403038900346
+      },
+      {
+        "token": " vero",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.00016313401283696294
+      },
+      {
+        "token": " E",
+        "logprob": -0.001091639045625925
+      },
+      {
+        "token": " tu",
+        "logprob": -1.6166903151315637e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.599009096622467
+      },
+      {
+        "token": " capp",
+        "logprob": -0.016803160309791565
+      },
+      {
+        "token": "uccino",
+        "logprob": -2.9875325708417222e-05
+      },
+      {
+        "token": "?",
+        "logprob": -5.455048449221067e-05
+      },
+      {
+        "token": " La",
+        "logprob": -0.004932258743792772
+      },
+      {
+        "token": " mang",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": "i",
+        "logprob": -3.690834273584187e-05
+      },
+      {
+        "token": " la",
+        "logprob": -0.0041020275093615055
+      },
+      {
+        "token": " tort",
+        "logprob": -3.392824874026701e-05
+      },
+      {
+        "token": "ina",
+        "logprob": -1.9385402993066236e-05
+      },
+      {
+        "token": " anche",
+        "logprob": -8.590104698669165e-05
+      },
+      {
+        "token": " tu",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "?",
+        "logprob": -3.666993507067673e-05
+      },
+      {
+        "token": " È",
+        "logprob": -0.2283129096031189
+      },
+      {
+        "token": " bu",
+        "logprob": -0.0006047414499334991
+      },
+      {
+        "token": "ono",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " il",
+        "logprob": -4.274932143744081e-05
+      },
+      {
+        "token": " capp",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": "uccino",
+        "logprob": -1.6240566083070007e-06
+      },
+      {
+        "token": " che",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": " fa",
+        "logprob": -0.0024801772087812424
+      },
+      {
+        "token": " il",
+        "logprob": -2.3080716346157715e-05
+      },
+      {
+        "token": " pap",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "à",
+        "logprob": 0.0
+      },
+      {
+        "token": "?",
+        "logprob": -1.8312570318812504e-05
+      },
+      {
+        "token": " S",
+        "logprob": -0.16033054888248444
+      },
+      {
+        "token": "ì",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.01737702637910843
+      },
+      {
+        "token": " All",
+        "logprob": -3.166338137816638e-05
+      },
+      {
+        "token": "ora",
+        "logprob": 0.0
+      },
+      {
+        "token": " buona",
+        "logprob": -0.03811848908662796
+      },
+      {
+        "token": " domen",
+        "logprob": -7.52919222577475e-05
+      },
+      {
+        "token": "ica",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.11092110723257065
+      },
+      {
+        "token": " Gra",
+        "logprob": -0.31500378251075745
+      },
+      {
+        "token": "zie",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.014500876888632774
+      },
+      {
+        "token": " c",
+        "logprob": 0.0
+      },
+      {
+        "token": "iao",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.04908052459359169
+      },
+      {
+        "token": " C",
+        "logprob": -0.1404363512992859
+      },
+      {
+        "token": "iao",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.7346551418304443
+      },
+      {
+        "token": " c",
+        "logprob": -1.0325924449716695e-05
+      },
+      {
+        "token": "iao",
+        "logprob": 0.0
+      },
+      {
+        "token": "!",
+        "logprob": -0.005753153003752232
+      }
+    ]
+  },
+  "./Videos/Video80.mp4": {
+    "text": "La musica è bella.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.0121116638183594
+      },
+      {
+        "token": " musica",
+        "logprob": -2.5685713291168213
+      },
+      {
+        "token": " è",
+        "logprob": -0.5631967782974243
+      },
+      {
+        "token": " bella",
+        "logprob": -1.7772982120513916
+      },
+      {
+        "token": ".",
+        "logprob": -0.13249129056930542
+      }
+    ]
+  },
+  "./Videos/Video81.mp4": {
+    "text": "Questo è il mio.",
+    "segments": [
+      {
+        "token": "Questo",
+        "logprob": -2.007894992828369
+      },
+      {
+        "token": " è",
+        "logprob": -0.5576747059822083
+      },
+      {
+        "token": " il",
+        "logprob": -1.670188307762146
+      },
+      {
+        "token": " mio",
+        "logprob": -1.49190092086792
+      },
+      {
+        "token": ".",
+        "logprob": -2.1771323680877686
+      }
+    ]
+  },
+  "./Videos/Video82.mp4": {
+    "text": "Il film è stato diretto da.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.8723559379577637
+      },
+      {
+        "token": " film",
+        "logprob": -2.7938804626464844
+      },
+      {
+        "token": " è",
+        "logprob": -0.7696875333786011
+      },
+      {
+        "token": " stato",
+        "logprob": -0.8654647469520569
+      },
+      {
+        "token": " diret",
+        "logprob": -0.6841736435890198
+      },
+      {
+        "token": "to",
+        "logprob": -3.857719275401905e-05
+      },
+      {
+        "token": " da",
+        "logprob": -0.5129593014717102
+      },
+      {
+        "token": ".",
+        "logprob": -1.0840424299240112
+      }
+    ]
+  },
+  "./Videos/Video83.mp4": {
+    "text": "Il tamburo è uno strumento musicale.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.6021479368209839
+      },
+      {
+        "token": " tamb",
+        "logprob": -1.8106374740600586
+      },
+      {
+        "token": "uro",
+        "logprob": -0.10476463288068771
+      },
+      {
+        "token": " è",
+        "logprob": -0.7507637143135071
+      },
+      {
+        "token": " uno",
+        "logprob": -0.20020748674869537
+      },
+      {
+        "token": " str",
+        "logprob": -0.11877761036157608
+      },
+      {
+        "token": "umento",
+        "logprob": -9.253090865968261e-06
+      },
+      {
+        "token": " musicale",
+        "logprob": -0.4651450216770172
+      },
+      {
+        "token": ".",
+        "logprob": -0.3549001216888428
+      }
+    ]
+  },
+  "./Videos/Video84.mp4": {
+    "text": "Fasi boccia! Fasi boccia!",
+    "segments": [
+      {
+        "token": "F",
+        "logprob": -0.1578507274389267
+      },
+      {
+        "token": "asi",
+        "logprob": -1.1848845481872559
+      },
+      {
+        "token": " boc",
+        "logprob": -0.1009674146771431
+      },
+      {
+        "token": "cia",
+        "logprob": -0.0010282850125804543
+      },
+      {
+        "token": "!",
+        "logprob": -0.8217282891273499
+      },
+      {
+        "token": " F",
+        "logprob": -0.6587322950363159
+      },
+      {
+        "token": "asi",
+        "logprob": -0.00032831361750140786
+      },
+      {
+        "token": " boc",
+        "logprob": -0.000343210413120687
+      },
+      {
+        "token": "cia",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": "!",
+        "logprob": -0.11899734288454056
+      }
+    ]
+  },
+  "./Videos/Video85.mp4": {
+    "text": "Il ristorante era affollato.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.6375267505645752
+      },
+      {
+        "token": " r",
+        "logprob": -2.1602859497070312
+      },
+      {
+        "token": "istorante",
+        "logprob": -0.02905099466443062
+      },
+      {
+        "token": " era",
+        "logprob": -0.8800876140594482
+      },
+      {
+        "token": " aff",
+        "logprob": -0.8615498542785645
+      },
+      {
+        "token": "oll",
+        "logprob": -6.372916686814278e-05
+      },
+      {
+        "token": "ato",
+        "logprob": -0.00043448375072330236
+      },
+      {
+        "token": ".",
+        "logprob": -0.13177528977394104
+      }
+    ]
+  },
+  "./Videos/Video86.mp4": {
+    "text": "Non te la pago, guarda.",
+    "segments": [
+      {
+        "token": "Non",
+        "logprob": -1.807798147201538
+      },
+      {
+        "token": " te",
+        "logprob": -1.284448504447937
+      },
+      {
+        "token": " la",
+        "logprob": -0.6863192319869995
+      },
+      {
+        "token": " pago",
+        "logprob": -1.32265043258667
+      },
+      {
+        "token": ",",
+        "logprob": -0.5041483044624329
+      },
+      {
+        "token": " guarda",
+        "logprob": -0.28434085845947266
+      },
+      {
+        "token": ".",
+        "logprob": -0.49480685591697693
+      }
+    ]
+  },
+  "./Videos/Video87.mp4": {
+    "text": "Il latte che viene munto finisce dentro a quel secchio.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -0.46594980359077454
+      },
+      {
+        "token": " latte",
+        "logprob": -4.961759259458631e-06
+      },
+      {
+        "token": " che",
+        "logprob": -0.004171356093138456
+      },
+      {
+        "token": " viene",
+        "logprob": -2.3557529857498594e-05
+      },
+      {
+        "token": " mun",
+        "logprob": -3.976922744186595e-05
+      },
+      {
+        "token": "to",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " fin",
+        "logprob": -0.00026169343618676066
+      },
+      {
+        "token": "isce",
+        "logprob": 0.0
+      },
+      {
+        "token": " dentro",
+        "logprob": -3.531315314830863e-06
+      },
+      {
+        "token": " a",
+        "logprob": -0.014171031303703785
+      },
+      {
+        "token": " quel",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": " sec",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": "chio",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.47649142146110535
+      }
+    ]
+  },
+  "./Videos/Video88.mp4": {
+    "text": "La musica è finita.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.1723735332489014
+      },
+      {
+        "token": " musica",
+        "logprob": -2.68013072013855
+      },
+      {
+        "token": " è",
+        "logprob": -0.9994650483131409
+      },
+      {
+        "token": " fin",
+        "logprob": -1.553425908088684
+      },
+      {
+        "token": "ita",
+        "logprob": -0.0010725847678259015
+      },
+      {
+        "token": ".",
+        "logprob": -0.0823301151394844
+      }
+    ]
+  },
+  "./Videos/Video89.mp4": {
+    "text": "Molto bene Antonio Tiberi, avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare, forse gli ha detto ce la fai ancora tirare un po' o devo partire? E Michael gli ha detto sì, forse ce la faccio ancora per tirare. Una cinquantina di secondi l'avvantaggio di Pellizzari nei confronti di questa prima parte del gruppo della Maglia Rosa, ce la fa.",
+    "segments": [
+      {
+        "token": "Mol",
+        "logprob": -0.007654188666492701
+      },
+      {
+        "token": "to",
+        "logprob": 0.0
+      },
+      {
+        "token": " bene",
+        "logprob": -4.246537173457909e-06
+      },
+      {
+        "token": " Antonio",
+        "logprob": -0.00864175520837307
+      },
+      {
+        "token": " T",
+        "logprob": -1.9266199160483666e-05
+      },
+      {
+        "token": "iber",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "i",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.10537613183259964
+      },
+      {
+        "token": " avete",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": " visto",
+        "logprob": 0.0
+      },
+      {
+        "token": " che",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " ha",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " cerc",
+        "logprob": 0.0
+      },
+      {
+        "token": "ato",
+        "logprob": 0.0
+      },
+      {
+        "token": " senza",
+        "logprob": -0.029797818511724472
+      },
+      {
+        "token": " andare",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " fuori",
+        "logprob": -0.014242835342884064
+      },
+      {
+        "token": " g",
+        "logprob": -0.0052360063418745995
+      },
+      {
+        "token": "iri",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": -0.001505578518845141
+      },
+      {
+        "token": " stare",
+        "logprob": -2.2200749754119897e-06
+      },
+      {
+        "token": " nella",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " sc",
+        "logprob": -1.4021237802808173e-05
+      },
+      {
+        "token": "ia",
+        "logprob": 0.0
+      },
+      {
+        "token": " dei",
+        "logprob": -1.7432603272027336e-06
+      },
+      {
+        "token": " corr",
+        "logprob": -0.0006452414090745151
+      },
+      {
+        "token": "id",
+        "logprob": -1.0206720617134124e-05
+      },
+      {
+        "token": "ori",
+        "logprob": 0.0
+      },
+      {
+        "token": " al",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": " comando",
+        "logprob": -0.0001434690784662962
+      },
+      {
+        "token": " e",
+        "logprob": -0.002656989498063922
+      },
+      {
+        "token": " Tr",
+        "logprob": -0.1234128475189209
+      },
+      {
+        "token": "amp",
+        "logprob": -0.04278014972805977
+      },
+      {
+        "token": "osi",
+        "logprob": -1.0021742582321167
+      },
+      {
+        "token": " continua",
+        "logprob": -0.016531404107809067
+      },
+      {
+        "token": " a",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": " parlare",
+        "logprob": -1.0280383548888494e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.3931073546409607
+      },
+      {
+        "token": " forse",
+        "logprob": -1.8074162653647363e-05
+      },
+      {
+        "token": " gli",
+        "logprob": -0.00039051592466421425
+      },
+      {
+        "token": " ha",
+        "logprob": -1.8624639324116288e-06
+      },
+      {
+        "token": " detto",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " ce",
+        "logprob": -0.051176611334085464
+      },
+      {
+        "token": " la",
+        "logprob": -6.2729995988775045e-06
+      },
+      {
+        "token": " fai",
+        "logprob": -0.00026622318546287715
+      },
+      {
+        "token": " ancora",
+        "logprob": -2.8206473871250637e-05
+      },
+      {
+        "token": " tir",
+        "logprob": -0.3993754982948303
+      },
+      {
+        "token": "are",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": " un",
+        "logprob": -0.004265608265995979
+      },
+      {
+        "token": " po",
+        "logprob": -1.4617256056226324e-05
+      },
+      {
+        "token": "'",
+        "logprob": -0.00027933192905038595
+      },
+      {
+        "token": " o",
+        "logprob": -4.8828707804204896e-05
+      },
+      {
+        "token": " devo",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " partire",
+        "logprob": 0.0
+      },
+      {
+        "token": "?",
+        "logprob": -0.044234748929739
+      },
+      {
+        "token": " E",
+        "logprob": -0.019946448504924774
+      },
+      {
+        "token": " Michael",
+        "logprob": -0.04723253473639488
+      },
+      {
+        "token": " gli",
+        "logprob": -0.04863335192203522
+      },
+      {
+        "token": " ha",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " detto",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " sì",
+        "logprob": -0.003928675781935453
+      },
+      {
+        "token": ",",
+        "logprob": -0.6932173371315002
+      },
+      {
+        "token": " forse",
+        "logprob": -2.2200749754119897e-06
+      },
+      {
+        "token": " ce",
+        "logprob": -6.034592388459714e-06
+      },
+      {
+        "token": " la",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " fac",
+        "logprob": -6.349075556499884e-05
+      },
+      {
+        "token": "cio",
+        "logprob": -5.955703818472102e-05
+      },
+      {
+        "token": " ancora",
+        "logprob": -4.008129963040119e-06
+      },
+      {
+        "token": " per",
+        "logprob": -0.006888361647725105
+      },
+      {
+        "token": " tir",
+        "logprob": -0.0001049736310960725
+      },
+      {
+        "token": "are",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.02525191567838192
+      },
+      {
+        "token": " Una",
+        "logprob": -0.0005006087594665587
+      },
+      {
+        "token": " cin",
+        "logprob": -4.215330409351736e-05
+      },
+      {
+        "token": "quant",
+        "logprob": 0.0
+      },
+      {
+        "token": "ina",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": " di",
+        "logprob": 0.0
+      },
+      {
+        "token": " second",
+        "logprob": -3.4121114822482923e-06
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": " l",
+        "logprob": -1.0482869148254395
+      },
+      {
+        "token": "'av",
+        "logprob": -0.07657695561647415
+      },
+      {
+        "token": "vant",
+        "logprob": -1.9504606825648807e-05
+      },
+      {
+        "token": "aggio",
+        "logprob": -2.45848218582978e-06
+      },
+      {
+        "token": " di",
+        "logprob": -0.0015153385465964675
+      },
+      {
+        "token": " Pell",
+        "logprob": -0.001985852373763919
+      },
+      {
+        "token": "izz",
+        "logprob": -1.8074162653647363e-05
+      },
+      {
+        "token": "ari",
+        "logprob": -0.0008981237770058215
+      },
+      {
+        "token": " nei",
+        "logprob": -2.2200749754119897e-06
+      },
+      {
+        "token": " confront",
+        "logprob": -4.4849443838757e-06
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": -7.827200897736475e-05
+      },
+      {
+        "token": " questa",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " prima",
+        "logprob": -1.8624639324116288e-06
+      },
+      {
+        "token": " parte",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " del",
+        "logprob": -0.003191501135006547
+      },
+      {
+        "token": " gruppo",
+        "logprob": -4.692145012086257e-05
+      },
+      {
+        "token": " della",
+        "logprob": -2.939851037808694e-05
+      },
+      {
+        "token": " Mag",
+        "logprob": -0.006797439884394407
+      },
+      {
+        "token": "lia",
+        "logprob": -0.00012713817704934627
+      },
+      {
+        "token": " Rosa",
+        "logprob": -2.7968066206085496e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.28072676062583923
+      },
+      {
+        "token": " ce",
+        "logprob": -0.00019662656995933503
+      },
+      {
+        "token": " la",
+        "logprob": -1.8624639324116288e-06
+      },
+      {
+        "token": " fa",
+        "logprob": -0.000297685619443655
+      },
+      {
+        "token": ".",
+        "logprob": -0.8562363982200623
+      }
+    ]
+  },
+  "./Videos/Video90.mp4": {
+    "text": "Con te cammino, Signore.",
+    "segments": [
+      {
+        "token": "Con",
+        "logprob": -1.4963243007659912
+      },
+      {
+        "token": " te",
+        "logprob": -1.7052037715911865
+      },
+      {
+        "token": " cam",
+        "logprob": -0.6450818777084351
+      },
+      {
+        "token": "mino",
+        "logprob": -0.0038275104016065598
+      },
+      {
+        "token": ",",
+        "logprob": -0.2052977830171585
+      },
+      {
+        "token": " Sign",
+        "logprob": -0.0009486184571869671
+      },
+      {
+        "token": "ore",
+        "logprob": -3.082895273109898e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.40389302372932434
+      }
+    ]
+  },
+  "./Videos/Video91.mp4": {
+    "text": "Dottore, potete chiedere a lei se avete questo farmaco?",
+    "segments": [
+      {
+        "token": "D",
+        "logprob": -0.11199335008859634
+      },
+      {
+        "token": "ott",
+        "logprob": -0.00014299227041192353
+      },
+      {
+        "token": "ore",
+        "logprob": -7.24310302757658e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.012418059632182121
+      },
+      {
+        "token": " pot",
+        "logprob": -0.9743428230285645
+      },
+      {
+        "token": "ete",
+        "logprob": -0.15625666081905365
+      },
+      {
+        "token": " chied",
+        "logprob": -0.15065553784370422
+      },
+      {
+        "token": "ere",
+        "logprob": -5.3120038501219824e-05
+      },
+      {
+        "token": " a",
+        "logprob": -0.005284038372337818
+      },
+      {
+        "token": " lei",
+        "logprob": -0.0007929548737592995
+      },
+      {
+        "token": " se",
+        "logprob": -0.06218334659934044
+      },
+      {
+        "token": " avete",
+        "logprob": -0.0014395194593816996
+      },
+      {
+        "token": " questo",
+        "logprob": -2.696889623621246e-06
+      },
+      {
+        "token": " farm",
+        "logprob": -2.2603901015827432e-05
+      },
+      {
+        "token": "aco",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "?",
+        "logprob": -0.10737254470586777
+      }
+    ]
+  },
+  "./Videos/Video92.mp4": {
+    "text": "Buongiorno, cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito e una bottiglia da mezzo litro di olio.",
+    "segments": [
+      {
+        "token": "Bu",
+        "logprob": -1.1398757123970427e-05
+      },
+      {
+        "token": "ong",
+        "logprob": 0.0
+      },
+      {
+        "token": "ior",
+        "logprob": 0.0
+      },
+      {
+        "token": "no",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.7296820878982544
+      },
+      {
+        "token": " cosa",
+        "logprob": -0.06749476492404938
+      },
+      {
+        "token": " desider",
+        "logprob": -1.3856492842023727e-06
+      },
+      {
+        "token": "ate",
+        "logprob": -1.3856492842023727e-06
+      },
+      {
+        "token": "?",
+        "logprob": -0.03218124434351921
+      },
+      {
+        "token": " Vor",
+        "logprob": -0.0008430993184447289
+      },
+      {
+        "token": "rem",
+        "logprob": -4.961759259458631e-06
+      },
+      {
+        "token": "mo",
+        "logprob": 0.0
+      },
+      {
+        "token": " un",
+        "logprob": -8.2994620242971e-06
+      },
+      {
+        "token": " ch",
+        "logprob": -1.7432603272027336e-06
+      },
+      {
+        "token": "ilo",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": 0.0
+      },
+      {
+        "token": " far",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "ina",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.0005606581107713282
+      },
+      {
+        "token": " una",
+        "logprob": -3.607391408877447e-05
+      },
+      {
+        "token": " scat",
+        "logprob": 0.0
+      },
+      {
+        "token": "ola",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": -3.7697225252486533e-06
+      },
+      {
+        "token": " pom",
+        "logprob": -1.676292231422849e-05
+      },
+      {
+        "token": "od",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": "ori",
+        "logprob": 0.0
+      },
+      {
+        "token": " e",
+        "logprob": -6.0391463193809614e-05
+      },
+      {
+        "token": " due",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " mozz",
+        "logprob": -0.4742993712425232
+      },
+      {
+        "token": "are",
+        "logprob": -7.896309739408025e-07
+      },
+      {
+        "token": "lle",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.14633135497570038
+      },
+      {
+        "token": " Anche",
+        "logprob": -0.000181372175575234
+      },
+      {
+        "token": " un",
+        "logprob": 0.0
+      },
+      {
+        "token": " po",
+        "logprob": 0.0
+      },
+      {
+        "token": "'",
+        "logprob": -1.9623810658231378e-05
+      },
+      {
+        "token": " di",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " lie",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "v",
+        "logprob": 0.0
+      },
+      {
+        "token": "ito",
+        "logprob": 0.0
+      },
+      {
+        "token": " e",
+        "logprob": -0.1802462786436081
+      },
+      {
+        "token": " una",
+        "logprob": 0.0
+      },
+      {
+        "token": " bott",
+        "logprob": -4.179569077678025e-05
+      },
+      {
+        "token": "iglia",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": " da",
+        "logprob": -1.0325924449716695e-05
+      },
+      {
+        "token": " mezzo",
+        "logprob": -5.9153885558771435e-06
+      },
+      {
+        "token": " litro",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": " di",
+        "logprob": -1.676292231422849e-05
+      },
+      {
+        "token": " ol",
+        "logprob": 0.0
+      },
+      {
+        "token": "io",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.0003670364967547357
+      }
+    ]
+  },
+  "./Videos/Video93.mp4": {
+    "text": "La musica è un linguaggio universale.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -1.5066190958023071
+      },
+      {
+        "token": " musica",
+        "logprob": -2.047373056411743
+      },
+      {
+        "token": " è",
+        "logprob": -1.0390485525131226
+      },
+      {
+        "token": " un",
+        "logprob": -1.939157485961914
+      },
+      {
+        "token": " lingu",
+        "logprob": -0.19206823408603668
+      },
+      {
+        "token": "aggio",
+        "logprob": -1.2113979209971149e-05
+      },
+      {
+        "token": " univers",
+        "logprob": -0.005785162560641766
+      },
+      {
+        "token": "ale",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.11124956607818604
+      }
+    ]
+  },
+  "./Videos/Video94.mp4": {
+    "text": "Se vi mettete dove state, questa ha una buona continuità di legno. Man mano che sali si restringe e se è vero questo dal punto di vista del principio dei vasi comunicanti, tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo... tu ti fermi adesso. Non lo so, se con altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato. Cioè nel senso che questa è una pianta, qui abbiamo ridato una continuità di legno.",
+    "segments": [
+      {
+        "token": "Se",
+        "logprob": -0.040013544261455536
+      },
+      {
+        "token": " vi",
+        "logprob": -0.009972813539206982
+      },
+      {
+        "token": " mett",
+        "logprob": -8.387458365177736e-05
+      },
+      {
+        "token": "ete",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " dove",
+        "logprob": -0.00016587569552939385
+      },
+      {
+        "token": " state",
+        "logprob": -2.7372048862162046e-05
+      },
+      {
+        "token": ",",
+        "logprob": -0.16047371923923492
+      },
+      {
+        "token": " questa",
+        "logprob": -4.2987729102605954e-05
+      },
+      {
+        "token": " ha",
+        "logprob": -3.619311974034645e-05
+      },
+      {
+        "token": " una",
+        "logprob": -1.4259644558478612e-05
+      },
+      {
+        "token": " buona",
+        "logprob": -0.011382372118532658
+      },
+      {
+        "token": " contin",
+        "logprob": -0.00033796546631492674
+      },
+      {
+        "token": "uit",
+        "logprob": -8.061054359131958e-06
+      },
+      {
+        "token": "à",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " di",
+        "logprob": -3.368984107510187e-05
+      },
+      {
+        "token": " leg",
+        "logprob": -0.0015298592625185847
+      },
+      {
+        "token": "no",
+        "logprob": -0.10453498363494873
+      },
+      {
+        "token": ".",
+        "logprob": -0.31618502736091614
+      },
+      {
+        "token": " Man",
+        "logprob": -0.6066974401473999
+      },
+      {
+        "token": " mano",
+        "logprob": -0.13084010779857635
+      },
+      {
+        "token": " che",
+        "logprob": -5.6457742175552994e-05
+      },
+      {
+        "token": " sal",
+        "logprob": -0.13083529472351074
+      },
+      {
+        "token": "i",
+        "logprob": -0.0007878291653469205
+      },
+      {
+        "token": " si",
+        "logprob": -0.003746525151655078
+      },
+      {
+        "token": " restring",
+        "logprob": -0.0012524925405159593
+      },
+      {
+        "token": "e",
+        "logprob": -3.173704271830502e-06
+      },
+      {
+        "token": " e",
+        "logprob": -0.043825920671224594
+      },
+      {
+        "token": " se",
+        "logprob": -0.023471178486943245
+      },
+      {
+        "token": " è",
+        "logprob": -0.000577696890104562
+      },
+      {
+        "token": " vero",
+        "logprob": -1.0206720617134124e-05
+      },
+      {
+        "token": " questo",
+        "logprob": -0.0003694205661304295
+      },
+      {
+        "token": " dal",
+        "logprob": -0.048794813454151154
+      },
+      {
+        "token": " punto",
+        "logprob": -0.0017798993503674865
+      },
+      {
+        "token": " di",
+        "logprob": -6.392202976712724e-06
+      },
+      {
+        "token": " vista",
+        "logprob": -2.339278580620885e-06
+      },
+      {
+        "token": " del",
+        "logprob": -0.6944349408149719
+      },
+      {
+        "token": " principio",
+        "logprob": -0.0005068036844022572
+      },
+      {
+        "token": " dei",
+        "logprob": -0.11063767224550247
+      },
+      {
+        "token": " v",
+        "logprob": -0.0010297117987647653
+      },
+      {
+        "token": "asi",
+        "logprob": -1.5048530030981055e-06
+      },
+      {
+        "token": " comunic",
+        "logprob": -3.2617008400848135e-05
+      },
+      {
+        "token": "anti",
+        "logprob": -0.002497183158993721
+      },
+      {
+        "token": ",",
+        "logprob": -0.029889214783906937
+      },
+      {
+        "token": " tanto",
+        "logprob": -2.939851037808694e-05
+      },
+      {
+        "token": " più",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " si",
+        "logprob": -8.2994620242971e-06
+      },
+      {
+        "token": " sf",
+        "logprob": -0.019206605851650238
+      },
+      {
+        "token": "ila",
+        "logprob": -0.08223019540309906
+      },
+      {
+        "token": ",",
+        "logprob": -0.03870435059070587
+      },
+      {
+        "token": " tanto",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": " più",
+        "logprob": 0.0
+      },
+      {
+        "token": " si",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " fer",
+        "logprob": -0.00013917774776928127
+      },
+      {
+        "token": "ma",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.002942517166957259
+      },
+      {
+        "token": " Questa",
+        "logprob": -0.01846374198794365
+      },
+      {
+        "token": " pi",
+        "logprob": -8.65707261255011e-06
+      },
+      {
+        "token": "anta",
+        "logprob": -1.1472419600977446e-06
+      },
+      {
+        "token": " l",
+        "logprob": -0.008038113825023174
+      },
+      {
+        "token": "'",
+        "logprob": -5.3358446166384965e-05
+      },
+      {
+        "token": "abb",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "iamo",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": "...",
+        "logprob": -0.1997929811477661
+      },
+      {
+        "token": " tu",
+        "logprob": -0.7888427972793579
+      },
+      {
+        "token": " ti",
+        "logprob": -6.034592388459714e-06
+      },
+      {
+        "token": " f",
+        "logprob": -0.001425237045623362
+      },
+      {
+        "token": "ermi",
+        "logprob": -3.011373155459296e-05
+      },
+      {
+        "token": " ad",
+        "logprob": -2.816093228830141e-06
+      },
+      {
+        "token": "esso",
+        "logprob": -4.320199877838604e-07
+      },
+      {
+        "token": ".",
+        "logprob": -0.0948234498500824
+      },
+      {
+        "token": " Non",
+        "logprob": -6.015305552864447e-05
+      },
+      {
+        "token": " lo",
+        "logprob": -0.4572821259498596
+      },
+      {
+        "token": " so",
+        "logprob": -9.968312951968983e-06
+      },
+      {
+        "token": ",",
+        "logprob": -0.6939048171043396
+      },
+      {
+        "token": " se",
+        "logprob": -0.1251794844865799
+      },
+      {
+        "token": " con",
+        "logprob": -0.0327102355659008
+      },
+      {
+        "token": " altro",
+        "logprob": -0.01442638784646988
+      },
+      {
+        "token": " lingu",
+        "logprob": -5.512236498361744e-07
+      },
+      {
+        "token": "aggio",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.6992383599281311
+      },
+      {
+        "token": " non",
+        "logprob": -1.2352385965641588e-05
+      },
+      {
+        "token": " vor",
+        "logprob": -7.3458322731312364e-06
+      },
+      {
+        "token": "rei",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": " usare",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " il",
+        "logprob": -0.02130269818007946
+      },
+      {
+        "token": " lingu",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": "aggio",
+        "logprob": 0.0
+      },
+      {
+        "token": " tecnico",
+        "logprob": -1.9361264946837764e-07
+      },
+      {
+        "token": ",",
+        "logprob": -0.0003926615754608065
+      },
+      {
+        "token": " vog",
+        "logprob": -1.9504606825648807e-05
+      },
+      {
+        "token": "lio",
+        "logprob": 0.0
+      },
+      {
+        "token": " usare",
+        "logprob": -6.704273118884885e-07
+      },
+      {
+        "token": " quello",
+        "logprob": -1.981667537620524e-06
+      },
+      {
+        "token": " immed",
+        "logprob": -1.723973582556937e-05
+      },
+      {
+        "token": "i",
+        "logprob": 0.0
+      },
+      {
+        "token": "ato",
+        "logprob": 0.0
+      },
+      {
+        "token": ".",
+        "logprob": -0.0434146486222744
+      },
+      {
+        "token": " C",
+        "logprob": -0.08367247879505157
+      },
+      {
+        "token": "io",
+        "logprob": -2.935296834039036e-06
+      },
+      {
+        "token": "è",
+        "logprob": 0.0
+      },
+      {
+        "token": " nel",
+        "logprob": -0.029773863032460213
+      },
+      {
+        "token": " senso",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": " che",
+        "logprob": 0.0
+      },
+      {
+        "token": " questa",
+        "logprob": -0.00021676832693628967
+      },
+      {
+        "token": " è",
+        "logprob": -0.0012758307857438922
+      },
+      {
+        "token": " una",
+        "logprob": 0.0
+      },
+      {
+        "token": " pi",
+        "logprob": 0.0
+      },
+      {
+        "token": "anta",
+        "logprob": 0.0
+      },
+      {
+        "token": ",",
+        "logprob": -0.4850603938102722
+      },
+      {
+        "token": " qui",
+        "logprob": -7.803360495017841e-05
+      },
+      {
+        "token": " abbiamo",
+        "logprob": -2.5776860184123507e-06
+      },
+      {
+        "token": " rid",
+        "logprob": -0.003161914646625519
+      },
+      {
+        "token": "ato",
+        "logprob": -5.2762428822461516e-05
+      },
+      {
+        "token": " una",
+        "logprob": -0.0019466065568849444
+      },
+      {
+        "token": " contin",
+        "logprob": -9.088346359931165e-07
+      },
+      {
+        "token": "uit",
+        "logprob": -3.128163257315464e-07
+      },
+      {
+        "token": "à",
+        "logprob": 0.0
+      },
+      {
+        "token": " di",
+        "logprob": -0.00037609596620313823
+      },
+      {
+        "token": " leg",
+        "logprob": -0.0012395139783620834
+      },
+      {
+        "token": "no",
+        "logprob": -0.0021512117236852646
+      },
+      {
+        "token": ".",
+        "logprob": -0.5798718333244324
+      }
+    ]
+  },
+  "./Videos/Video95.mp4": {
+    "text": "Il gatto è sul tetto.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.7795321941375732
+      },
+      {
+        "token": " gat",
+        "logprob": -2.1800925731658936
+      },
+      {
+        "token": "to",
+        "logprob": -6.134509021649137e-05
+      },
+      {
+        "token": " è",
+        "logprob": -1.4467532634735107
+      },
+      {
+        "token": " sul",
+        "logprob": -1.783803105354309
+      },
+      {
+        "token": " tet",
+        "logprob": -1.0947996377944946
+      },
+      {
+        "token": "to",
+        "logprob": -1.4736459888808895e-05
+      },
+      {
+        "token": ".",
+        "logprob": -0.11575225740671158
+      }
+    ]
+  },
+  "./Videos/Video96.mp4": {
+    "text": "Fiori, fiori, fiori del colanno.",
+    "segments": [
+      {
+        "token": "F",
+        "logprob": -0.40020671486854553
+      },
+      {
+        "token": "iori",
+        "logprob": -0.10116835683584213
+      },
+      {
+        "token": ",",
+        "logprob": -1.2516460418701172
+      },
+      {
+        "token": " f",
+        "logprob": -0.15613022446632385
+      },
+      {
+        "token": "iori",
+        "logprob": -0.0005664954078383744
+      },
+      {
+        "token": ",",
+        "logprob": -0.7220938205718994
+      },
+      {
+        "token": " f",
+        "logprob": -0.09640716016292572
+      },
+      {
+        "token": "iori",
+        "logprob": -0.03821970149874687
+      },
+      {
+        "token": " del",
+        "logprob": -1.0343273878097534
+      },
+      {
+        "token": " col",
+        "logprob": -0.9600211381912231
+      },
+      {
+        "token": "anno",
+        "logprob": -0.13329912722110748
+      },
+      {
+        "token": ".",
+        "logprob": -0.4258643686771393
+      }
+    ]
+  },
+  "./Videos/Video97.mp4": {
+    "text": "Il sistema di produzione.",
+    "segments": [
+      {
+        "token": "Il",
+        "logprob": -1.4678462743759155
+      },
+      {
+        "token": " sistema",
+        "logprob": -0.4216185212135315
+      },
+      {
+        "token": " di",
+        "logprob": -0.6436880230903625
+      },
+      {
+        "token": " produzione",
+        "logprob": -0.6055577993392944
+      },
+      {
+        "token": ".",
+        "logprob": -0.6697930693626404
+      }
+    ]
+  },
+  "./Videos/Video98.mp4": {
+    "text": "Sentite quanto pesa.",
+    "segments": [
+      {
+        "token": "Sent",
+        "logprob": -0.13397036492824554
+      },
+      {
+        "token": "ite",
+        "logprob": -0.0005476722144521773
+      },
+      {
+        "token": " quanto",
+        "logprob": -0.018079819157719612
+      },
+      {
+        "token": " pesa",
+        "logprob": -0.04719911143183708
+      },
+      {
+        "token": ".",
+        "logprob": -0.984320342540741
+      }
+    ]
+  },
+  "./Videos/Video99.mp4": {
+    "text": "La città è molto bella.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.0518572330474854
+      },
+      {
+        "token": " città",
+        "logprob": -3.1605052947998047
+      },
+      {
+        "token": " è",
+        "logprob": -0.5093921422958374
+      },
+      {
+        "token": " molto",
+        "logprob": -0.7812660932540894
+      },
+      {
+        "token": " bella",
+        "logprob": -1.1246089935302734
+      },
+      {
+        "token": ".",
+        "logprob": -0.07119782269001007
+      }
+    ]
+  },
+  "./Videos/Video100.mp4": {
+    "text": "La palla rimbalza sul pavimento.",
+    "segments": [
+      {
+        "token": "La",
+        "logprob": -2.0460128784179688
+      },
+      {
+        "token": " p",
+        "logprob": -1.6524738073349
+      },
+      {
+        "token": "alla",
+        "logprob": -0.005264949053525925
+      },
+      {
+        "token": " r",
+        "logprob": -1.1650421619415283
+      },
+      {
+        "token": "imbal",
+        "logprob": -0.014271625317633152
+      },
+      {
+        "token": "za",
+        "logprob": -0.0013207156443968415
+      },
+      {
+        "token": " sul",
+        "logprob": -0.7659298181533813
+      },
+      {
+        "token": " pav",
+        "logprob": -0.6580084562301636
+      },
+      {
+        "token": "imento",
+        "logprob": -6.153795766294934e-06
+      },
+      {
+        "token": ".",
+        "logprob": -0.09346634149551392
+      }
+    ]
+  }
+}

@@ -27,16 +27,27 @@ for media_file in media_file_path:
                 file=video_to_transcribe,
                 language= "it",
                 temperature=0,
-                response_format="text",
+                response_format="json",
+                include=["logprobs"]
                
             )
-        
-        ordered_transcription[media_file] = transcription
+        formatted_transcription = {
+            "text" :transcription.text,
+            "segments": [
+                {
+                "token": token.token,
+                "logprob": token.logprob
+                }
+                for token in transcription.logprobs
+            ]
+        }
+        ordered_transcription[media_file] = formatted_transcription
+        print(formatted_transcription)
         print(f"OK: {media_file}")
     except Exception as e:
         print(f"ERROR: file -> {media_file}: {e}") 
 
 
 
-with open("gpt4otranscribeTranscription.json", "w", encoding="utf-8") as transcription_file:
+with open("gpt4otranscribeVerboseTranscription.json", "w", encoding="utf-8") as transcription_file:
     json.dump(ordered_transcription, transcription_file, ensure_ascii=False, indent=2)
