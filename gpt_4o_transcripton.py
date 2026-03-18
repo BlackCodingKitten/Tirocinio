@@ -28,7 +28,7 @@ for media_file in media_file_path:
                 language= "it",
                 temperature=0,
                 response_format="json",
-                include=["logprobs"]
+                include=["logprobs"]    #è il logaritmo della probabilità che il modello assegna a quel token in quella precisa posizione, dato tutto il contesto precedente
                
             )
         formatted_transcription = {
