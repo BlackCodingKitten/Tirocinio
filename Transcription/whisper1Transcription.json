@@ -1,0 +1,3755 @@
+{
+  "./Videos/Video1.mp4": {
+    "text": "Prima mettiamo... Prima mettiamo... Ehi, prima! Ehi, prima!                        Ehi, prima!    Ehi, prima! Ehi, prima! Ehi, prima! ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Prima mettiamo...",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 1,
+        "text": " Prima mettiamo...",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 2,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 3,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 4,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 5,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 6,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 7,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 8,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 9,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 10,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 11,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 12,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 13,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 14,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 15,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 16,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 17,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 18,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 19,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 20,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 21,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 22,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 23,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 24,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 25,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 26,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 27,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 28,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 29,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 30,
+        "text": "",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 31,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.22374999523162842,
+        "compression_ratio": 9.404762268066406,
+        "no_speech_prob": 0.6467210054397583
+      },
+      {
+        "id": 32,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.28849732875823975,
+        "compression_ratio": 1.52173912525177,
+        "no_speech_prob": 0.9928030371665955
+      },
+      {
+        "id": 33,
+        "text": " Ehi, prima!",
+        "avg_logprob": -0.28849732875823975,
+        "compression_ratio": 1.52173912525177,
+        "no_speech_prob": 0.9928030371665955
+      },
+      {
+        "id": 34,
+        "text": "",
+        "avg_logprob": -0.28849732875823975,
+        "compression_ratio": 1.52173912525177,
+        "no_speech_prob": 0.9928030371665955
+      }
+    ]
+  },
+  "./Videos/Video2.mp4": {
+    "text": "fare l'aspirapolvere avete una fetta biscottata bene spaccatela intera la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere",
+    "segments": [
+      {
+        "id": 0,
+        "text": " fare l'aspirapolvere avete una fetta biscottata bene spaccatela intera",
+        "avg_logprob": -0.33000534772872925,
+        "compression_ratio": 1.4509804248809814,
+        "no_speech_prob": 0.012308348901569843
+      },
+      {
+        "id": 1,
+        "text": " la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere",
+        "avg_logprob": -0.33000534772872925,
+        "compression_ratio": 1.4509804248809814,
+        "no_speech_prob": 0.012308348901569843
+      }
+    ]
+  },
+  "./Videos/Video3.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.486592561006546,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.7539772391319275
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2819393277168274,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9964028596878052
+      }
+    ]
+  },
+  "./Videos/Video4.mp4": {
+    "text": "musica applausi",
+    "segments": [
+      {
+        "id": 0,
+        "text": " musica",
+        "avg_logprob": -1.3822766542434692,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.3972585201263428
+      },
+      {
+        "id": 1,
+        "text": " applausi",
+        "avg_logprob": -0.4138103723526001,
+        "compression_ratio": 0.5,
+        "no_speech_prob": 0.6567623615264893
+      }
+    ]
+  },
+  "./Videos/Video5.mp4": {
+    "text": "dove metti i piedi di gondoliere tutto l'alice, austriaco o italiano, solido ma leggero, mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono innose, dopo circa 15-16 anni si cambia il fondo a pescaggio, e durante altri 15-20 anni la vita media non ha scappato.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " dove metti i piedi di gondoliere tutto l'alice, austriaco o italiano, solido ma leggero,",
+        "avg_logprob": -0.4729520082473755,
+        "compression_ratio": 1.398809552192688,
+        "no_speech_prob": 0.21914325654506683
+      },
+      {
+        "id": 1,
+        "text": " mentre quello che manca qua è ancora più leggero dell'alice.",
+        "avg_logprob": -0.4729520082473755,
+        "compression_ratio": 1.398809552192688,
+        "no_speech_prob": 0.21914325654506683
+      },
+      {
+        "id": 2,
+        "text": " Tutte le cornici sono innose,",
+        "avg_logprob": -0.4729520082473755,
+        "compression_ratio": 1.398809552192688,
+        "no_speech_prob": 0.21914325654506683
+      },
+      {
+        "id": 3,
+        "text": " dopo circa 15-16 anni si cambia il fondo a pescaggio,",
+        "avg_logprob": -0.4729520082473755,
+        "compression_ratio": 1.398809552192688,
+        "no_speech_prob": 0.21914325654506683
+      },
+      {
+        "id": 4,
+        "text": " e durante altri 15-20 anni la vita media non ha scappato.",
+        "avg_logprob": -0.5282986760139465,
+        "compression_ratio": 0.9344262480735779,
+        "no_speech_prob": 0.1334524303674698
+      }
+    ]
+  },
+  "./Videos/Video6.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5196517109870911,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.632235586643219
+      }
+    ]
+  },
+  "./Videos/Video7.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.42224955558776855,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6129862666130066
+      }
+    ]
+  },
+  "./Videos/Video8.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.38181033730506897,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.38858339190483093
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.3035673201084137,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9806890487670898
+      }
+    ]
+  },
+  "./Videos/Video9.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5161442756652832,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.5807126760482788
+      }
+    ]
+  },
+  "./Videos/Video10.mp4": {
+    "text": "Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove dove dove? E' qua! Guarda che tu voli giù! No sta dormendo! Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi? Prendi un pezzo di carta igienica Ma tu non sei normale! Anibaletto! Guarda che bello!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove dove dove? E' qua!",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 1,
+        "text": " Guarda che tu voli giù!",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 2,
+        "text": " No sta dormendo!",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 3,
+        "text": " Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi?",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 4,
+        "text": " Prendi un pezzo di carta igienica",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 5,
+        "text": " Ma tu non sei normale!",
+        "avg_logprob": -0.49476394057273865,
+        "compression_ratio": 1.4971429109573364,
+        "no_speech_prob": 0.02365286275744438
+      },
+      {
+        "id": 6,
+        "text": " Anibaletto! Guarda che bello!",
+        "avg_logprob": -0.4952137768268585,
+        "compression_ratio": 0.7837837934494019,
+        "no_speech_prob": 0.2772989869117737
+      }
+    ]
+  },
+  "./Videos/Video11.mp4": {
+    "text": "La prima angoloide in Milano Peso in avanti Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro",
+    "segments": [
+      {
+        "id": 0,
+        "text": " La prima angoloide in Milano",
+        "avg_logprob": -0.6046100854873657,
+        "compression_ratio": 1.1428571939468384,
+        "no_speech_prob": 0.6201379895210266
+      },
+      {
+        "id": 1,
+        "text": " Peso in avanti",
+        "avg_logprob": -0.6046100854873657,
+        "compression_ratio": 1.1428571939468384,
+        "no_speech_prob": 0.6201379895210266
+      },
+      {
+        "id": 2,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.6046100854873657,
+        "compression_ratio": 1.1428571939468384,
+        "no_speech_prob": 0.6201379895210266
+      },
+      {
+        "id": 3,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 4,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 5,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 6,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 7,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 8,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 9,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 10,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 11,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 12,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 13,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 14,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 15,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      },
+      {
+        "id": 16,
+        "text": " Peso in avanti perché sennò casca indietro",
+        "avg_logprob": -0.10215277969837189,
+        "compression_ratio": 10.483333587646484,
+        "no_speech_prob": 0.8373416662216187
+      }
+    ]
+  },
+  "./Videos/Video12.mp4": {
+    "text": "mi ha catturato mi dà gli ordini due passi indietro due mani perché io sono armato il cane va a terra senza passare tra me e il cane passa dietro mi fa la perquisizione per vedere se ho rubato qualcosa vede che ho l'arma e me la toglie",
+    "segments": [
+      {
+        "id": 0,
+        "text": " mi ha catturato mi dà gli ordini due passi indietro due mani perché io sono armato il cane va a terra",
+        "avg_logprob": -0.438824862241745,
+        "compression_ratio": 1.4710144996643066,
+        "no_speech_prob": 0.3146168291568756
+      },
+      {
+        "id": 1,
+        "text": " senza passare tra me e il cane passa dietro mi fa la perquisizione per vedere se ho rubato qualcosa",
+        "avg_logprob": -0.438824862241745,
+        "compression_ratio": 1.4710144996643066,
+        "no_speech_prob": 0.3146168291568756
+      },
+      {
+        "id": 2,
+        "text": " vede che ho l'arma e me la toglie",
+        "avg_logprob": -0.3880651891231537,
+        "compression_ratio": 0.8048780560493469,
+        "no_speech_prob": 0.1617511361837387
+      }
+    ]
+  },
+  "./Videos/Video13.mp4": {
+    "text": "Ciao bella, ciao bella, ciao ciao, questo è il fiore del partigiano, morto per la libertà, e questo è il fiore del partigiano, morto per la libertà.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Ciao bella, ciao bella, ciao ciao, questo è il fiore del partigiano, morto per la libertà, e questo è il fiore del partigiano, morto per la libertà.",
+        "avg_logprob": -0.49504220485687256,
+        "compression_ratio": 1.7882353067398071,
+        "no_speech_prob": 0.6611451506614685
+      }
+    ]
+  },
+  "./Videos/Video14.mp4": {
+    "text": "E' brutto, ma ho morte, Ari! Fai una lancetta, Popo, vai! Non mi cago, Francesco, è troppo brutto! Dai, vai, tira! Ah, ha visto il mangiare! Ha visto il mangiare, ha visto il mangiare! Non me lo dice il pubblico! Non me lo dice il pubblico!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " E' brutto, ma ho morte, Ari!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 1,
+        "text": " Fai una lancetta, Popo, vai!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 2,
+        "text": " Non mi cago, Francesco, è troppo brutto!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 3,
+        "text": " Dai, vai, tira!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 4,
+        "text": " Ah, ha visto il mangiare!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 5,
+        "text": " Ha visto il mangiare, ha visto il mangiare!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 6,
+        "text": " Non me lo dice il pubblico!",
+        "avg_logprob": -0.641683042049408,
+        "compression_ratio": 1.5106383562088013,
+        "no_speech_prob": 0.5595422983169556
+      },
+      {
+        "id": 7,
+        "text": " Non me lo dice il pubblico!",
+        "avg_logprob": -0.4558885991573334,
+        "compression_ratio": 0.7714285850524902,
+        "no_speech_prob": 0.989346444606781
+      }
+    ]
+  },
+  "./Videos/Video15.mp4": {
+    "text": "... ... ... ... ... ...",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...",
+        "avg_logprob": -0.7921772599220276,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8397095203399658
+      },
+      {
+        "id": 1,
+        "text": " ...",
+        "avg_logprob": -0.7921772599220276,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8397095203399658
+      },
+      {
+        "id": 2,
+        "text": " ...",
+        "avg_logprob": -0.7921772599220276,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8397095203399658
+      },
+      {
+        "id": 3,
+        "text": " ...",
+        "avg_logprob": -0.7921772599220276,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8397095203399658
+      },
+      {
+        "id": 4,
+        "text": " ...",
+        "avg_logprob": -0.4361138343811035,
+        "compression_ratio": 0.46666666865348816,
+        "no_speech_prob": 0.32357656955718994
+      },
+      {
+        "id": 5,
+        "text": " ...",
+        "avg_logprob": -0.4361138343811035,
+        "compression_ratio": 0.46666666865348816,
+        "no_speech_prob": 0.32357656955718994
+      }
+    ]
+  },
+  "./Videos/Video16.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5576084852218628,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6626571416854858
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2615177035331726,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9967189431190491
+      }
+    ]
+  },
+  "./Videos/Video17.mp4": {
+    "text": "È in la prima posizione, non poteva che essere lui, con un tempo strepitoso perché la gara era ed è rimarrà dura anche per l'anno prossimo, anche se non ci sarà vento, con un vento così forte, con le salite che c'erano un'ora, 11.46 per Ismail Eccolo qua che arriva e vi assicuro è arrivato che non era neanche sudato Allora andiamo",
+    "segments": [
+      {
+        "id": 0,
+        "text": " È in la prima posizione, non poteva che essere lui, con un tempo strepitoso perché la gara era ed è",
+        "avg_logprob": -0.37823882699012756,
+        "compression_ratio": 1.5211267471313477,
+        "no_speech_prob": 0.623719334602356
+      },
+      {
+        "id": 1,
+        "text": " rimarrà dura anche per l'anno prossimo, anche se non ci sarà vento, con un vento così forte, con le salite che c'erano",
+        "avg_logprob": -0.37823882699012756,
+        "compression_ratio": 1.5211267471313477,
+        "no_speech_prob": 0.623719334602356
+      },
+      {
+        "id": 2,
+        "text": " un'ora, 11.46 per Ismail",
+        "avg_logprob": -0.37823882699012756,
+        "compression_ratio": 1.5211267471313477,
+        "no_speech_prob": 0.623719334602356
+      },
+      {
+        "id": 3,
+        "text": " Eccolo qua che arriva e vi assicuro è arrivato che non era neanche sudato",
+        "avg_logprob": -0.37823882699012756,
+        "compression_ratio": 1.5211267471313477,
+        "no_speech_prob": 0.623719334602356
+      },
+      {
+        "id": 4,
+        "text": " Allora andiamo",
+        "avg_logprob": -0.5860179662704468,
+        "compression_ratio": 0.6363636255264282,
+        "no_speech_prob": 0.6702691316604614
+      }
+    ]
+  },
+  "./Videos/Video18.mp4": {
+    "text": "Angela e Vincenzo ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Angela e Vincenzo",
+        "avg_logprob": -0.4903775751590729,
+        "compression_ratio": 0.6800000071525574,
+        "no_speech_prob": 0.45286324620246887
+      },
+      {
+        "id": 1,
+        "text": "",
+        "avg_logprob": -0.4154188632965088,
+        "compression_ratio": 0.8260869383811951,
+        "no_speech_prob": 0.6989044547080994
+      }
+    ]
+  },
+  "./Videos/Video19.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.3874994218349457,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.5365419983863831
+      }
+    ]
+  },
+  "./Videos/Video20.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5033636093139648,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6428494453430176
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.26427504420280457,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9948496222496033
+      }
+    ]
+  },
+  "./Videos/Video21.mp4": {
+    "text": "Scosso dell'Oca, quindi la Torre. L'ultimo San Martino affrontato in controllo, anche se la distanza va giù, va giù. Oddio, lo scosso dell'Oca. C'è l'Oca davanti con la Torre che prova a ritornare. Torre-Oca all'ultima curva. Oca davanti alla Torre, va giù anche la Torre. Dunque vince il cavallo scosso, vince il cavallo scosso. Dell'Oca, clamoroso con la Pantera che era avanti in pratica fino all'ultimo San Martino.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Scosso dell'Oca, quindi la Torre. L'ultimo San Martino affrontato in controllo, anche se la distanza va giù, va giù.",
+        "avg_logprob": -0.2928011119365692,
+        "compression_ratio": 1.7164947986602783,
+        "no_speech_prob": 0.8150569200515747
+      },
+      {
+        "id": 1,
+        "text": " Oddio, lo scosso dell'Oca.",
+        "avg_logprob": -0.2928011119365692,
+        "compression_ratio": 1.7164947986602783,
+        "no_speech_prob": 0.8150569200515747
+      },
+      {
+        "id": 2,
+        "text": " C'è l'Oca davanti con la Torre che prova a ritornare. Torre-Oca all'ultima curva.",
+        "avg_logprob": -0.2928011119365692,
+        "compression_ratio": 1.7164947986602783,
+        "no_speech_prob": 0.8150569200515747
+      },
+      {
+        "id": 3,
+        "text": " Oca davanti alla Torre, va giù anche la Torre. Dunque vince il cavallo scosso, vince il cavallo scosso.",
+        "avg_logprob": -0.2928011119365692,
+        "compression_ratio": 1.7164947986602783,
+        "no_speech_prob": 0.8150569200515747
+      },
+      {
+        "id": 4,
+        "text": " Dell'Oca, clamoroso con la Pantera che era avanti in pratica fino all'ultimo San Martino.",
+        "avg_logprob": -0.25520333647727966,
+        "compression_ratio": 1.0595238208770752,
+        "no_speech_prob": 0.8070378303527832
+      }
+    ]
+  },
+  "./Videos/Video22.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no No",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.1629166603088379,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.39439907670021057
+      },
+      {
+        "id": 1,
+        "text": " No",
+        "avg_logprob": -0.7488550543785095,
+        "compression_ratio": 0.20000000298023224,
+        "no_speech_prob": 0.9147389531135559
+      }
+    ]
+  },
+  "./Videos/Video23.mp4": {
+    "text": "Se lascio un po' tu devi macinare, capito? Vai con la bambuglia! La polvere magica! Lui sa in quanti video miei sta già a fare le risate! Ancora!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Se lascio un po' tu devi macinare, capito?",
+        "avg_logprob": -0.6087002754211426,
+        "compression_ratio": 1.2105263471603394,
+        "no_speech_prob": 0.25207775831222534
+      },
+      {
+        "id": 1,
+        "text": " Vai con la bambuglia!",
+        "avg_logprob": -0.6087002754211426,
+        "compression_ratio": 1.2105263471603394,
+        "no_speech_prob": 0.25207775831222534
+      },
+      {
+        "id": 2,
+        "text": " La polvere magica!",
+        "avg_logprob": -0.6087002754211426,
+        "compression_ratio": 1.2105263471603394,
+        "no_speech_prob": 0.25207775831222534
+      },
+      {
+        "id": 3,
+        "text": " Lui sa in quanti video miei sta già a fare le risate!",
+        "avg_logprob": -0.6087002754211426,
+        "compression_ratio": 1.2105263471603394,
+        "no_speech_prob": 0.25207775831222534
+      },
+      {
+        "id": 4,
+        "text": " Ancora!",
+        "avg_logprob": -0.7980009317398071,
+        "compression_ratio": 0.46666666865348816,
+        "no_speech_prob": 0.1259629875421524
+      }
+    ]
+  },
+  "./Videos/Video24.mp4": {
+    "text": "Pallone numero 5 Paccini Gol Paccini! Paccini! Sprocca il risultato per la Sampdoria Calcio",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Pallone numero 5 Paccini",
+        "avg_logprob": -0.8755857348442078,
+        "compression_ratio": 0.9736841917037964,
+        "no_speech_prob": 0.3126401901245117
+      },
+      {
+        "id": 1,
+        "text": " Gol Paccini!",
+        "avg_logprob": -0.8755857348442078,
+        "compression_ratio": 0.9736841917037964,
+        "no_speech_prob": 0.3126401901245117
+      },
+      {
+        "id": 2,
+        "text": " Paccini! Sprocca il risultato per la Sampdoria Calcio",
+        "avg_logprob": -0.5169797539710999,
+        "compression_ratio": 0.8983050584793091,
+        "no_speech_prob": 0.01481054350733757
+      }
+    ]
+  },
+  "./Videos/Video25.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.42859673500061035,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.5888665914535522
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2767118811607361,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9946606755256653
+      }
+    ]
+  },
+  "./Videos/Video26.mp4": {
+    "text": "ho capito tutto e poi le mettiamo il caldo sotto la spianatoia vai Vane, fai il castello pronti? hai messo sabbia mista bagnata e asciutta buonissima",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ho capito tutto e poi le mettiamo il caldo sotto la spianatoia",
+        "avg_logprob": -0.7355190515518188,
+        "compression_ratio": 1.3142857551574707,
+        "no_speech_prob": 0.048649489879608154
+      },
+      {
+        "id": 1,
+        "text": " vai Vane, fai il castello",
+        "avg_logprob": -0.7355190515518188,
+        "compression_ratio": 1.3142857551574707,
+        "no_speech_prob": 0.048649489879608154
+      },
+      {
+        "id": 2,
+        "text": " pronti?",
+        "avg_logprob": -0.7355190515518188,
+        "compression_ratio": 1.3142857551574707,
+        "no_speech_prob": 0.048649489879608154
+      },
+      {
+        "id": 3,
+        "text": " hai messo sabbia mista bagnata e asciutta",
+        "avg_logprob": -0.7355190515518188,
+        "compression_ratio": 1.3142857551574707,
+        "no_speech_prob": 0.048649489879608154
+      },
+      {
+        "id": 4,
+        "text": " buonissima",
+        "avg_logprob": -1.5360866785049438,
+        "compression_ratio": 0.5555555820465088,
+        "no_speech_prob": 0.07254203408956528
+      }
+    ]
+  },
+  "./Videos/Video27.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.558068037033081,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.695457935333252
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2918485701084137,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9057778716087341
+      }
+    ]
+  },
+  "./Videos/Video28.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.4528391361236572,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6999314427375793
+      }
+    ]
+  },
+  "./Videos/Video29.mp4": {
+    "text": "La candidata Loh Sara, susscritta al Consiglio delle Antiche Culture Pericolose e del Commercio Internazionale, ha presentato nell'elaborato finale dell'articolo lo sviluppo della ricettività alberghiera sulla sconda del gatto ad origami dalla fine dell'Occidente all'inizio dell'Ottobre e lo ha discusso nella presenza della Commissione a porta del Professore Davide Mazzarrano e Francesco Vecchietto.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " La candidata Loh Sara, susscritta al Consiglio delle Antiche Culture Pericolose e del Commercio Internazionale, ha presentato nell'elaborato finale dell'articolo",
+        "avg_logprob": -0.5902562737464905,
+        "compression_ratio": 1.5089285373687744,
+        "no_speech_prob": 0.674121081829071
+      },
+      {
+        "id": 1,
+        "text": " lo sviluppo della ricettività alberghiera sulla sconda del gatto ad origami dalla fine dell'Occidente all'inizio dell'Ottobre e lo ha discusso nella presenza della Commissione",
+        "avg_logprob": -0.5902562737464905,
+        "compression_ratio": 1.5089285373687744,
+        "no_speech_prob": 0.674121081829071
+      },
+      {
+        "id": 2,
+        "text": " a porta del Professore Davide Mazzarrano e Francesco Vecchietto.",
+        "avg_logprob": -0.7584978342056274,
+        "compression_ratio": 0.9142857193946838,
+        "no_speech_prob": 0.8161760568618774
+      }
+    ]
+  },
+  "./Videos/Video30.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.4634178578853607,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.47350189089775085
+      }
+    ]
+  },
+  "./Videos/Video31.mp4": {
+    "text": "Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 1,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 2,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 3,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 4,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 5,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 6,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 7,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 8,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 9,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 10,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 11,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 12,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 13,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.27469393610954285,
+        "compression_ratio": 8.655172348022461,
+        "no_speech_prob": 0.6621801853179932
+      },
+      {
+        "id": 14,
+        "text": " Piano con le mani",
+        "avg_logprob": -0.12985001504421234,
+        "compression_ratio": 0.6800000071525574,
+        "no_speech_prob": 0.9179267883300781
+      }
+    ]
+  },
+  "./Videos/Video32.mp4": {
+    "text": "adesso mangiamo? ma cosa fai parecchi? ma dovresti anche sciacquare poi, ecco vediamo un po' questa bambina che brava ma sei bravissima allora mi aiuti tu sempre ok grazie guardate come si fa",
+    "segments": [
+      {
+        "id": 0,
+        "text": " adesso mangiamo? ma cosa fai parecchi? ma dovresti anche sciacquare poi, ecco",
+        "avg_logprob": -0.4627341032028198,
+        "compression_ratio": 1.3508771657943726,
+        "no_speech_prob": 0.08656728267669678
+      },
+      {
+        "id": 1,
+        "text": " vediamo un po' questa bambina che brava ma sei bravissima allora mi aiuti tu",
+        "avg_logprob": -0.4627341032028198,
+        "compression_ratio": 1.3508771657943726,
+        "no_speech_prob": 0.08656728267669678
+      },
+      {
+        "id": 2,
+        "text": " sempre ok grazie guardate come si fa",
+        "avg_logprob": -0.6623583436012268,
+        "compression_ratio": 0.8181818127632141,
+        "no_speech_prob": 0.5255993604660034
+      }
+    ]
+  },
+  "./Videos/Video33.mp4": {
+    "text": "perchè guarda questa secondo me Stefano è la parte della frenata perchè sono caduti davanti però ok, io tocco i freni poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche chiaramente ora con i freni a disco che frenano pinzano molto più con molta più forza nel momento in cui il corridore si spaventa frena con il freno a disco",
+    "segments": [
+      {
+        "id": 0,
+        "text": " perchè guarda",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 1,
+        "text": " questa secondo me Stefano",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 2,
+        "text": " è la parte della frenata",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 3,
+        "text": " perchè sono caduti davanti",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 4,
+        "text": " però",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 5,
+        "text": " ok, io tocco i freni",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 6,
+        "text": " poi è vero che al giorno d'oggi",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 7,
+        "text": " non è più come una volta, poi adesso",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 8,
+        "text": " magari potranno iniziare le polemiche",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 9,
+        "text": " chiaramente ora con i freni a disco",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 10,
+        "text": " che frenano",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 11,
+        "text": " pinzano molto più",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 12,
+        "text": " con molta più forza nel momento",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 13,
+        "text": " in cui il corridore si spaventa",
+        "avg_logprob": -0.2390824556350708,
+        "compression_ratio": 1.6061947345733643,
+        "no_speech_prob": 0.3989376127719879
+      },
+      {
+        "id": 14,
+        "text": " frena con il freno a disco",
+        "avg_logprob": -0.34087997674942017,
+        "compression_ratio": 0.8125,
+        "no_speech_prob": 0.6272390484809875
+      }
+    ]
+  },
+  "./Videos/Video34.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5413599610328674,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.761769711971283
+      }
+    ]
+  },
+  "./Videos/Video35.mp4": {
+    "text": "musica musica",
+    "segments": [
+      {
+        "id": 0,
+        "text": " musica",
+        "avg_logprob": -1.1917732954025269,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.44138598442077637
+      },
+      {
+        "id": 1,
+        "text": " musica",
+        "avg_logprob": -0.5912822484970093,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.9121280312538147
+      }
+    ]
+  },
+  "./Videos/Video36.mp4": {
+    "text": "auguri a te tanti auguri mannaggia la m***a sono cascato testa di c***o strutti sono cascato auguri Tomas mannaggia la m***a testa di c***o strutti auguri auguri a te",
+    "segments": [
+      {
+        "id": 0,
+        "text": " auguri a te",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 1,
+        "text": " tanti auguri",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 2,
+        "text": " mannaggia la m***a",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 3,
+        "text": " sono cascato",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 4,
+        "text": " testa di c***o",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 5,
+        "text": " strutti",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 6,
+        "text": " sono cascato",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 7,
+        "text": " auguri Tomas",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 8,
+        "text": " mannaggia la m***a",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 9,
+        "text": " testa di c***o",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 10,
+        "text": " strutti",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 11,
+        "text": " auguri",
+        "avg_logprob": -0.3987266719341278,
+        "compression_ratio": 1.790697693824768,
+        "no_speech_prob": 0.4116341471672058
+      },
+      {
+        "id": 12,
+        "text": " auguri a te",
+        "avg_logprob": -0.19008873403072357,
+        "compression_ratio": 0.5789473652839661,
+        "no_speech_prob": 0.6610003709793091
+      }
+    ]
+  },
+  "./Videos/Video37.mp4": {
+    "text": "Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui. No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano.",
+        "avg_logprob": -0.4721631109714508,
+        "compression_ratio": 1.3798882961273193,
+        "no_speech_prob": 0.10784564912319183
+      },
+      {
+        "id": 1,
+        "text": " Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui.",
+        "avg_logprob": -0.4721631109714508,
+        "compression_ratio": 1.3798882961273193,
+        "no_speech_prob": 0.10784564912319183
+      },
+      {
+        "id": 2,
+        "text": " No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia.",
+        "avg_logprob": -0.3895059823989868,
+        "compression_ratio": 1.1384615898132324,
+        "no_speech_prob": 0.20051537454128265
+      }
+    ]
+  },
+  "./Videos/Video38.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.4640713632106781,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6416258811950684
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.25807100534439087,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9961878657341003
+      }
+    ]
+  },
+  "./Videos/Video39.mp4": {
+    "text": "con il ragazzo del centro c'è troppi dei bottigiani di strada Parto via dei compagni guai S'occupietto di se stessa",
+    "segments": [
+      {
+        "id": 0,
+        "text": " con il ragazzo del centro",
+        "avg_logprob": -0.9289184808731079,
+        "compression_ratio": 1.0843373537063599,
+        "no_speech_prob": 0.5812865495681763
+      },
+      {
+        "id": 1,
+        "text": " c'è troppi dei bottigiani",
+        "avg_logprob": -0.9289184808731079,
+        "compression_ratio": 1.0843373537063599,
+        "no_speech_prob": 0.5812865495681763
+      },
+      {
+        "id": 2,
+        "text": " di strada",
+        "avg_logprob": -0.9289184808731079,
+        "compression_ratio": 1.0843373537063599,
+        "no_speech_prob": 0.5812865495681763
+      },
+      {
+        "id": 3,
+        "text": " Parto via dei compagni guai",
+        "avg_logprob": -0.9289184808731079,
+        "compression_ratio": 1.0843373537063599,
+        "no_speech_prob": 0.5812865495681763
+      },
+      {
+        "id": 4,
+        "text": " S'occupietto di se stessa",
+        "avg_logprob": -0.9388832449913025,
+        "compression_ratio": 0.7575757503509521,
+        "no_speech_prob": 0.19124777615070343
+      }
+    ]
+  },
+  "./Videos/Video40.mp4": {
+    "text": "Si vergogna perchè non è toccato Ma che cazzo te ne butti, sei in aperitivo, ma si Vai, fatti tu risare Com'è il nostro aperitivo? Anche lei si vergogna Dai Fede Questo aperitivo è molto easy Prendi buoni e benzina Buoni e benzina Ci vuole i voglio e benzina Aspetta, ce ne anch'io due Questa è la foto per bere Questo è l'aperitivo C'è gente che balla, gente che si diverte",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Si vergogna perchè non è toccato",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 1,
+        "text": " Ma che cazzo te ne butti, sei in aperitivo, ma si",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 2,
+        "text": " Vai, fatti tu risare",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 3,
+        "text": " Com'è il nostro aperitivo?",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 4,
+        "text": " Anche lei si vergogna",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 5,
+        "text": " Dai Fede",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 6,
+        "text": " Questo aperitivo è molto easy",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 7,
+        "text": " Prendi buoni e benzina",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 8,
+        "text": " Buoni e benzina",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 9,
+        "text": " Ci vuole i voglio e benzina",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 10,
+        "text": " Aspetta, ce ne anch'io due",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 11,
+        "text": " Questa è la foto per bere",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 12,
+        "text": " Questo è l'aperitivo",
+        "avg_logprob": -0.4176079332828522,
+        "compression_ratio": 1.617224931716919,
+        "no_speech_prob": 0.22281986474990845
+      },
+      {
+        "id": 13,
+        "text": " C'è gente che balla, gente che si diverte",
+        "avg_logprob": -0.2693180739879608,
+        "compression_ratio": 1.0243902206420898,
+        "no_speech_prob": 0.516997754573822
+      }
+    ]
+  },
+  "./Videos/Video41.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.42455214262008667,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.3487817049026489
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2548828423023224,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.99415522813797
+      }
+    ]
+  },
+  "./Videos/Video42.mp4": {
+    "text": "Siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma,",
+        "avg_logprob": -0.216805562376976,
+        "compression_ratio": 21.25,
+        "no_speech_prob": 0.7537211775779724
+      },
+      {
+        "id": 1,
+        "text": " siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a",
+        "avg_logprob": -0.11669482290744781,
+        "compression_ratio": 21.100000381469727,
+        "no_speech_prob": 0.5343468189239502
+      }
+    ]
+  },
+  "./Videos/Video43.mp4": {
+    "text": "...gran loggia da istituto nazionale previdenza sociale e istituto neutralizzazione parassiti sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava viaggi agevolati senza ritorno.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...gran loggia da istituto nazionale previdenza sociale e istituto neutralizzazione parassiti",
+        "avg_logprob": -0.28530260920524597,
+        "compression_ratio": 1.4682539701461792,
+        "no_speech_prob": 0.20661652088165283
+      },
+      {
+        "id": 1,
+        "text": " sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava",
+        "avg_logprob": -0.28530260920524597,
+        "compression_ratio": 1.4682539701461792,
+        "no_speech_prob": 0.20661652088165283
+      },
+      {
+        "id": 2,
+        "text": " viaggi agevolati senza ritorno.",
+        "avg_logprob": -0.6163998246192932,
+        "compression_ratio": 0.7948718070983887,
+        "no_speech_prob": 0.03503869101405144
+      }
+    ]
+  },
+  "./Videos/Video44.mp4": {
+    "text": "Ragazzi dobbiamo prendere un'altra foto, non è vero? Ragazzi c'è la moglie che si è disinterrata Avete tanti avanzi nella vostra relazione? Come vi togliete in Italia, avete passato un paio di tappe o no? Non è vero?",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Ragazzi dobbiamo prendere un'altra foto, non è vero?",
+        "avg_logprob": -0.6388124227523804,
+        "compression_ratio": 1.3441557884216309,
+        "no_speech_prob": 0.31464242935180664
+      },
+      {
+        "id": 1,
+        "text": " Ragazzi c'è la moglie che si è disinterrata",
+        "avg_logprob": -0.6388124227523804,
+        "compression_ratio": 1.3441557884216309,
+        "no_speech_prob": 0.31464242935180664
+      },
+      {
+        "id": 2,
+        "text": " Avete tanti avanzi nella vostra relazione?",
+        "avg_logprob": -0.6388124227523804,
+        "compression_ratio": 1.3441557884216309,
+        "no_speech_prob": 0.31464242935180664
+      },
+      {
+        "id": 3,
+        "text": " Come vi togliete in Italia, avete passato un paio di tappe o no?",
+        "avg_logprob": -0.6388124227523804,
+        "compression_ratio": 1.3441557884216309,
+        "no_speech_prob": 0.31464242935180664
+      },
+      {
+        "id": 4,
+        "text": " Non è vero?",
+        "avg_logprob": -0.5476219058036804,
+        "compression_ratio": 0.6000000238418579,
+        "no_speech_prob": 0.43574583530426025
+      }
+    ]
+  },
+  "./Videos/Video45.mp4": {
+    "text": "Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film.",
+        "avg_logprob": -0.4717962443828583,
+        "compression_ratio": 1.4090908765792847,
+        "no_speech_prob": 0.05524686351418495
+      }
+    ]
+  },
+  "./Videos/Video46.mp4": {
+    "text": "Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso. La aiuterò a tornare a casa della nonna. E mentre lei è lì tranquilla, che si fida di me, io mi amano. Me l'ha fatto! Ciao, bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto il lupo cattivo del bosco. Ma te sei anche un lupo cattivo, cattivo? Sì, cattivo, molto cattivo. E ora ti bello!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso.",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 1,
+        "text": " La aiuterò a tornare a casa della nonna.",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 2,
+        "text": " E mentre lei è lì tranquilla, che si fida di me,",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 3,
+        "text": " io mi amano.",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 4,
+        "text": " Me l'ha fatto!",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 5,
+        "text": " Ciao, bella bambina, buonasera!",
+        "avg_logprob": -0.4287842810153961,
+        "compression_ratio": 1.3580247163772583,
+        "no_speech_prob": 0.09509111940860748
+      },
+      {
+        "id": 6,
+        "text": " Ma te sei un lupo vero, vero, vero?",
+        "avg_logprob": -0.3396502733230591,
+        "compression_ratio": 1.504347801208496,
+        "no_speech_prob": 0.29770854115486145
+      },
+      {
+        "id": 7,
+        "text": " Sì, mi chiamano giusto il lupo cattivo del bosco.",
+        "avg_logprob": -0.3396502733230591,
+        "compression_ratio": 1.504347801208496,
+        "no_speech_prob": 0.29770854115486145
+      },
+      {
+        "id": 8,
+        "text": " Ma te sei anche un lupo cattivo, cattivo?",
+        "avg_logprob": -0.3396502733230591,
+        "compression_ratio": 1.504347801208496,
+        "no_speech_prob": 0.29770854115486145
+      },
+      {
+        "id": 9,
+        "text": " Sì, cattivo, molto cattivo.",
+        "avg_logprob": -0.3396502733230591,
+        "compression_ratio": 1.504347801208496,
+        "no_speech_prob": 0.29770854115486145
+      },
+      {
+        "id": 10,
+        "text": " E ora ti bello!",
+        "avg_logprob": -0.3396502733230591,
+        "compression_ratio": 1.504347801208496,
+        "no_speech_prob": 0.29770854115486145
+      }
+    ]
+  },
+  "./Videos/Video47.mp4": {
+    "text": "musica musica",
+    "segments": [
+      {
+        "id": 0,
+        "text": " musica",
+        "avg_logprob": -1.4293169975280762,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.5535220503807068
+      },
+      {
+        "id": 1,
+        "text": " musica",
+        "avg_logprob": -0.6223207116127014,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.915294885635376
+      }
+    ]
+  },
+  "./Videos/Video48.mp4": {
+    "text": "Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno. Aiuto! Aiuto! Marsini! Marsini! Marsini!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno.",
+        "avg_logprob": -0.4536689221858978,
+        "compression_ratio": 1.4277456998825073,
+        "no_speech_prob": 0.7757112979888916
+      },
+      {
+        "id": 1,
+        "text": " Aiuto! Aiuto! Marsini! Marsini! Marsini!",
+        "avg_logprob": -0.4420589804649353,
+        "compression_ratio": 1.5384615659713745,
+        "no_speech_prob": 0.6842741370201111
+      }
+    ]
+  },
+  "./Videos/Video49.mp4": {
+    "text": "Se non la spingo io non scenderete mai. Ci siete? Ci siete? Sì? Tieni la forte, Vane, ok? Vado! Vado!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Se non la spingo io non scenderete mai. Ci siete?",
+        "avg_logprob": -0.8214035630226135,
+        "compression_ratio": 1.116279125213623,
+        "no_speech_prob": 0.10720384865999222
+      },
+      {
+        "id": 1,
+        "text": " Ci siete? Sì? Tieni la forte, Vane, ok?",
+        "avg_logprob": -0.8214035630226135,
+        "compression_ratio": 1.116279125213623,
+        "no_speech_prob": 0.10720384865999222
+      },
+      {
+        "id": 2,
+        "text": " Vado!",
+        "avg_logprob": -0.8214035630226135,
+        "compression_ratio": 1.116279125213623,
+        "no_speech_prob": 0.10720384865999222
+      },
+      {
+        "id": 3,
+        "text": " Vado!",
+        "avg_logprob": -0.9784486889839172,
+        "compression_ratio": 0.38461539149284363,
+        "no_speech_prob": 0.964686930179596
+      }
+    ]
+  },
+  "./Videos/Video50.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.3357364535331726,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9425907731056213
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.34059056639671326,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9781027436256409
+      }
+    ]
+  },
+  "./Videos/Video51.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5498197078704834,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.5243226289749146
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.2711397111415863,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9447888135910034
+      }
+    ]
+  },
+  "./Videos/Video52.mp4": {
+    "text": "",
+    "segments": []
+  },
+  "./Videos/Video53.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.1745833307504654,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.9062050580978394
+      }
+    ]
+  },
+  "./Videos/Video54.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no No",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.17902778089046478,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.9091665744781494
+      },
+      {
+        "id": 1,
+        "text": " No",
+        "avg_logprob": -0.7017924189567566,
+        "compression_ratio": 0.20000000298023224,
+        "no_speech_prob": 0.9604673981666565
+      }
+    ]
+  },
+  "./Videos/Video55.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5155238509178162,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6039252877235413
+      }
+    ]
+  },
+  "./Videos/Video56.mp4": {
+    "text": "Direttamente al popolo con la rossa! Guai! Guai! Chi ci tocca? Chi ci prende la mano? Con la rossa! Guai! Guai!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Direttamente al popolo con la rossa!",
+        "avg_logprob": -0.6943603754043579,
+        "compression_ratio": 1.2692307233810425,
+        "no_speech_prob": 0.5221014618873596
+      },
+      {
+        "id": 1,
+        "text": " Guai! Guai!",
+        "avg_logprob": -0.6943603754043579,
+        "compression_ratio": 1.2692307233810425,
+        "no_speech_prob": 0.5221014618873596
+      },
+      {
+        "id": 2,
+        "text": " Chi ci tocca?",
+        "avg_logprob": -0.6943603754043579,
+        "compression_ratio": 1.2692307233810425,
+        "no_speech_prob": 0.5221014618873596
+      },
+      {
+        "id": 3,
+        "text": " Chi ci prende la mano?",
+        "avg_logprob": -0.6943603754043579,
+        "compression_ratio": 1.2692307233810425,
+        "no_speech_prob": 0.5221014618873596
+      },
+      {
+        "id": 4,
+        "text": " Con la rossa!",
+        "avg_logprob": -0.6943603754043579,
+        "compression_ratio": 1.2692307233810425,
+        "no_speech_prob": 0.5221014618873596
+      },
+      {
+        "id": 5,
+        "text": " Guai! Guai!",
+        "avg_logprob": -0.5550081729888916,
+        "compression_ratio": 0.6875,
+        "no_speech_prob": 0.9015334248542786
+      }
+    ]
+  },
+  "./Videos/Video57.mp4": {
+    "text": "...50, 100, 200 euro. Grazie.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...50, 100, 200 euro. Grazie.",
+        "avg_logprob": -0.9396219849586487,
+        "compression_ratio": 0.8285714387893677,
+        "no_speech_prob": 0.312774658203125
+      }
+    ]
+  },
+  "./Videos/Video58.mp4": {
+    "text": "Quanto viene? Quattro euro. La margherita quanto dovrebbe? Quel pezzo giusto. Quattro euro.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Quanto viene? Quattro euro.",
+        "avg_logprob": -0.7307367920875549,
+        "compression_ratio": 1.013157844543457,
+        "no_speech_prob": 0.8484296202659607
+      },
+      {
+        "id": 1,
+        "text": " La margherita quanto dovrebbe? Quel pezzo giusto.",
+        "avg_logprob": -0.7307367920875549,
+        "compression_ratio": 1.013157844543457,
+        "no_speech_prob": 0.8484296202659607
+      },
+      {
+        "id": 2,
+        "text": " Quattro euro.",
+        "avg_logprob": -0.711805522441864,
+        "compression_ratio": 0.6190476417541504,
+        "no_speech_prob": 0.7288309335708618
+      }
+    ]
+  },
+  "./Videos/Video59.mp4": {
+    "text": "Buongiorno Buongiorno Grazie Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 1,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 2,
+        "text": " Grazie",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 3,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 4,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 5,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 6,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 7,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 8,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 9,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 10,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 11,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      },
+      {
+        "id": 12,
+        "text": " Buongiorno",
+        "avg_logprob": -0.28922998905181885,
+        "compression_ratio": 4.3125,
+        "no_speech_prob": 0.11485213786363602
+      }
+    ]
+  },
+  "./Videos/Video60.mp4": {
+    "text": "dentro la tua lingua, bene, bene, molto molto bene, metti un dizzo che sentirei, la faccia bene, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+    "segments": [
+      {
+        "id": 0,
+        "text": " dentro la tua lingua, bene, bene, molto molto bene, metti un dizzo che sentirei, la faccia",
+        "avg_logprob": -0.7698473930358887,
+        "compression_ratio": 1.2000000476837158,
+        "no_speech_prob": 0.5362328290939331
+      },
+      {
+        "id": 1,
+        "text": " bene, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+        "avg_logprob": -0.14666666090488434,
+        "compression_ratio": 21.69565200805664,
+        "no_speech_prob": 0.6847058534622192
+      },
+      {
+        "id": 2,
+        "text": " bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+        "avg_logprob": -0.14666666090488434,
+        "compression_ratio": 21.69565200805664,
+        "no_speech_prob": 0.6847058534622192
+      },
+      {
+        "id": 3,
+        "text": " bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+        "avg_logprob": -0.14666666090488434,
+        "compression_ratio": 21.69565200805664,
+        "no_speech_prob": 0.6847058534622192
+      },
+      {
+        "id": 4,
+        "text": " bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+        "avg_logprob": -0.14666666090488434,
+        "compression_ratio": 21.69565200805664,
+        "no_speech_prob": 0.6847058534622192
+      },
+      {
+        "id": 5,
+        "text": " bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+        "avg_logprob": -0.14666666090488434,
+        "compression_ratio": 21.69565200805664,
+        "no_speech_prob": 0.6847058534622192
+      }
+    ]
+  },
+  "./Videos/Video61.mp4": {
+    "text": "Siamo a Florence",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Siamo a Florence",
+        "avg_logprob": -0.7586863040924072,
+        "compression_ratio": 0.6666666865348816,
+        "no_speech_prob": 0.2190651297569275
+      }
+    ]
+  },
+  "./Videos/Video62.mp4": {
+    "text": "musica musica",
+    "segments": [
+      {
+        "id": 0,
+        "text": " musica",
+        "avg_logprob": -1.3024896383285522,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.48658862709999084
+      },
+      {
+        "id": 1,
+        "text": " musica",
+        "avg_logprob": -0.9738677740097046,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.3672583997249603
+      }
+    ]
+  },
+  "./Videos/Video63.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.19972221553325653,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.5983989238739014
+      }
+    ]
+  },
+  "./Videos/Video64.mp4": {
+    "text": "Numero 10 andiamo a Sicilia, da Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Numero 10 andiamo a Sicilia, da Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia",
+        "avg_logprob": -0.9495857357978821,
+        "compression_ratio": 1.2450979948043823,
+        "no_speech_prob": 0.8156014680862427
+      }
+    ]
+  },
+  "./Videos/Video65.mp4": {
+    "text": "... ... ... ... ...",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...",
+        "avg_logprob": -0.7465890049934387,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8643173575401306
+      },
+      {
+        "id": 1,
+        "text": " ...",
+        "avg_logprob": -0.7465890049934387,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8643173575401306
+      },
+      {
+        "id": 2,
+        "text": " ...",
+        "avg_logprob": -0.7465890049934387,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8643173575401306
+      },
+      {
+        "id": 3,
+        "text": " ...",
+        "avg_logprob": -0.7465890049934387,
+        "compression_ratio": 1.0714285373687744,
+        "no_speech_prob": 0.8643173575401306
+      },
+      {
+        "id": 4,
+        "text": " ...",
+        "avg_logprob": -0.19487082958221436,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.25511741638183594
+      }
+    ]
+  },
+  "./Videos/Video66.mp4": {
+    "text": "Siamo arrivati in un'altra parte della città, dove c'è un'altra città che si chiama Piazza Sardegna, che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna,",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Siamo arrivati in un'altra parte della città, dove c'è un'altra città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.7569764256477356,
+        "compression_ratio": 2.8983051776885986,
+        "no_speech_prob": 0.9227015972137451
+      },
+      {
+        "id": 1,
+        "text": " che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.7569764256477356,
+        "compression_ratio": 2.8983051776885986,
+        "no_speech_prob": 0.9227015972137451
+      },
+      {
+        "id": 2,
+        "text": " dove c'è una città che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.7569764256477356,
+        "compression_ratio": 2.8983051776885986,
+        "no_speech_prob": 0.9227015972137451
+      },
+      {
+        "id": 3,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.7569764256477356,
+        "compression_ratio": 2.8983051776885986,
+        "no_speech_prob": 0.9227015972137451
+      },
+      {
+        "id": 4,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.13088779151439667,
+        "compression_ratio": 4.111111164093018,
+        "no_speech_prob": 0.7303932905197144
+      },
+      {
+        "id": 5,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.13088779151439667,
+        "compression_ratio": 4.111111164093018,
+        "no_speech_prob": 0.7303932905197144
+      },
+      {
+        "id": 6,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.13088779151439667,
+        "compression_ratio": 4.111111164093018,
+        "no_speech_prob": 0.7303932905197144
+      },
+      {
+        "id": 7,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.13088779151439667,
+        "compression_ratio": 4.111111164093018,
+        "no_speech_prob": 0.7303932905197144
+      },
+      {
+        "id": 8,
+        "text": " dove c'è una città che si chiama Piazza Sardegna,",
+        "avg_logprob": -0.13088779151439667,
+        "compression_ratio": 4.111111164093018,
+        "no_speech_prob": 0.7303932905197144
+      }
+    ]
+  },
+  "./Videos/Video67.mp4": {
+    "text": "I miei figli saranno migliori e diventeranno italiani Sì, avranno una lingua",
+    "segments": [
+      {
+        "id": 0,
+        "text": " I miei figli saranno migliori e diventeranno italiani",
+        "avg_logprob": -0.7700337767601013,
+        "compression_ratio": 1.0694444179534912,
+        "no_speech_prob": 0.1727057695388794
+      },
+      {
+        "id": 1,
+        "text": " Sì, avranno una lingua",
+        "avg_logprob": -0.7700337767601013,
+        "compression_ratio": 1.0694444179534912,
+        "no_speech_prob": 0.1727057695388794
+      }
+    ]
+  },
+  "./Videos/Video68.mp4": {
+    "text": "O Dio divino, io ti vedo qui a te mai, o Dio beato, hai quanto di posso d'avermi amato, hai quanto di posso d'avermi amato, a te che sei del mondo.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " O Dio divino, io ti vedo qui a te mai, o Dio beato,",
+        "avg_logprob": -0.48502933979034424,
+        "compression_ratio": 1.556962013244629,
+        "no_speech_prob": 0.6642055511474609
+      },
+      {
+        "id": 1,
+        "text": " hai quanto di posso d'avermi amato, hai quanto di posso d'avermi amato,",
+        "avg_logprob": -0.48502933979034424,
+        "compression_ratio": 1.556962013244629,
+        "no_speech_prob": 0.6642055511474609
+      },
+      {
+        "id": 2,
+        "text": " a te che sei del mondo.",
+        "avg_logprob": -0.4358421862125397,
+        "compression_ratio": 0.7419354915618896,
+        "no_speech_prob": 0.6675597429275513
+      }
+    ]
+  },
+  "./Videos/Video69.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.4146978259086609,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.7460359930992126
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.31902003288269043,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9854959845542908
+      }
+    ]
+  },
+  "./Videos/Video70.mp4": {
+    "text": "ma scimmie e nandaggio non ne avevo mai visto andiamo, si si si adesso andiamo ok asciugatevi asciugatevi andiamo dentro andiamo dentro tieniamo i carabinieri dai dai dai via via via scappa sono paura dentro dentro dentro dentro spegni spegni spegni vogliamo andare in camera? si andiamo in camera andiamo in camera che qua fa freddo venite venite Sami Sami vieni chiudi chiudi tutto chiudi tutto",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ma scimmie e nandaggio non ne avevo mai visto",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 1,
+        "text": " andiamo, si si si adesso andiamo",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 2,
+        "text": " ok asciugatevi asciugatevi",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 3,
+        "text": " andiamo dentro andiamo dentro",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 4,
+        "text": " tieniamo i carabinieri",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 5,
+        "text": " dai dai dai",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 6,
+        "text": " via via via",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 7,
+        "text": " scappa",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 8,
+        "text": " sono paura",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 9,
+        "text": " dentro dentro dentro",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 10,
+        "text": " dentro spegni spegni spegni",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 11,
+        "text": " vogliamo andare in camera?",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 12,
+        "text": " si andiamo in camera",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 13,
+        "text": " andiamo in camera che qua fa freddo",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 14,
+        "text": " venite venite",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 15,
+        "text": " Sami Sami vieni",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 16,
+        "text": " chiudi chiudi tutto",
+        "avg_logprob": -0.3988715410232544,
+        "compression_ratio": 2.139664888381958,
+        "no_speech_prob": 0.24423621594905853
+      },
+      {
+        "id": 17,
+        "text": " chiudi tutto",
+        "avg_logprob": -0.7119198441505432,
+        "compression_ratio": 0.6000000238418579,
+        "no_speech_prob": 0.4831313192844391
+      }
+    ]
+  },
+  "./Videos/Video71.mp4": {
+    "text": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono",
+        "avg_logprob": -0.3459906280040741,
+        "compression_ratio": 2.0260870456695557,
+        "no_speech_prob": 0.2785749137401581
+      },
+      {
+        "id": 1,
+        "text": " belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con",
+        "avg_logprob": -0.3459906280040741,
+        "compression_ratio": 2.0260870456695557,
+        "no_speech_prob": 0.2785749137401581
+      },
+      {
+        "id": 2,
+        "text": " le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci",
+        "avg_logprob": -0.3459906280040741,
+        "compression_ratio": 2.0260870456695557,
+        "no_speech_prob": 0.2785749137401581
+      },
+      {
+        "id": 3,
+        "text": " e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance",
+        "avg_logprob": -0.6546197533607483,
+        "compression_ratio": 1.223880648612976,
+        "no_speech_prob": 0.11228697746992111
+      }
+    ]
+  },
+  "./Videos/Video72.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.16944444179534912,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.651390790939331
+      }
+    ]
+  },
+  "./Videos/Video73.mp4": {
+    "text": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ...",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 1,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 2,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 3,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 4,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 5,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 6,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 7,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 8,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 9,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 10,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 11,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 12,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 13,
+        "text": " ...",
+        "avg_logprob": -0.2933870851993561,
+        "compression_ratio": 3.6666667461395264,
+        "no_speech_prob": 0.7066018581390381
+      },
+      {
+        "id": 14,
+        "text": " ...",
+        "avg_logprob": -0.270582914352417,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.39866432547569275
+      }
+    ]
+  },
+  "./Videos/Video74.mp4": {
+    "text": "Check papà! Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle! Lays, life needs flavor! Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile! È nel prezzo!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Check papà!",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 1,
+        "text": " Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino.",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 2,
+        "text": " Papà, manca la valigia.",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 3,
+        "text": " Ah già!",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 4,
+        "text": " Una volta provate, non puoi più dimenticarle!",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 5,
+        "text": " Lays, life needs flavor!",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 6,
+        "text": " Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema.",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 7,
+        "text": " In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così?",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      },
+      {
+        "id": 8,
+        "text": " Incredibile! È nel prezzo!",
+        "avg_logprob": -0.28220000863075256,
+        "compression_ratio": 1.6113073825836182,
+        "no_speech_prob": 0.02528184838593006
+      }
+    ]
+  },
+  "./Videos/Video75.mp4": {
+    "text": "eccolo là qui adesso l'apro ma anche lei l'ha già visto prima lo apriamo così senza niente così senti un po' come quando te lo appoggi sui denti e poi dopo ti spiego come funziona il progresso delle cose, va bene? l'orellino che c'ha fatto tu non è sopra, così poi ti puoi ricordare del dentino storto quindi così, apro grande semplicemente si appoggia sui dentini dietro e si spinge fine, insieme nessun male, nessun fastidio",
+    "segments": [
+      {
+        "id": 0,
+        "text": " eccolo là",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 1,
+        "text": " qui adesso l'apro",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 2,
+        "text": " ma anche lei l'ha già visto",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 3,
+        "text": " prima lo apriamo così senza niente",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 4,
+        "text": " così senti un po' come quando te lo appoggi sui denti",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 5,
+        "text": " e poi dopo ti spiego come funziona",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 6,
+        "text": " il progresso delle cose, va bene?",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 7,
+        "text": " l'orellino che c'ha fatto",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 8,
+        "text": " tu non è sopra, così poi ti puoi ricordare",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 9,
+        "text": " del dentino storto",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 10,
+        "text": " quindi così, apro grande",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 11,
+        "text": " semplicemente si appoggia",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 12,
+        "text": " sui dentini dietro e si spinge",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 13,
+        "text": " fine, insieme",
+        "avg_logprob": -0.3764745593070984,
+        "compression_ratio": 1.6763485670089722,
+        "no_speech_prob": 0.41230741143226624
+      },
+      {
+        "id": 14,
+        "text": " nessun male, nessun fastidio",
+        "avg_logprob": -0.1961829662322998,
+        "compression_ratio": 0.9032257795333862,
+        "no_speech_prob": 0.8096237778663635
+      }
+    ]
+  },
+  "./Videos/Video76.mp4": {
+    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no no",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+        "avg_logprob": -0.20944444835186005,
+        "compression_ratio": 26.235294342041016,
+        "no_speech_prob": 0.7802456021308899
+      },
+      {
+        "id": 1,
+        "text": " no",
+        "avg_logprob": -0.7299951314926147,
+        "compression_ratio": 0.20000000298023224,
+        "no_speech_prob": 0.9569146037101746
+      }
+    ]
+  },
+  "./Videos/Video77.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5046263337135315,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.7946462035179138
+      }
+    ]
+  },
+  "./Videos/Video78.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.3490636348724365,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.98056960105896
+      }
+    ]
+  },
+  "./Videos/Video79.mp4": {
+    "text": "Buona colazione ma dove siamo al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta, questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta, abbiamo festeggiato qualcosa, vero? E tu cappuccino? La mangi la tortina anche tu? Eh? E' buono il cappuccino che fa il papà? Sì? Allora buona domenica! Buona domenica, ciao! Ciao ciao!",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Buona colazione ma dove siamo al bar da papà? E cosa vi ha preparato il papà?",
+        "avg_logprob": -0.34293654561042786,
+        "compression_ratio": 1.6192660331726074,
+        "no_speech_prob": 0.010307282209396362
+      },
+      {
+        "id": 1,
+        "text": " Cappuccino. Cappuccino, la torta, questa torta è uno spoiler, è uno spoiler, non bisogna dire",
+        "avg_logprob": -0.34293654561042786,
+        "compression_ratio": 1.6192660331726074,
+        "no_speech_prob": 0.010307282209396362
+      },
+      {
+        "id": 2,
+        "text": " molto di questa torta, abbiamo festeggiato qualcosa, vero? E tu cappuccino? La mangi la",
+        "avg_logprob": -0.34293654561042786,
+        "compression_ratio": 1.6192660331726074,
+        "no_speech_prob": 0.010307282209396362
+      },
+      {
+        "id": 3,
+        "text": " tortina anche tu? Eh? E' buono il cappuccino che fa il papà? Sì? Allora buona domenica!",
+        "avg_logprob": -0.34293654561042786,
+        "compression_ratio": 1.6192660331726074,
+        "no_speech_prob": 0.010307282209396362
+      },
+      {
+        "id": 4,
+        "text": " Buona domenica, ciao! Ciao ciao!",
+        "avg_logprob": -0.9033917784690857,
+        "compression_ratio": 0.9411764740943909,
+        "no_speech_prob": 0.7020102739334106
+      }
+    ]
+  },
+  "./Videos/Video80.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5214981436729431,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.8443517684936523
+      }
+    ]
+  },
+  "./Videos/Video81.mp4": {
+    "text": " ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.523962676525116,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.5328858494758606
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.27760225534439087,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9415739178657532
+      }
+    ]
+  },
+  "./Videos/Video82.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.43544334173202515,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9264216423034668
+      }
+    ]
+  },
+  "./Videos/Video83.mp4": {
+    "text": "",
+    "segments": []
+  },
+  "./Videos/Video84.mp4": {
+    "text": "No, fai si boccia! Fai si boccia allora! Fai si boccia! Fai si boccia Dario! Hai presente le tavole? Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " No, fai si boccia!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 1,
+        "text": " Fai si boccia allora!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 2,
+        "text": " Fai si boccia!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 3,
+        "text": " Fai si boccia Dario!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 4,
+        "text": " Hai presente le tavole?",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 5,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 6,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 7,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 8,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 9,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 10,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 11,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 12,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 13,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 14,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 15,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 16,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 17,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 18,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 19,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 20,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 21,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 22,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 23,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 24,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 25,
+        "text": " Sì!",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      },
+      {
+        "id": 26,
+        "text": "",
+        "avg_logprob": -0.21250304579734802,
+        "compression_ratio": 2.763157844543457,
+        "no_speech_prob": 0.20745660364627838
+      }
+    ]
+  },
+  "./Videos/Video85.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.34998276829719543,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9780524373054504
+      }
+    ]
+  },
+  "./Videos/Video86.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.3552677035331726,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9779642820358276
+      }
+    ]
+  },
+  "./Videos/Video87.mp4": {
+    "text": "Ecco, si attacca così Il latte che viene munto finisce dentro a quel secchio Lo vedete lì sotto",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Ecco, si attacca così",
+        "avg_logprob": -0.5084125399589539,
+        "compression_ratio": 1.013157844543457,
+        "no_speech_prob": 0.04949115589261055
+      },
+      {
+        "id": 1,
+        "text": " Il latte che viene munto finisce dentro a quel secchio",
+        "avg_logprob": -0.5084125399589539,
+        "compression_ratio": 1.013157844543457,
+        "no_speech_prob": 0.04949115589261055
+      },
+      {
+        "id": 2,
+        "text": " Lo vedete lì sotto",
+        "avg_logprob": -0.32400259375572205,
+        "compression_ratio": 0.7037037014961243,
+        "no_speech_prob": 0.008184264414012432
+      }
+    ]
+  },
+  "./Videos/Video88.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5705463886260986,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.7649322152137756
+      }
+    ]
+  },
+  "./Videos/Video89.mp4": {
+    "text": "molto bene Antonio Tiberi avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare forse gli ha detto ce la fai ancora a tirare un po' o devo partire e Maica gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi il vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della maglia rosa ce la fa ancora",
+    "segments": [
+      {
+        "id": 0,
+        "text": " molto bene Antonio Tiberi avete visto che ha cercato senza andare fuori giri di",
+        "avg_logprob": -0.3310967683792114,
+        "compression_ratio": 1.6166666746139526,
+        "no_speech_prob": 0.36204037070274353
+      },
+      {
+        "id": 1,
+        "text": " stare nella scia dei corridori al comando e Tramposi continua a parlare",
+        "avg_logprob": -0.3310967683792114,
+        "compression_ratio": 1.6166666746139526,
+        "no_speech_prob": 0.36204037070274353
+      },
+      {
+        "id": 2,
+        "text": " forse gli ha detto ce la fai ancora a tirare un po' o devo partire e Maica gli ha",
+        "avg_logprob": -0.3310967683792114,
+        "compression_ratio": 1.6166666746139526,
+        "no_speech_prob": 0.36204037070274353
+      },
+      {
+        "id": 3,
+        "text": " detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi il",
+        "avg_logprob": -0.3310967683792114,
+        "compression_ratio": 1.6166666746139526,
+        "no_speech_prob": 0.36204037070274353
+      },
+      {
+        "id": 4,
+        "text": " vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della",
+        "avg_logprob": -0.3310967683792114,
+        "compression_ratio": 1.6166666746139526,
+        "no_speech_prob": 0.36204037070274353
+      },
+      {
+        "id": 5,
+        "text": " maglia rosa ce la fa ancora",
+        "avg_logprob": -0.6950502991676331,
+        "compression_ratio": 0.7714285850524902,
+        "no_speech_prob": 0.8469682931900024
+      }
+    ]
+  },
+  "./Videos/Video90.mp4": {
+    "text": "...e sono creduta nella terra e nel corso... ...che l'onore e la felicità... ...non li dimostrano, non li dimostrano mai. Un libri amico, Signore... ...la gloria e la felicità.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ...e sono creduta nella terra e nel corso...",
+        "avg_logprob": -1.1202502250671387,
+        "compression_ratio": 1.3669724464416504,
+        "no_speech_prob": 0.4210301637649536
+      },
+      {
+        "id": 1,
+        "text": " ...che l'onore e la felicità...",
+        "avg_logprob": -1.1202502250671387,
+        "compression_ratio": 1.3669724464416504,
+        "no_speech_prob": 0.4210301637649536
+      },
+      {
+        "id": 2,
+        "text": " ...non li dimostrano, non li dimostrano mai.",
+        "avg_logprob": -1.1202502250671387,
+        "compression_ratio": 1.3669724464416504,
+        "no_speech_prob": 0.4210301637649536
+      },
+      {
+        "id": 3,
+        "text": " Un libri amico, Signore...",
+        "avg_logprob": -1.1202502250671387,
+        "compression_ratio": 1.3669724464416504,
+        "no_speech_prob": 0.4210301637649536
+      },
+      {
+        "id": 4,
+        "text": " ...la gloria e la felicità.",
+        "avg_logprob": -0.9077507257461548,
+        "compression_ratio": 0.800000011920929,
+        "no_speech_prob": 0.8960499167442322
+      }
+    ]
+  },
+  "./Videos/Video91.mp4": {
+    "text": "Io lo so, io lo so che un po' di bene già mi vuoi Dimmi perché, ma perché, ma perché negli occhi miei non guardi mai Eppure tanto io lo so, io lo so che un po' di bene già mi vuoi Dottore? Sì Posso chiedere a lei se avete questo farmaco? Questo farmaco, sì Bustini o pillole? Pillole meglio",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Io lo so, io lo so che un po' di bene già mi vuoi",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 1,
+        "text": " Dimmi perché, ma perché, ma perché negli occhi miei non guardi mai",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 2,
+        "text": " Eppure tanto io lo so, io lo so che un po' di bene già mi vuoi",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 3,
+        "text": " Dottore?",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 4,
+        "text": " Sì",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 5,
+        "text": " Posso chiedere a lei se avete questo farmaco?",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 6,
+        "text": " Questo farmaco, sì",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 7,
+        "text": " Bustini o pillole?",
+        "avg_logprob": -0.2939230799674988,
+        "compression_ratio": 1.6886227130889893,
+        "no_speech_prob": 0.09423233568668365
+      },
+      {
+        "id": 8,
+        "text": " Pillole meglio",
+        "avg_logprob": -0.4555630683898926,
+        "compression_ratio": 0.6363636255264282,
+        "no_speech_prob": 0.9525781273841858
+      }
+    ]
+  },
+  "./Videos/Video92.mp4": {
+    "text": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori",
+        "avg_logprob": -0.21593132615089417,
+        "compression_ratio": 1.1481481790542603,
+        "no_speech_prob": 0.021019132807850838
+      },
+      {
+        "id": 1,
+        "text": " e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio.",
+        "avg_logprob": -0.29805389046669006,
+        "compression_ratio": 1.0512820482254028,
+        "no_speech_prob": 0.05331576615571976
+      }
+    ]
+  },
+  "./Videos/Video93.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.5265741944313049,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6794497966766357
+      }
+    ]
+  },
+  "./Videos/Video94.mp4": {
+    "text": "se vi mettete dove state, questa ha una buona continuità di legno, manomale che il sale si restringe e se è vero questo dal punto di vista principale dei vasi comunicanti tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo, vi avevo detto, tutti fermi adesso. Non lo so, se con un altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato cioè nel senso che questa è una pianta a cui abbiamo ridato una continuità di legno e una continuità di sale.",
+    "segments": [
+      {
+        "id": 0,
+        "text": " se vi mettete dove state, questa ha una buona continuità di legno, manomale che il sale si restringe",
+        "avg_logprob": -0.3317199647426605,
+        "compression_ratio": 1.6134454011917114,
+        "no_speech_prob": 0.24250711500644684
+      },
+      {
+        "id": 1,
+        "text": " e se è vero questo dal punto di vista principale dei vasi comunicanti",
+        "avg_logprob": -0.3317199647426605,
+        "compression_ratio": 1.6134454011917114,
+        "no_speech_prob": 0.24250711500644684
+      },
+      {
+        "id": 2,
+        "text": " tanto più si sfila, tanto più si ferma.",
+        "avg_logprob": -0.3317199647426605,
+        "compression_ratio": 1.6134454011917114,
+        "no_speech_prob": 0.24250711500644684
+      },
+      {
+        "id": 3,
+        "text": " Questa pianta l'abbiamo, vi avevo detto, tutti fermi adesso.",
+        "avg_logprob": -0.3317199647426605,
+        "compression_ratio": 1.6134454011917114,
+        "no_speech_prob": 0.24250711500644684
+      },
+      {
+        "id": 4,
+        "text": " Non lo so, se con un altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato",
+        "avg_logprob": -0.3317199647426605,
+        "compression_ratio": 1.6134454011917114,
+        "no_speech_prob": 0.24250711500644684
+      },
+      {
+        "id": 5,
+        "text": " cioè nel senso che questa è una pianta a cui abbiamo ridato una continuità di legno e una continuità di sale.",
+        "avg_logprob": -0.39382487535476685,
+        "compression_ratio": 1.3139535188674927,
+        "no_speech_prob": 0.8636934757232666
+      }
+    ]
+  },
+  "./Videos/Video95.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.4632103145122528,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.6254148483276367
+      }
+    ]
+  },
+  "./Videos/Video96.mp4": {
+    "text": "Musica",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Musica",
+        "avg_logprob": -1.1995774507522583,
+        "compression_ratio": 0.4285714328289032,
+        "no_speech_prob": 0.346660315990448
+      }
+    ]
+  },
+  "./Videos/Video97.mp4": {
+    "text": "Nooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo ",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Nooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+        "avg_logprob": -0.09270833432674408,
+        "compression_ratio": 52.35293960571289,
+        "no_speech_prob": 0.8095977902412415
+      },
+      {
+        "id": 1,
+        "text": " ",
+        "avg_logprob": -0.42463234066963196,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9794273376464844
+      }
+    ]
+  },
+  "./Videos/Video98.mp4": {
+    "text": "Siamo pronti? Sentite, sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Siamo pronti?",
+        "avg_logprob": -0.5383321642875671,
+        "compression_ratio": 1.3191488981246948,
+        "no_speech_prob": 0.5664427280426025
+      },
+      {
+        "id": 1,
+        "text": " Sentite, sentite quanto pesa",
+        "avg_logprob": -0.5383321642875671,
+        "compression_ratio": 1.3191488981246948,
+        "no_speech_prob": 0.5664427280426025
+      },
+      {
+        "id": 2,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.5383321642875671,
+        "compression_ratio": 1.3191488981246948,
+        "no_speech_prob": 0.5664427280426025
+      },
+      {
+        "id": 3,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 4,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 5,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 6,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 7,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 8,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 9,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 10,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 11,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 12,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 13,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 14,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 15,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      },
+      {
+        "id": 16,
+        "text": " Sentite quanto pesa",
+        "avg_logprob": -0.12971243262290955,
+        "compression_ratio": 9.0,
+        "no_speech_prob": 0.3794091045856476
+      }
+    ]
+  },
+  "./Videos/Video99.mp4": {
+    "text": "Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+    "segments": [
+      {
+        "id": 0,
+        "text": " Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+        "avg_logprob": -0.7714157700538635,
+        "compression_ratio": 1.9605263471603394,
+        "no_speech_prob": 0.8250132203102112
+      },
+      {
+        "id": 1,
+        "text": " Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+        "avg_logprob": -0.7714157700538635,
+        "compression_ratio": 1.9605263471603394,
+        "no_speech_prob": 0.8250132203102112
+      },
+      {
+        "id": 2,
+        "text": " Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+        "avg_logprob": -0.13450738787651062,
+        "compression_ratio": 1.9605263471603394,
+        "no_speech_prob": 0.910129964351654
+      },
+      {
+        "id": 3,
+        "text": " Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+        "avg_logprob": -0.13450738787651062,
+        "compression_ratio": 1.9605263471603394,
+        "no_speech_prob": 0.910129964351654
+      }
+    ]
+  },
+  "./Videos/Video100.mp4": {
+    "text": "",
+    "segments": [
+      {
+        "id": 0,
+        "text": " ",
+        "avg_logprob": -0.3642003536224365,
+        "compression_ratio": 0.8461538553237915,
+        "no_speech_prob": 0.9767947793006897
+      }
+    ]
+  }
+}
