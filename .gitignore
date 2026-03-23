@@ -5,11 +5,11 @@ __pycache__/
 
 # C extensions
 *.so
-
+*.Identifier
 # Distribution / packaging
 venv
 venv_command.txt
-Videos/
+
 .Python
 build/
 develop-eggs/
