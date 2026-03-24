@@ -27,22 +27,22 @@ for media_file in media_file_path:
                 file=video_to_transcribe,
                 language= "it",
                 temperature=0,
-                prompt= "se il video contiene dialogo scrivi solo \"dialogue uknown\", se il video contiene della musica, scrivi solo \"music\", se il video contiene del rumore , non inventare le parole ma scrivimi \"silence/noise\"",
-                response_format="text",
+                prompt= "se il video contiene della musica, scrivi solo \"music\", se il video contiene del rumore , non inventare le parole ma scrivimi \"silence/noise\", se il video contiene un dialogo che non riesci a capire scrivi \"unknown dialogue\"",
+                response_format="json",
                 # include=["logprobs"]    #è il logaritmo della probabilità che il modello assegna a quel token in quella precisa posizione, dato tutto il contesto precedente
                
             )
-        # formatted_transcription = {
-        #     "text" :transcription.text,
-        #     "segments": [
-        #         {
-        #         "token": token.token,
-        #         "logprob": token.logprob
-        #         }
-        #         for token in transcription.logprobs
-        #     ]
-        # }
-        ordered_transcription[media_file] = transcription
+        formatted_transcription = {
+            "text" :transcription.text,
+            # "segments": [
+            #     {
+            #     "token": token.token,
+            #     "logprob": token.logprob
+            #     }
+            #     for token in transcription.logprobs
+            # ]
+        }
+        ordered_transcription[media_file] = formatted_transcription
         # print(formatted_transcription)
         print(f"OK: {media_file}")
     except Exception as e:
@@ -50,5 +50,5 @@ for media_file in media_file_path:
 
 
 
-with open("data/prompt/2prompt4o.json", "w", encoding="utf-8") as transcription_file:
+with open("data/prompted_transcription/gpt-4o-promped_transcription.json", "w", encoding="utf-8") as transcription_file:
     json.dump(ordered_transcription, transcription_file, ensure_ascii=False, indent=2)

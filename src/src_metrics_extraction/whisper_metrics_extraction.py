@@ -85,30 +85,35 @@ def _classify_text(whisper: Dict[str, Any]) -> str:
         and no_speech_prob < 0.5
         and len(tokens) >= 2
     ) or (avg_logprob > -1 and compression_ratio < 2.4 and not music_text):
-        return whisper["text"]
+        return "dialogue"
 
     # fallback
-    return "dialogue unknown"
+    return "unknown dialogue"
 
 def context_flagger(whisper_dict: Dict) -> Dict: 
     for path in whisper_dict.keys(): 
-        whisper_dict[path]["context_type"]=_classify_text(whisper_dict[path])
+        whisper_dict[path]["context"]=_classify_text(whisper_dict[path])
     return whisper_dict
 
 
 
    
-with open("./data/raw_transcription/whisper1Transcription.json", "r", encoding="utf-8") as whisper_file:
+with open("./data/raw_transcription/whisper_verbose_transcription.json", "r", encoding="utf-8") as whisper_file:
     whisper_dict = context_flagger(whisper_performance_calculator(json.load(whisper_file)))
 
 # whisper_dict = dict(sorted(whisper_dict.items(), key=lambda x: x[1]["context_type"]))
-data = [{"log-prob":video_entry["metrics"]["text_logprob"], "compression_ratio":video_entry["metrics"]["text_compression_ratio"],"no_speech:prob":video_entry["metrics"]["text_no_speech_prob"], "type":video_entry["context_type"]} for video_entry in whisper_dict.values()]
+data = [{"log-prob":video_entry["metrics"]["text_logprob"], "compression_ratio":video_entry["metrics"]["text_compression_ratio"],"no_speech:prob":video_entry["metrics"]["text_no_speech_prob"], "type":video_entry["context"]} for video_entry in whisper_dict.values()]
 df= pd.DataFrame(data, index=whisper_dict.keys())
-text_data =[{ "type":video_entry["context_type"]}for video_entry in whisper_dict.values()]
+text_data =[{ "type":video_entry["context"]}for video_entry in whisper_dict.values()]
 df2 = pd.DataFrame( text_data, index=whisper_dict.keys())
 with open("./data/metrics/flagged_whisper_metrics.txt", "w", encoding ="utf-8") as file:
      file.write(df.to_string())
      file.write("\n"*3)
      file.write(df2.to_string())
 
+for d in whisper_dict.values():
+    del d["segments"]
+print(whisper_dict)
+with open("./data/metrics/whisper_json_metrics.json", "w", encoding="utf-8") as save:
+    json.dump(whisper_dict, save, ensure_ascii=False, indent=2)
 
