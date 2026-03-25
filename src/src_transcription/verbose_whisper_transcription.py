@@ -12,7 +12,7 @@ client = OpenAI(api_key=API_KEY)
 # #Create media_file_path list: 
 def create_media_file_path(media_file_path = []):
     for i in range(1,101):
-        media_file_path.append(f"./Videos/Video{str(i)}.mp4")
+        media_file_path.append(f"data/videos/Video{str(i)}.mp4")
     return media_file_path
  
 formatted_transcription = {}
@@ -51,5 +51,5 @@ for media_file in media_file_path:
 
 
 
-with open("whisper1Transcription.json", "w", encoding="utf-8") as transcription_file:
+with open("data/raw_transcription/whisper_verbose_transcription.json", "w", encoding="utf-8") as transcription_file:
     json.dump(formatted_transcription, transcription_file, ensure_ascii=False, indent=2)
