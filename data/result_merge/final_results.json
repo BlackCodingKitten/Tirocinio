@@ -1,0 +1,602 @@
+{
+  "Video1.mp4": {
+    "context": "unknown_dialogue",
+    "score": -1.3181317065798213,
+    "score_meaning": "unreliable",
+    "selected_model": "irrelevant"
+  },
+  "Video2.mp4": {
+    "context": "Come fare l'aspirapolvere? Avete una fetta biscottata? Bene, spaccatela in terra. La spaccate in terra e in pochi secondi scomparirà tutto. Via con l'aspirapolvere.",
+    "score": -0.04136754722806275,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video3.mp4": {
+    "context": "silence/noise",
+    "score": -0.45840150701185395,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video4.mp4": {
+    "context": "music",
+    "score": -0.5902810518443585,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video5.mp4": {
+    "context": "mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono in noce. Dopo circa 15-16 anni si cambia il fondo a quest'altro.",
+    "score": -0.13762638619172732,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video6.mp4": {
+    "context": "silence/noise",
+    "score": -0.49087043572191763,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video7.mp4": {
+    "context": "music",
+    "score": -0.595378041267395,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video8.mp4": {
+    "context": "silence/noise",
+    "score": -0.4331764057457258,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video9.mp4": {
+    "context": "silence/noise",
+    "score": -0.5424911908311787,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video10.mp4": {
+    "context": "Infatti nell'angolo giunge il giardiniere. Dove? Dove? Dove? Guarda che tu vuoi giù. No, sta dormendo. Vanessa non ti mangia, non ti fa niente. Dove scappi? Prendi un pezzo di carta igienica. Ma tu non sei normale. Animaletto! Guarda che...",
+    "score": -0.22974485800299715,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video11.mp4": {
+    "context": "unknown_dialogue",
+    "score": -1.4479219904131777,
+    "score_meaning": "unreliable",
+    "selected_model": "irrelevant"
+  },
+  "Video12.mp4": {
+    "context": "Mi ha catturato un medaglione di due passi indietro.",
+    "score": -0.20871444125057437,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video13.mp4": {
+    "context": "Ciao bella, ciao bella, ciao ciao ciao, questo è il fiore del partigiano morto per la libertà. E questo è il fiore del partigiano morto per la libertà.",
+    "score": -0.10275735415127507,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video14.mp4": {
+    "context": "silence/noise",
+    "score": -0.21663828999953694,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video15.mp4": {
+    "context": "silence/noise",
+    "score": -0.010881022148168995,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video16.mp4": {
+    "context": "silence/noise",
+    "score": -0.5058114672601914,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video17.mp4": {
+    "context": "Ecco qua che arriva, vi assicuro è arrivato e non era neanche sudato.",
+    "score": -0.21842013995710916,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video18.mp4": {
+    "context": "Angela e Vincenzo!",
+    "score": -0.19060897945601027,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video19.mp4": {
+    "context": "silence/noise",
+    "score": -0.3466440774499142,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video20.mp4": {
+    "context": "silence/noise",
+    "score": -0.4340798990445546,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video21.mp4": {
+    "context": "silence/noise",
+    "score": -0.30382628116058186,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video22.mp4": {
+    "context": "silence/noise",
+    "score": -0.03107080204244994,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video23.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.41497930223867296,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video24.mp4": {
+    "context": "silence/noise",
+    "score": -0.3241292209331732,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video25.mp4": {
+    "context": "silence/noise",
+    "score": -0.4107399476295814,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video26.mp4": {
+    "context": "Ho capito tutto. E poi le mettiamo al caldo. Vai, Vane, fai il castello. Pronti? Hai messo sabbia mista, bagnata e asciutta? Mizzica!",
+    "score": -0.15688056300796704,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video27.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.6355517244664952,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video28.mp4": {
+    "context": "silence/noise",
+    "score": -0.427410155215025,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video29.mp4": {
+    "context": "La candidata Sara, iscritta al corso di laurea in lingue e culture per il turismo e il commercio internazionale, ha presentato un elaborato finale dal titolo \"Lo sviluppo della ricettività alberghiera sulla sponda del Gata Bresciano dalla fine dell'Ottocento ai giorni nostri\". Lo ha discusso nella presenza della commissione composta dai professori Mario Rizzo Ferraro e Francesco Ricciardi. L'elaborato è stato...",
+    "score": -0.1928541556272473,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video30.mp4": {
+    "context": "silence/noise",
+    "score": -0.41875121111665065,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video31.mp4": {
+    "context": "Chiamalo, chiamalo.",
+    "score": -0.8802965083824736,
+    "score_meaning": "uncertain",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video32.mp4": {
+    "context": "Adesso mangiamo? Cosa fai, parecchi? Eh, ma dovresti anche sciacquare poi, eh? Ah, ecco. Vediamo un po' questa bambina, che brava. Ma sei bravissima! Allora mi aiuti tu, eh? Sempre, ok? Grazie. Guardate come si fa!",
+    "score": -0.07922322178836794,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video33.mp4": {
+    "context": "Questa secondo me Stefano è la parte della frenata perché sono caduti davanti. Però, ok, io tocchi i freni. Poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche, chiaramente ora con i freni a disco che frenano, pinzano con molta più forza nel momento in cui il corridore si spaventa, frena col freno a disco.",
+    "score": -0.05703221718703434,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video34.mp4": {
+    "context": "silence/noise",
+    "score": -0.552791477595497,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video35.mp4": {
+    "context": "silence/noise",
+    "score": -0.19138775106694084,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video36.mp4": {
+    "context": "Auguri a te!",
+    "score": -0.40073282665689475,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video37.mp4": {
+    "context": "Vanessa che volo hai fatto! Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro. È quella di qui. No, lo sapevo! Ma scusa, ma Anastasia! La gamba! No, no, no, no, no. Anastasia!",
+    "score": -0.13104003196474684,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video38.mp4": {
+    "context": "silence/noise",
+    "score": -0.4353968329303825,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video39.mp4": {
+    "context": "music",
+    "score": -0.04192202538251877,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video40.mp4": {
+    "context": "Questo è l'aperitivo. Gente che balla.",
+    "score": -0.13791026927345648,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video41.mp4": {
+    "context": "music",
+    "score": -0.02856152132153511,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video42.mp4": {
+    "context": "silence/noise",
+    "score": -0.022849536191642983,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video43.mp4": {
+    "context": "...dall'Istituto Nazionale Previdenza Sociale, l'Istituto Neutralizzazione Parassiti Sociali, e preventivando un risparmio di almeno due miliardi per ogni gruppo di trenta, organizzava viaggi agevolati senza ritorni.",
+    "score": -0.10812652335679263,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video44.mp4": {
+    "context": "Ragazzi c'è la buia!",
+    "score": -0.3526667366673387,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video45.mp4": {
+    "context": "Ma Marco continuava a dormire come un gran pigrone, non aveva ascoltato i cori e in più la sera precedente aveva visto un film alla televisione. Perciò stanco come non aveva visto.",
+    "score": -0.15732341761498422,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video46.mp4": {
+    "context": "In questo bel buio potrei fare io Cappuccetto Rosso. La aiuterò a tornare a casa dalla nonna. E mentre lei è lì tranquilla, che si fida di me, io mi am... me la faccio! Ciao bella bambina, buonasera! Ma te sei un lupo vero vero vero? Sì, mi chiamano giusto lupo cattivo del bosco. Ma te sei un lupo cattivo cattivo? Sì, cattivo! E ora ti mangio!",
+    "score": -0.13971396239281114,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video47.mp4": {
+    "context": "silence/noise",
+    "score": -0.7624001388648867,
+    "score_meaning": "uncertain",
+    "selected_model": "irrelevant"
+  },
+  "Video48.mp4": {
+    "context": "Un giro sprint ed è Duccio Marsili in testa, seguito da Giacomo Mazza, poi Piercini, poi Mallorca, ma sono lì tutti vicini, vicinissimi nelle parti opposte a quella dell'arrivo del tracciato, fuori all'esterno Piercini che passa, Marsili all'interno.",
+    "score": -0.17184519978336005,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video49.mp4": {
+    "context": "Se non la spingo io non scenderete mai. Ci siete? Ci siete? Sì? Tienila forte, Vane. Ok? Vado! Ok.",
+    "score": -0.13130065090411355,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video50.mp4": {
+    "context": "silence/noise",
+    "score": -0.5217888506927011,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video51.mp4": {
+    "context": "silence/noise",
+    "score": -0.6108071914752146,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video52.mp4": {
+    "context": "silence/noise",
+    "score": -0.006354442352949264,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video53.mp4": {
+    "context": "silence/noise",
+    "score": -0.08787467883030331,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video54.mp4": {
+    "context": "music",
+    "score": -0.007306072395294905,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video55.mp4": {
+    "context": "silence/noise",
+    "score": -0.43173347800084233,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video56.mp4": {
+    "context": "silence/noise",
+    "score": -0.21638357216488657,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video57.mp4": {
+    "context": "silence/noise",
+    "score": -0.1569876007088169,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video58.mp4": {
+    "context": "La margherita quanto verrebbe?",
+    "score": -0.14742865319419707,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video59.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.8090123226260766,
+    "score_meaning": "uncertain",
+    "selected_model": "irrelevant"
+  },
+  "Video60.mp4": {
+    "context": "Dentro c'è la lingua.",
+    "score": -0.11696837358613266,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video61.mp4": {
+    "context": "silence/noise",
+    "score": -0.16764868601785565,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video62.mp4": {
+    "context": "silence/noise",
+    "score": -0.05462318265654176,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video63.mp4": {
+    "context": "silence/noise",
+    "score": -0.07176613241972518,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video64.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.3957427116110921,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video65.mp4": {
+    "context": "silence/noise",
+    "score": -0.012451013385543774,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video66.mp4": {
+    "context": "silence/noise",
+    "score": -0.00842395275230956,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video67.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.08142342150676996,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video68.mp4": {
+    "context": "unknown_dialogue",
+    "score": -0.40271368715912104,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video69.mp4": {
+    "context": "silence/noise",
+    "score": -0.5382538783819609,
+    "score_meaning": "reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video70.mp4": {
+    "context": "Dentro, spegni, spegni, spegni.",
+    "score": -0.194511925843231,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video71.mp4": {
+    "context": "Franco, la crisi fa sentire, niente, diamo con le arance, sono buone, sono belle, chiedetelo alle vostre sorelle, diamo con le arance, le arance, diamo con le arance, forza con le arance, le arance, le arance, vai. Ma sono dolci? Sono dolci, dicevo dolci, sono arance, quella pasticceria, diamo con le arance.",
+    "score": -0.07414577714728716,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video72.mp4": {
+    "context": "silence/noise",
+    "score": -0.01397563421051018,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video73.mp4": {
+    "context": "silence/noise",
+    "score": -0.00864634257141006,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video74.mp4": {
+    "context": "Dunque, patatina lei per te, patatina lei per me, lei per la mamma, lei per tua sorella, lei per il nonno, lei per il portinaio e lei per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle. Lays, life needs flavor. Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così. Incredibile, è nel prezzo!",
+    "score": -0.0696317589010431,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video75.mp4": {
+    "context": "Va bene, così poi ti puoi ricordare del dentino storto.",
+    "score": -0.2478290613507852,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video76.mp4": {
+    "context": "silence/noise",
+    "score": -0.13335212680249242,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video77.mp4": {
+    "context": "silence/noise",
+    "score": -0.48526525817814214,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video78.mp4": {
+    "context": "music",
+    "score": -0.11925151944160461,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video79.mp4": {
+    "context": "Buona colazione! Ma dove siamo? Al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta. Questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta. Abbiamo festeggiato qualcosa, vero? E tu, cappuccino? La mangi la tortina anche tu? È buono il cappuccino che fa il papà? Sì? Allora buona domenica! Grazie, ciao! Ciao ciao! Ciao!",
+    "score": -0.06361484392616415,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video80.mp4": {
+    "context": "music",
+    "score": -0.1448037177324295,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video81.mp4": {
+    "context": "silence/noise",
+    "score": -0.420589108015929,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video82.mp4": {
+    "context": "music",
+    "score": -0.017952080816030502,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video83.mp4": {
+    "context": "silence/noise",
+    "score": 0.0,
+    "score_meaning": "very reliable",
+    "selected_model": "whisper-1"
+  },
+  "Video84.mp4": {
+    "context": "Fai si boccia!",
+    "score": -0.5616573470906587,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video85.mp4": {
+    "context": "silence/noise",
+    "score": -0.4721435237837613,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video86.mp4": {
+    "context": "silence/noise",
+    "score": -0.4937469905224316,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video87.mp4": {
+    "context": "Il latte che viene munto finisce dentro a quel secchio. Lo vedete di sotto.",
+    "score": -0.07683067338725777,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video88.mp4": {
+    "context": "music",
+    "score": -0.422000527381897,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video89.mp4": {
+    "context": "Molto bene Antonio Tiberi, avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare, forse gli ha detto ce la fai ancora tirare un po' o devo partire? E Michael gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi l'avvantaggio di Pellizzari nei confronti di questa prima parte del gruppo della Maglia Rosa, ce la fa.",
+    "score": -0.0632494333270315,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video90.mp4": {
+    "context": "music",
+    "score": -0.16363437473773956,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video91.mp4": {
+    "context": "Io lo so, io lo so che un po' di bene già mi vuoi. Dimmi perché, ma perché, ma perché, negli occhi miei non guardi mai. Eppure io lo so, io lo so che un po' di bene già mi vuoi. Dottore, sì, posso chiedere a lei, se avete questo farmaco? Questo farmaco, sì. Bustine o pillole? Pillole è meglio.",
+    "score": -0.10998839291915803,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video92.mp4": {
+    "context": "Buongiorno. Buongiorno, cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito e una bottiglia da mezzo litro di olio.",
+    "score": -0.023968007826764497,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video93.mp4": {
+    "context": "music",
+    "score": -0.019077837467193604,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video94.mp4": {
+    "context": "Se vi mettete dove state, questa ha una buona continuità di legno. Manomale che sali si restringe e se è vero questo dal punto di vista dei principi dei vasi comunicanti, tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo... tu ti fermi adesso. Non lo so se con altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato. Cioè nel senso che questa è una pianta, qui abbiamo ridato una continuità di legno.",
+    "score": -0.07501743581867172,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video95.mp4": {
+    "context": "silence/noise",
+    "score": -0.40800700584047717,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  },
+  "Video96.mp4": {
+    "context": "music",
+    "score": -0.7892896488308907,
+    "score_meaning": "uncertain",
+    "selected_model": "irrelevant"
+  },
+  "Video97.mp4": {
+    "context": "silence/noise",
+    "score": -0.029161456768633798,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video98.mp4": {
+    "context": "silence/noise",
+    "score": -0.049229507700147224,
+    "score_meaning": "very reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video99.mp4": {
+    "context": "music",
+    "score": -0.4008936583995819,
+    "score_meaning": "reliable",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video100.mp4": {
+    "context": "silence/noise",
+    "score": -0.4757306669681656,
+    "score_meaning": "very reliable",
+    "selected_model": "irrelevant"
+  }
+}

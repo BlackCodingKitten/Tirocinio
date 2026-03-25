@@ -88,7 +88,7 @@ def _classify_text(whisper: Dict[str, Any]) -> str:
         return whisper["text"]
 
     # fallback
-    return "unknown dialogue"
+    return "unknown_dialogue"
 
 def context_flagger(whisper_dict: Dict) -> Dict: 
     for path in whisper_dict.keys(): 

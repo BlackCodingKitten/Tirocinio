@@ -27,7 +27,7 @@ for media_file in media_file_path:
                 file=video_to_transcribe,
                 language= "it",
                 temperature=0,
-                prompt= "se il video contiene della musica, scrivi solo \"music\", se il video contiene del rumore , non inventare le parole ma scrivimi \"silence/noise\", se il video contiene un dialogo che non riesci a capire scrivi \"unknown dialogue\"",
+                prompt= "se il video contiene della musica, scrivi solo \"music\", se il video contiene del rumore , non inventare le parole ma scrivimi \"silence/noise\", se il video contiene un dialogo che non riesci a capire scrivi \"unknown_dialogue\"",
                 response_format="json",
                 include=["logprobs"]    #è il logaritmo della probabilità che il modello assegna a quel token in quella precisa posizione, dato tutto il contesto precedente
                

@@ -4,7 +4,7 @@ import pandas as pd
 metrics_dict ={}
 # {
 #   "data/videos/Video1.mp4": {
-#     "text": "unknown dialogue",
+#     "text": "unknown_dialogue",
 #     "segments": [
 #       {
 #         "logprob": -0.6838496923446655
