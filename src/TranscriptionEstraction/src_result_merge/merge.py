@@ -106,14 +106,14 @@ def evaluate_single_reliability(
 def metrics(w,g):
     if w["context"] == g["context"]:
         score = _final_score(w,g)
-        return {"context":g["context"], "score":score, "score_meaning": _score_evaluation(score), "selected_model":"irrelevant"}
+        return {"classification":g["context"], "score":score, "score_meaning": _score_evaluation(score), "selected_model":""}
     else: 
-        w_score = _score_whisper(w["text_logprob"],w["compression_ratio"],w["no_speech_prob"])
+        w_score = w["text_logprob"]
         g_score = g["text_logprob"]
         if g_score >= w_score:
-            return {"context":g["context"], "score":g_score, "score_meaning": evaluate_single_reliability(g_score), "selected_model":"gpt-4o-transcribe"}
+            return {"classification":g["context"], "score":g_score, "score_meaning":evaluate_single_reliability(g_score), "selected_model":"gpt-4o-transcribe"}
         if g_score < w_score:  
-            return {"context":w["context"], "score":w_score, "score_meaning":evaluate_single_reliability(w["text_logprob"],w["no_speech_prob"],w["compression_ratio"]), "selected_model":"whisper-1"}
+            return {"classification":w["context"], "score":w_score, "score_meaning":evaluate_single_reliability(w["text_logprob"],w["no_speech_prob"],w["compression_ratio"]), "selected_model":"whisper-1"}
         
         
         

@@ -72,11 +72,11 @@ def _classify_text(whisper: Dict[str, Any]) -> str:
 
     # 1) Silenzio / rumore
     if not text or (avg_logprob < -1 and no_speech_prob >= 0.5):
-        return "silence/noise"
+        return "silence/noise", None
 
     # 2) Musica (euristico)
     if( music_text and avg_logprob < -0.75) or (repetition >= 0.6 and avg_logprob < -0.7):
-        return "music"
+        return "music", None
 
     # 3) Dialogo
     if (
@@ -85,14 +85,19 @@ def _classify_text(whisper: Dict[str, Any]) -> str:
         and no_speech_prob < 0.5
         and len(tokens) >= 2
     ) or (avg_logprob > -1 and compression_ratio < 2.4 and not music_text):
-        return whisper["text"]
+        return "dialogue",whisper["text"]
 
     # fallback
-    return "unknown_dialogue"
+    return "unknown_dialogue", None
 
 def context_flagger(whisper_dict: Dict) -> Dict: 
     for path in whisper_dict.keys(): 
-        whisper_dict[path]["context"]=_classify_text(whisper_dict[path])
+        whisper_dict[path]["context"],text=_classify_text(whisper_dict[path])
+        if text == None: 
+            whisper_dict[path]["transcription"] = ""
+        else: 
+            whisper_dict[path]["transcription"] = text
+        
     return whisper_dict
 
 
