@@ -22,7 +22,7 @@ def _create_media_file_path(media_file_path: List[str] = []) -> List[str]:
     for i in range(1, 101):
         # Append the current video file path
         # in the format: data/videos/Video1.mp4, ..., Video100.mp4
-        media_file_path.append(f"data/videos/Video{str(i)}.mp4")
+        media_file_path.append(f"Data/Videos/Video{str(i)}.mp4")
 
     # Return the complete list of file paths.
     return media_file_path
@@ -90,13 +90,13 @@ def generate_and_save_transcription(
     ) as transcription_file:
         dump(formatted_transcription, transcription_file, ensure_ascii=False, indent=2)
 
-    return
+    
 
 
 # Execute the transcription pipeline.
 def main() -> None:
     generate_and_save_transcription()
-    return
+    
 
 
 if __name__ == "__main__":

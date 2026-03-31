@@ -1,902 +1,902 @@
 {
-  "data/videos/Video1.mp4": {
-    "text": "Prima mettiamo... Prima mettiamo... Ehi, prima! Ehi, prima!                        Ehi, prima!    Ehi, prima! Ehi, prima! Ehi, prima! ",
+  "Data/Videos/Video1.mp4": {
     "metrics": {
-      "text_logprob": -0.22929976667676652,
-      "text_compression_ratio": 8.729074570110866,
-      "text_no_speech_prob": 0.6763851795877729
+      "text_logprob": -0.14480965480696958,
+      "text_compression_ratio": 11.532334358965764,
+      "text_no_speech_prob": 0.8098276130488662
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video2.mp4": {
-    "text": "fare l'aspirapolvere avete una fetta biscottata bene spaccatela intera la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere",
+  "Data/Videos/Video2.mp4": {
     "metrics": {
       "text_logprob": -0.33000534772872925,
       "text_compression_ratio": 1.4509804248809814,
       "text_no_speech_prob": 0.012308348901569843
     },
-    "context": "fare l'aspirapolvere avete una fetta biscottata bene spaccatela intera la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere"
+    "context": "dialogue",
+    "transcription": "fare l'aspirapolvere avete una fetta biscottata bene spaccatela intera la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere"
   },
-  "data/videos/Video3.mp4": {
-    "text": " ",
+  "Data/Videos/Video3.mp4": {
     "metrics": {
       "text_logprob": -0.3842659443616867,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.8751900494098663
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video4.mp4": {
-    "text": "musica applausi",
+  "Data/Videos/Video4.mp4": {
     "metrics": {
       "text_logprob": -0.8980435132980347,
       "text_compression_ratio": 0.4642857164144516,
       "text_no_speech_prob": 0.527010440826416
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video5.mp4": {
-    "text": "dove metti i piedi di gondoliere tutto l'alice, austriaco o italiano, solido ma leggero, mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono innose, dopo circa 15-16 anni si cambia il fondo a pescaggio, e durante altri 15-20 anni la vita media non ha scappato.",
+  "Data/Videos/Video5.mp4": {
     "metrics": {
-      "text_logprob": -0.4840213418006897,
-      "text_compression_ratio": 1.305932891368866,
-      "text_no_speech_prob": 0.2020050913095474
+      "text_logprob": -0.4633172571659088,
+      "text_compression_ratio": 1.279215693473816,
+      "text_no_speech_prob": 0.3094717264175415
     },
-    "context": "dove metti i piedi di gondoliere tutto l'alice, austriaco o italiano, solido ma leggero, mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono innose, dopo circa 15-16 anni si cambia il fondo a pescaggio, e durante altri 15-20 anni la vita media non ha scappato."
+    "context": "dialogue",
+    "transcription": "dove metti i piedi di gondoliere tutto l'alice, austriaco o italiano, solido ma leggero. Mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono innoce. Dopo circa 15-16 anni si cambia il fondo a pescaggio. Dopo altri 15-20 anni la vita media non ha scappato."
   },
-  "data/videos/Video6.mp4": {
-    "text": "",
+  "Data/Videos/Video6.mp4": {
     "metrics": {
-      "text_logprob": -0.5196517109870911,
+      "text_logprob": -0.5210303664207458,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.632235586643219
+      "text_no_speech_prob": 0.6343261003494263
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video7.mp4": {
-    "text": "",
+  "Data/Videos/Video7.mp4": {
     "metrics": {
       "text_logprob": -0.42224955558776855,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.6129862666130066
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video8.mp4": {
-    "text": " ",
+  "Data/Videos/Video8.mp4": {
     "metrics": {
-      "text_logprob": -0.34268882870674133,
+      "text_logprob": -0.3428037166595459,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.6846362203359604
+      "text_no_speech_prob": 0.6831306666135788
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video9.mp4": {
-    "text": "",
+  "Data/Videos/Video9.mp4": {
     "metrics": {
-      "text_logprob": -0.5161442756652832,
+      "text_logprob": -0.5156847238540649,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.5807126760482788
+      "text_no_speech_prob": 0.5823041796684265
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video10.mp4": {
-    "text": "Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove dove dove? E' qua! Guarda che tu voli giù! No sta dormendo! Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi? Prendi un pezzo di carta igienica Ma tu non sei normale! Anibaletto! Guarda che bello!",
+  "Data/Videos/Video10.mp4": {
     "metrics": {
-      "text_logprob": -0.49482820289475576,
-      "text_compression_ratio": 1.39523446559906,
-      "text_no_speech_prob": 0.05988802335091999
+      "text_logprob": -0.494561459336962,
+      "text_compression_ratio": 1.3782028981617518,
+      "text_no_speech_prob": 0.06124042985694749
     },
-    "context": "Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove dove dove? E' qua! Guarda che tu voli giù! No sta dormendo! Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi? Prendi un pezzo di carta igienica Ma tu non sei normale! Anibaletto! Guarda che bello!"
+    "context": "dialogue",
+    "transcription": "Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove, dove? E' qua! Guarda che tu voli giù! No, sta dormendo! Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi? Prendi un pezzo di carta igienica! Ma tu non sei normale! Animaletto! Guarda che bello!"
   },
-  "data/videos/Video11.mp4": {
-    "text": "La prima angoloide in Milano Peso in avanti Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro",
+  "Data/Videos/Video11.mp4": {
     "metrics": {
       "text_logprob": -0.1908217160140767,
       "text_compression_ratio": 8.83501422405243,
       "text_no_speech_prob": 0.7990116056273965
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video12.mp4": {
-    "text": "mi ha catturato mi dà gli ordini due passi indietro due mani perché io sono armato il cane va a terra senza passare tra me e il cane passa dietro mi fa la perquisizione per vedere se ho rubato qualcosa vede che ho l'arma e me la toglie",
+  "Data/Videos/Video12.mp4": {
     "metrics": {
-      "text_logprob": -0.42190497120221454,
+      "text_logprob": -0.421486775080363,
       "text_compression_ratio": 1.24896901845932,
-      "text_no_speech_prob": 0.26366159816582996
+      "text_no_speech_prob": 0.26515263319015503
     },
-    "context": "mi ha catturato mi dà gli ordini due passi indietro due mani perché io sono armato il cane va a terra senza passare tra me e il cane passa dietro mi fa la perquisizione per vedere se ho rubato qualcosa vede che ho l'arma e me la toglie"
+    "context": "dialogue",
+    "transcription": "mi ha catturato mi dà gli ordini due passi indietro due mani perché io sono armato il cane va a terra senza passare tra me e il cane passa dietro mi fa la perquisizione per vedere se ho rubato qualcosa vede che ho l'arma e me la toglie"
   },
-  "data/videos/Video13.mp4": {
-    "text": "Ciao bella, ciao bella, ciao ciao, questo è il fiore del partigiano, morto per la libertà, e questo è il fiore del partigiano, morto per la libertà.",
+  "Data/Videos/Video13.mp4": {
     "metrics": {
       "text_logprob": -0.49504220485687256,
       "text_compression_ratio": 1.7882353067398071,
-      "text_no_speech_prob": 0.6611451506614685
+      "text_no_speech_prob": 0.6604059934616089
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video14.mp4": {
-    "text": "E' brutto, ma ho morte, Ari! Fai una lancetta, Popo, vai! Non mi cago, Francesco, è troppo brutto! Dai, vai, tira! Ah, ha visto il mangiare! Ha visto il mangiare, ha visto il mangiare! Non me lo dice il pubblico! Non me lo dice il pubblico!",
+  "Data/Videos/Video14.mp4": {
     "metrics": {
       "text_logprob": -0.6184587366878986,
       "text_compression_ratio": 1.4182371348142624,
       "text_no_speech_prob": 0.6132678166031837
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video15.mp4": {
-    "text": "... ... ... ... ... ...",
+  "Data/Videos/Video15.mp4": {
     "metrics": {
       "text_logprob": -0.6734894514083862,
       "text_compression_ratio": 0.8698412477970123,
       "text_no_speech_prob": 0.6676652034123739
     },
-    "context": "... ... ... ... ... ..."
+    "context": "dialogue",
+    "transcription": "... ... ... ... ... ..."
   },
-  "data/videos/Video16.mp4": {
-    "text": " ",
+  "Data/Videos/Video16.mp4": {
     "metrics": {
-      "text_logprob": -0.4095630943775177,
+      "text_logprob": -0.40967798233032227,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.8296880424022675
+      "text_no_speech_prob": 0.8297301232814789
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video17.mp4": {
-    "text": "È in la prima posizione, non poteva che essere lui, con un tempo strepitoso perché la gara era ed è rimarrà dura anche per l'anno prossimo, anche se non ci sarà vento, con un vento così forte, con le salite che c'erano un'ora, 11.46 per Ismail Eccolo qua che arriva e vi assicuro è arrivato che non era neanche sudato Allora andiamo",
+  "Data/Videos/Video17.mp4": {
     "metrics": {
-      "text_logprob": -0.4197946548461914,
+      "text_logprob": -0.4197693705558777,
       "text_compression_ratio": 1.3441741228103639,
-      "text_no_speech_prob": 0.633029294013977
+      "text_no_speech_prob": 0.6359263062477112
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video18.mp4": {
-    "text": "Angela e Vincenzo ",
+  "Data/Videos/Video18.mp4": {
     "metrics": {
       "text_logprob": -0.45289821922779083,
       "text_compression_ratio": 0.7530434727668762,
       "text_no_speech_prob": 0.5758838504552841
     },
-    "context": "Angela e Vincenzo "
+    "context": "dialogue",
+    "transcription": "Angela e Vincenzo Sottotitoli e revisione a cura di QTSS"
   },
-  "data/videos/Video19.mp4": {
-    "text": "",
+  "Data/Videos/Video19.mp4": {
     "metrics": {
       "text_logprob": -0.3874994218349457,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.5365419983863831
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video20.mp4": {
-    "text": " ",
+  "Data/Videos/Video20.mp4": {
     "metrics": {
-      "text_logprob": -0.3838193267583847,
+      "text_logprob": -0.3835895508527756,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.8188495337963104
+      "text_no_speech_prob": 0.8194532096385956
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video21.mp4": {
-    "text": "Scosso dell'Oca, quindi la Torre. L'ultimo San Martino affrontato in controllo, anche se la distanza va giù, va giù. Oddio, lo scosso dell'Oca. C'è l'Oca davanti con la Torre che prova a ritornare. Torre-Oca all'ultima curva. Oca davanti alla Torre, va giù anche la Torre. Dunque vince il cavallo scosso, vince il cavallo scosso. Dell'Oca, clamoroso con la Pantera che era avanti in pratica fino all'ultimo San Martino.",
+  "Data/Videos/Video21.mp4": {
     "metrics": {
-      "text_logprob": -0.2852815568447113,
+      "text_logprob": -0.28576082587242124,
       "text_compression_ratio": 1.5851006031036377,
-      "text_no_speech_prob": 0.8134531021118164
+      "text_no_speech_prob": 0.8139246702194214
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video22.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no No",
+  "Data/Videos/Video22.mp4": {
     "metrics": {
       "text_logprob": -0.4558858573436737,
       "text_compression_ratio": 13.217647172510624,
       "text_no_speech_prob": 0.6545690149068832
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video23.mp4": {
-    "text": "Se lascio un po' tu devi macinare, capito? Vai con la bambuglia! La polvere magica! Lui sa in quanti video miei sta già a fare le risate! Ancora!",
+  "Data/Videos/Video23.mp4": {
     "metrics": {
       "text_logprob": -0.6465604066848755,
       "text_compression_ratio": 1.0617544114589692,
       "text_no_speech_prob": 0.22685480415821074
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video24.mp4": {
-    "text": "Pallone numero 5 Paccini Gol Paccini! Paccini! Sprocca il risultato per la Sampdoria Calcio",
+  "Data/Videos/Video24.mp4": {
     "metrics": {
-      "text_logprob": -0.7560504078865051,
+      "text_logprob": -0.7557257811228434,
       "text_compression_ratio": 0.9485578139623007,
-      "text_no_speech_prob": 0.21336364125212035
+      "text_no_speech_prob": 0.21555066667497158
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video25.mp4": {
-    "text": " ",
+  "Data/Videos/Video25.mp4": {
     "metrics": {
-      "text_logprob": -0.3526543080806732,
+      "text_logprob": -0.3531138747930527,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.7917636334896088
+      "text_no_speech_prob": 0.79353266954422
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video26.mp4": {
-    "text": "ho capito tutto e poi le mettiamo il caldo sotto la spianatoia vai Vane, fai il castello pronti? hai messo sabbia mista bagnata e asciutta buonissima",
+  "Data/Videos/Video26.mp4": {
     "metrics": {
       "text_logprob": -0.8956325769424438,
       "text_compression_ratio": 1.1625397205352783,
       "text_no_speech_prob": 0.053427998721599576
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video27.mp4": {
-    "text": " ",
+  "Data/Videos/Video27.mp4": {
     "metrics": {
       "text_logprob": -0.4249583035707474,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.800617903470993
+      "text_no_speech_prob": 0.8001681566238403
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video28.mp4": {
-    "text": "",
+  "Data/Videos/Video28.mp4": {
     "metrics": {
       "text_logprob": -0.4528391361236572,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.6999314427375793
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video29.mp4": {
-    "text": "La candidata Loh Sara, susscritta al Consiglio delle Antiche Culture Pericolose e del Commercio Internazionale, ha presentato nell'elaborato finale dell'articolo lo sviluppo della ricettività alberghiera sulla sconda del gatto ad origami dalla fine dell'Occidente all'inizio dell'Ottobre e lo ha discusso nella presenza della Commissione a porta del Professore Davide Mazzarrano e Francesco Vecchietto.",
+  "Data/Videos/Video29.mp4": {
     "metrics": {
       "text_logprob": -0.6463367938995361,
       "text_compression_ratio": 1.3107142647107441,
       "text_no_speech_prob": 0.7214727401733398
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video30.mp4": {
-    "text": "",
+  "Data/Videos/Video30.mp4": {
     "metrics": {
-      "text_logprob": -0.4634178578853607,
+      "text_logprob": -0.46387743949890137,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.47350189089775085
+      "text_no_speech_prob": 0.47052329778671265
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video31.mp4": {
-    "text": "Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani",
+  "Data/Videos/Video31.mp4": {
     "metrics": {
-      "text_logprob": -0.26503767470518746,
+      "text_logprob": -0.2644631614287694,
       "text_compression_ratio": 8.123494191964467,
-      "text_no_speech_prob": 0.6792299588521321
+      "text_no_speech_prob": 0.6783825318018596
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video32.mp4": {
-    "text": "adesso mangiamo? ma cosa fai parecchi? ma dovresti anche sciacquare poi, ecco vediamo un po' questa bambina che brava ma sei bravissima allora mi aiuti tu sempre ok grazie guardate come si fa",
+  "Data/Videos/Video32.mp4": {
     "metrics": {
-      "text_logprob": -0.5292755166689554,
+      "text_logprob": -0.5295882821083069,
       "text_compression_ratio": 1.1733120481173198,
-      "text_no_speech_prob": 0.23291130860646567
+      "text_no_speech_prob": 0.23291082680225372
     },
-    "context": "adesso mangiamo? ma cosa fai parecchi? ma dovresti anche sciacquare poi, ecco vediamo un po' questa bambina che brava ma sei bravissima allora mi aiuti tu sempre ok grazie guardate come si fa"
+    "context": "dialogue",
+    "transcription": "adesso mangiamo? ma cosa fai parecchi? ma dovresti anche sciacquare poi, ecco vediamo un po' questa bambina che brava ma sei bravissima allora mi aiuti tu sempre ok grazie guardate come si fa"
   },
-  "data/videos/Video33.mp4": {
-    "text": "perchè guarda questa secondo me Stefano è la parte della frenata perchè sono caduti davanti però ok, io tocco i freni poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche chiaramente ora con i freni a disco che frenano pinzano molto più con molta più forza nel momento in cui il corridore si spaventa frena con il freno a disco",
+  "Data/Videos/Video33.mp4": {
     "metrics": {
-      "text_logprob": -0.2458689570426941,
+      "text_logprob": -0.2457184871037801,
       "text_compression_ratio": 1.5532817522684732,
-      "text_no_speech_prob": 0.4141577084859212
+      "text_no_speech_prob": 0.41439685026804607
     },
-    "context": "perchè guarda questa secondo me Stefano è la parte della frenata perchè sono caduti davanti però ok, io tocco i freni poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche chiaramente ora con i freni a disco che frenano pinzano molto più con molta più forza nel momento in cui il corridore si spaventa frena con il freno a disco"
+    "context": "dialogue",
+    "transcription": "perchè guarda questa secondo me Stefano è la parte della frenata perchè sono caduti davanti però ok, io tocco i freni poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche chiaramente ora con i freni a disco che frenano pinzano molto più con molta più forza nel momento in cui il corridore si spaventa frena con il freno a disco"
   },
-  "data/videos/Video34.mp4": {
-    "text": "",
+  "Data/Videos/Video34.mp4": {
     "metrics": {
-      "text_logprob": -0.5413599610328674,
+      "text_logprob": -0.5409004092216492,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.761769711971283
+      "text_no_speech_prob": 0.7603979110717773
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video35.mp4": {
-    "text": "musica musica",
+  "Data/Videos/Video35.mp4": {
     "metrics": {
-      "text_logprob": -0.8915277719497681,
+      "text_logprob": -0.8918611705303192,
       "text_compression_ratio": 0.4285714328289032,
-      "text_no_speech_prob": 0.6767570078372955
+      "text_no_speech_prob": 0.6788135915994644
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video36.mp4": {
-    "text": "auguri a te tanti auguri mannaggia la m***a sono cascato testa di c***o strutti sono cascato auguri Tomas mannaggia la m***a testa di c***o strutti auguri auguri a te",
+  "Data/Videos/Video36.mp4": {
     "metrics": {
       "text_logprob": -0.3826775997877121,
       "text_compression_ratio": 1.6974861300908601,
       "text_no_speech_prob": 0.43081616438352144
     },
-    "context": "auguri a te tanti auguri mannaggia la m***a sono cascato testa di c***o strutti sono cascato auguri Tomas mannaggia la m***a testa di c***o strutti auguri auguri a te"
+    "context": "dialogue",
+    "transcription": "auguri a te tanti auguri mannaggia la m***a sono cascato testa di c***o strutti sono cascato auguri Tomas mannaggia la m***a testa di c***o strutti auguri auguri a te"
   },
-  "data/videos/Video37.mp4": {
-    "text": "Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui. No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia.",
+  "Data/Videos/Video37.mp4": {
     "metrics": {
       "text_logprob": -0.44461073478062946,
       "text_compression_ratio": 1.299412727355957,
       "text_no_speech_prob": 0.13873555759588876
     },
-    "context": "Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui. No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia."
+    "context": "dialogue",
+    "transcription": "Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui. No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia."
   },
-  "data/videos/Video38.mp4": {
-    "text": " ",
+  "Data/Videos/Video38.mp4": {
     "metrics": {
       "text_logprob": -0.3610711842775345,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.8189068734645844
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video39.mp4": {
-    "text": "con il ragazzo del centro c'è troppi dei bottigiani di strada Parto via dei compagni guai S'occupietto di se stessa",
+  "Data/Videos/Video39.mp4": {
     "metrics": {
       "text_logprob": -0.9309114336967468,
       "text_compression_ratio": 1.0189850330352783,
       "text_no_speech_prob": 0.5032787948846817
     },
-    "context": "con il ragazzo del centro c'è troppi dei bottigiani di strada Parto via dei compagni guai S'occupietto di se stessa"
+    "context": "dialogue",
+    "transcription": "con il ragazzo del centro c'è troppi dei bottigiani di strada Parto via dei compagni guai S'occupietto di se stessa"
   },
-  "data/videos/Video40.mp4": {
-    "text": "Si vergogna perchè non è toccato Ma che cazzo te ne butti, sei in aperitivo, ma si Vai, fatti tu risare Com'è il nostro aperitivo? Anche lei si vergogna Dai Fede Questo aperitivo è molto easy Prendi buoni e benzina Buoni e benzina Ci vuole i voglio e benzina Aspetta, ce ne anch'io due Questa è la foto per bere Questo è l'aperitivo C'è gente che balla, gente che si diverte",
+  "Data/Videos/Video40.mp4": {
     "metrics": {
-      "text_logprob": -0.4070158004760742,
-      "text_compression_ratio": 1.574879595211574,
-      "text_no_speech_prob": 0.24383257116590226
+      "text_logprob": -0.4108823835849762,
+      "text_compression_ratio": 1.5809939077922277,
+      "text_no_speech_prob": 0.23911005684307643
     },
-    "context": "Si vergogna perchè non è toccato Ma che cazzo te ne butti, sei in aperitivo, ma si Vai, fatti tu risare Com'è il nostro aperitivo? Anche lei si vergogna Dai Fede Questo aperitivo è molto easy Prendi buoni e benzina Buoni e benzina Ci vuole i voglio e benzina Aspetta, ce ne anch'io due Questa è la foto per bere Questo è l'aperitivo C'è gente che balla, gente che si diverte"
+    "context": "dialogue",
+    "transcription": "Si vergogna perchè non è toccato Ma che cazzo te ne butti, sei in aperitivo, ma si Vai, fatti tu risare Com'è il nostro aperitivo? Anche lei si vergogna Dai Fede Questo aperitivo è molto easy Prendi buoni e benzina Buoni e benzina Ci vuole i voglio e benzina Aspetta, ce l'ho anch'io dove Questa è la foto per bere Questo è l'aperitivo C'è gente che balla, gente che si diverte"
   },
-  "data/videos/Video41.mp4": {
-    "text": " ",
+  "Data/Videos/Video41.mp4": {
     "metrics": {
-      "text_logprob": -0.33971749246120453,
+      "text_logprob": -0.3394877016544342,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.6714684665203094
+      "text_no_speech_prob": 0.6716056168079376
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video42.mp4": {
-    "text": "Siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a Roma, siamo arrivati a",
+  "Data/Videos/Video42.mp4": {
     "metrics": {
-      "text_logprob": -0.16675019264221191,
+      "text_logprob": -0.1665761061012745,
       "text_compression_ratio": 21.175000190734863,
-      "text_no_speech_prob": 0.6440339982509613
+      "text_no_speech_prob": 0.6463963687419891
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video43.mp4": {
-    "text": "...gran loggia da istituto nazionale previdenza sociale e istituto neutralizzazione parassiti sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava viaggi agevolati senza ritorno.",
+  "Data/Videos/Video43.mp4": {
     "metrics": {
-      "text_logprob": -0.39566834767659503,
-      "text_compression_ratio": 1.243793249130249,
-      "text_no_speech_prob": 0.1494239109257857
+      "text_logprob": -0.303356796503067,
+      "text_compression_ratio": 1.419354796409607,
+      "text_no_speech_prob": 0.20661082863807678
     },
-    "context": "...gran loggia da istituto nazionale previdenza sociale e istituto neutralizzazione parassiti sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava viaggi agevolati senza ritorno."
+    "context": "dialogue",
+    "transcription": "...gran loggia da Istituto Nazionale Previdenza Sociale e l'Istituto Neutralizzazione Parassiti Sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava viaggi agevolati, senza ritorni."
   },
-  "data/videos/Video44.mp4": {
-    "text": "Ragazzi dobbiamo prendere un'altra foto, non è vero? Ragazzi c'è la moglie che si è disinterrata Avete tanti avanzi nella vostra relazione? Come vi togliete in Italia, avete passato un paio di tappe o no? Non è vero?",
+  "Data/Videos/Video44.mp4": {
     "metrics": {
       "text_logprob": -0.6205743193626404,
       "text_compression_ratio": 1.1953246355056764,
       "text_no_speech_prob": 0.33886311054229734
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video45.mp4": {
-    "text": "Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film.",
+  "Data/Videos/Video45.mp4": {
     "metrics": {
       "text_logprob": -0.4717962443828583,
       "text_compression_ratio": 1.4090908765792847,
       "text_no_speech_prob": 0.05524686351418495
     },
-    "context": "Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film."
+    "context": "dialogue",
+    "transcription": "Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film."
   },
-  "data/videos/Video46.mp4": {
-    "text": "Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso. La aiuterò a tornare a casa della nonna. E mentre lei è lì tranquilla, che si fida di me, io mi amano. Me l'ha fatto! Ciao, bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto il lupo cattivo del bosco. Ma te sei anche un lupo cattivo, cattivo? Sì, cattivo, molto cattivo. E ora ti bello!",
+  "Data/Videos/Video46.mp4": {
     "metrics": {
       "text_logprob": -0.38826882297342474,
       "text_compression_ratio": 1.4245352094823664,
       "text_no_speech_prob": 0.18718994747508655
     },
-    "context": "Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso. La aiuterò a tornare a casa della nonna. E mentre lei è lì tranquilla, che si fida di me, io mi amano. Me l'ha fatto! Ciao, bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto il lupo cattivo del bosco. Ma te sei anche un lupo cattivo, cattivo? Sì, cattivo, molto cattivo. E ora ti bello!"
+    "context": "dialogue",
+    "transcription": "Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso. La aiuterò a tornare a casa della nonna. E mentre lei è lì tranquilla, che si fida di me, io mi amano. Me l'ha fatto! Ciao, bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto il lupo cattivo del bosco. Ma te sei anche un lupo cattivo, cattivo? Sì, cattivo, molto cattivo. E ora ti bello!"
   },
-  "data/videos/Video47.mp4": {
-    "text": "musica musica",
+  "Data/Videos/Video47.mp4": {
     "metrics": {
-      "text_logprob": -1.0258188545703888,
+      "text_logprob": -1.0262116193771362,
       "text_compression_ratio": 0.4285714328289032,
-      "text_no_speech_prob": 0.7344084680080414
+      "text_no_speech_prob": 0.7345041632652283
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video48.mp4": {
-    "text": "Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno. Aiuto! Aiuto! Marsini! Marsini! Marsini!",
+  "Data/Videos/Video48.mp4": {
     "metrics": {
-      "text_logprob": -0.44786395132541656,
+      "text_logprob": -0.4478609263896942,
       "text_compression_ratio": 1.483103632926941,
-      "text_no_speech_prob": 0.7299927175045013
+      "text_no_speech_prob": 0.7316906154155731
     },
-    "context": "Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno. Aiuto! Aiuto! Marsini! Marsini! Marsini!"
+    "context": "dialogue",
+    "transcription": "Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno. Aiuto! Aiuto! Marsini! Marsini! Marsini!"
   },
-  "data/videos/Video49.mp4": {
-    "text": "Se non la spingo io non scenderete mai. Ci siete? Ci siete? Sì? Tieni la forte, Vane, ok? Vado! Vado!",
+  "Data/Videos/Video49.mp4": {
     "metrics": {
-      "text_logprob": -0.8606648445129395,
-      "text_compression_ratio": 0.9333631917834282,
-      "text_no_speech_prob": 0.32157461903989315
+      "text_logprob": -0.7772607604662577,
+      "text_compression_ratio": 0.9565542936325073,
+      "text_no_speech_prob": 0.09897001087665558
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video50.mp4": {
-    "text": " ",
+  "Data/Videos/Video50.mp4": {
     "metrics": {
-      "text_logprob": -0.33816350996494293,
+      "text_logprob": -0.33850817382335663,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.9603467583656311
+      "text_no_speech_prob": 0.9603902697563171
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video51.mp4": {
-    "text": " ",
+  "Data/Videos/Video51.mp4": {
     "metrics": {
       "text_logprob": -0.41047970950603485,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.734555721282959
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video52.mp4": {
-    "text": "",
+  "Data/Videos/Video52.mp4": {
     "metrics": {
       "text_logprob": 0.0,
       "text_compression_ratio": 0.0,
       "text_no_speech_prob": 0.0
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video53.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+  "Data/Videos/Video53.mp4": {
     "metrics": {
       "text_logprob": -0.1745833307504654,
       "text_compression_ratio": 26.235294342041016,
       "text_no_speech_prob": 0.9062050580978394
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video54.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no No",
+  "Data/Videos/Video54.mp4": {
     "metrics": {
       "text_logprob": -0.4404100999236107,
       "text_compression_ratio": 13.217647172510624,
       "text_no_speech_prob": 0.934816986322403
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video55.mp4": {
-    "text": "",
+  "Data/Videos/Video55.mp4": {
     "metrics": {
-      "text_logprob": -0.5155238509178162,
+      "text_logprob": -0.5168731808662415,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.6039252877235413
+      "text_no_speech_prob": 0.6044857501983643
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video56.mp4": {
-    "text": "Direttamente al popolo con la rossa! Guai! Guai! Chi ci tocca? Chi ci prende la mano? Con la rossa! Guai! Guai!",
+  "Data/Videos/Video56.mp4": {
     "metrics": {
-      "text_logprob": -0.6711350083351135,
+      "text_logprob": -0.6705439388751984,
       "text_compression_ratio": 1.1722756028175354,
-      "text_no_speech_prob": 0.5853401223818461
+      "text_no_speech_prob": 0.5911859273910522
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video57.mp4": {
-    "text": "...50, 100, 200 euro. Grazie.",
+  "Data/Videos/Video57.mp4": {
     "metrics": {
-      "text_logprob": -0.9396219849586487,
+      "text_logprob": -0.9402168393135071,
       "text_compression_ratio": 0.8285714387893677,
-      "text_no_speech_prob": 0.312774658203125
+      "text_no_speech_prob": 0.3137321174144745
     },
-    "context": "...50, 100, 200 euro. Grazie."
+    "context": "dialogue",
+    "transcription": "...50, 100, 200 euro. Grazie."
   },
-  "data/videos/Video58.mp4": {
-    "text": "Quanto viene? Quattro euro. La margherita quanto dovrebbe? Quel pezzo giusto. Quattro euro.",
+  "Data/Videos/Video58.mp4": {
     "metrics": {
       "text_logprob": -0.7244263688723246,
       "text_compression_ratio": 0.8817877769470215,
       "text_no_speech_prob": 0.8085633913675944
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video59.mp4": {
-    "text": "Buongiorno Buongiorno Grazie Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno",
+  "Data/Videos/Video59.mp4": {
     "metrics": {
-      "text_logprob": -0.28922998905181885,
+      "text_logprob": -0.27706393599510193,
       "text_compression_ratio": 4.3125,
-      "text_no_speech_prob": 0.11485213786363602
+      "text_no_speech_prob": 0.11613287776708603
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video60.mp4": {
-    "text": "dentro la tua lingua, bene, bene, molto molto bene, metti un dizzo che sentirei, la faccia bene, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo, bravo,",
+  "Data/Videos/Video60.mp4": {
     "metrics": {
       "text_logprob": -0.2505301162600517,
       "text_compression_ratio": 18.279710014661152,
       "text_no_speech_prob": 0.6599603494008383
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video61.mp4": {
-    "text": "Siamo a Florence",
+  "Data/Videos/Video61.mp4": {
     "metrics": {
-      "text_logprob": -0.7586863040924072,
+      "text_logprob": -0.7590769529342651,
       "text_compression_ratio": 0.6666666865348816,
-      "text_no_speech_prob": 0.2190651297569275
+      "text_no_speech_prob": 0.2190845012664795
     },
-    "context": "Siamo a Florence"
+    "context": "dialogue",
+    "transcription": "Siamo a Florence"
   },
-  "data/videos/Video62.mp4": {
-    "text": "musica musica",
+  "Data/Videos/Video62.mp4": {
     "metrics": {
       "text_logprob": -1.1381787061691284,
       "text_compression_ratio": 0.4285714328289032,
       "text_no_speech_prob": 0.4269235134124756
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video63.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+  "Data/Videos/Video63.mp4": {
     "metrics": {
       "text_logprob": -0.19972221553325653,
       "text_compression_ratio": 26.235294342041016,
       "text_no_speech_prob": 0.5983989238739014
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video64.mp4": {
-    "text": "Numero 10 andiamo a Sicilia, da Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia",
+  "Data/Videos/Video64.mp4": {
     "metrics": {
-      "text_logprob": -0.9495857357978821,
-      "text_compression_ratio": 1.2450979948043823,
-      "text_no_speech_prob": 0.8156014680862427
+      "text_logprob": -0.9486700296401978,
+      "text_compression_ratio": 1.25,
+      "text_no_speech_prob": 0.8137692213058472
     },
-    "context": "Numero 10 andiamo a Sicilia, da Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia"
+    "context": "dialogue",
+    "transcription": "Numero 10 andiamo a Sicilia, va in Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia"
   },
-  "data/videos/Video65.mp4": {
-    "text": "... ... ... ... ...",
+  "Data/Videos/Video65.mp4": {
     "metrics": {
-      "text_logprob": -0.6362453699111938,
+      "text_logprob": -0.6361433506011963,
       "text_compression_ratio": 0.9116882860660553,
-      "text_no_speech_prob": 0.7424773693084716
+      "text_no_speech_prob": 0.7437116861343384
     },
-    "context": "... ... ... ... ..."
+    "context": "dialogue",
+    "transcription": "... ... ... ... ..."
   },
-  "data/videos/Video66.mp4": {
-    "text": "Siamo arrivati in un'altra parte della città, dove c'è un'altra città che si chiama Piazza Sardegna, che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna perché è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna, dove c'è una città che si chiama Piazza Sardegna,",
+  "Data/Videos/Video66.mp4": {
     "metrics": {
       "text_logprob": -0.4091494066847695,
       "text_compression_ratio": 3.572086281246609,
       "text_no_speech_prob": 0.8158636490503947
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video67.mp4": {
-    "text": "I miei figli saranno migliori e diventeranno italiani Sì, avranno una lingua",
+  "Data/Videos/Video67.mp4": {
     "metrics": {
-      "text_logprob": -0.7700337767601013,
+      "text_logprob": -0.7715680599212646,
       "text_compression_ratio": 1.0694444179534912,
-      "text_no_speech_prob": 0.1727057695388794
+      "text_no_speech_prob": 0.17053192853927612
     },
-    "context": "I miei figli saranno migliori e diventeranno italiani Sì, avranno una lingua"
+    "context": "dialogue",
+    "transcription": "I miei figli saranno migliori e diventeranno italiani Sì, avranno una lingua"
   },
-  "data/videos/Video68.mp4": {
-    "text": "O Dio divino, io ti vedo qui a te mai, o Dio beato, hai quanto di posso d'avermi amato, hai quanto di posso d'avermi amato, a te che sei del mondo.",
+  "Data/Videos/Video68.mp4": {
     "metrics": {
-      "text_logprob": -0.46863362193107605,
-      "text_compression_ratio": 1.285286506017049,
-      "text_no_speech_prob": 0.6653236150741577
+      "text_logprob": -0.5392886201540629,
+      "text_compression_ratio": 1.2900468508402507,
+      "text_no_speech_prob": 0.6589532891909281
     },
-    "context": "O Dio divino, io ti vedo qui a te mai, o Dio beato, hai quanto di posso d'avermi amato, hai quanto di posso d'avermi amato, a te che sei del mondo."
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video69.mp4": {
-    "text": " ",
+  "Data/Videos/Video69.mp4": {
     "metrics": {
       "text_logprob": -0.36685892939567566,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.8657659888267517
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video70.mp4": {
-    "text": "ma scimmie e nandaggio non ne avevo mai visto andiamo, si si si adesso andiamo ok asciugatevi asciugatevi andiamo dentro andiamo dentro tieniamo i carabinieri dai dai dai via via via scappa sono paura dentro dentro dentro dentro spegni spegni spegni vogliamo andare in camera? si andiamo in camera andiamo in camera che qua fa freddo venite venite Sami Sami vieni chiudi chiudi tutto chiudi tutto",
+  "Data/Videos/Video70.mp4": {
     "metrics": {
-      "text_logprob": -0.4162631134192149,
+      "text_logprob": -0.4156910479068756,
       "text_compression_ratio": 2.0541279514630637,
-      "text_no_speech_prob": 0.25750816613435745
+      "text_no_speech_prob": 0.2545845839712355
     },
-    "context": "ma scimmie e nandaggio non ne avevo mai visto andiamo, si si si adesso andiamo ok asciugatevi asciugatevi andiamo dentro andiamo dentro tieniamo i carabinieri dai dai dai via via via scappa sono paura dentro dentro dentro dentro spegni spegni spegni vogliamo andare in camera? si andiamo in camera andiamo in camera che qua fa freddo venite venite Sami Sami vieni chiudi chiudi tutto chiudi tutto"
+    "context": "dialogue",
+    "transcription": "ma scimmie e nandaggio non ne avevo mai visto andiamo, si si si adesso andiamo ok asciugatevi asciugatevi andiamo dentro andiamo dentro tieniamo i carabinieri dai dai dai via via via scappa sono paura dentro dentro dentro dentro spegni spegni spegni vogliamo andare in camera? si andiamo in camera andiamo in camera che qua fa freddo venite venite Sami Sami vieni chiudi chiudi tutto chiudi tutto"
   },
-  "data/videos/Video71.mp4": {
-    "text": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance",
+  "Data/Videos/Video71.mp4": {
     "metrics": {
-      "text_logprob": -0.42314790934324265,
+      "text_logprob": -0.42326754331588745,
       "text_compression_ratio": 1.8255354464054108,
-      "text_no_speech_prob": 0.23700292967259884
+      "text_no_speech_prob": 0.2362328190356493
     },
-    "context": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance"
+    "context": "dialogue",
+    "transcription": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance"
   },
-  "data/videos/Video72.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+  "Data/Videos/Video72.mp4": {
     "metrics": {
-      "text_logprob": -0.16944444179534912,
+      "text_logprob": -0.1691666692495346,
       "text_compression_ratio": 26.235294342041016,
-      "text_no_speech_prob": 0.651390790939331
+      "text_no_speech_prob": 0.653630256652832
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video73.mp4": {
-    "text": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ...",
+  "Data/Videos/Video73.mp4": {
     "metrics": {
-      "text_logprob": -0.2918668071428935,
+      "text_logprob": -0.29243502815564476,
       "text_compression_ratio": 3.44040411512057,
-      "text_no_speech_prob": 0.686072689294815
+      "text_no_speech_prob": 0.6847702781359355
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video74.mp4": {
-    "text": "Check papà! Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle! Lays, life needs flavor! Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile! È nel prezzo!",
+  "Data/Videos/Video74.mp4": {
     "metrics": {
-      "text_logprob": -0.28220000863075256,
+      "text_logprob": -0.28182122111320496,
       "text_compression_ratio": 1.6113073825836182,
-      "text_no_speech_prob": 0.02528184838593006
+      "text_no_speech_prob": 0.025295935571193695
     },
-    "context": "Check papà! Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle! Lays, life needs flavor! Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile! È nel prezzo!"
+    "context": "dialogue",
+    "transcription": "Check papà! Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle! Lays, life needs flavor! Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile! È nel prezzo!"
   },
-  "data/videos/Video75.mp4": {
-    "text": "eccolo là qui adesso l'apro ma anche lei l'ha già visto prima lo apriamo così senza niente così senti un po' come quando te lo appoggi sui denti e poi dopo ti spiego come funziona il progresso delle cose, va bene? l'orellino che c'ha fatto tu non è sopra, così poi ti puoi ricordare del dentino storto quindi così, apro grande semplicemente si appoggia sui dentini dietro e si spinge fine, insieme nessun male, nessun fastidio",
+  "Data/Videos/Video75.mp4": {
     "metrics": {
       "text_logprob": -0.3644551197687785,
       "text_compression_ratio": 1.6248070478439331,
       "text_no_speech_prob": 0.43879516919453937
     },
-    "context": "eccolo là qui adesso l'apro ma anche lei l'ha già visto prima lo apriamo così senza niente così senti un po' come quando te lo appoggi sui denti e poi dopo ti spiego come funziona il progresso delle cose, va bene? l'orellino che c'ha fatto tu non è sopra, così poi ti puoi ricordare del dentino storto quindi così, apro grande semplicemente si appoggia sui dentini dietro e si spinge fine, insieme nessun male, nessun fastidio"
+    "context": "dialogue",
+    "transcription": "eccolo là qui adesso l'apro ma anche lei l'ha già visto prima lo apriamo così senza niente così senti un po' come quando te lo appoggi sui denti e poi dopo ti spiego come funziona il progresso delle cose, va bene? l'orellino che c'ha fatto tu non è sopra, così poi ti puoi ricordare del dentino storto quindi così, apro grande semplicemente si appoggia sui dentini dietro e si spinge fine, insieme nessun male, nessun fastidio"
   },
-  "data/videos/Video76.mp4": {
-    "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no no",
+  "Data/Videos/Video76.mp4": {
     "metrics": {
-      "text_logprob": -0.4697197899222374,
+      "text_logprob": -0.4704164043068886,
       "text_compression_ratio": 13.217647172510624,
-      "text_no_speech_prob": 0.8685801029205322
+      "text_no_speech_prob": 0.8683223128318787
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video77.mp4": {
-    "text": "",
+  "Data/Videos/Video77.mp4": {
     "metrics": {
       "text_logprob": -0.5046263337135315,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.7946462035179138
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video78.mp4": {
-    "text": "",
+  "Data/Videos/Video78.mp4": {
     "metrics": {
       "text_logprob": -0.3490636348724365,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.98056960105896
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video79.mp4": {
-    "text": "Buona colazione ma dove siamo al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta, questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta, abbiamo festeggiato qualcosa, vero? E tu cappuccino? La mangi la tortina anche tu? Eh? E' buono il cappuccino che fa il papà? Sì? Allora buona domenica! Buona domenica, ciao! Ciao ciao!",
+  "Data/Videos/Video79.mp4": {
     "metrics": {
       "text_logprob": -0.45502759218215943,
       "text_compression_ratio": 1.4836481213569641,
       "text_no_speech_prob": 0.14864788055419922
     },
-    "context": "Buona colazione ma dove siamo al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta, questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta, abbiamo festeggiato qualcosa, vero? E tu cappuccino? La mangi la tortina anche tu? Eh? E' buono il cappuccino che fa il papà? Sì? Allora buona domenica! Buona domenica, ciao! Ciao ciao!"
+    "context": "dialogue",
+    "transcription": "Buona colazione ma dove siamo al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta, questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta, abbiamo festeggiato qualcosa, vero? E tu cappuccino? La mangi la tortina anche tu? Eh? E' buono il cappuccino che fa il papà? Sì? Allora buona domenica! Buona domenica, ciao! Ciao ciao!"
   },
-  "data/videos/Video80.mp4": {
-    "text": "",
+  "Data/Videos/Video80.mp4": {
     "metrics": {
-      "text_logprob": -0.5214981436729431,
+      "text_logprob": -0.5219576954841614,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.8443517684936523
+      "text_no_speech_prob": 0.8443614840507507
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video81.mp4": {
-    "text": " ",
+  "Data/Videos/Video81.mp4": {
     "metrics": {
       "text_logprob": -0.4007824659347534,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.7372298836708069
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video82.mp4": {
-    "text": "",
+  "Data/Videos/Video82.mp4": {
     "metrics": {
       "text_logprob": -0.43544334173202515,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.9264216423034668
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video83.mp4": {
-    "text": "",
+  "Data/Videos/Video83.mp4": {
     "metrics": {
       "text_logprob": 0.0,
       "text_compression_ratio": 0.0,
       "text_no_speech_prob": 0.0
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video84.mp4": {
-    "text": "No, fai si boccia! Fai si boccia allora! Fai si boccia! Fai si boccia Dario! Hai presente le tavole? Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! Sì! ",
+  "Data/Videos/Video84.mp4": {
     "metrics": {
-      "text_logprob": -0.21250304579734802,
+      "text_logprob": -0.2121124267578125,
       "text_compression_ratio": 2.763157844543457,
-      "text_no_speech_prob": 0.20745660364627838
+      "text_no_speech_prob": 0.2053358256816864
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video85.mp4": {
-    "text": "",
+  "Data/Videos/Video85.mp4": {
     "metrics": {
       "text_logprob": -0.34998276829719543,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.9780524373054504
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video86.mp4": {
-    "text": "",
+  "Data/Videos/Video86.mp4": {
     "metrics": {
       "text_logprob": -0.3552677035331726,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.9779642820358276
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video87.mp4": {
-    "text": "Ecco, si attacca così Il latte che viene munto finisce dentro a quel secchio Lo vedete lì sotto",
+  "Data/Videos/Video87.mp4": {
     "metrics": {
-      "text_logprob": -0.4469425578912099,
+      "text_logprob": -0.447003831466039,
       "text_compression_ratio": 0.9100064635276794,
-      "text_no_speech_prob": 0.035722192066411175
+      "text_no_speech_prob": 0.03572235939403375
     },
-    "context": "Ecco, si attacca così Il latte che viene munto finisce dentro a quel secchio Lo vedete lì sotto"
+    "context": "dialogue",
+    "transcription": "Ecco, si attacca così Il latte che viene munto finisce dentro a quel secchio Lo vedete lì sotto"
   },
-  "data/videos/Video88.mp4": {
-    "text": "",
+  "Data/Videos/Video88.mp4": {
     "metrics": {
-      "text_logprob": -0.5705463886260986,
+      "text_logprob": -0.5705173015594482,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.7649322152137756
+      "text_no_speech_prob": 0.7648895382881165
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video89.mp4": {
-    "text": "molto bene Antonio Tiberi avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare forse gli ha detto ce la fai ancora a tirare un po' o devo partire e Maica gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi il vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della maglia rosa ce la fa ancora",
+  "Data/Videos/Video89.mp4": {
     "metrics": {
-      "text_logprob": -0.3917556901772817,
+      "text_logprob": -0.3887025515238444,
       "text_compression_ratio": 1.4757936596870422,
-      "text_no_speech_prob": 0.4428616911172867
+      "text_no_speech_prob": 0.43953895568847656
     },
-    "context": "molto bene Antonio Tiberi avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare forse gli ha detto ce la fai ancora a tirare un po' o devo partire e Maica gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi il vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della maglia rosa ce la fa ancora"
+    "context": "dialogue",
+    "transcription": "molto bene Antonio Tiberi avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Tramposi continua a parlare forse gli ha detto ce la fai ancora a tirare un po' o devo partire e Maica gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi il vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della maglia rosa ce la fa ancora"
   },
-  "data/videos/Video90.mp4": {
-    "text": "...e sono creduta nella terra e nel corso... ...che l'onore e la felicità... ...non li dimostrano, non li dimostrano mai. Un libri amico, Signore... ...la gloria e la felicità.",
+  "Data/Videos/Video90.mp4": {
     "metrics": {
       "text_logprob": -1.077750325202942,
       "text_compression_ratio": 1.253577959537506,
       "text_no_speech_prob": 0.5160341143608094
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video91.mp4": {
-    "text": "Io lo so, io lo so che un po' di bene già mi vuoi Dimmi perché, ma perché, ma perché negli occhi miei non guardi mai Eppure tanto io lo so, io lo so che un po' di bene già mi vuoi Dottore? Sì Posso chiedere a lei se avete questo farmaco? Questo farmaco, sì Bustini o pillole? Pillole meglio",
+  "Data/Videos/Video91.mp4": {
     "metrics": {
-      "text_logprob": -0.3118830786810981,
-      "text_compression_ratio": 1.571705036693149,
-      "text_no_speech_prob": 0.18960409031973946
+      "text_logprob": -0.3137707352638245,
+      "text_compression_ratio": 1.5925520420074464,
+      "text_no_speech_prob": 0.18078647404909134
     },
-    "context": "Io lo so, io lo so che un po' di bene già mi vuoi Dimmi perché, ma perché, ma perché negli occhi miei non guardi mai Eppure tanto io lo so, io lo so che un po' di bene già mi vuoi Dottore? Sì Posso chiedere a lei se avete questo farmaco? Questo farmaco, sì Bustini o pillole? Pillole meglio"
+    "context": "dialogue",
+    "transcription": "Io lo so, io lo so che un po' di bene già mi vuoi Dimmi perché, ma perché, ma perché negli occhi miei non guardi mai Eppure tanto io lo so, io lo so che un po' di bene già mi vuoi Dottore? Sì Posso chiedere a lei? Se avete questo farmaco? Questo farmaco sì Bustini o pillole? Pillole meglio"
   },
-  "data/videos/Video92.mp4": {
-    "text": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio.",
+  "Data/Videos/Video92.mp4": {
     "metrics": {
       "text_logprob": -0.2569926083087921,
       "text_compression_ratio": 1.0997151136398315,
       "text_no_speech_prob": 0.0371674494817853
     },
-    "context": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio."
+    "context": "dialogue",
+    "transcription": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio."
   },
-  "data/videos/Video93.mp4": {
-    "text": "",
+  "Data/Videos/Video93.mp4": {
     "metrics": {
       "text_logprob": -0.5265741944313049,
       "text_compression_ratio": 0.8461538553237915,
       "text_no_speech_prob": 0.6794497966766357
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video94.mp4": {
-    "text": "se vi mettete dove state, questa ha una buona continuità di legno, manomale che il sale si restringe e se è vero questo dal punto di vista principale dei vasi comunicanti tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo, vi avevo detto, tutti fermi adesso. Non lo so, se con un altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato cioè nel senso che questa è una pianta a cui abbiamo ridato una continuità di legno e una continuità di sale.",
+  "Data/Videos/Video94.mp4": {
     "metrics": {
-      "text_logprob": -0.3420707831780116,
+      "text_logprob": -0.3418482095003128,
       "text_compression_ratio": 1.5635300874710083,
-      "text_no_speech_prob": 0.3460381751259168
+      "text_no_speech_prob": 0.3460404500365257
     },
-    "context": "se vi mettete dove state, questa ha una buona continuità di legno, manomale che il sale si restringe e se è vero questo dal punto di vista principale dei vasi comunicanti tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo, vi avevo detto, tutti fermi adesso. Non lo so, se con un altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato cioè nel senso che questa è una pianta a cui abbiamo ridato una continuità di legno e una continuità di sale."
+    "context": "dialogue",
+    "transcription": "se vi mettete dove state, questa ha una buona continuità di legno, manomale che il sale si restringe e se è vero questo dal punto di vista principale dei vasi comunicanti tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo, vi avevo detto, tutti fermi adesso. Non lo so, se con un altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato cioè nel senso che questa è una pianta a cui abbiamo ridato una continuità di legno e una continuità di sale."
   },
-  "data/videos/Video95.mp4": {
-    "text": "",
+  "Data/Videos/Video95.mp4": {
     "metrics": {
-      "text_logprob": -0.4632103145122528,
+      "text_logprob": -0.4629805088043213,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.6254148483276367
+      "text_no_speech_prob": 0.625371515750885
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   },
-  "data/videos/Video96.mp4": {
-    "text": "Musica",
+  "Data/Videos/Video96.mp4": {
     "metrics": {
-      "text_logprob": -1.1995774507522583,
+      "text_logprob": -1.2001440525054932,
       "text_compression_ratio": 0.4285714328289032,
-      "text_no_speech_prob": 0.346660315990448
+      "text_no_speech_prob": 0.3447349965572357
     },
-    "context": "music"
+    "context": "music",
+    "transcription": ""
   },
-  "data/videos/Video97.mp4": {
-    "text": "Nooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo ",
+  "Data/Videos/Video97.mp4": {
     "metrics": {
       "text_logprob": -0.258670337498188,
       "text_compression_ratio": 26.59954673051834,
       "text_no_speech_prob": 0.8945125639438629
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video98.mp4": {
-    "text": "Siamo pronti? Sentite, sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa Sentite quanto pesa",
+  "Data/Videos/Video98.mp4": {
     "metrics": {
-      "text_logprob": -0.2018217970343197,
+      "text_logprob": -0.201553134357228,
       "text_compression_ratio": 7.644555687904358,
-      "text_no_speech_prob": 0.4124150381368749
+      "text_no_speech_prob": 0.4154597731197582
     },
-    "context": "unknown_dialogue"
+    "context": "unknown_dialogue",
+    "transcription": ""
   },
-  "data/videos/Video99.mp4": {
-    "text": "Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali",
+  "Data/Videos/Video99.mp4": {
     "metrics": {
-      "text_logprob": -0.4529615789651871,
+      "text_logprob": -0.4525086283683777,
       "text_compression_ratio": 1.9605263471603394,
-      "text_no_speech_prob": 0.8675715923309326
+      "text_no_speech_prob": 0.8673351407051086
     },
-    "context": "Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali"
+    "context": "dialogue",
+    "transcription": "Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali Il soggetto di questa esperienza è stato un esperto di ipnosi non verbali"
   },
-  "data/videos/Video100.mp4": {
-    "text": "",
+  "Data/Videos/Video100.mp4": {
     "metrics": {
-      "text_logprob": -0.3642003536224365,
+      "text_logprob": -0.36443015933036804,
       "text_compression_ratio": 0.8461538553237915,
-      "text_no_speech_prob": 0.9767947793006897
+      "text_no_speech_prob": 0.9768765568733215
     },
-    "context": "silence/noise"
+    "context": "silence/noise",
+    "transcription": ""
   }
 }

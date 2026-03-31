@@ -154,7 +154,8 @@ def main() -> None:
             "text_logprob": video_entry["metrics"]["text_logprob"],
             "compression_ratio": video_entry["metrics"]["text_compression_ratio"],
             "no_speech_prob": video_entry["metrics"]["text_no_speech_prob"],
-            "context": video_entry["context"]
+            "context": video_entry["context"],
+            "transcription": video_entry["transcription"]
         }
         for video_entry in whisper_dict.values()
     ]
@@ -176,6 +177,7 @@ def main() -> None:
     # Remove raw segment data before saving the final JSON output.
     for d in whisper_dict.values():
         del d["segments"]
+        del d["text"]
 
     # print(whisper_dict)
 

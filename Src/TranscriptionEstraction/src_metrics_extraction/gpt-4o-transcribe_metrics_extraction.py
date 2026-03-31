@@ -60,6 +60,7 @@ def main() -> None:
 
     # Build a list of dictionaries for DataFrame creation,
     # including the average logprob and the text-based context label.
+    
     data = [
         {
             "text_logprob": entry["avg_logprob"],
@@ -67,6 +68,13 @@ def main() -> None:
         }
         for entry in metrics_dict.values()
     ]
+    
+    for e in data:
+        if e["context"] == "music" or e["context"] == "silence/noise" or e["context"] == "unknown_dialogue":
+            e["transcription"] = ""
+        else:
+            e["transcription"] = e ["context"]
+            e["context"] = "dialogue"
 
     # Create the DataFrame using media file paths as index.
     df = pd.DataFrame(data, index=metrics_dict.keys())

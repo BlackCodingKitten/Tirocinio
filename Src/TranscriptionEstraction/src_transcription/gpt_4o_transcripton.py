@@ -68,7 +68,7 @@ def generate_and_save_transcription(
             ordered_transcription[media_file] = formatted_transcription
 
             # Print the formatted transcription and a success message.
-            print(formatted_transcription)
+            # print(formatted_transcription)
             print(f"OK: {media_file}")
 
         except Exception as e:
