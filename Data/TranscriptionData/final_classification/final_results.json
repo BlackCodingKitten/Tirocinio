@@ -1,5 +1,8 @@
 {
-  "Video1.mp4": null,
+  "Video1.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video2.mp4": {
     "classification": "dialogue",
     "score": -0.18345576194099264,
@@ -26,7 +29,10 @@
     "classification": "silence/noise",
     "selected_model": "both"
   },
-  "Video7.mp4": null,
+  "Video7.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video8.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
@@ -70,7 +76,10 @@
     "selected_model": "both",
     "generated_transcription": "E' brutto, ma ho morte, Ari! Fai una lancetta, Popo, vai! Non mi cago, Francesco, è troppo brutto! Dai, vai, tira! Ah, ha visto il mangiare! Ha visto il mangiare, ha visto il mangiare! Non me lo dice il pubblico! Non me lo dice il pubblico!"
   },
-  "Video15.mp4": null,
+  "Video15.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video16.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
@@ -104,7 +113,10 @@
     "selected_model": "gpt-4o-transcribe",
     "generated_transcription": "C'è Locca davanti con la Torre che prova a ritornare. Torre Oca all'ultima curva. Oca davanti alla Torre, va giù anche la Torre e dunque vince il cavallo scosso. Vince il cavallo scosso. Clamoroso. Clamoroso con la Pantera che era avanti in pratica fino all'ultimo San Martino."
   },
-  "Video22.mp4": null,
+  "Video22.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video23.mp4": {
     "classification": "unknown_dialogue",
     "score": -0.42370375847160663,
@@ -112,7 +124,10 @@
     "selected_model": "both",
     "generated_transcription": "Se lascio un po' tu devi macinare, capito? Vai con la bambuglia! La polvere macina! Lui sa in quanti video miei sta già a fare le risate! Ancora!"
   },
-  "Video24.mp4": null,
+  "Video24.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video25.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
@@ -193,7 +208,10 @@
     "classification": "silence/noise",
     "selected_model": "both"
   },
-  "Video39.mp4": null,
+  "Video39.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video40.mp4": {
     "classification": "unknown_dialogue",
     "score": -0.32814834758513217,
@@ -201,7 +219,10 @@
     "selected_model": "gpt-4o-transcribe",
     "generated_transcription": ""
   },
-  "Video41.mp4": null,
+  "Video41.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video42.mp4": {
     "classification": "unknown_dialogue",
     "score": -2.6060593862003105,
@@ -274,13 +295,22 @@
     "selected_model": "both",
     "generated_transcription": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no"
   },
-  "Video54.mp4": null,
+  "Video54.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video55.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
   },
-  "Video56.mp4": null,
-  "Video57.mp4": null,
+  "Video56.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video57.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video58.mp4": {
     "classification": "dialogue",
     "score": -0.17932796176035026,
@@ -302,9 +332,18 @@
     "selected_model": "gpt-4o-transcribe",
     "generated_transcription": "Dentro c'è la lingua. Bene, bene. Sì, regge, regge. Molto, molto bene. Metti il nizzo che se dire si va bene. La faccia aprire, dottore. Apri un secondo. Bravo, bravo, bravo. Esatto. Apri, apri."
   },
-  "Video61.mp4": null,
-  "Video62.mp4": null,
-  "Video63.mp4": null,
+  "Video61.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video62.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video63.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video64.mp4": {
     "classification": "dialogue",
     "score": -0.9032162736790997,
@@ -312,8 +351,14 @@
     "selected_model": "both",
     "generated_transcription": "Numero 10 andiamo a Sicilia, va in Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia Numero 10, Gabriella Cecilia."
   },
-  "Video65.mp4": null,
-  "Video66.mp4": null,
+  "Video65.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video66.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video67.mp4": {
     "classification": "unknown_dialogue",
     "score": -0.03959119754532973,
@@ -321,8 +366,14 @@
     "selected_model": "gpt-4o-transcribe",
     "generated_transcription": ""
   },
-  "Video68.mp4": null,
-  "Video69.mp4": null,
+  "Video68.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video69.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video70.mp4": {
     "classification": "dialogue",
     "score": -0.39241591358560746,
@@ -337,8 +388,14 @@
     "selected_model": "both",
     "generated_transcription": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance Franco, la crisi fa sentire, niente, diamo con le arance! Diamo! Sono buone, sono belle, chiedetelo alle vostre sorelle! Le arance, diamo con le arance! Le arance, vai! Sono dolci, dicevo dolci! Quella pasticceria, ma?"
   },
-  "Video72.mp4": null,
-  "Video73.mp4": null,
+  "Video72.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video73.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video74.mp4": {
     "classification": "dialogue",
     "score": -0.17936643550444342,
@@ -353,12 +410,18 @@
     "selected_model": "both",
     "generated_transcription": "E poi dopo ti spiego come funziona tutto il resto. Va bene? Così poi ti puoi ricordare del dentino storto. Quindi così, apro grande, semplicemente si appoggia sui dentini dietro e si spinge. Nessun male, nessun fastidio."
   },
-  "Video76.mp4": null,
+  "Video76.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video77.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
   },
-  "Video78.mp4": null,
+  "Video78.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video79.mp4": {
     "classification": "dialogue",
     "score": -0.2857657730159702,
@@ -366,17 +429,26 @@
     "selected_model": "both",
     "generated_transcription": "Buona colazione! Ma dove siamo? Al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta. Questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta. Abbiamo festeggiato qualcosa, vero? E tu, cappuccino? La mangi la tortina anche tu? È buono il cappuccino che fa il papà? Sì? Allora buona domenica! Grazie, ciao! Ciao ciao! Ciao!"
   },
-  "Video80.mp4": null,
+  "Video80.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video81.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
   },
-  "Video82.mp4": null,
+  "Video82.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video83.mp4": {
     "classification": "silence/noise",
     "selected_model": "whisper-1"
   },
-  "Video84.mp4": null,
+  "Video84.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video85.mp4": {
     "classification": "silence/noise",
     "selected_model": "both"
@@ -403,7 +475,10 @@
     "selected_model": "both",
     "generated_transcription": "Molto bene Antonio Tiberi, avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Trampozzi continua a parlare, forse gli ha detto ce la fai ancora tirare un po' o devo partire? E Michael gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi la vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della Maglia Rosa, ce la fa."
   },
-  "Video90.mp4": null,
+  "Video90.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video91.mp4": {
     "classification": "dialogue",
     "score": -0.26374461057431264,
@@ -418,7 +493,10 @@
     "selected_model": "both",
     "generated_transcription": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio."
   },
-  "Video93.mp4": null,
+  "Video93.mp4": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video94.mp4": {
     "classification": "dialogue",
     "score": -0.30376890953696456,
@@ -434,8 +512,14 @@
     "classification": "music",
     "selected_model": "both"
   },
-  "Video97.mp4": null,
-  "Video98.mp4": null,
+  "Video97.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video98.mp4": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
   "Video99.mp4": {
     "classification": "dialogue",
     "score": -0.4525086283683777,

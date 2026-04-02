@@ -399,11 +399,11 @@ def metrics(w: Dict[str, Any], g: Dict[str, Any]) -> Dict[str, Any]:
                     "selected_model": "gpt-4o-transcribe",
                     "generated_transcription": g["transcription"]
                 }
-              
-                return {
-                    "classification": g["context"],
-                    "selected_model": "gpt-4o-transcribe"
-                }
+            
+            return {
+                "classification": g["context"],
+                "selected_model": "gpt-4o-transcribe"
+            }
 
 
         # If Whisper has the better score, use its classification
