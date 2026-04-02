@@ -121,7 +121,7 @@ def _classify_text(whisper: Dict[str, Any]) -> Tuple[str, Optional[str]]:
         return "dialogue", whisper["text"]
 
     # Fallback classification
-    return "unknown_dialogue", None
+    return "unknown_dialogue", whisper["text"]
 
 
 # Add the context label and the final transcription field to each video entry.

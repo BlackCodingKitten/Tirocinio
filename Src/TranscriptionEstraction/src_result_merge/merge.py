@@ -338,11 +338,11 @@ def evaluate_single_reliability(
         return "transcription text unreliable"
 
     # Score-based classification.
-    if score >= -0.35:
+    if score >= -0.3:
         return "transcription text very reliable"
     elif score >= -0.6:
         return "transcription text reliable"
-    elif score >= -0.95:
+    elif score >= -0.9:
         return "transcription text uncertain"
     else:
         return "transcription text unreliable"
@@ -369,7 +369,7 @@ def metrics(w: Dict[str, Any], g: Dict[str, Any]) -> Dict[str, Any]:
     # Case 1: both models agree on the same context label.
     if w["context"] == g["context"]:
         score: float = _final_score(w, g)
-        if g["context"] == 'unkown_dialogue' or g["context"] == 'dialogue':
+        if g["context"] == 'unknown_dialogue' or g["context"] == 'dialogue':
             return {
                 "classification": g["context"],
                 "score": score,
@@ -391,7 +391,7 @@ def metrics(w: Dict[str, Any], g: Dict[str, Any]) -> Dict[str, Any]:
 
         # If GPT-4o has the better score, use its classification.
         if g_score >= w_score:
-            if g["context"] == 'unkown_dialogue' or g["context"] == 'dialogue':
+            if g["context"] == 'unknown_dialogue' or g["context"] == 'dialogue':
                 return {
                     "classification": g["context"],
                     "score": g_score,
@@ -399,16 +399,17 @@ def metrics(w: Dict[str, Any], g: Dict[str, Any]) -> Dict[str, Any]:
                     "selected_model": "gpt-4o-transcribe",
                     "generated_transcription": g["transcription"]
                 }
-            return {
-                "classification": g["context"],
-                "selected_model": "gpt-4o-transcribe"
-            }
+              
+                return {
+                    "classification": g["context"],
+                    "selected_model": "gpt-4o-transcribe"
+                }
 
 
         # If Whisper has the better score, use its classification
         # and evaluate reliability using Whisper-specific extra signals.
         if g_score < w_score:
-            if w["context"] == 'unkown_dialogue' or w["context"] == 'dialogue':
+            if w["context"] == 'unknown_dialogue' or w["context"] == 'dialogue':
                 return {
                     "classification": w["context"],
                     "score": w_score,
@@ -423,7 +424,7 @@ def metrics(w: Dict[str, Any], g: Dict[str, Any]) -> Dict[str, Any]:
             return {
                     "classification": w["context"],
                     "selected_model": "whisper-1"
-                   
+                
                 }
             
                 
