@@ -1,0 +1,2 @@
+scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,accuracy,precision_macro,recall_macro,f1_macro,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
+GLOBAL,19200,3162,16038,0,0.081875,0.49734679240927904,0.08181049382600841,0.14003371848494622,653,933,657,919
