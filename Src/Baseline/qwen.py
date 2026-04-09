@@ -3,15 +3,19 @@ from __future__ import annotations
 import json
 import os
 import re
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
+import pandas as pd
 import torch
+from accelerate import PartialState
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
-# Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+# By default, expose GPUs 0 and 1.
+# You can override this from the shell, for example:
+# CUDA_VISIBLE_DEVICES=0,1 accelerate launch --num_processes 2 qwen.py
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0,1")
 
 
 JsonDict = Dict[str, Any]
@@ -52,22 +56,28 @@ class PredictionRecord:
 
 def load_model(
     model_name: str,
+    device: torch.device,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "auto",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[Qwen2_5_VLForConditionalGeneration, AutoProcessor]:
     """
-    Load the Qwen2.5-VL model and processor.
+    Load the Qwen2.5-VL model and processor on the local process device.
+
+    In distributed inference, each process owns a full copy of the model and
+    works on a different shard of the dataset.
     """
     print(f"[INFO] Loading model: {model_name}")
+    print(f"[INFO] Target device: {device}")
     print("[INFO] Initializing model weights...")
+
+    if device.type == "cuda":
+        torch.cuda.set_device(device)
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
-        device_map=device_map,
         attn_implementation=attn_implementation,
-    )
+    ).to(device)
 
     print("[INFO] Model weights loaded.")
     print("[INFO] Loading processor...")
@@ -96,6 +106,8 @@ def save_json_file(data: JsonDict, json_path: str | Path) -> None:
     Save a JSON file to disk using UTF-8 and readable indentation.
     """
     path = Path(json_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
     print(f"[INFO] Saving JSON output to: {path}")
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -107,10 +119,24 @@ def save_text_file(text: str, text_path: str | Path) -> None:
     Save a plain text file to disk.
     """
     path = Path(text_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
     print(f"[INFO] Saving text report to: {path}")
     with path.open("w", encoding="utf-8") as f:
         f.write(text)
     print(f"[INFO] Text report saved successfully: {path}")
+
+
+def save_dataframe_csv(df: pd.DataFrame, csv_path: str | Path) -> None:
+    """
+    Save a pandas DataFrame as CSV.
+    """
+    path = Path(csv_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"[INFO] Saving DataFrame CSV to: {path}")
+    df.to_csv(path, index=False, encoding="utf-8")
+    print(f"[INFO] DataFrame CSV saved successfully: {path}")
 
 
 def natural_video_sort_key(video_id: str) -> Tuple[int, str]:
@@ -227,9 +253,8 @@ def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     """
     Retrieve the transcript for a given video if it is available and relevant.
 
-    The previous logic is preserved:
-    if the classification contains the substring 'dialogue' the transcription is returned. Otherwise, a standard fallback string
-    is returned.
+    If the classification contains the substring 'dialogue', the transcription
+    is returned. Otherwise, a standard fallback string is returned.
     """
     video_data = get_video_metadata(final_results, video_id)
     classification = str(video_data.get("classification", "")).lower()
@@ -246,13 +271,13 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     Build the text prompt for the model.
 
     The model must answer strictly with 0 or 1.
-    """ 
-    return (        
+    """
+    return (
         "Scegli randomicamente quale descrizione ha la maggiore probabilità di essere corretta.\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        "Rispondi esclusivamente con 0 o 1."
-        )
+        "Rispondi esclusivamente con una stringa 0 o 1."
+    )
     # return (
     #     "Ti fornirò, se disponibile, la trascrizione dell'audio del video, potrebbe contenere degli errori, avere parti mancanti, o essere parziale "
     #     "e due descrizioni candidate del contenuto del video.\n\n"
@@ -302,8 +327,7 @@ def move_inputs_to_model_device(
     model: Qwen2_5_VLForConditionalGeneration,
 ) -> Dict[str, Any]:
     """
-    Move tensor inputs to the device used by the first model parameter.
-    This is the safest simple strategy for generation with device_map='auto'.
+    Move tensor inputs to the device used by the model parameters.
     """
     print("[INFO] Moving batch inputs to model device...")
     model_device = next(model.parameters()).device
@@ -355,7 +379,6 @@ def generate_answers_batch(
 
     print("[INFO] Decoding generated outputs...")
 
-    # Remove the prompt tokens from the generated sequence.
     trimmed_ids = [
         output_ids[len(input_ids):]
         for input_ids, output_ids in zip(inputs["input_ids"], generated_ids)
@@ -398,28 +421,71 @@ def safe_divide(numerator: float, denominator: float) -> float:
     return numerator / denominator if denominator != 0 else 0.0
 
 
+def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, int]:
+    """
+    Compute a binary 2x2 confusion matrix over valid predictions only.
+
+    The matrix layout is:
+        rows    = actual labels
+        columns = predicted labels
+
+                    pred_0  pred_1
+        actual_0      c00     c01
+        actual_1      c10     c11
+
+    Invalid predictions are tracked separately elsewhere and are excluded from
+    the matrix itself to keep the matrix standard and easy to read.
+    """
+    c00 = sum(
+        record.target == 0 and record.predicted_label == 0
+        for record in records
+    )
+    c01 = sum(
+        record.target == 0 and record.predicted_label == 1
+        for record in records
+    )
+    c10 = sum(
+        record.target == 1 and record.predicted_label == 0
+        for record in records
+    )
+    c11 = sum(
+        record.target == 1 and record.predicted_label == 1
+        for record in records
+    )
+
+    return {
+        "actual_0_pred_0": c00,
+        "actual_0_pred_1": c01,
+        "actual_1_pred_0": c10,
+        "actual_1_pred_1": c11,
+    }
+
+
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
     Compute binary classification metrics over labels {0, 1}.
 
-    Definitions used:
-    - accuracy: exact-match accuracy
-    - precision_macro / recall_macro / f1_macro:
-      macro average over labels 0 and 1
-    - invalid_predictions:
-      number of model outputs that could not be parsed into 0 or 1
+    Metrics returned:
+    - accuracy
+    - macro precision
+    - macro recall
+    - macro F1
+    - invalid_predictions
+    - 2x2 confusion matrix counts
 
-    Invalid predictions count as wrong for accuracy and contribute to FN where relevant.
+    Per-label metrics are intentionally omitted because they are not useful in
+    this reporting format for the current task.
     """
     print(f"[INFO] Computing metrics for {len(records)} records...")
+
     labels = (0, 1)
     n_samples = len(records)
     invalid_predictions = sum(
-        record.predicted_label not in labels for record in records
+        record.predicted_label not in labels
+        for record in records
     )
     correct_predictions = sum(record.is_correct for record in records)
 
-    per_label: JsonDict = {}
     precision_values: List[float] = []
     recall_values: List[float] = []
     f1_values: List[float] = []
@@ -437,7 +503,6 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
             record.predicted_label != label and record.target == label
             for record in records
         )
-        support = sum(record.target == label for record in records)
 
         precision = safe_divide(tp, tp + fp)
         recall = safe_divide(tp, tp + fn)
@@ -447,15 +512,7 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         recall_values.append(recall)
         f1_values.append(f1)
 
-        per_label[str(label)] = {
-            "support": support,
-            "tp": tp,
-            "fp": fp,
-            "fn": fn,
-            "precision": precision,
-            "recall": recall,
-            "f1": f1,
-        }
+    confusion_counts = compute_confusion_counts(records)
 
     print("[INFO] Metrics computed successfully.")
     return {
@@ -465,7 +522,7 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "precision_macro": safe_divide(sum(precision_values), len(labels)),
         "recall_macro": safe_divide(sum(recall_values), len(labels)),
         "f1_macro": safe_divide(sum(f1_values), len(labels)),
-        "per_label": per_label,
+        **confusion_counts,
     }
 
 
@@ -505,6 +562,224 @@ def compute_all_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "by_normalized_question_category": class_metrics,
         "by_video": video_metrics,
     }
+
+
+def metric_row_from_summary(
+    entity_name: str,
+    metrics: JsonDict,
+    entity_column_name: str,
+) -> Dict[str, Any]:
+    """
+    Convert a metric summary dictionary into a single flat row suitable for a
+    pandas DataFrame.
+    """
+    return {
+        entity_column_name: entity_name,
+        "n_samples": metrics["n_samples"],
+        "invalid_predictions": metrics["invalid_predictions"],
+        "accuracy": metrics["accuracy"],
+        "precision_macro": metrics["precision_macro"],
+        "recall_macro": metrics["recall_macro"],
+        "f1_macro": metrics["f1_macro"],
+        "actual_0_pred_0": metrics["actual_0_pred_0"],
+        "actual_0_pred_1": metrics["actual_0_pred_1"],
+        "actual_1_pred_0": metrics["actual_1_pred_0"],
+        "actual_1_pred_1": metrics["actual_1_pred_1"],
+    }
+
+
+def build_global_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+    """
+    Build a one-row DataFrame containing the global metrics.
+    """
+    row = metric_row_from_summary(
+        entity_name="GLOBAL",
+        metrics=metrics_summary["global"],
+        entity_column_name="scope",
+    )
+    return pd.DataFrame([row])
+
+
+def build_class_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+    """
+    Build a DataFrame containing one row per normalized question category.
+    """
+    rows = [
+        metric_row_from_summary(
+            entity_name=class_name,
+            metrics=class_metrics,
+            entity_column_name="normalized_question_category",
+        )
+        for class_name, class_metrics in metrics_summary["by_normalized_question_category"].items()
+    ]
+    return pd.DataFrame(rows)
+
+
+def build_video_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+    """
+    Build a DataFrame containing one row per video.
+    """
+    rows = [
+        metric_row_from_summary(
+            entity_name=video_id,
+            metrics=video_metrics,
+            entity_column_name="video_id",
+        )
+        for video_id, video_metrics in metrics_summary["by_video"].items()
+    ]
+    return pd.DataFrame(rows)
+
+
+def build_confusion_matrix_dataframe(metrics: JsonDict) -> pd.DataFrame:
+    """
+    Build a 2x2 confusion matrix DataFrame from a metric summary.
+    """
+    return pd.DataFrame(
+        [
+            [metrics["actual_0_pred_0"], metrics["actual_0_pred_1"]],
+            [metrics["actual_1_pred_0"], metrics["actual_1_pred_1"]],
+        ],
+        index=["actual_0", "actual_1"],
+        columns=["predicted_0", "predicted_1"],
+    )
+
+
+def dataframe_to_string(df: pd.DataFrame, index: bool = False) -> str:
+    """
+    Convert a pandas DataFrame to a readable string with stable formatting.
+    """
+    with pd.option_context(
+        "display.max_rows", None,
+        "display.max_columns", None,
+        "display.width", 200,
+        "display.max_colwidth", 200,
+    ):
+        return df.to_string(index=index, float_format=lambda x: f"{x:.4f}")
+
+
+def build_metrics_report(metrics_summary: JsonDict) -> str:
+    """
+    Build a readable TXT report using pandas DataFrames.
+
+    The report order is:
+    1. Global performance
+    2. Global confusion matrix
+    3. Per-class summary table
+    4. Per-class confusion matrices
+    5. Per-video summary table
+    """
+    print("[INFO] Building metrics text report...")
+
+    global_df = build_global_metrics_dataframe(metrics_summary)
+    class_df = build_class_metrics_dataframe(metrics_summary)
+    video_df = build_video_metrics_dataframe(metrics_summary)
+
+    report_parts: List[str] = [
+        "MODEL EVALUATION REPORT",
+        "=======================",
+        "",
+        "NOTES",
+        "-----",
+        "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
+        "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
+        "- Confusion matrices include only valid predictions; invalid predictions are reported separately.",
+        "",
+        "GLOBAL PERFORMANCE",
+        "------------------",
+        dataframe_to_string(global_df, index=False),
+        "",
+        "GLOBAL CONFUSION MATRIX",
+        "-----------------------",
+        dataframe_to_string(
+            build_confusion_matrix_dataframe(metrics_summary["global"]),
+            index=True,
+        ),
+        "",
+        "PER-CLASS PERFORMANCE",
+        "---------------------",
+        dataframe_to_string(class_df, index=False),
+        "",
+        "PER-CLASS CONFUSION MATRICES",
+        "----------------------------",
+    ]
+
+    for class_name, class_metrics in metrics_summary["by_normalized_question_category"].items():
+        report_parts.extend(
+            [
+                "",
+                f"[CLASS] {class_name}",
+                dataframe_to_string(
+                    pd.DataFrame(
+                        [
+                            metric_row_from_summary(
+                                entity_name=class_name,
+                                metrics=class_metrics,
+                                entity_column_name="normalized_question_category",
+                            )
+                        ]
+                    ),
+                    index=False,
+                ),
+                "",
+                dataframe_to_string(
+                    build_confusion_matrix_dataframe(class_metrics),
+                    index=True,
+                ),
+            ]
+        )
+
+    report_parts.extend(
+        [
+            "",
+            "PER-VIDEO PERFORMANCE",
+            "---------------------",
+            dataframe_to_string(video_df, index=False),
+        ]
+    )
+
+    print("[INFO] Metrics text report built successfully.")
+    return "\n".join(report_parts)
+
+
+def get_metrics_dataframes(metrics_summary: JsonDict) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """
+    Build the three main pandas DataFrames used in the final output.
+    """
+    global_df = build_global_metrics_dataframe(metrics_summary)
+    class_df = build_class_metrics_dataframe(metrics_summary)
+    video_df = build_video_metrics_dataframe(metrics_summary)
+    return global_df, class_df, video_df
+
+
+def save_prediction_records(
+    records: Sequence[PredictionRecord],
+    output_path: str | Path,
+) -> None:
+    """
+    Save flat prediction records to JSON.
+    """
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    serializable_records = [asdict(record) for record in records]
+
+    print(f"[INFO] Saving flat prediction shard to: {path}")
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(serializable_records, f, ensure_ascii=False, indent=2)
+    print(f"[INFO] Flat prediction shard saved successfully: {path}")
+
+
+def load_prediction_records(input_path: str | Path) -> List[PredictionRecord]:
+    """
+    Load flat prediction records from JSON.
+    """
+    path = Path(input_path)
+
+    print(f"[INFO] Loading flat prediction shard: {path}")
+    with path.open("r", encoding="utf-8") as f:
+        raw_records = json.load(f)
+
+    return [PredictionRecord(**item) for item in raw_records]
 
 
 def build_results_json(
@@ -564,10 +839,10 @@ def build_results_json(
 
         video_questions[record.question_category][record.pool_key] = {
             "normalized_question_category": record.normalized_question_category,
-            "0": record.choice_0,
-            "1": record.choice_1,
+            # "0": record.choice_0,
+            # "1": record.choice_1,
             "target": record.target,
-            "prompt": record.prompt,
+            # "prompt": record.prompt,
             "raw_model_output": record.raw_model_output,
             "predicted_label": record.predicted_label,
             "is_correct": record.is_correct,
@@ -575,81 +850,6 @@ def build_results_json(
 
     print("[INFO] Final results JSON structure built successfully.")
     return results
-
-
-def format_metric_block(title: str, metrics: JsonDict) -> str:
-    """
-    Format a single metric block as human-readable text.
-    """
-    lines: List[str] = [
-        title,
-        f"  n_samples: {metrics['n_samples']}",
-        f"  invalid_predictions: {metrics['invalid_predictions']}",
-        f"  accuracy: {metrics['accuracy']:.4f}",
-        f"  precision_macro: {metrics['precision_macro']:.4f}",
-        f"  recall_macro: {metrics['recall_macro']:.4f}",
-        f"  f1_macro: {metrics['f1_macro']:.4f}",
-        "  per_label:",
-    ]
-
-    per_label = metrics.get("per_label", {})
-    for label in ("0", "1"):
-        label_metrics = per_label.get(label, {})
-        lines.extend(
-            [
-                f"    label {label}:",
-                f"      support: {label_metrics.get('support', 0)}",
-                f"      tp: {label_metrics.get('tp', 0)}",
-                f"      fp: {label_metrics.get('fp', 0)}",
-                f"      fn: {label_metrics.get('fn', 0)}",
-                f"      precision: {label_metrics.get('precision', 0.0):.4f}",
-                f"      recall: {label_metrics.get('recall', 0.0):.4f}",
-                f"      f1: {label_metrics.get('f1', 0.0):.4f}",
-            ]
-        )
-
-    return "\n".join(lines)
-
-
-def build_metrics_report(metrics_summary: JsonDict) -> str:
-    """
-    Build a readable TXT report for global metrics, per normalized class, and per video.
-    """
-    print("[INFO] Building metrics text report...")
-    lines: List[str] = [
-        "METRICS REPORT",
-        "==============",
-        "",
-        "Note:",
-        "- accuracy is exact-match accuracy",
-        "- precision/recall/f1 are macro averages over labels 0 and 1",
-        "- invalid predictions are model outputs that could not be parsed as 0 or 1",
-        "",
-        format_metric_block("GLOBAL", metrics_summary["global"]),
-        "",
-        "BY NORMALIZED QUESTION CATEGORY",
-        "-------------------------------",
-    ]
-
-    for class_name, class_metrics in metrics_summary["by_normalized_question_category"].items():
-        lines.append("")
-        lines.append(format_metric_block(class_name, class_metrics))
-
-    lines.extend(
-        [
-            "",
-            "BY VIDEO",
-            "--------",
-        ]
-    )
-
-    by_video = metrics_summary["by_video"]
-    for video_id in sorted(by_video.keys(), key=natural_video_sort_key):
-        lines.append("")
-        lines.append(format_metric_block(video_id, by_video[video_id]))
-
-    print("[INFO] Metrics text report built successfully.")
-    return "\n".join(lines)
 
 
 def run_inference(
@@ -736,9 +936,33 @@ def run_inference(
     return records
 
 
+def sort_prediction_records(records: List[PredictionRecord]) -> None:
+    """
+    Sort prediction records in place to keep the final output deterministic.
+    """
+    records.sort(
+        key=lambda record: (
+            natural_video_sort_key(record.video_id),
+            record.normalized_question_category,
+            record.question_category,
+            natural_pool_sort_key(record.pool_key),
+        )
+    )
+
+
 def main() -> None:
     print("[INFO] Script started.")
     model_name = "Qwen/Qwen2.5-VL-7B-Instruct"
+
+    distributed_state = PartialState()
+    local_device = distributed_state.device
+    process_index = distributed_state.process_index
+    num_processes = distributed_state.num_processes
+    is_main_process = distributed_state.is_main_process
+
+    print(f"[INFO][RANK {process_index}] Distributed setup initialized.")
+    print(f"[INFO][RANK {process_index}] Number of processes: {num_processes}")
+    print(f"[INFO][RANK {process_index}] Local device: {local_device}")
 
     # Input files
     final_results_path = Path("Data/TranscriptionData/final_classification/final_results.json")
@@ -747,72 +971,119 @@ def main() -> None:
     # Output files
     predictions_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_predictions_by_video.json")
     metrics_report_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_metrics_report.txt")
+    global_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_global_metrics.csv")
+    class_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_class_metrics.csv")
+    video_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_video_metrics.csv")
+
+    # Temporary distributed outputs
+    partial_records_dir = Path("Data/ModelResponse/Random/partial_records")
+    partial_records_dir.mkdir(parents=True, exist_ok=True)
 
     # Inference configuration
     batch_size = 8
 
-    print("[INFO] Configuration loaded.")
-    print(f"[INFO] final_results_path: {final_results_path}")
-    print(f"[INFO] dataset_path: {dataset_path}")
-    print(f"[INFO] predictions_output_path: {predictions_output_path}")
-    print(f"[INFO] metrics_report_output_path: {metrics_report_output_path}")
-    print(f"[INFO] batch_size: {batch_size}")
+    print(f"[INFO][RANK {process_index}] Configuration loaded.")
+    print(f"[INFO][RANK {process_index}] final_results_path: {final_results_path}")
+    print(f"[INFO][RANK {process_index}] dataset_path: {dataset_path}")
+    print(f"[INFO][RANK {process_index}] predictions_output_path: {predictions_output_path}")
+    print(f"[INFO][RANK {process_index}] metrics_report_output_path: {metrics_report_output_path}")
+    print(f"[INFO][RANK {process_index}] batch_size: {batch_size}")
 
-    # Load inputs
-    print("[INFO] Loading input files...")
+    print(f"[INFO][RANK {process_index}] Loading input files...")
     final_results = load_json_file(final_results_path)
     dataset_json = load_json_file(dataset_path)
-    print("[INFO] Input files loaded successfully.")
+    print(f"[INFO][RANK {process_index}] Input files loaded successfully.")
 
-    # Extract all examples from the nested dataset JSON.
     examples = extract_examples(dataset_json)
     if not examples:
         raise ValueError("No examples were found in the dataset JSON.")
 
-    print(f"[INFO] Total extracted examples: {len(examples)}")
+    print(f"[INFO][RANK {process_index}] Total extracted examples: {len(examples)}")
 
-    # Load model only once.
-    print("[INFO] Loading model and processor...")
-    model, processor = load_model(model_name)
-    print("[INFO] Model and processor are ready.")
-
-    # Run inference on all examples.
-    print("[INFO] Starting inference phase...")
-    records = run_inference(
-        examples=examples,
-        final_results=final_results,
-        model=model,
-        processor=processor,
-        batch_size=batch_size,
+    print(f"[INFO][RANK {process_index}] Loading model and processor...")
+    model, processor = load_model(
+        model_name=model_name,
+        device=local_device,
+        attn_implementation="flash_attention_2",
     )
-    print(f"[INFO] Inference phase completed. Total prediction records: {len(records)}")
+    print(f"[INFO][RANK {process_index}] Model and processor are ready.")
+    print(f"[INFO][RANK {process_index}] torch.cuda.is_available(): {torch.cuda.is_available()}")
+    if torch.cuda.is_available():
+        print(
+            f"[INFO][RANK {process_index}] current CUDA device: "
+            f"{torch.cuda.current_device()} - "
+            f"{torch.cuda.get_device_name(torch.cuda.current_device())}"
+        )
 
-    # Compute all requested metrics.
-    print("[INFO] Starting metrics computation...")
-    metrics_summary = compute_all_metrics(records)
-    print("[INFO] Metrics computation completed.")
+    print(f"[INFO][RANK {process_index}] Splitting examples across processes...")
+    with distributed_state.split_between_processes(examples) as local_examples:
+        local_examples = list(local_examples)
+        print(
+            f"[INFO][RANK {process_index}] Local shard size: "
+            f"{len(local_examples)} examples."
+        )
 
-    # Build the final per-video JSON output.
-    print("[INFO] Building final predictions JSON...")
+        records = run_inference(
+            examples=local_examples,
+            final_results=final_results,
+            model=model,
+            processor=processor,
+            batch_size=batch_size,
+        )
+
+    partial_path = partial_records_dir / f"predictions_rank_{process_index}.json"
+    print(f"[INFO][RANK {process_index}] Saving local prediction shard...")
+    save_prediction_records(records, partial_path)
+    print(f"[INFO][RANK {process_index}] Local shard saved to: {partial_path}")
+
+    distributed_state.wait_for_everyone()
+
+    if not is_main_process:
+        print(f"[INFO][RANK {process_index}] Worker completed successfully.")
+        return
+
+    print("[INFO][MAIN] All workers completed. Merging partial prediction shards...")
+
+    merged_records: List[PredictionRecord] = []
+    for rank in range(num_processes):
+        rank_path = partial_records_dir / f"predictions_rank_{rank}.json"
+        merged_records.extend(load_prediction_records(rank_path))
+
+    sort_prediction_records(merged_records)
+    print(f"[INFO][MAIN] Total merged prediction records: {len(merged_records)}")
+
+    print("[INFO][MAIN] Starting metrics computation...")
+    metrics_summary = compute_all_metrics(merged_records)
+    print("[INFO][MAIN] Metrics computation completed.")
+
+    print("[INFO][MAIN] Building final predictions JSON...")
     predictions_json = build_results_json(
-        records=records,
+        records=merged_records,
         final_results=final_results,
         metrics_summary=metrics_summary,
     )
-    print("[INFO] Final predictions JSON built successfully.")
+    print("[INFO][MAIN] Final predictions JSON built successfully.")
 
-    # Save outputs.
-    print("[INFO] Saving output files...")
+    print("[INFO][MAIN] Building pandas metric tables...")
+    global_df, class_df, video_df = get_metrics_dataframes(metrics_summary)
+
+    print("[INFO][MAIN] Saving output files...")
     save_json_file(predictions_json, predictions_output_path)
 
     metrics_report = build_metrics_report(metrics_summary)
     save_text_file(metrics_report, metrics_report_output_path)
 
-    print(f"[INFO] Predictions saved to: {predictions_output_path}")
-    print(f"[INFO] Metrics report saved to: {metrics_report_output_path}")
-    print("[INFO] Script finished successfully.")
+    save_dataframe_csv(global_df, global_metrics_csv_path)
+    save_dataframe_csv(class_df, class_metrics_csv_path)
+    save_dataframe_csv(video_df, video_metrics_csv_path)
+
+    print(f"[INFO][MAIN] Predictions saved to: {predictions_output_path}")
+    print(f"[INFO][MAIN] Metrics report saved to: {metrics_report_output_path}")
+    print(f"[INFO][MAIN] Global metrics CSV saved to: {global_metrics_csv_path}")
+    print(f"[INFO][MAIN] Class metrics CSV saved to: {class_metrics_csv_path}")
+    print(f"[INFO][MAIN] Video metrics CSV saved to: {video_metrics_csv_path}")
+    print("[INFO][MAIN] Script finished successfully.")
 
 
 if __name__ == "__main__":
-    # torch.cuda.init()
     main()
