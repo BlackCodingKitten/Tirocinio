@@ -3,22 +3,21 @@ from __future__ import annotations
 import json
 import os
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
-
+import openpyxl
+import matplotlib.pyplot as plt
 import pandas as pd
 import torch
-from accelerate import PartialState
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
-# By default, expose GPUs 0 and 1.
-# You can override this from the shell, for example:
-# CUDA_VISIBLE_DEVICES=0,1 accelerate launch --num_processes 2 qwen.py
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0,1")
+# Select the GPU to use.
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 JsonDict = Dict[str, Any]
+EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
 
 
 @dataclass(frozen=True)
@@ -39,6 +38,7 @@ class Example:
 class PredictionRecord:
     """
     Flat prediction record used both for JSON export and metric computation.
+    raw_model_output is always forced to be a non-empty string.
     """
     video_id: str
     question_category: str
@@ -56,28 +56,19 @@ class PredictionRecord:
 
 def load_model(
     model_name: str,
-    device: torch.device,
     torch_dtype: torch.dtype = torch.bfloat16,
+    device_map: str = "auto",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[Qwen2_5_VLForConditionalGeneration, AutoProcessor]:
-    """
-    Load the Qwen2.5-VL model and processor on the local process device.
-
-    In distributed inference, each process owns a full copy of the model and
-    works on a different shard of the dataset.
-    """
     print(f"[INFO] Loading model: {model_name}")
-    print(f"[INFO] Target device: {device}")
     print("[INFO] Initializing model weights...")
-
-    if device.type == "cuda":
-        torch.cuda.set_device(device)
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
+        device_map=device_map,
         attn_implementation=attn_implementation,
-    ).to(device)
+    )
 
     print("[INFO] Model weights loaded.")
     print("[INFO] Loading processor...")
@@ -253,8 +244,9 @@ def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     """
     Retrieve the transcript for a given video if it is available and relevant.
 
-    If the classification contains the substring 'dialogue', the transcription
-    is returned. Otherwise, a standard fallback string is returned.
+    The previous logic is preserved:
+    if the classification contains the substring 'dialogue' the transcription is
+    returned. Otherwise, a standard fallback string is returned.
     """
     video_data = get_video_metadata(final_results, video_id)
     classification = str(video_data.get("classification", "")).lower()
@@ -270,23 +262,14 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     """
     Build the text prompt for the model.
 
-    The model must answer strictly with 0 or 1.
+    The active prompt is intentionally kept unchanged.
     """
     return (
         "Scegli randomicamente quale descrizione ha la maggiore probabilità di essere corretta.\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        "Rispondi esclusivamente con una stringa 0 o 1."
+        "Rispondi esclusivamente con 0 o 1."
     )
-    # return (
-    #     "Ti fornirò, se disponibile, la trascrizione dell'audio del video, potrebbe contenere degli errori, avere parti mancanti, o essere parziale "
-    #     "e due descrizioni candidate del contenuto del video.\n\n"
-    #     f"Trascrizione audio: {transcript}\n\n"
-    #     "Scegli quale descrizione ha la maggiore probabilità di essere corretta.\n"
-    #     f"0. {choice_0}\n"
-    #     f"1. {choice_1}\n\n"
-    #     "Rispondi esclusivamente con 0 o 1."
-    # )
 
 
 def build_messages(prompts: Sequence[str]) -> List[List[Dict[str, Any]]]:
@@ -327,7 +310,8 @@ def move_inputs_to_model_device(
     model: Qwen2_5_VLForConditionalGeneration,
 ) -> Dict[str, Any]:
     """
-    Move tensor inputs to the device used by the model parameters.
+    Move tensor inputs to the device used by the first model parameter.
+    This is the safest simple strategy for generation with device_map='auto'.
     """
     print("[INFO] Moving batch inputs to model device...")
     model_device = next(model.parameters()).device
@@ -394,6 +378,18 @@ def generate_answers_batch(
     return [text.strip() for text in output_texts]
 
 
+def normalize_raw_output(raw_output: Optional[str]) -> str:
+    """
+    Force raw_model_output to always be a non-empty string so that evaluation
+    remains meaningful and explicit.
+    """
+    if raw_output is None:
+        return EMPTY_RAW_OUTPUT_TOKEN
+
+    cleaned = str(raw_output).strip()
+    return cleaned if cleaned else EMPTY_RAW_OUTPUT_TOKEN
+
+
 def parse_binary_answer(raw_output: str) -> Optional[int]:
     """
     Extract the first valid binary answer from the model output.
@@ -425,16 +421,9 @@ def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, i
     """
     Compute a binary 2x2 confusion matrix over valid predictions only.
 
-    The matrix layout is:
-        rows    = actual labels
-        columns = predicted labels
-
                     pred_0  pred_1
         actual_0      c00     c01
         actual_1      c10     c11
-
-    Invalid predictions are tracked separately elsewhere and are excluded from
-    the matrix itself to keep the matrix standard and easy to read.
     """
     c00 = sum(
         record.target == 0 and record.predicted_label == 0
@@ -463,27 +452,39 @@ def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, i
 
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
-    Compute binary classification metrics over labels {0, 1}.
+    Compute only the aggregate metrics that are meaningful for this task.
 
-    Metrics returned:
-    - accuracy
-    - macro precision
-    - macro recall
-    - macro F1
+    Global / category-level metrics returned:
+    - n_samples
+    - valid_predictions
     - invalid_predictions
-    - 2x2 confusion matrix counts
+    - empty_raw_outputs
+    - accuracy
+    - precision_macro
+    - recall_macro
+    - f1_macro
+    - confusion matrix counts
 
-    Per-label metrics are intentionally omitted because they are not useful in
-    this reporting format for the current task.
+    Notes:
+    - accuracy is exact-match accuracy over all examples
+    - macro precision / recall / f1 are averaged over labels 0 and 1
+    - invalid predictions are outputs that cannot be parsed as 0 or 1
+    - empty raw outputs are tracked separately and normalized to a sentinel token
+    - confusion matrix includes only valid predictions
     """
     print(f"[INFO] Computing metrics for {len(records)} records...")
 
     labels = (0, 1)
     n_samples = len(records)
+    empty_raw_outputs = sum(
+        record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN
+        for record in records
+    )
     invalid_predictions = sum(
         record.predicted_label not in labels
         for record in records
     )
+    valid_predictions = n_samples - invalid_predictions
     correct_predictions = sum(record.is_correct for record in records)
 
     precision_values: List[float] = []
@@ -517,7 +518,9 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     print("[INFO] Metrics computed successfully.")
     return {
         "n_samples": n_samples,
+        "valid_predictions": valid_predictions,
         "invalid_predictions": invalid_predictions,
+        "empty_raw_outputs": empty_raw_outputs,
         "accuracy": safe_divide(correct_predictions, n_samples),
         "precision_macro": safe_divide(sum(precision_values), len(labels)),
         "recall_macro": safe_divide(sum(recall_values), len(labels)),
@@ -530,7 +533,7 @@ def compute_all_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
     Compute:
     - global metrics
-    - metrics by normalized question class
+    - metrics by normalized question category
     - metrics by video
     """
     print("[INFO] Computing aggregated metrics...")
@@ -570,13 +573,15 @@ def metric_row_from_summary(
     entity_column_name: str,
 ) -> Dict[str, Any]:
     """
-    Convert a metric summary dictionary into a single flat row suitable for a
-    pandas DataFrame.
+    Convert an aggregate metric summary dictionary into a single flat row
+    suitable for a pandas DataFrame.
     """
     return {
         entity_column_name: entity_name,
         "n_samples": metrics["n_samples"],
+        "valid_predictions": metrics["valid_predictions"],
         "invalid_predictions": metrics["invalid_predictions"],
+        "empty_raw_outputs": metrics["empty_raw_outputs"],
         "accuracy": metrics["accuracy"],
         "precision_macro": metrics["precision_macro"],
         "recall_macro": metrics["recall_macro"],
@@ -590,34 +595,45 @@ def metric_row_from_summary(
 
 def build_global_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
     """
-    Build a one-row DataFrame containing the global metrics.
+    One-row DataFrame with the global evaluation metrics.
+
+    Meaning:
+    - This summarizes the overall behaviour of the model on the full dataset.
     """
-    row = metric_row_from_summary(
-        entity_name="GLOBAL",
-        metrics=metrics_summary["global"],
-        entity_column_name="scope",
+    return pd.DataFrame(
+        [
+            metric_row_from_summary(
+                entity_name="GLOBAL",
+                metrics=metrics_summary["global"],
+                entity_column_name="scope",
+            )
+        ]
     )
-    return pd.DataFrame([row])
 
 
-def build_class_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+def build_category_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
     """
-    Build a DataFrame containing one row per normalized question category.
+    DataFrame with one row per normalized_question_category.
+
+    Meaning:
+    - This lets you compare model quality across semantic question families
+      after collapsing suffix variants such as _A / _B into the same category.
     """
     rows = [
         metric_row_from_summary(
-            entity_name=class_name,
-            metrics=class_metrics,
+            entity_name=category_name,
+            metrics=category_metrics,
             entity_column_name="normalized_question_category",
         )
-        for class_name, class_metrics in metrics_summary["by_normalized_question_category"].items()
+        for category_name, category_metrics
+        in metrics_summary["by_normalized_question_category"].items()
     ]
     return pd.DataFrame(rows)
 
 
 def build_video_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
     """
-    Build a DataFrame containing one row per video.
+    DataFrame with one row per video.
     """
     rows = [
         metric_row_from_summary(
@@ -644,6 +660,26 @@ def build_confusion_matrix_dataframe(metrics: JsonDict) -> pd.DataFrame:
     )
 
 
+def build_category_confusion_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+    """
+    Flat confusion counts by normalized_question_category.
+    """
+    rows: List[Dict[str, Any]] = []
+
+    for category_name, metrics in metrics_summary["by_normalized_question_category"].items():
+        rows.append(
+            {
+                "normalized_question_category": category_name,
+                "actual_0_pred_0": metrics["actual_0_pred_0"],
+                "actual_0_pred_1": metrics["actual_0_pred_1"],
+                "actual_1_pred_0": metrics["actual_1_pred_0"],
+                "actual_1_pred_1": metrics["actual_1_pred_1"],
+            }
+        )
+
+    return pd.DataFrame(rows)
+
+
 def dataframe_to_string(df: pd.DataFrame, index: bool = False) -> str:
     """
     Convert a pandas DataFrame to a readable string with stable formatting.
@@ -659,30 +695,29 @@ def dataframe_to_string(df: pd.DataFrame, index: bool = False) -> str:
 
 def build_metrics_report(metrics_summary: JsonDict) -> str:
     """
-    Build a readable TXT report using pandas DataFrames.
-
-    The report order is:
-    1. Global performance
-    2. Global confusion matrix
-    3. Per-class summary table
-    4. Per-class confusion matrices
-    5. Per-video summary table
+    Build a readable TXT report focused only on the meaningful aggregate metrics.
     """
     print("[INFO] Building metrics text report...")
 
     global_df = build_global_metrics_dataframe(metrics_summary)
-    class_df = build_class_metrics_dataframe(metrics_summary)
+    category_df = build_category_metrics_dataframe(metrics_summary)
     video_df = build_video_metrics_dataframe(metrics_summary)
+    global_conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
+    category_conf_df = build_category_confusion_dataframe(metrics_summary)
 
     report_parts: List[str] = [
         "MODEL EVALUATION REPORT",
         "=======================",
         "",
-        "NOTES",
-        "-----",
+        "DEFINITIONS",
+        "-----------",
+        "- Global metrics summarize the overall model performance on the full dataset.",
+        "- Normalized-question-category metrics summarize performance after collapsing category variants such as _A/_B into a single family.",
+        "- Accuracy is exact-match accuracy over all examples.",
         "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
         "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
-        "- Confusion matrices include only valid predictions; invalid predictions are reported separately.",
+        f"- Empty raw outputs are normalized to the explicit token: {EMPTY_RAW_OUTPUT_TOKEN}",
+        "- Confusion matrices include only valid predictions.",
         "",
         "GLOBAL PERFORMANCE",
         "------------------",
@@ -690,96 +725,165 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
         "",
         "GLOBAL CONFUSION MATRIX",
         "-----------------------",
-        dataframe_to_string(
-            build_confusion_matrix_dataframe(metrics_summary["global"]),
-            index=True,
-        ),
+        dataframe_to_string(global_conf_df, index=True),
         "",
-        "PER-CLASS PERFORMANCE",
+        "PER NORMALIZED QUESTION CATEGORY",
+        "--------------------------------",
+        dataframe_to_string(category_df, index=False),
+        "",
+        "PER NORMALIZED QUESTION CATEGORY CONFUSION",
+        "------------------------------------------",
+        dataframe_to_string(category_conf_df, index=False),
+        "",
+        "PER VIDEO PERFORMANCE",
         "---------------------",
-        dataframe_to_string(class_df, index=False),
-        "",
-        "PER-CLASS CONFUSION MATRICES",
-        "----------------------------",
+        dataframe_to_string(video_df, index=False),
     ]
-
-    for class_name, class_metrics in metrics_summary["by_normalized_question_category"].items():
-        report_parts.extend(
-            [
-                "",
-                f"[CLASS] {class_name}",
-                dataframe_to_string(
-                    pd.DataFrame(
-                        [
-                            metric_row_from_summary(
-                                entity_name=class_name,
-                                metrics=class_metrics,
-                                entity_column_name="normalized_question_category",
-                            )
-                        ]
-                    ),
-                    index=False,
-                ),
-                "",
-                dataframe_to_string(
-                    build_confusion_matrix_dataframe(class_metrics),
-                    index=True,
-                ),
-            ]
-        )
-
-    report_parts.extend(
-        [
-            "",
-            "PER-VIDEO PERFORMANCE",
-            "---------------------",
-            dataframe_to_string(video_df, index=False),
-        ]
-    )
 
     print("[INFO] Metrics text report built successfully.")
     return "\n".join(report_parts)
 
 
-def get_metrics_dataframes(metrics_summary: JsonDict) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def plot_global_confusion_matrix(metrics_summary: JsonDict, output_path: str | Path) -> None:
     """
-    Build the three main pandas DataFrames used in the final output.
+    Save a PNG heatmap for the global confusion matrix.
     """
-    global_df = build_global_metrics_dataframe(metrics_summary)
-    class_df = build_class_metrics_dataframe(metrics_summary)
-    video_df = build_video_metrics_dataframe(metrics_summary)
-    return global_df, class_df, video_df
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
+    values = conf_df.values
+
+    fig, ax = plt.subplots(figsize=(5, 4))
+    im = ax.imshow(values)
+
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(conf_df.columns)
+    ax.set_yticks([0, 1])
+    ax.set_yticklabels(conf_df.index)
+    ax.set_title("Global confusion matrix")
+    ax.set_xlabel("Predicted label")
+    ax.set_ylabel("Actual label")
+
+    for i in range(values.shape[0]):
+        for j in range(values.shape[1]):
+            ax.text(j, i, str(values[i, j]), ha="center", va="center")
+
+    fig.colorbar(im, ax=ax)
+    fig.tight_layout()
+    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+    print(f"[INFO] Global confusion matrix plot saved to: {output_path}")
 
 
-def save_prediction_records(
-    records: Sequence[PredictionRecord],
+def plot_metric_by_category(
+    df: pd.DataFrame,
+    metric_column: str,
+    title: str,
+    ylabel: str,
     output_path: str | Path,
 ) -> None:
     """
-    Save flat prediction records to JSON.
+    Save a bar chart for a metric by normalized question category.
     """
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    serializable_records = [asdict(record) for record in records]
+    if df.empty:
+        print(f"[INFO] Skipping plot {title}: empty DataFrame.")
+        return
 
-    print(f"[INFO] Saving flat prediction shard to: {path}")
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(serializable_records, f, ensure_ascii=False, indent=2)
-    print(f"[INFO] Flat prediction shard saved successfully: {path}")
+    plot_df = df.sort_values(metric_column, ascending=False)
+
+    fig, ax = plt.subplots(figsize=(max(8, len(plot_df) * 0.8), 5))
+    ax.bar(plot_df["normalized_question_category"], plot_df[metric_column])
+
+    ax.set_title(title)
+    ax.set_xlabel("Normalized question category")
+    ax.set_ylabel(ylabel)
+    ax.tick_params(axis="x", rotation=45)
+
+    values = plot_df[metric_column].tolist()
+    for idx, value in enumerate(values):
+        ax.text(idx, value, f"{value:.3f}", ha="center", va="bottom")
+
+    fig.tight_layout()
+    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+    print(f"[INFO] Plot saved to: {output_path}")
 
 
-def load_prediction_records(input_path: str | Path) -> List[PredictionRecord]:
+def save_evaluation_artifacts(
+    metrics_summary: JsonDict,
+    output_dir: str | Path,
+) -> None:
     """
-    Load flat prediction records from JSON.
+    Save evaluation artifacts:
+    - Excel workbook with multiple sheets
+    - CSV files for the main DataFrames
+    - PNG charts for quick visual inspection
     """
-    path = Path(input_path)
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"[INFO] Loading flat prediction shard: {path}")
-    with path.open("r", encoding="utf-8") as f:
-        raw_records = json.load(f)
+    plots_dir = output_dir / "plots"
+    plots_dir.mkdir(parents=True, exist_ok=True)
 
-    return [PredictionRecord(**item) for item in raw_records]
+    global_df = build_global_metrics_dataframe(metrics_summary)
+    category_df = build_category_metrics_dataframe(metrics_summary)
+    video_df = build_video_metrics_dataframe(metrics_summary)
+    global_conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
+    category_conf_df = build_category_confusion_dataframe(metrics_summary)
+
+    workbook_path = output_dir / "evaluation_summary.xlsx"
+    global_csv_path = output_dir / "global_metrics.csv"
+    category_csv_path = output_dir / "normalized_question_category_metrics.csv"
+    video_csv_path = output_dir / "video_metrics.csv"
+    category_conf_csv_path = output_dir / "normalized_question_category_confusion.csv"
+
+    with pd.ExcelWriter(workbook_path) as writer:
+        global_df.to_excel(writer, sheet_name="global_metrics", index=False)
+        category_df.to_excel(writer, sheet_name="category_metrics", index=False)
+        video_df.to_excel(writer, sheet_name="video_metrics", index=False)
+        global_conf_df.to_excel(writer, sheet_name="global_confusion")
+        category_conf_df.to_excel(writer, sheet_name="category_confusion", index=False)
+
+    save_dataframe_csv(global_df, global_csv_path)
+    save_dataframe_csv(category_df, category_csv_path)
+    save_dataframe_csv(video_df, video_csv_path)
+    save_dataframe_csv(category_conf_df, category_conf_csv_path)
+
+    plot_global_confusion_matrix(
+        metrics_summary,
+        plots_dir / "global_confusion_matrix.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="accuracy",
+        title="Accuracy by normalized question category",
+        ylabel="Accuracy",
+        output_path=plots_dir / "accuracy_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="f1_macro",
+        title="Macro F1 by normalized question category",
+        ylabel="Macro F1",
+        output_path=plots_dir / "f1_macro_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="invalid_predictions",
+        title="Invalid predictions by normalized question category",
+        ylabel="Invalid predictions",
+        output_path=plots_dir / "invalid_predictions_by_category.png",
+    )
+
+    print(f"[INFO] Evaluation workbook saved to: {workbook_path}")
+    print(f"[INFO] Evaluation CSVs saved in: {output_dir}")
+    print(f"[INFO] Evaluation plots saved in: {plots_dir}")
 
 
 def build_results_json(
@@ -789,32 +893,6 @@ def build_results_json(
 ) -> JsonDict:
     """
     Build the final per-video JSON file.
-
-    Structure:
-    {
-      "Video1.mp4": {
-        "classification": "...",
-        "score": ...,
-        "score_meaning": "...",
-        "selected_model": "...",
-        "generated_transcription": "...",
-        "metrics": {...},
-        "questions": {
-          "Controfattuale_A": {
-            "pool_pos_1": {
-              "normalized_question_category": "Controfattuale",
-              "0": "...",
-              "1": "...",
-              "target": 0,
-              "prompt": "...",
-              "raw_model_output": "...",
-              "predicted_label": 0,
-              "is_correct": true
-            }
-          }
-        }
-      }
-    }
     """
     print("[INFO] Building final results JSON structure...")
     results: JsonDict = {}
@@ -839,10 +917,10 @@ def build_results_json(
 
         video_questions[record.question_category][record.pool_key] = {
             "normalized_question_category": record.normalized_question_category,
-            # "0": record.choice_0,
-            # "1": record.choice_1,
+            "0": record.choice_0,
+            "1": record.choice_1,
             "target": record.target,
-            # "prompt": record.prompt,
+            "prompt": record.prompt,
             "raw_model_output": record.raw_model_output,
             "predicted_label": record.predicted_label,
             "is_correct": record.is_correct,
@@ -909,7 +987,8 @@ def run_inference(
             prompts,
             raw_outputs,
         ):
-            predicted_label = parse_binary_answer(raw_output)
+            safe_raw_output = normalize_raw_output(raw_output)
+            predicted_label = parse_binary_answer(safe_raw_output)
             is_correct = predicted_label == example.target
 
             records.append(
@@ -923,7 +1002,7 @@ def run_inference(
                     target=example.target,
                     transcript=transcript,
                     prompt=prompt,
-                    raw_model_output=raw_output,
+                    raw_model_output=safe_raw_output,
                     predicted_label=predicted_label,
                     is_correct=is_correct,
                 )
@@ -936,33 +1015,9 @@ def run_inference(
     return records
 
 
-def sort_prediction_records(records: List[PredictionRecord]) -> None:
-    """
-    Sort prediction records in place to keep the final output deterministic.
-    """
-    records.sort(
-        key=lambda record: (
-            natural_video_sort_key(record.video_id),
-            record.normalized_question_category,
-            record.question_category,
-            natural_pool_sort_key(record.pool_key),
-        )
-    )
-
-
 def main() -> None:
     print("[INFO] Script started.")
     model_name = "Qwen/Qwen2.5-VL-7B-Instruct"
-
-    distributed_state = PartialState()
-    local_device = distributed_state.device
-    process_index = distributed_state.process_index
-    num_processes = distributed_state.num_processes
-    is_main_process = distributed_state.is_main_process
-
-    print(f"[INFO][RANK {process_index}] Distributed setup initialized.")
-    print(f"[INFO][RANK {process_index}] Number of processes: {num_processes}")
-    print(f"[INFO][RANK {process_index}] Local device: {local_device}")
 
     # Input files
     final_results_path = Path("Data/TranscriptionData/final_classification/final_results.json")
@@ -971,118 +1026,68 @@ def main() -> None:
     # Output files
     predictions_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_predictions_by_video.json")
     metrics_report_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_metrics_report.txt")
-    global_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_global_metrics.csv")
-    class_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_class_metrics.csv")
-    video_metrics_csv_path = Path("Data/ModelResponse/Random/qwen_mc_random_video_metrics.csv")
-
-    # Temporary distributed outputs
-    partial_records_dir = Path("Data/ModelResponse/Random/partial_records")
-    partial_records_dir.mkdir(parents=True, exist_ok=True)
+    evaluation_output_dir = Path("Data/ModelResponse/Random/evaluation")
 
     # Inference configuration
     batch_size = 8
 
-    print(f"[INFO][RANK {process_index}] Configuration loaded.")
-    print(f"[INFO][RANK {process_index}] final_results_path: {final_results_path}")
-    print(f"[INFO][RANK {process_index}] dataset_path: {dataset_path}")
-    print(f"[INFO][RANK {process_index}] predictions_output_path: {predictions_output_path}")
-    print(f"[INFO][RANK {process_index}] metrics_report_output_path: {metrics_report_output_path}")
-    print(f"[INFO][RANK {process_index}] batch_size: {batch_size}")
+    print("[INFO] Configuration loaded.")
+    print(f"[INFO] final_results_path: {final_results_path}")
+    print(f"[INFO] dataset_path: {dataset_path}")
+    print(f"[INFO] predictions_output_path: {predictions_output_path}")
+    print(f"[INFO] metrics_report_output_path: {metrics_report_output_path}")
+    print(f"[INFO] evaluation_output_dir: {evaluation_output_dir}")
+    print(f"[INFO] batch_size: {batch_size}")
 
-    print(f"[INFO][RANK {process_index}] Loading input files...")
+    print("[INFO] Loading input files...")
     final_results = load_json_file(final_results_path)
     dataset_json = load_json_file(dataset_path)
-    print(f"[INFO][RANK {process_index}] Input files loaded successfully.")
+    print("[INFO] Input files loaded successfully.")
 
     examples = extract_examples(dataset_json)
     if not examples:
         raise ValueError("No examples were found in the dataset JSON.")
 
-    print(f"[INFO][RANK {process_index}] Total extracted examples: {len(examples)}")
+    print(f"[INFO] Total extracted examples: {len(examples)}")
 
-    print(f"[INFO][RANK {process_index}] Loading model and processor...")
-    model, processor = load_model(
-        model_name=model_name,
-        device=local_device,
-        attn_implementation="flash_attention_2",
+    print("[INFO] Loading model and processor...")
+    model, processor = load_model(model_name)
+    print("[INFO] Model and processor are ready.")
+
+    print("[INFO] Starting inference phase...")
+    records = run_inference(
+        examples=examples,
+        final_results=final_results,
+        model=model,
+        processor=processor,
+        batch_size=batch_size,
     )
-    print(f"[INFO][RANK {process_index}] Model and processor are ready.")
-    print(f"[INFO][RANK {process_index}] torch.cuda.is_available(): {torch.cuda.is_available()}")
-    if torch.cuda.is_available():
-        print(
-            f"[INFO][RANK {process_index}] current CUDA device: "
-            f"{torch.cuda.current_device()} - "
-            f"{torch.cuda.get_device_name(torch.cuda.current_device())}"
-        )
+    print(f"[INFO] Inference phase completed. Total prediction records: {len(records)}")
 
-    print(f"[INFO][RANK {process_index}] Splitting examples across processes...")
-    with distributed_state.split_between_processes(examples) as local_examples:
-        local_examples = list(local_examples)
-        print(
-            f"[INFO][RANK {process_index}] Local shard size: "
-            f"{len(local_examples)} examples."
-        )
+    print("[INFO] Starting metrics computation...")
+    metrics_summary = compute_all_metrics(records)
+    print("[INFO] Metrics computation completed.")
 
-        records = run_inference(
-            examples=local_examples,
-            final_results=final_results,
-            model=model,
-            processor=processor,
-            batch_size=batch_size,
-        )
-
-    partial_path = partial_records_dir / f"predictions_rank_{process_index}.json"
-    print(f"[INFO][RANK {process_index}] Saving local prediction shard...")
-    save_prediction_records(records, partial_path)
-    print(f"[INFO][RANK {process_index}] Local shard saved to: {partial_path}")
-
-    distributed_state.wait_for_everyone()
-
-    if not is_main_process:
-        print(f"[INFO][RANK {process_index}] Worker completed successfully.")
-        return
-
-    print("[INFO][MAIN] All workers completed. Merging partial prediction shards...")
-
-    merged_records: List[PredictionRecord] = []
-    for rank in range(num_processes):
-        rank_path = partial_records_dir / f"predictions_rank_{rank}.json"
-        merged_records.extend(load_prediction_records(rank_path))
-
-    sort_prediction_records(merged_records)
-    print(f"[INFO][MAIN] Total merged prediction records: {len(merged_records)}")
-
-    print("[INFO][MAIN] Starting metrics computation...")
-    metrics_summary = compute_all_metrics(merged_records)
-    print("[INFO][MAIN] Metrics computation completed.")
-
-    print("[INFO][MAIN] Building final predictions JSON...")
+    print("[INFO] Building final predictions JSON...")
     predictions_json = build_results_json(
-        records=merged_records,
+        records=records,
         final_results=final_results,
         metrics_summary=metrics_summary,
     )
-    print("[INFO][MAIN] Final predictions JSON built successfully.")
+    print("[INFO] Final predictions JSON built successfully.")
 
-    print("[INFO][MAIN] Building pandas metric tables...")
-    global_df, class_df, video_df = get_metrics_dataframes(metrics_summary)
-
-    print("[INFO][MAIN] Saving output files...")
+    print("[INFO] Saving output files...")
     save_json_file(predictions_json, predictions_output_path)
 
     metrics_report = build_metrics_report(metrics_summary)
     save_text_file(metrics_report, metrics_report_output_path)
 
-    save_dataframe_csv(global_df, global_metrics_csv_path)
-    save_dataframe_csv(class_df, class_metrics_csv_path)
-    save_dataframe_csv(video_df, video_metrics_csv_path)
+    save_evaluation_artifacts(metrics_summary, evaluation_output_dir)
 
-    print(f"[INFO][MAIN] Predictions saved to: {predictions_output_path}")
-    print(f"[INFO][MAIN] Metrics report saved to: {metrics_report_output_path}")
-    print(f"[INFO][MAIN] Global metrics CSV saved to: {global_metrics_csv_path}")
-    print(f"[INFO][MAIN] Class metrics CSV saved to: {class_metrics_csv_path}")
-    print(f"[INFO][MAIN] Video metrics CSV saved to: {video_metrics_csv_path}")
-    print("[INFO][MAIN] Script finished successfully.")
+    print(f"[INFO] Predictions saved to: {predictions_output_path}")
+    print(f"[INFO] Metrics report saved to: {metrics_report_output_path}")
+    print(f"[INFO] Evaluation artifacts saved to: {evaluation_output_dir}")
+    print("[INFO] Script finished successfully.")
 
 
 if __name__ == "__main__":
