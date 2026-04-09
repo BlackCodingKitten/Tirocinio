@@ -4,9 +4,9 @@
 ### <span style="color:#8A2BE2;">Automatic Video Audio Transcription and Multimodal Benchmark Enrichment</span>
 
 <p align="center">
-  <a href="https://www.fbk.eu/en/">
-    <img src="https://img.shields.io/badge/Research-FBK-8A2BE2?style=for-the-badge" />
-  </a>
+<a href="https://www.fbk.eu/en/" target="_blank">
+  <img src="https://img.shields.io/badge/Research-FBK-8A2BE2?style=for-the-badge" alt="FBK Research Badge" />
+</a>
   <img src="https://img.shields.io/badge/Domain-Multimodal%20AI-7B1FA2?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Task-Automatic%20Transcription-6A1B9A?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Models-Whisper--1%20%7C%20GPT--4.0-9C27B0?style=for-the-badge" />
