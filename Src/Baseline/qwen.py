@@ -1,12 +1,13 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "5"
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+from typing import Any
 import json
 from pathlib import Path
 
 import torch
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
+global video_path = "Data/Videos/"
 
 def load_model(
     model_name: str,
@@ -40,10 +41,18 @@ def load_final_results(json_path: str):
     with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-
-def get_transcript_for_video(final_results, video_path: str) -> str:
+def save_final_results(data: dict ,json_path: str):
     """
-    Retrieve the transcript for the given video file.
+    Save the results on disk.
+    """
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data,f)
+    print("File Salvato OK")
+    return
+
+def get_transcript_for_video(final_results, fr_key: str) -> str:
+    """
+    Retrieve the transcript, if exists, for the given video file or return transcription not available.
 
     Expected JSON structure example:
     {
@@ -56,20 +65,12 @@ def get_transcript_for_video(final_results, video_path: str) -> str:
         }
     }
 
-    The lookup is performed using only the video filename.
+    The lookup is performed using the dictionary key.
     """
-    video_name = Path(video_path).name
-
-    if video_name not in final_results:
-        raise KeyError(f"No entry found in final_results.json for: {video_name}")
-
-    item = final_results[video_name]
-
-    transcript = item.get("generated_transcription", "").strip()
-    if not transcript:
-        raise KeyError(f"No generated_transcription found for: {video_name}")
-
-    return transcript
+    if "dialogue" in final_results[fr_key] ["classification"]:
+        return f"La trascrizione dell'audio contenuto nel video è \"{final_results[fr_key]["generated_transcription"]}\""
+    else: 
+        return "La trascrizione dell'audio contenuto nel video non è disponibile."
 
 
 def build_message_TV(prompt_text):
@@ -146,15 +147,15 @@ def main():
     caption = "L'uomo è caduto in acqua perché ha perso l'equilibrio"
     foil = "L'uomo è caduto in acqua perché è stato spinto"
 
-    json_path = "/home/mikela/Documents/Tirocinio/src/Tirocinio/Data/TranscriptionData/final_classification/final_results.json"
-    video_path = "/home/dtesta/MAIA_def/dataset_def/videos/Video12.mp4"
+    json_path = "Data/TranscriptionData/final_classification/final_results.json"
+    
 
     final_results = load_final_results(json_path)
-    transcript = get_transcript_for_video(final_results, video_path)
+    
 
-    prompt_text = (
+    prompt_text_transcription = (
         "Ti viene fornita solo la trascrizione automatica dell'audio del video.\n"
-        "La trascrizione può contenere errori, omissioni o parole sbagliate.\n"
+        "La trascrizione è in italiano, può contenere errori, omissioni o parole sbagliate.\n"
         "Usa solo la trascrizione per scegliere la descrizione corretta.\n\n"
         f"Trascrizione:\n{transcript}\n\n"
         f"Scegli la descrizione corretta:\n"
@@ -162,23 +163,35 @@ def main():
         f"B. {foil}.\n"
         f"Rispondi solo A o B.\n"
     )
+    
+    prompt_text_no_transcription= (
+        f"Scegli la descrizione che ha la maggior probabilità di essere corretta:\n"
+        f"A. {caption}\n"
+        f"B. {foil}.\n"
+        f"Rispondi solo A o B.\n"
+    )
 
     model, processor, tokenizer = load_model(model_name)
 
-    message = build_message_TV(prompt_text)
-    text, inputs = inference(message, processor, model)
 
-    print("\n===== TRANSCRIPT =====")
-    print(transcript)
+with open("Data/ModelResponse/random.json", "w", encoding="utf-8") as result_file: 
+    result_dict = dict[str, Any] = {}
+    for in in range (1,101):
+        key = f"Video{i}.mp4"  
 
-    print("\n===== FORMATTED PROMPT =====")
-    print(text)
+        transcript =get_transcript_for_video(final_results, key)
+        result_dict[key]["transcript"] = transcript
+        result_dict[key]["formatted_prompt"] = text
 
-    answer = generate_answer(model, processor, inputs)
+        message = build_message_TV(prompt_text_no_transcription)
+        text, inputs = inference(message, processor, model)
+        answer = generate_answer(model, processor, inputs)
 
-    print("\n===== MODEL ANSWER =====")
-    print(answer)
+        print("\n===== MODEL ANSWER =====")
+        print(answer)
 
 
 if __name__ == "__main__":
     main()
+
+
