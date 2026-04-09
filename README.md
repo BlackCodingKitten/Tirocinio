@@ -4,14 +4,17 @@
 ### <span style="color:#8A2BE2;">Automatic Video Audio Transcription and Multimodal Benchmark Enrichment</span>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Research-FBK-8A2BE2?style=for-the-badge" />
+  <a href="https://www.fbk.eu/en/">
+    <img src="https://img.shields.io/badge/Research-FBK-8A2BE2?style=for-the-badge" />
+  </a>
   <img src="https://img.shields.io/badge/Domain-Multimodal%20AI-7B1FA2?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Task-Automatic%20Transcription-6A1B9A?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Models-Whisper--1%20%7C%20GPT--4.0-9C27B0?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Focus-Benchmark%20Enrichment-AB47BC?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <em>A research internship project developed in collaboration with FBK to explore automatic transcription, transcript merging, and multimodal benchmark enrichment.</em>
+  <em>A research internship project developed in collaboration with <a href="https://www.fbk.eu/en/">FBK – Fondazione Bruno Kessler</a> to explore automatic transcription, transcript merging, multimodal benchmark enrichment, and new evaluation baselines.</em>
 </p>
 
 </div>
@@ -20,7 +23,7 @@
 
 ## 💼 <span style="color:#8A2BE2;">Project Overview</span>
 
-This internship project is carried out in collaboration with **FBK (Fondazione Bruno Kessler)** and is supervised by **Dr. Bernardo Magnini** and **Davide Testa**.
+This internship project is carried out in collaboration with **[FBK – Fondazione Bruno Kessler](https://www.fbk.eu/en/)** and is supervised by **Dr. Bernardo Magnini** and **Davide Testa**.
 
 The project focuses on the **automatic transcription of audio extracted from videos**, with the broader aim of supporting research on **multimodal AI systems** and their performance under different informational conditions.
 
@@ -35,7 +38,7 @@ The core activity of the project consists of generating **automatic transcriptio
 
 The outputs produced by these models are then **merged and combined** in order to obtain a more reliable final transcription of the dialogues.
 
-This merging process is based on the **confidence with which the models predict the text**, allowing the system to select, combine, and refine the transcription segments according to the reliability of each prediction.
+This merging process is based on the **confidence with which the models predict the text**, allowing the system to select, combine, and refine transcription segments according to the reliability of each prediction.
 
 ---
 
@@ -48,8 +51,10 @@ The project pipeline can be summarized as follows:
 3. **Comparison of transcription outputs**  
 4. **Merge of the results** based on the confidence associated with the predicted text  
 5. **Combination of dialogue transcriptions** into a more accurate final version  
+6. **Integration of textual information** into the benchmark  
+7. **Creation of new baselines** for evaluation  
 
-This approach makes it possible to leverage the complementary strengths of different transcription models and improve the overall quality of the generated text.
+This approach makes it possible to leverage the complementary strengths of different transcription models and improve the overall quality of the generated text while supporting a more robust evaluation framework.
 
 ---
 
@@ -59,8 +64,9 @@ In the following stages of the project, the automatic transcription is used to *
 
 The goal is to use this enriched benchmark to evaluate:
 
-- **unimodal collapse**,  
-- and how the **performance of multimodal models changes** when they are provided with **more or less information** about the video.
+- **unimodal collapse**
+- how the **performance of multimodal models changes** when they are provided with **more or less information** about the video
+- the effectiveness of **new baselines** designed for a more structured and informative evaluation process
 
 More specifically, the project investigates how multimodal systems behave when textual information extracted from audio is added to the available input, and whether this additional information affects model robustness, balance across modalities, and overall task performance.
 
@@ -83,8 +89,17 @@ This is particularly important for studying **unimodal collapse**, namely the te
 - Merge transcripts according to **prediction confidence**  
 - Produce improved dialogue transcriptions  
 - Enrich the **MAIA Benchmark** with textual information extracted from videos  
+- Create **new baselines** for evaluation  
 - Evaluate the impact of additional textual information on **multimodal model performance**  
 - Study the phenomenon of **unimodal collapse**
+
+---
+
+## 🧩 <span style="color:#8A2BE2;">Evaluation Perspective</span>
+
+A relevant part of the project is dedicated not only to transcription quality, but also to the design of a stronger evaluation setting.
+
+By enriching the benchmark and introducing **new baselines**, the project aims to provide clearer points of comparison for measuring how multimodal models behave under different input configurations, especially when textual information is added or removed.
 
 ---
 
@@ -96,6 +111,7 @@ This internship project combines:
 - **multi-model transcript merging**
 - **confidence-based dialogue combination**
 - **benchmark enrichment for multimodal evaluation**
+- **creation of new evaluation baselines**
 - **analysis of unimodal collapse in multimodal systems**
 
 Overall, the project contributes to the study of **multimodal AI evaluation**, with a focus on understanding how the presence or absence of textual information influences model behavior and performance.
@@ -104,13 +120,13 @@ Overall, the project contributes to the study of **multimodal AI evaluation**, w
 
 ## 🤝 <span style="color:#8A2BE2;">Collaboration</span>
 
-**Institution:** FBK — *Fondazione Bruno Kessler*  
+**Institution:** [FBK — Fondazione Bruno Kessler](https://www.fbk.eu/en/)  
 **Supervisors:** **Dr. Bernardo Magnini** and **Davide Testa**
 
 ---
 
 <div align="center">
 
-### ✨ <span style="color:#8A2BE2;">Researching transcription, fusion, and multimodal understanding</span>
+### ✨ <span style="color:#8A2BE2;">Researching transcription, fusion, benchmark enrichment, and multimodal understanding</span>
 
 </div>
