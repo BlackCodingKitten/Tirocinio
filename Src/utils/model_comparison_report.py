@@ -848,7 +848,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("model_comparison_report.pdf"),
+        default=Path("Report/model_comparison_report.pdf"),
         help="Output PDF path.",
     )
     return parser
