@@ -1,0 +1,2 @@
+scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Precision,Recall,F1-Score,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
+GLOBAL,19200,19200,0,0,0.4928125,0.4909293709034531,0.4942653414221186,0.44234426909189195,7619,1935,7803,1843

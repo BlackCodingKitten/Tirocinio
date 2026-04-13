@@ -1,0 +1,84 @@
+{
+  "thresholds": {
+    "ambiguous_margin": 0.2,
+    "high_confidence": 0.8,
+    "low_confidence": 0.55
+  },
+  "global": {
+    "n_samples": 19200,
+    "valid_predictions": 19200,
+    "invalid_predictions": 0,
+    "empty_raw_outputs": 0,
+    "Accuracy": 0.4933854166666667,
+    "Precision": 0.4930662419796288,
+    "Recall": 0.4944591718273393,
+    "F1-Score": 0.46719305111994114,
+    "LogProb_Accuracy": 0.4933854166666667,
+    "LogProb_Precision": 0.4930662419796288,
+    "LogProb_Recall": 0.4944591718273393,
+    "LogProb_F1-Score": 0.46719305111994114,
+    "avg_logprob_margin": 0.6880561606089274,
+    "avg_confidence": 0.6492144141749789,
+    "avg_entropy": 0.6153907963901704,
+    "avg_confidence_correct_logprob": 0.6492515189914709,
+    "avg_confidence_wrong_logprob": 0.6491782782721693,
+    "avg_margin_correct_logprob": 0.6896811901774286,
+    "avg_margin_wrong_logprob": 0.686473565245258,
+    "free_vs_logprob_agreement_rate": 0.9997916666666666,
+    "ambiguous_rate": 0.20916666666666667,
+    "high_confidence_wrong_rate": 0.06130208333333333,
+    "low_confidence_correct_rate": 0.1046875,
+    "actual_0_pred_0": 6865,
+    "actual_0_pred_1": 2689,
+    "actual_1_pred_0": 7038,
+    "actual_1_pred_1": 2608,
+    "logprob_actual_0_pred_0": 6865,
+    "logprob_actual_0_pred_1": 2689,
+    "logprob_actual_1_pred_0": 7038,
+    "logprob_actual_1_pred_1": 2608
+  },
+  "confidence_buckets": [
+    {
+      "confidence_bucket": "[0.50,0.55)",
+      "n_samples": 4016,
+      "avg_confidence": 0.5205472305832631,
+      "avg_logprob_margin": 0.08229581673306773,
+      "logprob_accuracy": 0.5004980079681275
+    },
+    {
+      "confidence_bucket": "[0.55,0.65)",
+      "n_samples": 6467,
+      "avg_confidence": 0.5893049845283324,
+      "avg_logprob_margin": 0.3619913479008814,
+      "logprob_accuracy": 0.4853873511674656
+    },
+    {
+      "confidence_bucket": "[0.65,0.75)",
+      "n_samples": 4766,
+      "avg_confidence": 0.6851974035504982,
+      "avg_logprob_margin": 0.7813036843002518,
+      "logprob_accuracy": 0.49979018044481743
+    },
+    {
+      "confidence_bucket": "[0.75,0.85)",
+      "n_samples": 2354,
+      "avg_confidence": 0.7893201619665199,
+      "avg_logprob_margin": 1.3295998002070943,
+      "logprob_accuracy": 0.49022939677145283
+    },
+    {
+      "confidence_bucket": "[0.85,0.95)",
+      "n_samples": 1397,
+      "avg_confidence": 0.892518067965784,
+      "avg_logprob_margin": 2.1597443391530957,
+      "logprob_accuracy": 0.4889047959914102
+    },
+    {
+      "confidence_bucket": "[0.95,1.00]",
+      "n_samples": 200,
+      "avg_confidence": 0.9640275582671165,
+      "avg_logprob_margin": 3.3422305297851564,
+      "logprob_accuracy": 0.525
+    }
+  ]
+}

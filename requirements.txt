@@ -1,0 +1,12 @@
+PyYAML==6.0.3
+Pygments==2.20.0
+et_xmlfile==2.0.0
+flash-attn==2.6.3
+mdurl==0.1.2
+mkl_fft==1.3.11
+mkl_random==1.2.8
+ninja==1.13.0
+pip-chill==1.0.5
+qwen-vl-utils==0.0.8
+reportlab==4.4.10
+triton==3.1.0

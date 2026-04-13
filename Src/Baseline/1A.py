@@ -266,10 +266,10 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"/no_think You are a binary selector assistant. Output ONLY {0} or {1}. No explanation, no punctuation, no preamble.\nScegli randomicamente tra:.\n"
+        f"Scegli la risposta corretta tra:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        f"Here is the answer: or {1} or {0} Absolutly no ask for more Criteria /no_think"
+        f"Rispondi dolo con {0} o {1}"
     )
 
 
@@ -289,7 +289,7 @@ def build_messages(prompts: Sequence[str]) -> List[List[Dict[str, Any]]]:
                         {
                             "type": "text",
                             "text": (
-                                "You are a precise assistant. "
+                                "You are a precise binary assistant. "
                                 "Answer only with 0 or 1. "
                             ),
                         }
@@ -458,14 +458,14 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     - valid_predictions
     - invalid_predictions
     - empty_raw_outputs
-    - accuracy
-    - precision_macro
-    - recall_macro
-    - f1_macro
+    - Accuracy
+    - Precision
+    - Recall
+    - F1-Score
     - confusion matrix counts
 
     Notes:
-    - accuracy is exact-match accuracy over all examples
+    - Accuracy is exact-match Accuracy over all examples
     - macro precision / recall / f1 are averaged over labels 0 and 1
     - invalid predictions are outputs that cannot be parsed as 0 or 1
     - empty raw outputs are tracked separately and normalized to a sentinel token
@@ -520,10 +520,10 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "valid_predictions": valid_predictions,
         "invalid_predictions": invalid_predictions,
         "empty_raw_outputs": empty_raw_outputs,
-        "accuracy": safe_divide(correct_predictions, n_samples),
-        "precision_macro": safe_divide(sum(precision_values), len(labels)),
-        "recall_macro": safe_divide(sum(recall_values), len(labels)),
-        "f1_macro": safe_divide(sum(f1_values), len(labels)),
+        "Accuracy": safe_divide(correct_predictions, n_samples),
+        "Precision": safe_divide(sum(precision_values), len(labels)),
+        "Recall": safe_divide(sum(recall_values), len(labels)),
+        "F1-Score": safe_divide(sum(f1_values), len(labels)),
         **confusion_counts,
     }
 
@@ -581,10 +581,10 @@ def metric_row_from_summary(
         "valid_predictions": metrics["valid_predictions"],
         "invalid_predictions": metrics["invalid_predictions"],
         "empty_raw_outputs": metrics["empty_raw_outputs"],
-        "accuracy": metrics["accuracy"],
-        "precision_macro": metrics["precision_macro"],
-        "recall_macro": metrics["recall_macro"],
-        "f1_macro": metrics["f1_macro"],
+        "Accuracy": metrics["Accuracy"],
+        "Precision": metrics["Precision"],
+        "Recall": metrics["Recall"],
+        "F1-Score": metrics["F1-Score"],
         "actual_0_pred_0": metrics["actual_0_pred_0"],
         "actual_0_pred_1": metrics["actual_0_pred_1"],
         "actual_1_pred_0": metrics["actual_1_pred_0"],
@@ -712,7 +712,7 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
         "-----------",
         "- Global metrics summarize the overall model performance on the full dataset.",
         "- Normalized-question-category metrics summarize performance after collapsing category variants such as _A/_B into a single family.",
-        "- Accuracy is exact-match accuracy over all examples.",
+        "- Accuracy is exact-match Accuracy over all examples.",
         "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
         "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
         f"- Empty raw outputs are normalized to the explicit token: {EMPTY_RAW_OUTPUT_TOKEN}",
@@ -860,17 +860,17 @@ def save_evaluation_artifacts(
     )
     plot_metric_by_category(
         category_df,
-        metric_column="accuracy",
+        metric_column="Accuracy",
         title="Accuracy by normalized question category",
         ylabel="Accuracy",
-        output_path=plots_dir / "accuracy_by_category.png",
+        output_path=plots_dir / "Accuracy_by_category.png",
     )
     plot_metric_by_category(
         category_df,
-        metric_column="f1_macro",
+        metric_column="F1-Score",
         title="Macro F1 by normalized question category",
         ylabel="Macro F1",
-        output_path=plots_dir / "f1_macro_by_category.png",
+        output_path=plots_dir / "F1-Score_by_category.png",
     )
     plot_metric_by_category(
         category_df,
@@ -1023,9 +1023,9 @@ def main() -> None:
     dataset_path = Path("Data/Dataset/maia_ita_mc_by_video_category_pool.json")
 
     # Output files
-    predictions_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_predictions_by_video.json")
-    metrics_report_output_path = Path("Data/ModelResponse/Random/qwen_mc_random_metrics_report.txt")
-    evaluation_output_dir = Path("Data/ModelResponse/Random/evaluation")
+    predictions_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_predictions_by_video.json")
+    metrics_report_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_metrics_report.txt")
+    evaluation_output_dir = Path("Data/ModelResponse/1A/evaluation")
 
     # Inference configuration
     batch_size = 1
@@ -1091,3 +1091,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    # Data/TranscriptionData/final_classification/final_results.json
+    

@@ -1,0 +1,14 @@
+normalized_question_category,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1,logprob_actual_0_pred_0,logprob_actual_0_pred_1,logprob_actual_1_pred_0,logprob_actual_1_pred_1
+CausaleEsplicita,224,163,259,154,224,163,259,154
+CausaleImplicita,274,130,276,120,274,130,276,120
+Controfattuale,587,234,562,217,588,233,562,217
+ImplicitoParziale,586,219,561,234,586,219,561,234
+ImplicitoTot,638,183,620,159,637,184,620,159
+Incertezza,704,36,827,33,704,36,827,33
+OutofScope,706,63,766,65,706,63,766,65
+Pianificazione,582,240,568,210,582,240,567,211
+Sentiment,752,52,735,61,752,52,735,61
+SpazialeParziale,421,391,420,368,421,391,420,368
+SpazialeTotale,429,359,437,375,429,359,438,374
+TemporaleDurata,565,248,552,235,565,248,552,235
+TemporaleParziale,397,371,455,377,397,371,455,377
