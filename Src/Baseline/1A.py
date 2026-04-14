@@ -13,7 +13,7 @@ import torch
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 
 JsonDict = Dict[str, Any]
@@ -57,7 +57,7 @@ class PredictionRecord:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "auto",
+    device_map: str = "cuda:2",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[Qwen2_5_VLForConditionalGeneration, AutoProcessor]:
     print(f"[INFO] Loading model: {model_name}")

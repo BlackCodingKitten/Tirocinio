@@ -285,7 +285,7 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"Scegli la risposta corretta tra:\n"
+        f"Scegli la descrizione corretta tra:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
         f"Rispondi solo con {0} o {1}"

@@ -79,7 +79,8 @@ def load_model(
 
     processor = AutoProcessor.from_pretrained(
         model_name,
-        use_fast=True,
+        # use_fast=True,
+        backend="torchvision",
         padding_side="left",
     )
     tokenizer = processor.tokenizer
@@ -278,7 +279,7 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"Scegli la risposta corretta tra:\n"
+        f"Scegli la descrizione corretta tra:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
         f"Rispondi dolo con {0} o {1}"
@@ -448,20 +449,8 @@ def normalize_raw_output(raw_output: Optional[str]) -> str:
 
 
 def parse_binary_answer(raw_output: str) -> Optional[int]:
-    """
-    Extract the first valid binary answer from the model output.
-
-    Returns:
-    - 0 or 1 if a valid answer is found
-    - None otherwise
-    """
     cleaned = raw_output.strip()
-
-    if "0" in cleaned:
-        return 0
-    if "1" in cleaned:
-        return 1
-    return None
+    return int(cleaned) if cleaned in {"0", "1"} else None
 
 
 def safe_divide(numerator: float, denominator: float) -> float:
