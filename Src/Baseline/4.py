@@ -5,7 +5,7 @@ import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple, cast
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -14,7 +14,7 @@ from transformers import AutoProcessor, PreTrainedTokenizerBase, Qwen2_5_VLForCo
 from qwen_vl_utils import process_vision_info
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 JsonDict = Dict[str, Any]
@@ -58,7 +58,7 @@ class PredictionRecord:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "cuda:1",
+    device_map: str = "cuda:0",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[
     Qwen2_5_VLForConditionalGeneration,
@@ -66,7 +66,7 @@ def load_model(
     PreTrainedTokenizerBase,
 ]:
     """
-    Load only Qwen2.5-VL model, processor and tokenizer.
+    Load Qwen2.5-VL model, processor and tokenizer.
     """
     print(f"[INFO] Loading model: {model_name}")
 
@@ -82,10 +82,22 @@ def load_model(
         use_fast=True,
         padding_side="left",
     )
-    tokenizer = processor.tokenizer
+    tokenizer = cast(PreTrainedTokenizerBase, processor.tokenizer)
 
     print("[INFO] Model loaded successfully.")
     return model, processor, tokenizer
+
+
+def get_model_input_device(model: Qwen2_5_VLForConditionalGeneration) -> torch.device:
+    """
+    Infer the device where model inputs should be placed.
+    This is safer than relying blindly on model.device.
+    """
+    try:
+        first_parameter = next(model.parameters())
+        return first_parameter.device
+    except StopIteration:
+        return torch.device("cpu")
 
 
 def load_json_file(json_path: str | Path) -> JsonDict:
@@ -95,7 +107,7 @@ def load_json_file(json_path: str | Path) -> JsonDict:
     path = Path(json_path)
     print(f"[INFO] Loading JSON file: {path}")
     with path.open("r", encoding="utf-8") as f:
-        data = json.load(f)
+        data = cast(JsonDict, json.load(f))
     print(f"[INFO] JSON file loaded successfully: {path}")
     return data
 
@@ -250,7 +262,7 @@ def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     if "dialogue" in classification:
         return transcript
 
-    return "Trascrizione non disponibile, l'audio contiene musica o rumore."
+    return "L'audio contiene musica o rumore."
 
 
 def resolve_video_path(video_root_dir: str | Path, video_id: str) -> Path:
@@ -263,12 +275,19 @@ def resolve_video_path(video_root_dir: str | Path, video_id: str) -> Path:
     if not video_name.lower().endswith(".mp4"):
         video_name = f"{video_name}.mp4"
 
-    video_path = Path(video_root_dir) / video_name
+    video_path = (Path(video_root_dir) / video_name).resolve()
 
     if not video_path.exists():
         raise FileNotFoundError(f"Video file not found: {video_path}")
 
     return video_path
+
+
+def path_to_file_uri(path: str | Path) -> str:
+    """
+    Convert a local path to a file:// URI.
+    """
+    return Path(path).resolve().as_uri()
 
 
 def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
@@ -278,10 +297,10 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"{transcript}\nScegli la risposta corretta tra:\n"
+        f"Scegli la descrizione corretta rispetto al contenuto del video, considera anche la trascrizione del suo audio: {transcript}:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        f"Rispondi dolo con {0} o {1}"
+        f"Rispondi solo con {0} o {1}"
     )
 
 
@@ -289,10 +308,10 @@ def build_message_tv(
     prompt_text: str,
     video_path: str | Path,
     max_pixels: int = 360 * 420,
-    fps: float = 1.1,
+    fps: float = 2.0,
 ) -> List[Dict[str, Any]]:
     """
-    Build one single Qwen-VL message in the same style as the reference example.
+    Build one single Qwen-VL message.
     """
     return [
         {
@@ -309,7 +328,7 @@ def build_message_tv(
             "content": [
                 {
                     "type": "video",
-                    "video": str(video_path),
+                    "video": path_to_file_uri(video_path),
                     "max_pixels": max_pixels,
                     "fps": fps,
                 },
@@ -326,7 +345,7 @@ def build_messages(
     prompts: Sequence[str],
     video_paths: Sequence[Path],
     max_pixels: int = 360 * 420,
-    fps: float = 1.1,
+    fps: float = 2.0,
 ) -> List[List[Dict[str, Any]]]:
     """
     Convert prompts and video paths into chat-formatted multimodal messages.
@@ -350,6 +369,77 @@ def build_messages(
     return messages
 
 
+def process_visual_batch_compat(
+    messages: Sequence[List[Dict[str, Any]]],
+) -> Tuple[List[Any], List[Any], Dict[str, Any], bool]:
+    """
+    Backward/forward compatible wrapper around qwen_vl_utils.process_vision_info.
+
+    Returns:
+    - image_inputs
+    - video_inputs
+    - extra processor kwargs for videos
+    - whether do_resize should be disabled in the processor
+    """
+    image_inputs: List[Any] = []
+    video_inputs: List[Any] = []
+    merged_video_kwargs: Dict[str, Any] = {}
+    should_disable_resize = False
+
+    for message in messages:
+        try:
+            image_input, video_input, video_kwargs = process_vision_info(
+                message,
+                return_video_kwargs=True,
+            )
+            should_disable_resize = True
+        except TypeError:
+            image_input, video_input = process_vision_info(message)
+            video_kwargs = {}
+
+        image_inputs.append(image_input)
+        video_inputs.append(video_input)
+
+        if video_kwargs:
+            for key, value in video_kwargs.items():
+                merged_video_kwargs.setdefault(key, []).append(value)
+
+    return image_inputs, video_inputs, merged_video_kwargs, should_disable_resize
+
+
+def move_inputs_to_device(batch_inputs: Dict[str, Any], device: torch.device) -> Dict[str, Any]:
+    """
+    Move tensor-like processor outputs to the target device.
+    """
+    moved: Dict[str, Any] = {}
+
+    for key, value in batch_inputs.items():
+        if hasattr(value, "to"):
+            moved[key] = value.to(device)
+        else:
+            moved[key] = value
+
+    return moved
+
+
+def log_video_batch_debug_info(
+    batch_inputs: Dict[str, Any],
+    video_paths: Sequence[Path],
+) -> None:
+    """
+    Print a small debug summary to verify that video tensors are really present.
+    """
+    print("[DEBUG] Video files in current batch:")
+    for path in video_paths:
+        print(f"[DEBUG] - {path}")
+
+    for key, value in batch_inputs.items():
+        if hasattr(value, "shape"):
+            print(f"[DEBUG] inputs[{key}] shape = {tuple(value.shape)}")
+        else:
+            print(f"[DEBUG] inputs[{key}] type = {type(value).__name__}")
+
+
 def generate_answers_batch(
     model: Qwen2_5_VLForConditionalGeneration,
     processor: AutoProcessor,
@@ -357,11 +447,11 @@ def generate_answers_batch(
     video_paths: Sequence[Path],
     max_new_tokens: int = 16,
     max_pixels: int = 360 * 420,
-    fps: float = 1.1,
+    fps: float = 2.0,
+    debug_visual_inputs: bool = False,
 ) -> List[str]:
     """
     Run batched multimodal generation for a list of prompts and aligned videos.
-    Compatible with video-only inputs.
     """
     print(f"[INFO] Generating answers for a batch of {len(prompts)} prompts...")
 
@@ -383,15 +473,7 @@ def generate_answers_batch(
     ]
 
     print("[INFO] Processing visual inputs...")
-    image_inputs: List[Any] = []
-    video_inputs: List[Any] = []
-
-    for message in messages:
-        image_input, video_input = process_vision_info(message)
-        image_inputs.append(image_input)
-        video_inputs.append(video_input)
-
-    print("[INFO] Tokenizing multimodal batch inputs...")
+    image_inputs, video_inputs, video_kwargs, should_disable_resize = process_visual_batch_compat(messages)
 
     processor_kwargs: Dict[str, Any] = {
         "text": rendered_texts,
@@ -403,12 +485,20 @@ def generate_answers_batch(
     if any(image_input is not None for image_input in image_inputs):
         processor_kwargs["images"] = image_inputs
 
+    if video_kwargs:
+        processor_kwargs.update(video_kwargs)
+
+    if should_disable_resize:
+        processor_kwargs["do_resize"] = False
+
+    print("[INFO] Tokenizing multimodal batch inputs...")
     inputs = processor(**processor_kwargs)
 
-    inputs = {
-        key: value.to(model.device) if hasattr(value, "to") else value
-        for key, value in inputs.items()
-    }
+    target_device = get_model_input_device(model)
+    inputs = move_inputs_to_device(inputs, target_device)
+
+    if debug_visual_inputs:
+        log_video_batch_debug_info(inputs, video_paths)
 
     print("[INFO] Running model.generate()...")
     with torch.no_grad():
@@ -448,18 +538,26 @@ def normalize_raw_output(raw_output: Optional[str]) -> str:
 
 def parse_binary_answer(raw_output: str) -> Optional[int]:
     """
-    Extract the first valid binary answer from the model output.
+    Extract a binary answer from the model output.
 
-    Returns:
-    - 0 or 1 if a valid answer is found
-    - None otherwise
+    Accepted cases:
+    - "0"
+    - "1"
+    - text containing a standalone 0 or 1 token
+
+    Rejected ambiguous cases return None.
     """
     cleaned = raw_output.strip()
 
-    if "0" in cleaned:
-        return 0
-    if "1" in cleaned:
-        return 1
+    if cleaned in {"0", "1"}:
+        return int(cleaned)
+
+    matches = re.findall(r"\b([01])\b", cleaned)
+    unique_matches = set(matches)
+
+    if len(unique_matches) == 1:
+        return int(matches[0])
+
     return None
 
 
@@ -487,51 +585,78 @@ def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, i
     }
 
 
+def compute_label_metrics(
+    records: Sequence[PredictionRecord],
+    label: int,
+) -> Dict[str, float]:
+    """
+    Compute binary metrics for one specific label.
+
+    Semantics:
+    - tp: predicted == label and target == label
+    - fp: predicted == label and target != label
+    - fn: target == label and predicted != label
+          (this includes invalid predictions as misses for the true class)
+    """
+    tp = sum(
+        record.predicted_label == label and record.target == label
+        for record in records
+    )
+    fp = sum(
+        record.predicted_label == label and record.target != label
+        for record in records
+    )
+    fn = sum(
+        record.target == label and record.predicted_label != label
+        for record in records
+    )
+
+    precision = safe_divide(tp, tp + fp)
+    recall = safe_divide(tp, tp + fn)
+    f1 = safe_divide(2 * precision * recall, precision + recall)
+
+    support = sum(record.target == label for record in records)
+    predicted_as_label = sum(record.predicted_label == label for record in records)
+
+    return {
+        "support": float(support),
+        "predicted_as_label": float(predicted_as_label),
+        "tp": float(tp),
+        "fp": float(fp),
+        "fn": float(fn),
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+
+
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
-    Compute only the aggregate metrics that are meaningful for this task.
+    Compute metrics for the provided subset of records.
+
+    Important:
+    - If records are global -> metrics are global.
+    - If records belong to one video -> metrics are per-video.
+    - If records belong to one category -> metrics are per-category.
+
+    No macro-average or micro-average is used.
     """
     print(f"[INFO] Computing metrics for {len(records)} records...")
 
-    labels = (0, 1)
     n_samples = len(records)
     empty_raw_outputs = sum(
         record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN
         for record in records
     )
     invalid_predictions = sum(
-        record.predicted_label not in labels
+        record.predicted_label not in (0, 1)
         for record in records
     )
     valid_predictions = n_samples - invalid_predictions
     correct_predictions = sum(record.is_correct for record in records)
 
-    precision_values: List[float] = []
-    recall_values: List[float] = []
-    f1_values: List[float] = []
-
-    for label in labels:
-        tp = sum(
-            record.predicted_label == label and record.target == label
-            for record in records
-        )
-        fp = sum(
-            record.predicted_label == label and record.target != label
-            for record in records
-        )
-        fn = sum(
-            record.predicted_label != label and record.target == label
-            for record in records
-        )
-
-        precision = safe_divide(tp, tp + fp)
-        recall = safe_divide(tp, tp + fn)
-        f1 = safe_divide(2 * precision * recall, precision + recall)
-
-        precision_values.append(precision)
-        recall_values.append(recall)
-        f1_values.append(f1)
-
+    label_0 = compute_label_metrics(records, label=0)
+    label_1 = compute_label_metrics(records, label=1)
     confusion_counts = compute_confusion_counts(records)
 
     print("[INFO] Metrics computed successfully.")
@@ -540,10 +665,30 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "valid_predictions": valid_predictions,
         "invalid_predictions": invalid_predictions,
         "empty_raw_outputs": empty_raw_outputs,
+
+        # Exact-match accuracy on the whole subset, including invalid predictions as errors.
         "Accuracy": safe_divide(correct_predictions, n_samples),
-        "Precision": safe_divide(sum(precision_values), len(labels)),
-        "Recall": safe_divide(sum(recall_values), len(labels)),
-        "F1-Score": safe_divide(sum(f1_values), len(labels)),
+
+        # Accuracy only on valid parsed predictions.
+        "Accuracy_valid_only": safe_divide(
+            confusion_counts["actual_0_pred_0"] + confusion_counts["actual_1_pred_1"],
+            valid_predictions,
+        ),
+
+        # Class-specific metrics, no averaging.
+        "Support_0": int(label_0["support"]),
+        "Predicted_as_0": int(label_0["predicted_as_label"]),
+        "Precision_0": label_0["precision"],
+        "Recall_0": label_0["recall"],
+        "F1_0": label_0["f1"],
+
+        "Support_1": int(label_1["support"]),
+        "Predicted_as_1": int(label_1["predicted_as_label"]),
+        "Precision_1": label_1["precision"],
+        "Recall_1": label_1["recall"],
+        "F1_1": label_1["f1"],
+
+        # Valid-only confusion counts.
         **confusion_counts,
     }
 
@@ -601,10 +746,22 @@ def metric_row_from_summary(
         "valid_predictions": metrics["valid_predictions"],
         "invalid_predictions": metrics["invalid_predictions"],
         "empty_raw_outputs": metrics["empty_raw_outputs"],
+
         "Accuracy": metrics["Accuracy"],
-        "Precision": metrics["Precision"],
-        "Recall": metrics["Recall"],
-        "F1-Score": metrics["F1-Score"],
+        "Accuracy_valid_only": metrics["Accuracy_valid_only"],
+
+        "Support_0": metrics["Support_0"],
+        "Predicted_as_0": metrics["Predicted_as_0"],
+        "Precision_0": metrics["Precision_0"],
+        "Recall_0": metrics["Recall_0"],
+        "F1_0": metrics["F1_0"],
+
+        "Support_1": metrics["Support_1"],
+        "Predicted_as_1": metrics["Predicted_as_1"],
+        "Precision_1": metrics["Precision_1"],
+        "Recall_1": metrics["Recall_1"],
+        "F1_1": metrics["F1_1"],
+
         "actual_0_pred_0": metrics["actual_0_pred_0"],
         "actual_0_pred_1": metrics["actual_0_pred_1"],
         "actual_1_pred_0": metrics["actual_1_pred_0"],
@@ -699,8 +856,8 @@ def dataframe_to_string(df: pd.DataFrame, index: bool = False) -> str:
     with pd.option_context(
         "display.max_rows", None,
         "display.max_columns", None,
-        "display.width", 200,
-        "display.max_colwidth", 200,
+        "display.width", 240,
+        "display.max_colwidth", 240,
     ):
         return df.to_string(index=index, float_format=lambda x: f"{x:.4f}")
 
@@ -724,12 +881,15 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
         "DEFINITIONS",
         "-----------",
         "- Global metrics summarize the overall model performance on the full dataset.",
-        "- Normalized-question-category metrics summarize performance after collapsing category variants such as _A/_B into a single family.",
-        "- Accuracy is exact-match Accuracy over all examples.",
-        "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
-        "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
+        "- Per-video metrics are computed only on the examples of that specific video.",
+        "- Per-category metrics are computed only on the examples of that specific normalized question category.",
+        "- Accuracy is computed on the entire current subset.",
+        "- Accuracy_valid_only is computed only on valid parsed predictions.",
+        "- Precision, recall and F1 are reported separately for label 0 and label 1.",
+        "- No macro-average or micro-average is used.",
         f"- Empty raw outputs are normalized to the explicit token: {EMPTY_RAW_OUTPUT_TOKEN}",
         "- Confusion matrices include only valid predictions.",
+        "- Recall penalizes invalid predictions because an invalid output is treated as a miss for the true class.",
         "",
         "GLOBAL PERFORMANCE",
         "------------------",
@@ -880,10 +1040,17 @@ def save_evaluation_artifacts(
     )
     plot_metric_by_category(
         category_df,
-        metric_column="F1-Score",
-        title="Macro F1 by normalized question category",
-        ylabel="Macro F1",
-        output_path=plots_dir / "F1-Score_by_category.png",
+        metric_column="F1_0",
+        title="F1 for label 0 by normalized question category",
+        ylabel="F1 (label 0)",
+        output_path=plots_dir / "F1_0_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="F1_1",
+        title="F1 for label 1 by normalized question category",
+        ylabel="F1 (label 1)",
+        output_path=plots_dir / "F1_1_by_category.png",
     )
     plot_metric_by_category(
         category_df,
@@ -950,7 +1117,8 @@ def run_inference(
     video_root_dir: str | Path,
     batch_size: int = 16,
     max_pixels: int = 360 * 420,
-    fps: float = 1.1,
+    fps: float = 2.0,
+    debug_visual_inputs: bool = False,
 ) -> List[PredictionRecord]:
     """
     Run batched multimodal inference on all extracted examples.
@@ -999,6 +1167,7 @@ def run_inference(
             video_paths=video_paths,
             max_pixels=max_pixels,
             fps=fps,
+            debug_visual_inputs=debug_visual_inputs,
         )
 
         print(f"[INFO] Received {len(raw_outputs)} raw outputs for current batch.")
@@ -1047,14 +1216,15 @@ def main() -> None:
     video_root_dir = Path("Data/Videos")
 
     # Output files
-    predictions_output_path = Path("Data/ModelResponse/4/qwen_mc_video_transcript_predictions_by_video.json")
-    metrics_report_output_path = Path("Data/ModelResponse/4/qwen_mc_video_transcript_metrics_report.txt")
-    evaluation_output_dir = Path("Data/ModelResponse/4/evaluation")
+    predictions_output_path = Path("Data/ModelResponse/3/qwen_mc_video_transcript_predictions_by_video.json")
+    metrics_report_output_path = Path("Data/ModelResponse/3/qwen_mc_video_transcript_metrics_report.txt")
+    evaluation_output_dir = Path("Data/ModelResponse/3/evaluation")
 
     # Inference configuration
-    batch_size = 1
+    batch_size = 4
     max_pixels = 360 * 420
-    fps = 1.1
+    fps = 2.0
+    debug_visual_inputs = True
 
     print("[INFO] Configuration loaded.")
     print(f"[INFO] final_results_path: {final_results_path}")
@@ -1066,6 +1236,7 @@ def main() -> None:
     print(f"[INFO] batch_size: {batch_size}")
     print(f"[INFO] max_pixels: {max_pixels}")
     print(f"[INFO] fps: {fps}")
+    print(f"[INFO] debug_visual_inputs: {debug_visual_inputs}")
 
     print("[INFO] Loading input files...")
     final_results = load_json_file(final_results_path)
@@ -1093,6 +1264,7 @@ def main() -> None:
         batch_size=batch_size,
         max_pixels=max_pixels,
         fps=fps,
+        debug_visual_inputs=debug_visual_inputs,
     )
     print(f"[INFO] Inference phase completed. Total prediction records: {len(records)}")
 

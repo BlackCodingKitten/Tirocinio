@@ -1,2 +1,2 @@
-scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Precision,Recall,F1-Score,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
-GLOBAL,19200,19200,0,0,0.4928125,0.4909293709034531,0.4942653414221186,0.44234426909189195,7619,1935,7803,1843
+scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Accuracy_valid_only,Support_0,Predicted_as_0,Precision_0,Recall_0,F1_0,Support_1,Predicted_as_1,Precision_1,Recall_1,F1_1,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
+GLOBAL,19200,19200,0,0,0.49354166666666666,0.49354166666666666,9554,14174,0.49400310427543387,0.7328867490056521,0.5901888064733648,9646,5026,0.49224035017906886,0.25647936968691687,0.3372410032715376,7002,2552,7172,2474

@@ -13,7 +13,7 @@ import torch
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 JsonDict = Dict[str, Any]
@@ -57,7 +57,7 @@ class PredictionRecord:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "cuda:1",
+    device_map: str = "cuda:0",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[Qwen2_5_VLForConditionalGeneration, AutoProcessor]:
     print(f"[INFO] Loading model: {model_name}")
@@ -73,9 +73,9 @@ def load_model(
     print("[INFO] Model weights loaded.")
     print("[INFO] Loading processor...")
 
-    processor = AutoProcessor.from_pretrained(model_name, use_fast=True,  padding_side="left")
+    processor = AutoProcessor.from_pretrained(model_name, use_fast=True, padding_side="left")
     tokenizer = processor.tokenizer
-     
+
     print("[INFO] Processor loaded successfully.")
     print("[INFO] Model setup completed.")
     return model, processor, tokenizer
@@ -256,7 +256,7 @@ def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     if "dialogue" in classification:
         return transcript
 
-    return "Trascrizione non disponibile, l'audio contiene musica o rumore."
+    return "L'audio contiene musica o rumore."
 
 
 def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
@@ -265,11 +265,12 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
 
     The active prompt is intentionally kept unchanged.
     """
+    print("[INFO]: Inserted Transcription - {transcript} -")
     return (
-        f"{transcript}\nScegli la descrizione corretta tra:\n"
+        f"Scegli la descrizione corretta rispetto al contenuto del video, considera anche la trascrizione del suo audio: {transcript}:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        f"Rispondi dolo con {0} o {1}"
+        f"Rispondi solo con {0} o {1}"
     )
 
 
@@ -299,7 +300,6 @@ def build_messages(prompts: Sequence[str]) -> List[List[Dict[str, Any]]]:
                     "role": "user",
                     "content": [{"type": "text", "text": prompt}],
                 },
-                
             ]
         )
 
@@ -409,6 +409,7 @@ def parse_binary_answer(raw_output: str) -> Optional[int]:
     else:
         return None
 
+
 def safe_divide(numerator: float, denominator: float) -> float:
     """
     Safe floating-point division.
@@ -449,69 +450,72 @@ def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, i
     }
 
 
+def compute_label_metrics(
+    records: Sequence[PredictionRecord],
+    label: int,
+) -> Dict[str, float]:
+    """
+    Compute class-specific metrics for one label without any averaging.
+    Invalid predictions count as misses for the true class in recall.
+    """
+    tp = sum(
+        record.predicted_label == label and record.target == label
+        for record in records
+    )
+    fp = sum(
+        record.predicted_label == label and record.target != label
+        for record in records
+    )
+    fn = sum(
+        record.target == label and record.predicted_label != label
+        for record in records
+    )
+
+    precision = safe_divide(tp, tp + fp)
+    recall = safe_divide(tp, tp + fn)
+    f1 = safe_divide(2 * precision * recall, precision + recall)
+
+    support = sum(record.target == label for record in records)
+    predicted_as_label = sum(record.predicted_label == label for record in records)
+
+    return {
+        "support": float(support),
+        "predicted_as_label": float(predicted_as_label),
+        "tp": float(tp),
+        "fp": float(fp),
+        "fn": float(fn),
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+
+
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
-    Compute only the aggregate metrics that are meaningful for this task.
+    Compute metrics for the provided subset of records.
 
-    Global / category-level metrics returned:
-    - n_samples
-    - valid_predictions
-    - invalid_predictions
-    - empty_raw_outputs
-    - Accuracy
-    - Precision
-    - Recall
-    - F1-Score
-    - confusion matrix counts
+    If the subset is global, the metrics are global.
+    If the subset contains one video, the metrics are per-video.
+    If the subset contains one category, the metrics are per-category.
 
-    Notes:
-    - Accuracy is exact-match Accuracy over all examples
-    - macro precision / recall / f1 are averaged over labels 0 and 1
-    - invalid predictions are outputs that cannot be parsed as 0 or 1
-    - empty raw outputs are tracked separately and normalized to a sentinel token
-    - confusion matrix includes only valid predictions
+    No macro-average or micro-average is used.
     """
     print(f"[INFO] Computing metrics for {len(records)} records...")
 
-    labels = (0, 1)
     n_samples = len(records)
     empty_raw_outputs = sum(
         record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN
         for record in records
     )
     invalid_predictions = sum(
-        record.predicted_label not in labels
+        record.predicted_label not in (0, 1)
         for record in records
     )
     valid_predictions = n_samples - invalid_predictions
     correct_predictions = sum(record.is_correct for record in records)
 
-    precision_values: List[float] = []
-    recall_values: List[float] = []
-    f1_values: List[float] = []
-
-    for label in labels:
-        tp = sum(
-            record.predicted_label == label and record.target == label
-            for record in records
-        )
-        fp = sum(
-            record.predicted_label == label and record.target != label
-            for record in records
-        )
-        fn = sum(
-            record.predicted_label != label and record.target == label
-            for record in records
-        )
-
-        precision = safe_divide(tp, tp + fp)
-        recall = safe_divide(tp, tp + fn)
-        f1 = safe_divide(2 * precision * recall, precision + recall)
-
-        precision_values.append(precision)
-        recall_values.append(recall)
-        f1_values.append(f1)
-
+    label_0 = compute_label_metrics(records, label=0)
+    label_1 = compute_label_metrics(records, label=1)
     confusion_counts = compute_confusion_counts(records)
 
     print("[INFO] Metrics computed successfully.")
@@ -520,10 +524,25 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "valid_predictions": valid_predictions,
         "invalid_predictions": invalid_predictions,
         "empty_raw_outputs": empty_raw_outputs,
+
         "Accuracy": safe_divide(correct_predictions, n_samples),
-        "Precision": safe_divide(sum(precision_values), len(labels)),
-        "Recall": safe_divide(sum(recall_values), len(labels)),
-        "F1-Score": safe_divide(sum(f1_values), len(labels)),
+        "Accuracy_valid_only": safe_divide(
+            confusion_counts["actual_0_pred_0"] + confusion_counts["actual_1_pred_1"],
+            valid_predictions,
+        ),
+
+        "Support_0": int(label_0["support"]),
+        "Predicted_as_0": int(label_0["predicted_as_label"]),
+        "Precision_0": label_0["precision"],
+        "Recall_0": label_0["recall"],
+        "F1_0": label_0["f1"],
+
+        "Support_1": int(label_1["support"]),
+        "Predicted_as_1": int(label_1["predicted_as_label"]),
+        "Precision_1": label_1["precision"],
+        "Recall_1": label_1["recall"],
+        "F1_1": label_1["f1"],
+
         **confusion_counts,
     }
 
@@ -581,10 +600,22 @@ def metric_row_from_summary(
         "valid_predictions": metrics["valid_predictions"],
         "invalid_predictions": metrics["invalid_predictions"],
         "empty_raw_outputs": metrics["empty_raw_outputs"],
+
         "Accuracy": metrics["Accuracy"],
-        "Precision": metrics["Precision"],
-        "Recall": metrics["Recall"],
-        "F1-Score": metrics["F1-Score"],
+        "Accuracy_valid_only": metrics["Accuracy_valid_only"],
+
+        "Support_0": metrics["Support_0"],
+        "Predicted_as_0": metrics["Predicted_as_0"],
+        "Precision_0": metrics["Precision_0"],
+        "Recall_0": metrics["Recall_0"],
+        "F1_0": metrics["F1_0"],
+
+        "Support_1": metrics["Support_1"],
+        "Predicted_as_1": metrics["Predicted_as_1"],
+        "Precision_1": metrics["Precision_1"],
+        "Recall_1": metrics["Recall_1"],
+        "F1_1": metrics["F1_1"],
+
         "actual_0_pred_0": metrics["actual_0_pred_0"],
         "actual_0_pred_1": metrics["actual_0_pred_1"],
         "actual_1_pred_0": metrics["actual_1_pred_0"],
@@ -686,8 +717,8 @@ def dataframe_to_string(df: pd.DataFrame, index: bool = False) -> str:
     with pd.option_context(
         "display.max_rows", None,
         "display.max_columns", None,
-        "display.width", 200,
-        "display.max_colwidth", 200,
+        "display.width", 240,
+        "display.max_colwidth", 240,
     ):
         return df.to_string(index=index, float_format=lambda x: f"{x:.4f}")
 
@@ -711,12 +742,16 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
         "DEFINITIONS",
         "-----------",
         "- Global metrics summarize the overall model performance on the full dataset.",
-        "- Normalized-question-category metrics summarize performance after collapsing category variants such as _A/_B into a single family.",
-        "- Accuracy is exact-match Accuracy over all examples.",
-        "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
+        "- Per-video metrics are computed only on the examples of that specific video.",
+        "- Per-category metrics are computed only on the examples of that specific normalized question category.",
+        "- Accuracy is computed on the entire current subset.",
+        "- Accuracy_valid_only is computed only on valid parsed predictions.",
+        "- Precision, recall and F1 are reported separately for label 0 and label 1.",
+        "- No macro-average or micro-average is used.",
         "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
         f"- Empty raw outputs are normalized to the explicit token: {EMPTY_RAW_OUTPUT_TOKEN}",
         "- Confusion matrices include only valid predictions.",
+        "- Recall penalizes invalid predictions because an invalid output is treated as a miss for the true class.",
         "",
         "GLOBAL PERFORMANCE",
         "------------------",
@@ -867,10 +902,17 @@ def save_evaluation_artifacts(
     )
     plot_metric_by_category(
         category_df,
-        metric_column="F1-Score",
-        title="Macro F1 by normalized question category",
-        ylabel="Macro F1",
-        output_path=plots_dir / "F1-Score_by_category.png",
+        metric_column="F1_0",
+        title="F1 for label 0 by normalized question category",
+        ylabel="F1 (label 0)",
+        output_path=plots_dir / "F1_0_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="F1_1",
+        title="F1 for label 1 by normalized question category",
+        ylabel="F1 (label 1)",
+        output_path=plots_dir / "F1_1_by_category.png",
     )
     plot_metric_by_category(
         category_df,
@@ -1023,9 +1065,9 @@ def main() -> None:
     dataset_path = Path("Data/Dataset/maia_ita_mc_by_video_category_pool.json")
 
     # Output files
-    predictions_output_path = Path("Data/ModelResponse/2/qwen_mc_2_predictions_by_video.json")
-    metrics_report_output_path = Path("Data/ModelResponse/2/qwen_mc_2_metrics_report.txt")
-    evaluation_output_dir = Path("Data/ModelResponse/2/evaluation")
+    predictions_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_predictions_by_video.json")
+    metrics_report_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_metrics_report.txt")
+    evaluation_output_dir = Path("Data/ModelResponse/1A/evaluation")
 
     # Inference configuration
     batch_size = 1
@@ -1091,5 +1133,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    
     

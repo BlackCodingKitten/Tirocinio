@@ -18,7 +18,7 @@ from transformers import (
 )
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -85,7 +85,7 @@ class AggregateThresholds:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "auto",
+    device_map: str = "cuda:1",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[
     Qwen2_5_VLForConditionalGeneration,
@@ -285,7 +285,7 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"Scegli la descrizione corretta tra:\n"
+        f"Scegli la descrizione corretta rispetto al contenuto del video, considera anche la trascrizione del suo audio:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
         f"Rispondi solo con {0} o {1}"
@@ -683,61 +683,109 @@ def compute_logprob_confusion_counts(records: Sequence[PredictionRecord]) -> Dic
     }
 
 
+def compute_label_metrics_free(
+    records: Sequence[PredictionRecord],
+    label: int,
+) -> Dict[str, float]:
+    """
+    Class-specific metrics for free-form decoded predictions.
+    Invalid predictions count as misses for the true class in recall.
+    """
+    tp = sum(
+        record.predicted_label == label and record.target == label
+        for record in records
+    )
+    fp = sum(
+        record.predicted_label == label and record.target != label
+        for record in records
+    )
+    fn = sum(
+        record.target == label and record.predicted_label != label
+        for record in records
+    )
+
+    precision = safe_divide(tp, tp + fp)
+    recall = safe_divide(tp, tp + fn)
+    f1 = safe_divide(2 * precision * recall, precision + recall)
+
+    support = sum(record.target == label for record in records)
+    predicted_as_label = sum(record.predicted_label == label for record in records)
+
+    return {
+        "support": float(support),
+        "predicted_as_label": float(predicted_as_label),
+        "tp": float(tp),
+        "fp": float(fp),
+        "fn": float(fn),
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+
+
+def compute_label_metrics_logprob(
+    records: Sequence[PredictionRecord],
+    label: int,
+) -> Dict[str, float]:
+    """
+    Class-specific metrics for logprob-preferred predictions.
+    No invalid predictions exist here because the decision is always binary.
+    """
+    tp = sum(
+        record.predicted_label_by_logprob == label and record.target == label
+        for record in records
+    )
+    fp = sum(
+        record.predicted_label_by_logprob == label and record.target != label
+        for record in records
+    )
+    fn = sum(
+        record.target == label and record.predicted_label_by_logprob != label
+        for record in records
+    )
+
+    precision = safe_divide(tp, tp + fp)
+    recall = safe_divide(tp, tp + fn)
+    f1 = safe_divide(2 * precision * recall, precision + recall)
+
+    support = sum(record.target == label for record in records)
+    predicted_as_label = sum(record.predicted_label_by_logprob == label for record in records)
+
+    return {
+        "support": float(support),
+        "predicted_as_label": float(predicted_as_label),
+        "tp": float(tp),
+        "fp": float(fp),
+        "fn": float(fn),
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
+
+
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
-    Compute only the aggregate metrics that are meaningful for this task.
+    Compute metrics for the provided subset of records.
+
+    If records are global, the metrics are global.
+    If records belong to one video, the metrics are per-video.
+    If records belong to one category, the metrics are per-category.
+
+    No macro-average or micro-average is used.
     """
     print(f"[INFO] Computing metrics for {len(records)} records...")
 
-    labels = (0, 1)
     n_samples = len(records)
     empty_raw_outputs = sum(record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN for record in records)
-    invalid_predictions = sum(record.predicted_label not in labels for record in records)
+    invalid_predictions = sum(record.predicted_label not in (0, 1) for record in records)
     valid_predictions = n_samples - invalid_predictions
     correct_predictions = sum(record.is_correct for record in records)
     correct_predictions_by_logprob = sum(record.is_correct_by_logprob for record in records)
 
-    precision_values: List[float] = []
-    recall_values: List[float] = []
-    f1_values: List[float] = []
-
-    logprob_precision_values: List[float] = []
-    logprob_recall_values: List[float] = []
-    logprob_f1_values: List[float] = []
-
-    for label in labels:
-        tp = sum(record.predicted_label == label and record.target == label for record in records)
-        fp = sum(record.predicted_label == label and record.target != label for record in records)
-        fn = sum(record.predicted_label != label and record.target == label for record in records)
-
-        precision = safe_divide(tp, tp + fp)
-        recall = safe_divide(tp, tp + fn)
-        f1 = safe_divide(2 * precision * recall, precision + recall)
-
-        precision_values.append(precision)
-        recall_values.append(recall)
-        f1_values.append(f1)
-
-        log_tp = sum(
-            record.predicted_label_by_logprob == label and record.target == label
-            for record in records
-        )
-        log_fp = sum(
-            record.predicted_label_by_logprob == label and record.target != label
-            for record in records
-        )
-        log_fn = sum(
-            record.predicted_label_by_logprob != label and record.target == label
-            for record in records
-        )
-
-        log_precision = safe_divide(log_tp, log_tp + log_fp)
-        log_recall = safe_divide(log_tp, log_tp + log_fn)
-        log_f1 = safe_divide(2 * log_precision * log_recall, log_precision + log_recall)
-
-        logprob_precision_values.append(log_precision)
-        logprob_recall_values.append(log_recall)
-        logprob_f1_values.append(log_f1)
+    free_label_0 = compute_label_metrics_free(records, label=0)
+    free_label_1 = compute_label_metrics_free(records, label=1)
+    log_label_0 = compute_label_metrics_logprob(records, label=0)
+    log_label_1 = compute_label_metrics_logprob(records, label=1)
 
     confusion_counts = compute_confusion_counts(records)
     logprob_confusion_counts = compute_logprob_confusion_counts(records)
@@ -761,14 +809,39 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
         "valid_predictions": valid_predictions,
         "invalid_predictions": invalid_predictions,
         "empty_raw_outputs": empty_raw_outputs,
+
         "Accuracy": safe_divide(correct_predictions, n_samples),
-        "Precision": safe_divide(sum(precision_values), len(labels)),
-        "Recall": safe_divide(sum(recall_values), len(labels)),
-        "F1-Score": safe_divide(sum(f1_values), len(labels)),
+        "Accuracy_valid_only": safe_divide(
+            confusion_counts["actual_0_pred_0"] + confusion_counts["actual_1_pred_1"],
+            valid_predictions,
+        ),
+
+        "Support_0": int(free_label_0["support"]),
+        "Predicted_as_0": int(free_label_0["predicted_as_label"]),
+        "Precision_0": free_label_0["precision"],
+        "Recall_0": free_label_0["recall"],
+        "F1_0": free_label_0["f1"],
+
+        "Support_1": int(free_label_1["support"]),
+        "Predicted_as_1": int(free_label_1["predicted_as_label"]),
+        "Precision_1": free_label_1["precision"],
+        "Recall_1": free_label_1["recall"],
+        "F1_1": free_label_1["f1"],
+
         "LogProb_Accuracy": safe_divide(correct_predictions_by_logprob, n_samples),
-        "LogProb_Precision": safe_divide(sum(logprob_precision_values), len(labels)),
-        "LogProb_Recall": safe_divide(sum(logprob_recall_values), len(labels)),
-        "LogProb_F1-Score": safe_divide(sum(logprob_f1_values), len(labels)),
+
+        "LogProb_Support_0": int(log_label_0["support"]),
+        "LogProb_Predicted_as_0": int(log_label_0["predicted_as_label"]),
+        "LogProb_Precision_0": log_label_0["precision"],
+        "LogProb_Recall_0": log_label_0["recall"],
+        "LogProb_F1_0": log_label_0["f1"],
+
+        "LogProb_Support_1": int(log_label_1["support"]),
+        "LogProb_Predicted_as_1": int(log_label_1["predicted_as_label"]),
+        "LogProb_Precision_1": log_label_1["precision"],
+        "LogProb_Recall_1": log_label_1["recall"],
+        "LogProb_F1_1": log_label_1["f1"],
+
         "avg_logprob_margin": avg_logprob_margin,
         "avg_confidence": avg_confidence,
         "avg_entropy": avg_entropy,
@@ -899,14 +972,36 @@ def metric_row_from_summary(
         "valid_predictions": metrics["valid_predictions"],
         "invalid_predictions": metrics["invalid_predictions"],
         "empty_raw_outputs": metrics["empty_raw_outputs"],
+
         "Accuracy": metrics["Accuracy"],
-        "Precision": metrics["Precision"],
-        "Recall": metrics["Recall"],
-        "F1-Score": metrics["F1-Score"],
+        "Accuracy_valid_only": metrics["Accuracy_valid_only"],
+
+        "Support_0": metrics["Support_0"],
+        "Predicted_as_0": metrics["Predicted_as_0"],
+        "Precision_0": metrics["Precision_0"],
+        "Recall_0": metrics["Recall_0"],
+        "F1_0": metrics["F1_0"],
+
+        "Support_1": metrics["Support_1"],
+        "Predicted_as_1": metrics["Predicted_as_1"],
+        "Precision_1": metrics["Precision_1"],
+        "Recall_1": metrics["Recall_1"],
+        "F1_1": metrics["F1_1"],
+
         "LogProb_Accuracy": metrics["LogProb_Accuracy"],
-        "LogProb_Precision": metrics["LogProb_Precision"],
-        "LogProb_Recall": metrics["LogProb_Recall"],
-        "LogProb_F1-Score": metrics["LogProb_F1-Score"],
+
+        "LogProb_Support_0": metrics["LogProb_Support_0"],
+        "LogProb_Predicted_as_0": metrics["LogProb_Predicted_as_0"],
+        "LogProb_Precision_0": metrics["LogProb_Precision_0"],
+        "LogProb_Recall_0": metrics["LogProb_Recall_0"],
+        "LogProb_F1_0": metrics["LogProb_F1_0"],
+
+        "LogProb_Support_1": metrics["LogProb_Support_1"],
+        "LogProb_Predicted_as_1": metrics["LogProb_Predicted_as_1"],
+        "LogProb_Precision_1": metrics["LogProb_Precision_1"],
+        "LogProb_Recall_1": metrics["LogProb_Recall_1"],
+        "LogProb_F1_1": metrics["LogProb_F1_1"],
+
         "avg_logprob_margin": metrics["avg_logprob_margin"],
         "avg_confidence": metrics["avg_confidence"],
         "avg_entropy": metrics["avg_entropy"],
@@ -1039,10 +1134,14 @@ def build_metrics_report(
         "DEFINITIONS",
         "-----------",
         "- Global metrics summarize the overall model performance on the full dataset.",
-        "- Normalized-question-category metrics summarize performance after collapsing category variants such as _A/_B into a single family.",
+        "- Per-video metrics are computed only on the examples of that specific video.",
+        "- Per-category metrics are computed only on the examples of that specific normalized question category.",
         "- Accuracy is exact-match accuracy over all examples using the free-form decoded output.",
+        "- Accuracy_valid_only is computed only on valid parsed free-form predictions.",
+        "- Precision, recall and F1 for free-form outputs are reported separately for label 0 and label 1.",
         "- LogProb_Accuracy is computed from the preferred label between 0 and 1 according to the model log probabilities.",
-        "- Precision, recall and F1 are macro-averaged over labels 0 and 1.",
+        "- LogProb precision, recall and F1 are also reported separately for label 0 and label 1.",
+        "- No macro-average or micro-average is used.",
         "- Invalid predictions are outputs that could not be parsed as 0 or 1.",
         f"- Empty raw outputs are normalized to the explicit token: {EMPTY_RAW_OUTPUT_TOKEN}",
         "- avg_logprob_margin = average absolute gap |logprob_0 - logprob_1|.",
@@ -1344,10 +1443,31 @@ def save_evaluation_artifacts(
     )
     plot_metric_by_category(
         category_df,
-        metric_column="F1-Score",
-        title="Macro F1 by normalized question category",
-        ylabel="Macro F1",
-        output_path=plots_dir / "f1_by_category.png",
+        metric_column="F1_0",
+        title="F1 for free-form label 0 by normalized question category",
+        ylabel="F1 (label 0)",
+        output_path=plots_dir / "f1_0_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="F1_1",
+        title="F1 for free-form label 1 by normalized question category",
+        ylabel="F1 (label 1)",
+        output_path=plots_dir / "f1_1_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="LogProb_F1_0",
+        title="F1 for logprob label 0 by normalized question category",
+        ylabel="LogProb F1 (label 0)",
+        output_path=plots_dir / "logprob_f1_0_by_category.png",
+    )
+    plot_metric_by_category(
+        category_df,
+        metric_column="LogProb_F1_1",
+        title="F1 for logprob label 1 by normalized question category",
+        ylabel="LogProb F1 (label 1)",
+        output_path=plots_dir / "logprob_f1_1_by_category.png",
     )
     plot_metric_by_category(
         category_df,
@@ -1583,7 +1703,7 @@ def main() -> None:
     logprob_output_dir = Path("Data/ModelResponse/1B")
 
     # Inference configuration
-    batch_size = 1
+    batch_size = 4
     thresholds = AggregateThresholds(
         ambiguous_margin=0.20,
         high_confidence=0.80,
