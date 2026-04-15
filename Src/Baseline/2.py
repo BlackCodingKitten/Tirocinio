@@ -13,7 +13,7 @@ import torch
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 
 JsonDict = Dict[str, Any]
@@ -57,7 +57,7 @@ class PredictionRecord:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "cuda:0",
+    device_map: str = "cuda:2",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[Qwen2_5_VLForConditionalGeneration, AutoProcessor]:
     print(f"[INFO] Loading model: {model_name}")
@@ -267,10 +267,11 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     """
     print("[INFO]: Inserted Transcription - {transcript} -")
     return (
-        f"Scegli la descrizione corretta rispetto al contenuto del video, considera anche la trascrizione del suo audio: {transcript}:\n"
+        "Scegli la descrizione corretta rispetto al contenuto del video dato,"
+        f" considera anche la trascrizione del suo audio: {transcript}:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
-        f"Rispondi solo con {0} o {1}"
+        "Rispondi solo con 0 o 1"
     )
 
 
@@ -286,15 +287,7 @@ def build_messages(prompts: Sequence[str]) -> List[List[Dict[str, Any]]]:
             [
                 {
                     "role": "system",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": (
-                                "You are a precise binary assistant. "
-                                "Answer only with 0 or 1. "
-                            ),
-                        }
-                    ],
+                    "content": "You are a precise assistant.",
                 },
                 {
                     "role": "user",
@@ -871,7 +864,7 @@ def save_evaluation_artifacts(
     global_conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
     category_conf_df = build_category_confusion_dataframe(metrics_summary)
 
-    workbook_path = output_dir / "evaluation_summary.xlsx"
+    workbook_path = output_dir / "2_evaluation_summary.xlsx"
     global_csv_path = output_dir / "global_metrics.csv"
     category_csv_path = output_dir / "normalized_question_category_metrics.csv"
     video_csv_path = output_dir / "video_metrics.csv"
@@ -1065,9 +1058,9 @@ def main() -> None:
     dataset_path = Path("Data/Dataset/maia_ita_mc_by_video_category_pool.json")
 
     # Output files
-    predictions_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_predictions_by_video.json")
-    metrics_report_output_path = Path("Data/ModelResponse/1A/qwen_mc_1A_metrics_report.txt")
-    evaluation_output_dir = Path("Data/ModelResponse/1A/evaluation")
+    predictions_output_path = Path("Data/ModelResponse/2/qwen_mc_2_predictions_by_video.json")
+    metrics_report_output_path = Path("Data/ModelResponse/2/qwen_mc_2_metrics_report.txt")
+    evaluation_output_dir = Path("Data/ModelResponse/2/evaluation")
 
     # Inference configuration
     batch_size = 1

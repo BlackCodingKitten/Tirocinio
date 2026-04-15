@@ -1,2 +1,0 @@
-scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Accuracy_valid_only,Support_0,Predicted_as_0,Precision_0,Recall_0,F1_0,Support_1,Predicted_as_1,Precision_1,Recall_1,F1_1,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
-GLOBAL,19200,19200,0,0,0.49609375,0.49609375,9554,14927,0.49594694178334564,0.7748586979275696,0.6047955557371023,9646,4273,0.4966065995787503,0.2199875596102011,0.30490696170701914,7403,2151,7524,2122

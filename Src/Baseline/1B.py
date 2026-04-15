@@ -18,7 +18,7 @@ from transformers import (
 )
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -85,7 +85,7 @@ class AggregateThresholds:
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "cuda:1",
+    device_map: str = "cuda:6",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[
     Qwen2_5_VLForConditionalGeneration,
@@ -285,7 +285,7 @@ def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
     The active prompt is intentionally kept unchanged.
     """
     return (
-        f"Scegli la descrizione corretta rispetto al contenuto del video, considera anche la trascrizione del suo audio:\n"
+        f"Scegli la descrizione corretta rispetto al contenuto del video dato:\n"
         f"0. {choice_0}\n"
         f"1. {choice_1}\n\n"
         f"Rispondi solo con {0} o {1}"
@@ -304,15 +304,7 @@ def build_messages(prompts: Sequence[str]) -> List[List[Dict[str, Any]]]:
             [
                 {
                     "role": "system",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": (
-                                "You are a precise binary assistant. "
-                                "Answer only with 0 or 1. "
-                            ),
-                        }
-                    ],
+                    "content": "You are a precise assistant."
                 },
                 {
                     "role": "user",
@@ -1403,7 +1395,7 @@ def save_evaluation_artifacts(
     global_logprob_conf_df = build_logprob_confusion_matrix_dataframe(metrics_summary["global"])
     category_conf_df = build_category_confusion_dataframe(metrics_summary)
 
-    workbook_path = output_dir / "evaluation_summary.xlsx"
+    workbook_path = output_dir / "1B_evaluation_summary.xlsx"
     global_csv_path = output_dir / "global_metrics.csv"
     category_csv_path = output_dir / "normalized_question_category_metrics.csv"
     video_csv_path = output_dir / "video_metrics.csv"
