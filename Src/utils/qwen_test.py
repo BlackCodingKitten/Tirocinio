@@ -253,7 +253,7 @@ def main() -> None:
     # video_paths = list_mp4_videos("Data/Videos")
     video_paths = [Path(f"Data/Videos/Video{i}.mp4") for i in range(1,101)]
     # Cambia liberamente il prompt.
-    prompt_text = "Describe briefly what happens in this video."
+    prompt_text = "Describe briefly in what happens in this video."
 
     batch_size = 4
     max_pixels = 360 * 420

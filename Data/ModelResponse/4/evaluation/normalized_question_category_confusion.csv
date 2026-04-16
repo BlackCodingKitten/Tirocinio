@@ -1,0 +1,14 @@
+normalized_question_category,true_0_pred_0,true_0_pred_1,true_1_pred_0,true_1_pred_1
+CausaleEsplicita,344,43,85,328
+CausaleImplicita,369,35,75,321
+Controfattuale,459,362,208,571
+ImplicitoParziale,674,131,302,493
+ImplicitoTot,732,89,226,553
+Incertezza,717,23,63,797
+OutofScope,733,36,61,770
+Pianificazione,672,150,269,509
+Sentiment,755,49,190,606
+SpazialeParziale,549,263,217,571
+SpazialeTotale,651,137,67,745
+TemporaleDurata,630,183,270,517
+TemporaleParziale,590,178,214,618

@@ -34,8 +34,8 @@ def main() -> None:
     #   video_id: {
     #       question_category: {
     #           pool_pos_X: {
-    #               "0": caption,
-    #               "1": foil,
+    #               "0": answer1,   # MAIA option A
+    #               "1": answer2,   # MAIA option B
     #               "target": target
     #           }
     #       }
@@ -44,15 +44,18 @@ def main() -> None:
     result: JsonByVideo = {}
 
     for row in rows:
-        video_id: str = row["video_id"]
-        question_category: str = row["question_category"]
-        target: int = int(row["target"])
+        video_id: str = str(row["video_id"])
+        question_category: str = str(row["question_category"])
 
-        # Resolve the positive caption and the foil based on the target value.
-        # target == 0 -> answer1 is the correct caption, answer2 is the foil
-        # target == 1 -> answer2 is the correct caption, answer1 is the foil
-        caption: str = row["answer1"] if target == 0 else row["answer2"]
-        foil: str = row["answer2"] if target == 0 else row["answer1"]
+        # In MAIA multiple-choice:
+        # - answer1 is option A
+        # - answer2 is option B
+        # We want:
+        # - "0" <-> option A
+        # - "1" <-> option B
+        answer_a: str = str(row["answer1"])
+        answer_b: str = str(row["answer2"])
+        target: int = int(row["target"])
 
         # Use the dataset pool_pos when available.
         # Otherwise, generate a progressive pool position per (video_id, question_category).
@@ -69,11 +72,13 @@ def main() -> None:
         result.setdefault(video_id, {})
         result[video_id].setdefault(question_category, {})
 
-        # Store the caption under key "0", the foil under key "1",
-        # and keep the original target value.
+        # Store MAIA option A as "0" and MAIA option B as "1".
+        # The original target is kept unchanged:
+        # target == 0 -> correct answer is option A -> key "0"
+        # target == 1 -> correct answer is option B -> key "1"
         result[video_id][question_category][pool_key] = {
-            "0": caption,
-            "1": foil,
+            "0": answer_a,
+            "1": answer_b,
             "target": target,
         }
 

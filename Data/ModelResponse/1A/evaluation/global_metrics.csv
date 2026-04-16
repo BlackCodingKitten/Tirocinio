@@ -1,2 +1,2 @@
-scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Accuracy_valid_only,Support_0,Predicted_as_0,Precision_0,Recall_0,F1_0,Support_1,Predicted_as_1,Precision_1,Recall_1,F1_1,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
-GLOBAL,19200,19200,0,0,0.49515625,0.49515625,9554,12305,0.4943518894758228,0.6366966715511827,0.5565670890708632,9646,6895,0.49659173313995647,0.3549657889280531,0.4140015718517623,6083,3471,6222,3424
+scope,sample_count,valid_prediction_count,invalid_prediction_count,invalid_prediction_rate,overall_accuracy,valid_accuracy,precision_label_0,recall_label_0,f1_label_0,precision_label_1,recall_label_1,f1_label_1,true_negative,false_positive,false_negative,true_positive
+GLOBAL,19200,19200,0,0.0,0.6871875,0.6871875,0.6714340935446463,0.7272346661084362,0.6982212842930359,0.7056032535020335,0.647522289031723,0.6753162504054493,6948,2606,3400,6246

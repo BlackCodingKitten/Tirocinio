@@ -1,3 +1,4 @@
+
 from __future__ import annotations
 
 import json
@@ -18,7 +19,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
-PROMPT_TEMPLATE_VERSION = "video_transcript_strict_v2"
+PROMPT_TEMPLATE_VERSION = "video_plus_transcript_strict_v1"
 
 
 @dataclass(frozen=True)
@@ -69,7 +70,7 @@ def load_model(
 
     processor = AutoProcessor.from_pretrained(
         model_name,
-        use_fast=True,
+        # use_fast=True,
         padding_side="left",
     )
     tokenizer = cast(PreTrainedTokenizerBase, processor.tokenizer)
@@ -200,13 +201,8 @@ def get_video_metadata(final_results: JsonDict, video_id: str) -> JsonDict:
 
 def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     video_data = get_video_metadata(final_results, video_id)
-    classification = str(video_data.get("classification", "")).lower()
     transcript = str(video_data.get("generated_transcription", "")).strip()
-
-    if "dialogue" in classification and transcript:
-        return transcript
-
-    return "L'audio contiene musica o rumore."
+    return transcript if transcript else "Trascrizione non disponibile."
 
 
 def resolve_video_path(video_root_dir: str | Path, video_id: str) -> Path:
@@ -225,17 +221,16 @@ def path_to_file_uri(path: str | Path) -> str:
 
 
 def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
-    transcript_clean = transcript.strip() if transcript.strip() else "Trascrizione non disponibile."
+    transcription = transcript.strip() if transcript.strip() else "Trascrizione non disponibile."
     prompt = (
-        "Scegli la descrizione corretta rispetto al contenuto del video dato,"
-        f"considera anche la trascrizione del suo audio: {transcript_clean}:\n"
-        f"0. {choice_0}\n"
-        f"1. {choice_1}\n\n"
-        "Rispondi solo con 0 o 1"
+        f"Dato il video, considera anche la trascrizione del suo audio: {transcription}.\n"
+        "Scegli la descrizione corretta rispetto al contenuto del video:\n"
+        f"0:{choice_0}\n"
+        f"1:{choice_1}\n"
+        "Rispondi solo con 0 o 1."
     )
 
-    # Guard rail: se qui compare ancora il template vecchio, fallisci subito.
-    if "Scegli la risposta corretta tra" in prompt or "{transcript}" in prompt:
+    if "{transcription}" in prompt or "{answer_0}" in prompt or "{answer_1}" in prompt:
         raise RuntimeError(f"[BUG] Prompt template sbagliato generato: {prompt}")
 
     return prompt
@@ -250,7 +245,12 @@ def build_message_tv(
     return [
         {
             "role": "system",
-            "content": "You are a precise assistant.",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "You are a precise binary assistant. Answer only with 0 or 1.",
+                }
+            ],
         },
         {
             "role": "user",
@@ -303,10 +303,6 @@ def message_contains_video(message: Sequence[Dict[str, Any]]) -> bool:
 def process_visual_batch_strict(
     messages: Sequence[List[Dict[str, Any]]],
 ) -> Tuple[Any, Any, Dict[str, Any]]:
-    """
-    IMPORTANT:
-    process_vision_info must see the WHOLE batch, not one sample at a time.
-    """
     try:
         image_inputs, video_inputs, video_kwargs = process_vision_info(
             messages,
@@ -314,7 +310,6 @@ def process_visual_batch_strict(
         )
         return image_inputs, video_inputs, video_kwargs
     except TypeError:
-        # Older qwen-vl-utils fallback.
         image_inputs, video_inputs = process_vision_info(messages)
         return image_inputs, video_inputs, {}
 
@@ -330,10 +325,6 @@ def assert_video_features_present(
     batch_inputs: Dict[str, Any],
     video_paths: Sequence[Path],
 ) -> None:
-    """
-    Fail hard if the processor did not build real video tensors.
-    This prevents silent text-only runs.
-    """
     required_keys = ("pixel_values_videos", "video_grid_thw")
     missing = [key for key in required_keys if key not in batch_inputs]
     if missing:
@@ -348,30 +339,21 @@ def assert_video_features_present(
     video_grid_thw = batch_inputs["video_grid_thw"]
 
     if not isinstance(pixel_values_videos, torch.Tensor) or pixel_values_videos.numel() == 0:
-        raise RuntimeError(
-            "[FATAL] pixel_values_videos is empty or invalid. "
-            "The model is NOT seeing the videos."
-        )
+        raise RuntimeError("[FATAL] pixel_values_videos is empty or invalid.")
 
     if not isinstance(video_grid_thw, torch.Tensor) or video_grid_thw.numel() == 0:
-        raise RuntimeError(
-            "[FATAL] video_grid_thw is empty or invalid. "
-            "The model is NOT seeing the videos."
-        )
+        raise RuntimeError("[FATAL] video_grid_thw is empty or invalid.")
 
     print("[DEBUG] Video tensors detected correctly.")
     print(f"[DEBUG] pixel_values_videos.shape = {tuple(pixel_values_videos.shape)}")
     print(f"[DEBUG] video_grid_thw.shape      = {tuple(video_grid_thw.shape)}")
     print(f"[DEBUG] videos in batch           = {len(video_paths)}")
-    for path in video_paths:
-        print(f"[DEBUG] - {path}")
 
 
 def log_prompt_debug_info(prompts: Sequence[str]) -> None:
-    if not prompts:
-        return
-    print("[DEBUG] First prompt in current batch:")
-    print(prompts[0])
+    if prompts:
+        print("[DEBUG] First prompt in current batch:")
+        print(prompts[0])
 
 
 def generate_answers_batch(
@@ -416,15 +398,10 @@ def generate_answers_batch(
 
     if video_inputs is not None:
         processor_kwargs["videos"] = video_inputs
-        # Crucial: frame rate must be passed to the processor for video inference.
         processor_kwargs["fps"] = fps
 
     if video_kwargs:
         processor_kwargs.update(video_kwargs)
-
-    # IMPORTANT:
-    # DO NOT force do_resize=False here.
-    # Let the official processor path handle resizing/video preprocessing.
 
     inputs = processor(**processor_kwargs)
 
@@ -464,7 +441,7 @@ def normalize_raw_output(raw_output: Optional[str]) -> str:
         return EMPTY_RAW_OUTPUT_TOKEN
 
     cleaned = str(raw_output).strip()
-    return cleaned
+    return cleaned if cleaned else EMPTY_RAW_OUTPUT_TOKEN
 
 
 def parse_binary_answer(raw_output: str) -> Optional[int]:
@@ -486,110 +463,83 @@ def safe_divide(numerator: float, denominator: float) -> float:
     return numerator / denominator if denominator != 0 else 0.0
 
 
-def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, int]:
-    c00 = sum(record.target == 0 and record.predicted_label == 0 for record in records)
-    c01 = sum(record.target == 0 and record.predicted_label == 1 for record in records)
-    c10 = sum(record.target == 1 and record.predicted_label == 0 for record in records)
-    c11 = sum(record.target == 1 and record.predicted_label == 1 for record in records)
-
-    return {
-        "actual_0_pred_0": c00,
-        "actual_0_pred_1": c01,
-        "actual_1_pred_0": c10,
-        "actual_1_pred_1": c11,
-    }
-
-
-def compute_label_metrics(
-    records: Sequence[PredictionRecord],
-    label: int,
-) -> Dict[str, float]:
-    tp = sum(
-        record.predicted_label == label and record.target == label
-        for record in records
-    )
-    fp = sum(
-        record.predicted_label == label and record.target != label
-        for record in records
-    )
-    fn = sum(
-        record.target == label and record.predicted_label != label
-        for record in records
-    )
+def compute_label_metrics(records: Sequence[PredictionRecord], label: int) -> Dict[str, float]:
+    tp = sum(record.predicted_label == label and record.target == label for record in records)
+    fp = sum(record.predicted_label == label and record.target != label for record in records)
+    fn = sum(record.target == label and record.predicted_label != label for record in records)
 
     precision = safe_divide(tp, tp + fp)
     recall = safe_divide(tp, tp + fn)
     f1 = safe_divide(2 * precision * recall, precision + recall)
 
-    support = sum(record.target == label for record in records)
-    predicted_as_label = sum(record.predicted_label == label for record in records)
-
     return {
-        "support": float(support),
-        "predicted_as_label": float(predicted_as_label),
-        "tp": float(tp),
-        "fp": float(fp),
-        "fn": float(fn),
         "precision": precision,
         "recall": recall,
         "f1": f1,
+        "support": float(sum(record.target == label for record in records)),
+    }
+
+
+def compute_confusion_counts(records: Sequence[PredictionRecord]) -> Dict[str, int]:
+    true_0_pred_0 = sum(record.target == 0 and record.predicted_label == 0 for record in records)
+    true_0_pred_1 = sum(record.target == 0 and record.predicted_label == 1 for record in records)
+    true_1_pred_0 = sum(record.target == 1 and record.predicted_label == 0 for record in records)
+    true_1_pred_1 = sum(record.target == 1 and record.predicted_label == 1 for record in records)
+
+    return {
+        "true_0_pred_0": true_0_pred_0,
+        "true_0_pred_1": true_0_pred_1,
+        "true_1_pred_0": true_1_pred_0,
+        "true_1_pred_1": true_1_pred_1,
     }
 
 
 def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     print(f"[INFO] Computing metrics for {len(records)} records...")
 
-    n_samples = len(records)
-    empty_raw_outputs = sum(
-        record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN
-        for record in records
-    )
-    invalid_predictions = sum(
-        record.predicted_label not in (0, 1)
-        for record in records
-    )
-    valid_predictions = n_samples - invalid_predictions
-    correct_predictions = sum(record.is_correct for record in records)
+    total_examples = len(records)
+    empty_answers = sum(record.raw_model_output == EMPTY_RAW_OUTPUT_TOKEN for record in records)
+    invalid_answers = sum(record.predicted_label not in (0, 1) for record in records)
+    valid_answers = total_examples - invalid_answers
+    correct_answers = sum(record.is_correct for record in records)
 
-    label_0 = compute_label_metrics(records, label=0)
-    label_1 = compute_label_metrics(records, label=1)
-    confusion_counts = compute_confusion_counts(records)
+    label_0_metrics = compute_label_metrics(records, label=0)
+    label_1_metrics = compute_label_metrics(records, label=1)
+    confusion = compute_confusion_counts(records)
 
     return {
-        "n_samples": n_samples,
-        "valid_predictions": valid_predictions,
-        "invalid_predictions": invalid_predictions,
-        "empty_raw_outputs": empty_raw_outputs,
-        "Accuracy": safe_divide(correct_predictions, n_samples),
-        "Accuracy_valid_only": safe_divide(
-            confusion_counts["actual_0_pred_0"] + confusion_counts["actual_1_pred_1"],
-            valid_predictions,
+        "total_examples": total_examples,
+        "valid_answers": valid_answers,
+        "invalid_answers": invalid_answers,
+        "empty_answers": empty_answers,
+        "overall_accuracy": safe_divide(correct_answers, total_examples),
+        "valid_only_accuracy": safe_divide(
+            confusion["true_0_pred_0"] + confusion["true_1_pred_1"],
+            valid_answers,
         ),
-        "Support_0": int(label_0["support"]),
-        "Predicted_as_0": int(label_0["predicted_as_label"]),
-        "Precision_0": label_0["precision"],
-        "Recall_0": label_0["recall"],
-        "F1_0": label_0["f1"],
-        "Support_1": int(label_1["support"]),
-        "Predicted_as_1": int(label_1["predicted_as_label"]),
-        "Precision_1": label_1["precision"],
-        "Recall_1": label_1["recall"],
-        "F1_1": label_1["f1"],
-        **confusion_counts,
+        "support_label_0": int(label_0_metrics["support"]),
+        "precision_label_0": label_0_metrics["precision"],
+        "recall_label_0": label_0_metrics["recall"],
+        "f1_label_0": label_0_metrics["f1"],
+        "support_label_1": int(label_1_metrics["support"]),
+        "precision_label_1": label_1_metrics["precision"],
+        "recall_label_1": label_1_metrics["recall"],
+        "f1_label_1": label_1_metrics["f1"],
+        **confusion,
     }
 
 
 def compute_all_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
-    by_class: Dict[str, List[PredictionRecord]] = {}
+    by_category: Dict[str, List[PredictionRecord]] = {}
     by_video: Dict[str, List[PredictionRecord]] = {}
 
     for record in records:
-        by_class.setdefault(record.normalized_question_category, []).append(record)
+        by_category.setdefault(record.normalized_question_category, []).append(record)
         by_video.setdefault(record.video_id, []).append(record)
 
-    class_metrics = {
-        class_name: compute_metrics(class_records)
-        for class_name, class_records in sorted(by_class.items())
+    category_metrics = {
+        category_name: compute_metrics(category_records)
+        for category_name, category_records in sorted(by_category.items())
     }
     video_metrics = {
         video_id: compute_metrics(video_records)
@@ -601,7 +551,7 @@ def compute_all_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
 
     return {
         "global": compute_metrics(records),
-        "by_normalized_question_category": class_metrics,
+        "by_normalized_question_category": category_metrics,
         "by_video": video_metrics,
     }
 
@@ -613,26 +563,24 @@ def metric_row_from_summary(
 ) -> Dict[str, Any]:
     return {
         entity_column_name: entity_name,
-        "n_samples": metrics["n_samples"],
-        "valid_predictions": metrics["valid_predictions"],
-        "invalid_predictions": metrics["invalid_predictions"],
-        "empty_raw_outputs": metrics["empty_raw_outputs"],
-        "Accuracy": metrics["Accuracy"],
-        "Accuracy_valid_only": metrics["Accuracy_valid_only"],
-        "Support_0": metrics["Support_0"],
-        "Predicted_as_0": metrics["Predicted_as_0"],
-        "Precision_0": metrics["Precision_0"],
-        "Recall_0": metrics["Recall_0"],
-        "F1_0": metrics["F1_0"],
-        "Support_1": metrics["Support_1"],
-        "Predicted_as_1": metrics["Predicted_as_1"],
-        "Precision_1": metrics["Precision_1"],
-        "Recall_1": metrics["Recall_1"],
-        "F1_1": metrics["F1_1"],
-        "actual_0_pred_0": metrics["actual_0_pred_0"],
-        "actual_0_pred_1": metrics["actual_0_pred_1"],
-        "actual_1_pred_0": metrics["actual_1_pred_0"],
-        "actual_1_pred_1": metrics["actual_1_pred_1"],
+        "total_examples": metrics["total_examples"],
+        "valid_answers": metrics["valid_answers"],
+        "invalid_answers": metrics["invalid_answers"],
+        "empty_answers": metrics["empty_answers"],
+        "overall_accuracy": metrics["overall_accuracy"],
+        "valid_only_accuracy": metrics["valid_only_accuracy"],
+        "support_label_0": metrics["support_label_0"],
+        "precision_label_0": metrics["precision_label_0"],
+        "recall_label_0": metrics["recall_label_0"],
+        "f1_label_0": metrics["f1_label_0"],
+        "support_label_1": metrics["support_label_1"],
+        "precision_label_1": metrics["precision_label_1"],
+        "recall_label_1": metrics["recall_label_1"],
+        "f1_label_1": metrics["f1_label_1"],
+        "true_0_pred_0": metrics["true_0_pred_0"],
+        "true_0_pred_1": metrics["true_0_pred_1"],
+        "true_1_pred_0": metrics["true_1_pred_0"],
+        "true_1_pred_1": metrics["true_1_pred_1"],
     }
 
 
@@ -655,8 +603,7 @@ def build_category_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
             metrics=category_metrics,
             entity_column_name="normalized_question_category",
         )
-        for category_name, category_metrics
-        in metrics_summary["by_normalized_question_category"].items()
+        for category_name, category_metrics in metrics_summary["by_normalized_question_category"].items()
     ]
     return pd.DataFrame(rows)
 
@@ -676,11 +623,11 @@ def build_video_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
 def build_confusion_matrix_dataframe(metrics: JsonDict) -> pd.DataFrame:
     return pd.DataFrame(
         [
-            [metrics["actual_0_pred_0"], metrics["actual_0_pred_1"]],
-            [metrics["actual_1_pred_0"], metrics["actual_1_pred_1"]],
+            [metrics["true_0_pred_0"], metrics["true_0_pred_1"]],
+            [metrics["true_1_pred_0"], metrics["true_1_pred_1"]],
         ],
-        index=["actual_0", "actual_1"],
-        columns=["predicted_0", "predicted_1"],
+        index=["true_0", "true_1"],
+        columns=["pred_0", "pred_1"],
     )
 
 
@@ -691,10 +638,10 @@ def build_category_confusion_dataframe(metrics_summary: JsonDict) -> pd.DataFram
         rows.append(
             {
                 "normalized_question_category": category_name,
-                "actual_0_pred_0": metrics["actual_0_pred_0"],
-                "actual_0_pred_1": metrics["actual_0_pred_1"],
-                "actual_1_pred_0": metrics["actual_1_pred_0"],
-                "actual_1_pred_1": metrics["actual_1_pred_1"],
+                "true_0_pred_0": metrics["true_0_pred_0"],
+                "true_0_pred_1": metrics["true_0_pred_1"],
+                "true_1_pred_0": metrics["true_1_pred_0"],
+                "true_1_pred_1": metrics["true_1_pred_1"],
             }
         )
 
@@ -719,8 +666,8 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
     category_conf_df = build_category_confusion_dataframe(metrics_summary)
 
     report_parts: List[str] = [
-        "MODEL EVALUATION REPORT",
-        "=======================",
+        "MODEL EVALUATION REPORT - EXPERIMENT 4",
+        "======================================",
         "",
         f"PROMPT_TEMPLATE_VERSION: {PROMPT_TEMPLATE_VERSION}",
         f"EMPTY_RAW_OUTPUT_TOKEN: {EMPTY_RAW_OUTPUT_TOKEN}",
@@ -763,9 +710,9 @@ def plot_global_confusion_matrix(metrics_summary: JsonDict, output_path: str | P
     ax.set_xticklabels(conf_df.columns)
     ax.set_yticks([0, 1])
     ax.set_yticklabels(conf_df.index)
-    ax.set_title("Global confusion matrix")
+    ax.set_title("Experiment 4 - Global Confusion Matrix")
     ax.set_xlabel("Predicted label")
-    ax.set_ylabel("Actual label")
+    ax.set_ylabel("True label")
 
     for i in range(values.shape[0]):
         for j in range(values.shape[1]):
@@ -849,31 +796,31 @@ def save_evaluation_artifacts(
     )
     plot_metric_by_category(
         category_df,
-        metric_column="Accuracy",
-        title="Accuracy by normalized question category",
-        ylabel="Accuracy",
-        output_path=plots_dir / "Accuracy_by_category.png",
+        metric_column="overall_accuracy",
+        title="Experiment 4 - Accuracy by Question Category",
+        ylabel="Overall accuracy",
+        output_path=plots_dir / "accuracy_by_category.png",
     )
     plot_metric_by_category(
         category_df,
-        metric_column="F1_0",
-        title="F1 for label 0 by normalized question category",
-        ylabel="F1 (label 0)",
-        output_path=plots_dir / "F1_0_by_category.png",
+        metric_column="f1_label_0",
+        title="Experiment 4 - F1 Score for Label 0 by Question Category",
+        ylabel="F1 label 0",
+        output_path=plots_dir / "f1_label_0_by_category.png",
     )
     plot_metric_by_category(
         category_df,
-        metric_column="F1_1",
-        title="F1 for label 1 by normalized question category",
-        ylabel="F1 (label 1)",
-        output_path=plots_dir / "F1_1_by_category.png",
+        metric_column="f1_label_1",
+        title="Experiment 4 - F1 Score for Label 1 by Question Category",
+        ylabel="F1 label 1",
+        output_path=plots_dir / "f1_label_1_by_category.png",
     )
     plot_metric_by_category(
         category_df,
-        metric_column="invalid_predictions",
-        title="Invalid predictions by normalized question category",
-        ylabel="Invalid predictions",
-        output_path=plots_dir / "invalid_predictions_by_category.png",
+        metric_column="invalid_answers",
+        title="Experiment 4 - Invalid Answers by Question Category",
+        ylabel="Invalid answers",
+        output_path=plots_dir / "invalid_answers_by_category.png",
     )
 
     print(f"[INFO] Evaluation workbook saved to: {workbook_path}")
@@ -924,6 +871,24 @@ def build_results_json(
         }
 
     return results
+
+
+def print_example_result(record: PredictionRecord) -> None:
+    correctness = "CORRECT" if record.is_correct else "WRONG"
+    parsed_label = record.predicted_label if record.predicted_label is not None else "INVALID"
+
+    print(
+        "[RESULT] "
+        f"video={record.video_id} | "
+        f"category={record.question_category} | "
+        f"pool={record.pool_key}"
+    )
+    print(f"[RESULT] transcript     = {record.transcript}")
+    print(f"[RESULT] raw_output     = {record.raw_model_output}")
+    print(f"[RESULT] parsed_label   = {parsed_label}")
+    print(f"[RESULT] target         = {record.target}")
+    print(f"[RESULT] correctness    = {correctness}")
+    print("-" * 100)
 
 
 def run_inference(
@@ -992,22 +957,22 @@ def run_inference(
             predicted_label = parse_binary_answer(safe_raw_output)
             is_correct = predicted_label == example.target
 
-            records.append(
-                PredictionRecord(
-                    video_id=example.video_id,
-                    question_category=example.question_category,
-                    normalized_question_category=example.normalized_question_category,
-                    pool_key=example.pool_key,
-                    choice_0=example.choice_0,
-                    choice_1=example.choice_1,
-                    target=example.target,
-                    transcript=transcript,
-                    prompt=prompt,
-                    raw_model_output=safe_raw_output,
-                    predicted_label=predicted_label,
-                    is_correct=is_correct,
-                )
+            record = PredictionRecord(
+                video_id=example.video_id,
+                question_category=example.question_category,
+                normalized_question_category=example.normalized_question_category,
+                pool_key=example.pool_key,
+                choice_0=example.choice_0,
+                choice_1=example.choice_1,
+                target=example.target,
+                transcript=transcript,
+                prompt=prompt,
+                raw_model_output=safe_raw_output,
+                predicted_label=predicted_label,
+                is_correct=is_correct,
             )
+            records.append(record)
+            print_example_result(record)
 
         print(f"[INFO] Processed {min(start_idx + len(batch_examples), total_examples)}/{total_examples}")
 
@@ -1031,7 +996,6 @@ def main() -> None:
     fps = 2.0
     debug_visual_inputs = True
 
-    # Evita di leggere/tenere output vecchi che ti confondono il debug.
     if predictions_output_path.exists():
         predictions_output_path.unlink()
     if metrics_report_output_path.exists():
