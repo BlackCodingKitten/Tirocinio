@@ -991,8 +991,8 @@ def main() -> None:
     metrics_report_output_path = Path("Data/ModelResponse/4/qwen_mc_video_transcript_metrics_report.txt")
     evaluation_output_dir = Path("Data/ModelResponse/4/evaluation")
 
-    batch_size = 8
-    max_pixels = 360 * 420
+    batch_size = 2
+    max_pixels = 512 * 512
     fps = 2.0
     debug_visual_inputs = True
 

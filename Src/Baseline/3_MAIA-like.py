@@ -24,7 +24,7 @@ except Exception as exc:  # pragma: no cover
 
 
 # The physical GPU selected here becomes logical cuda:0 inside the process.
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "1")
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -67,7 +67,7 @@ class InferenceConfig:
     dataset_path: str = "Data/Dataset/maia_ita_mc_by_video_category_pool.json"
     videos_dir: str = "Data/Videos"
     out_dir: str = "Data/ModelResponse/3_MAIA-like"
-    batch_size: int = 4
+    batch_size: int = 2
     num_frames: int = 32
     max_image_dimension: int = 900
     max_new_tokens: int = 4
@@ -110,7 +110,7 @@ def load_model(
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
-        device_map="cuda:1",
+        device_map="cuda:0",
         attn_implementation=attn_implementation,
     )
     model.eval()
@@ -323,8 +323,8 @@ def preprocess_videos(
 def build_prompt(choice_0: str, choice_1: str) -> str:
     return (
         "Scegli la descrizione corretta rispetto al contenuto del video:\n"
-        "0:{choice_0}"
-        "1:{choice_1}"
+        f"0:{choice_0}"
+        f"1:{choice_1}"
         "Rispondi solo con 0 o 1."
     )
 
