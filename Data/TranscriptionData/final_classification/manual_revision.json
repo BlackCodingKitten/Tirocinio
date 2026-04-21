@@ -1,0 +1,588 @@
+{
+  "Video1": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription":"Prima mettiamo... Prima mettiamo... Ehi, prima! Ehi, prima!"
+  },
+  "Video2": {
+    "classification": "dialogue",
+    "score": -0.18345576194099264,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Come fare l'aspirapolvere? avete una fetta biscottata bene spaccatela intera la spaccate intera in pochi secondi scomparirà tutto via con l'aspirapolvere"
+  },
+  "Video3": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video4": {
+    "classification": "music",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video5": {
+    "classification": "dialogue",
+    "score": -0.3941448541525131,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Mentre quello che manca qua è ancora più leggero dell'alice. Tutte le cornici sono in noce. Dopo circa 15-16 anni si cambia il fondo a quest'altro."
+  },
+  "Video6": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video7": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video8": {
+    "classification": "music",
+    "manual_change": "True"
+  },
+  "Video9": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video10": {
+    "classification": "dialogue",
+    "score": -0.4416654204284584,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Fatemi lanciarlo giù in giardino. Dov'è? Dov'è? E' qua! Chiamatelo! Dove, dove? E' qua! Guarda che tu voli giù! No, sta dormendo! Vanessa non ti mangia! Non ti mangia! Non ti fa niente! Dove scappi? Prendi un pezzo di carta igienica! Ma tu non sei normale! Animaletto! Guarda che bello! Infatti nell'ancelo giunge al giardino."
+  },
+  "Video11": {
+    "classification": "unknown_dialogue",
+    "score": -1.330680870361653,
+    "score_meaning": "unreliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "La prima angoloide in Milano Peso in avanti Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro Peso in avanti perché sennò casca indietro"
+  },
+  "Video12": {
+    "classification": "dialogue",
+    "score": -0.3305642837974472,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Mi ha catturato un medaglione di due passi indietro, due mani, perché io sono armato, il cane va a terra, senza passare tra me e il cane, il cane passa dietro e mi fa la perquisizione per vedere se ho rubato qualcosa. Vede che ho l'arma e me la toglie."
+  },
+  "Video13": {
+    "classification": "unknown_dialogue",
+    "score": -0.49504220485687256,
+    "score_meaning": "transcription text unreliable",
+    "selected_model": "whisper-1",
+    "manual_change": "False",
+    "generated_transcription": "Ciao bella, ciao bella, ciao ciao, questo è il fiore del partigiano, morto per la libertà, e questo è il fiore del partigiano, morto per la libertà."
+  },
+  "Video14": {
+    "classification": "unknown_dialogue",
+    "score": -0.5906193997563969,
+    "score_meaning": "reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "E' brutto, ma ho morte, Ari! Fai una lancetta, Popo, vai! Non mi cago, Francesco, è troppo brutto! Dai, vai, tira! Ah, ha visto il mangiare! Ha visto il mangiare, ha visto il mangiare! Non me lo dice il pubblico! Non me lo dice il pubblico!"
+  },
+  "Video15": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe"
+  },
+  "Video16": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription":"Vattene via, OOOOH OOOH, hai rotto i coglioni, testa di ca**o, ah ah AIAh AIOh"
+  },
+  "Video17": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "È in la prima posizione, non poteva che essere lui, con un tempo strepitoso perché la gara era ed è rimarrà dura anche per l'anno prossimo, anche se non ci sarà vento, con un vento così forte, con le salite che c'erano un'ora, 11.46 per Ismail Eccolo qua che arriva e vi assicuro è arrivato che non era neanche sudato Allora andiamo"
+  },
+  "Video18": {
+    "classification": "dialogue",
+    "score": -0.44602692110762865,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Angela e Vincenzo, Angela e Vincenzo! Un forte applauso!"
+  },
+  "Video19": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video20": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video21": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Scosso dell'Oca, quindi la Torre. L'ultimo San Martino affrontato in controllo, anche se la distanza va giù, va giù. Oddio, lo scosso dell'Oca. C'è l'Oca davanti con la Torre che prova a ritornare. Torre-Oca all'ultima curva. Oca davanti alla Torre, va giù anche la Torre. Dunque vince il cavallo scosso, vince il cavallo scosso. Dell'Oca, clamoroso con la Pantera che era avanti in pratica fino all'ultimo San Martino."
+  },
+  "Video22": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video23": {
+    "classification": "unknown_dialogue",
+    "score": -0.42370375847160663,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Se lascio un po' tu devi macinare, capito? Vai con la bambuglia! La polvere macina! Lui sa in quanti video miei sta già a fare le risate! Ancora!"
+  },
+  "Video24": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription":"Pallone numero 5 Paccini Gol Paccini! Paccini! Sprocca il risultato per la Sampdoria Calcio"
+  },
+  "Video25": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+     "manual_change": "False"
+  },
+  "Video26": {
+    "classification": "dialogue",
+    "score": -0.14340926936976292,
+    "score_meaning": "transcription text very reliable",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False",
+    "generated_transcription": "Ho capito tutto. E poi le mettiamo al caldo. Vai, Vane, fai il castello. Pronti? Hai messo sabbia mista, bagnata e asciutta? Mizzica!"
+  },
+  "Video27": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Tanti auguri a te! Auguri amore."
+  },
+  "Video28": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video29": {
+    "classification": "dialogue",
+    "score": -0.1602523629650103,
+    "score_meaning": "transcription text very reliable",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False",
+    "generated_transcription": "La candidata Sara, iscritta al corso di laurea in lingue e culture per il turismo e il commercio internazionale, ha presentato un elaborato finale dal titolo \"Lo sviluppo della ricettività alberghiera sulla sponda del Garda Bresciano dalla fine dell'Ottocento ai giorni nostri\". Lo ha discusso nella presenza della commissione composta dai professori Mario Elisa Ferraro e Francesco Ricci. L'elaborato è stato..."
+  },
+  "Video30": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video31": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Chiama la polizia. Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani Piano con le mani, viemme addosso, viemme addosso"
+  },
+  "Video32": {
+    "classification": "dialogue",
+    "score": -0.3542966153833986,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Adesso mangiamo? Cosa fai, parecchi? Eh, ma dovresti anche sciacquare poi, eh? Ah, ecco. Vediamo un po' questa bambina, che brava! Ma sei bravissima! Allora mi aiuti tu, eh? Sempre, ok? Grazie. Guardate come si fa!"
+  },
+  "Video33": {
+    "classification": "dialogue",
+    "score": -0.2739928867008716,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Questa secondo me Stefano è la parte della frenata perché sono caduti davanti. Però, ok, io tocchi i freni. Poi è vero che al giorno d'oggi non è più come una volta, poi adesso magari potranno iniziare le polemiche, chiaramente ora con i freni a disco che pinzano con molta più forza nel momento in cui il corridore si spaventa, frena col freno a disco."
+  },
+  "Video34": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video35": {
+    "classification": "music",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video36": {
+    "classification": "unknown_dialogue",
+     "manual_change": "True",
+    "generated_transcription": "auguri a te tanti auguri mannaggia la m***a sono cascato testa di c***o strutti sono cascato auguri Tomas mannaggia la m***a testa di c***o strutti auguri auguri a te"
+  },
+  "Video37": {
+    "classification": "dialogue",
+    "score": -0.3112283249942269,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Madonna, sei fatta male ancora. Vanessa che volo hai fatto? Ragazze, se non entriamo qua ci distruggiamo, lei si è tagliata una mano. Allora, sentite che sono al deletto. Dai, poi andiamo. Bro, dov'è il mio libro? Libro? Libro? È quella di qui. No, lo sapevo. Ma scusa, ma Anastasia. La gamba. No, no, no. Ma Anastasia."
+  },
+  "Video38": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video39": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video40": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Si vergogna perchè non è toccato Ma che cazzo te ne butti, sei in aperitivo, ma si Vai, fatti tu risare Com'è il nostro aperitivo? Anche lei si vergogna Dai Fede Questo aperitivo è molto easy Prendi buoni e benzina Buoni e benzina Ci vuole i voglio e benzina Aspetta, ce l'ho anch'io dove Questa è la foto per bere Questo è l'aperitivo C'è gente che balla, gente che si diverte"
+  },
+  "Video41": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video42": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Dove sono i vigili via vai via"
+  },
+  "Video43": {
+    "classification": "dialogue",
+    "score": -0.31500042447337917,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": ". .. gran loggia da Istituto Nazionale Previdenza Sociale e l'Istituto Neutralizzazione Parassiti Sociali e preventivando un risparmio di almeno 2 miliardi per ogni gruppo di 30 organizzava viaggi agevolati, senza ritorni. Organizzava viaggi agevolati senza ritorni."
+  },
+  "Video44": {
+    "classification": "dialogue",
+    "score": -0.38705242939522577,
+    "score_meaning": "transcription text reliable",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False",
+    "generated_transcription": "Ragazzi c'è la buia che si è risvegliata."
+  },
+  "Video45": {
+    "classification": "dialogue",
+    "score": -0.33236222408174426,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Gianmarco continuava a dormire come un grandissimo, non aveva ascolto i corsi e in più la sera precedente aveva visto un film alla televisione, perciò tanto come lui non aveva il film. Perciò anche a scuola non aveva studiato."
+  },
+  "Video46": {
+    "classification": "dialogue",
+    "score": -0.3150377740281948,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Con questo bel muoio, potrei, potrei imparare io cappuccetto rosso. La aiuterò a tornare a casa della nonna. E mentre lei è lì tranquilla, che si fida di me, io mi amano. Me l'ha fatto! Ciao, bella bambina, buonasera! Ma te sei un lupo vero, vero, vero? Sì, mi chiamano giusto il lupo cattivo del bosco. Ma te sei anche un lupo cattivo, cattivo? Sì, cattivo, molto cattivo. E ora ti bello!"
+  },
+  "Video47": {
+    "classification": "music",
+    "manual_change": "True"
+  },
+  "Video48": {
+    "classification": "dialogue",
+    "score": -0.5270475960024265,
+    "score_meaning": "reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Un giro sprint ed è Duccio Marsini in testa, seguito da Giacomo Mazza, poi Piercigli, poi Mallorca, ma sono lì tutti vicini, vicinissimi, nelle parte opposta con l'arrivo del tracciato, con all'esterno Piercigli che attacca, Marsini all'interno. Aiuto! Aiuto! Marsini! Marsini! Marsini!"
+  },
+  "Video49": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Se non la spingo io non scenderete mai. Ci siete? Ci siete? Sì? Tieni la forte, Vane. Ok? Sì! Vado! Scusate! Ok!"
+  },
+  "Video50": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video51": {
+    "classification": "silence/noise",
+    "selected_model": "whisper-1",
+    "manual_change": "False"
+  },
+  "Video52": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video53": {
+    "classification": "silence/noise",
+    "manual_change": "True"
+   
+  },
+  "Video54": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+
+  },
+  "Video55": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video56": {
+    "classification": "silence/noise",
+    "manual_change": "True"
+  },
+  "Video57": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription":"50, 100 e 200 metri stile rana"
+  },
+  "Video58": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "Quanto viene? Quattro euro. La margherita quanto dovrebbe? Quel pezzo giusto. Quattro euro."
+  },
+  "Video59": {
+    "classification": "unknown_dialogue",
+    "score": -0.6399300115485675,
+    "score_meaning": "reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Buongiorno Buongiorno Grazie Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno Buongiorno"
+  },
+  "Video60": {
+    "classification": "dialogue",
+    "score": -0.19791757791854897,
+    "score_meaning": "transcription text very reliable",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False",
+    "generated_transcription": "Dentro c'è la lingua. Bene, bene. Sì, regge, regge. Molto, molto bene. Metti il nizzo che se dire si va bene. La faccia aprire, dottore. Apri un secondo. Bravo, bravo, bravo. Esatto. Apri, apri."
+  },
+  "Video61": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video62": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video63": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video64": {
+    "classification": "dialogue",
+    "score": -0.9032162736790997,
+    "score_meaning": "uncertain",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Avanza, Numero 10 andiamo a Sicilia, va in Sicilia il colombo dei giugnelli sbarotti, molto eleganti, con una fascia intorno alla caviglia Numero 10, Gabriella Cecilia."
+  },
+  "Video65": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video66": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video67": {
+    "classification": "unknown_dialogue",
+    "manual_change": "True",
+    "generated_transcription": "I miei figli saranno migliori e diventeranno italiani Sì, avranno una lingua"
+  },
+  "Video68": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription":"Dio divino, io ti vedo qui a te mai, oh Dio beato, hai quanto di posso d'avermi amato, hai quanto di posso d'avermi amato, a te che sei del mondo."
+  },
+  "Video69": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video70": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "O mio dio qua ci sono tanti gatti randagi, Ma scimmie e nandaggio non ne avevo mai visto andiamo, si si si adesso andiamo ok asciugatevi asciugatevi andiamo dentro andiamo dentro tieniamo i carabinieri dai dai dai via via via scappa sono paura dentro dentro dentro dentro spegni spegni spegni vogliamo andare in camera? si andiamo in camera andiamo in camera che qua fa freddo venite venite Sami Sami vieni chiudi chiudi tutto chiudi tutto Ok, asciugatevi, asciugatevi, andiamo dentro, andiamo dentro, chiamiamo i carabinieri, dai, dai, dai, dai."
+  },
+  "Video71": {
+    "classification": "dialogue",
+    "score": -0.3558550095556372,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Franco la Cris fa sentire niente diamo con le arance diamo sono buone sono belle chiedetelo alle vostre sorelle diamo con le arance le arance diamo con le arance forza con le arance le arance eh le arance vai ma sono dolci sono dolci e se erano dolci dicevo dolci sono arance quella patice e rime diamo con le arance Franco, la crisi fa sentire, niente, diamo con le arance! Diamo! Sono buone, sono belle, chiedetelo alle vostre sorelle! Le arance, diamo con le arance! Le arance, vai! Sono dolci, dicevo dolci! Quella pasticceria, ma?"
+  },
+  "Video72": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video73": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video74": {
+    "classification": "dialogue",
+    "score": -0.17936643550444342,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Check papà! Dunque, patatine Lays per te, patatine Lays per me, Lays per la mamma, Lays per tua sorella, Lays per il nonno, Lays per il portillaio e Lays per il bagnino. Papà, manca la valigia. Ah già! Una volta provate, non puoi più dimenticarle! Lays, life needs flavor! Si sblocca con uno sguardo e si avvia un video, sembra di essere al cinema. In certi momenti mi chiedo, ma questo smartphone l'ho pagato proprio così? Incredibile! È nel prezzo!"
+  },
+  "Video75": {
+    "classification": "dialogue",
+    "manual_change": "True",
+    "generated_transcription": "eccolo là qui adesso l'apro ma anche lei l'ha già visto prima lo apriamo così senza niente così senti un po' come quando te lo appoggi sui denti e poi dopo ti spiego come funziona il progresso delle cose, va bene? l'orellino che c'ha fatto tu non è sopra, così poi ti puoi ricordare del dentino storto quindi così, apro grande semplicemente si appoggia sui dentini dietro e si spinge fine, insieme nessun male, nessun fastidio"
+  },
+  "Video76": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video77": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video78": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video79": {
+    "classification": "dialogue",
+    "score": -0.2857657730159702,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Buona colazione! Ma dove siamo? Al bar da papà? E cosa vi ha preparato il papà? Cappuccino. Cappuccino, la torta. Questa torta è uno spoiler, è uno spoiler, non bisogna dire molto di questa torta. Abbiamo festeggiato qualcosa, vero? E tu, cappuccino? La mangi la tortina anche tu? È buono il cappuccino che fa il papà? Sì? Allora buona domenica! Grazie, ciao! Ciao ciao! Ciao!"
+  },
+  "Video80": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video81": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video82": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video83": {
+    "classification": "music",
+    "manual_change": "True"
+  },
+  "Video84": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video85": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video86": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video87": {
+    "classification": "dialogue",
+    "score": -0.2566217177273697,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Si munge con un attrezzo che si chiama mungitrice, Il latte che viene munto finisce dentro a quel secchio. Lo vedete di sotto."
+  },
+  "Video88": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+    
+  },
+  "Video89": {
+    "classification": "dialogue",
+    "score": -0.3441295875351671,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Molto bene Antonio Tiberi, avete visto che ha cercato senza andare fuori giri di stare nella scia dei corridori al comando e Trampozzi continua a parlare, forse gli ha detto ce la fai ancora tirare un po' o devo partire? E Michael gli ha detto sì forse ce la faccio ancora per tirare. Una cinquantina di secondi la vantaggio di Pellizzari nei confronti di questa prima parte del gruppo della Maglia Rosa, ce la fa."
+  },
+  "Video90": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+     "manual_change": "False"
+  },
+  "Video91": {
+    "classification": "dialogue",
+    "score": -0.26374461057431264,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Io lo so, io lo so che un po' di bene già mi vuoi. Dimmi perché, ma perché, ma perché, negli occhi miei non guardi mai. Eppure io lo so, io lo so che un po' di bene già mi vuoi. Dottore, sì, posso chiedere a lei, se avete questo farmaco? Questo farmaco, sì. Bustine o pillole? Pillole è meglio."
+  },
+  "Video92": {
+    "classification": "dialogue",
+    "score": -0.13979944868572772,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Buongiorno! Buongiorno! Cosa desiderate? Vorremmo un chilo di farina, una scatola di pomodori e due mozzarelle. Anche un po' di lievito. E una bottiglia da mezzo litro di olio."
+  },
+  "Video93": {
+    "classification": "music",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video94": {
+    "classification": "dialogue",
+    "score": -0.30376890953696456,
+    "score_meaning": "very reliable",
+    "selected_model": "both",
+    "manual_change": "False",
+    "generated_transcription": "Se vi mettete dove state, questa ha una buona continuità di legno. Man mano che sali si restringe e se è vero questo dal punto di vista dei principi dei vasi comunicanti, tanto più si sfila, tanto più si ferma. Questa pianta l'abbiamo. .. tu ti fermi adesso. Non lo so se con altro linguaggio, non vorrei usare il linguaggio tecnico, voglio usare quello immediato. Cioè nel senso che questa è una pianta, qui abbiamo ridato una continuità di legno."
+  },
+  "Video95": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video96": {
+    "classification": "music",
+    "selected_model": "both",
+    "manual_change": "False"
+  },
+  "Video97": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video98": {
+    "classification": "silence/noise",
+    "selected_model": "gpt-4o-transcribe",
+    "manual_change": "False"
+  },
+  "Video99": {
+    "classification": "music",
+    "manual_change": "True"
+  },
+  "Video100": {
+    "classification": "silence/noise",
+    "selected_model": "both",
+    "manual_change": "False"
+  }
+}

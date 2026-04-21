@@ -24,7 +24,7 @@ except Exception as exc:  # pragma: no cover
 
 
 # The physical GPU selected here becomes logical cuda:0 inside the process.
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "2")
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "5")
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -67,9 +67,9 @@ class InferenceConfig:
     model_name: str = "Qwen/Qwen2.5-VL-7B-Instruct"
     dataset_path: str = "Data/Dataset/maia_ita_mc_by_video_category_pool.json"
     videos_dir: str = "Data/Videos"
-    transcriptions_path: str = "Data/TranscriptionData/final_classification/final_results.json"
+    transcriptions_path: str = "Data/TranscriptionData/final_classification/manual_revision.json"
     out_dir: str = "Data/ModelResponse/4_MAIA-like"
-    batch_size: int = 2
+    batch_size: int = 4
     num_frames: int = 32
     max_image_dimension: int = 900
     max_new_tokens: int = 4
@@ -112,7 +112,7 @@ def load_model(
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
-        device_map="cuda:2",
+        device_map="cuda:5",
         attn_implementation=attn_implementation,
     )
     model.eval()
@@ -311,7 +311,7 @@ def resolve_transcription(video_id: str, transcription_index: Dict[str, str]) ->
 
     candidate_keys = (
         key,
-        f"{key}.mp4",
+        key,
         path.name,
         path.stem,
     )
@@ -382,7 +382,8 @@ def preprocess_videos(
 
 
 def build_prompt(choice_0: str, choice_1: str, transcription: str) -> str:
-    safe_transcription = transcription.strip() if transcription and transcription.strip() else "Trascrizione non disponibile."
+    safe_transcription = transcription.strip() if transcription and transcription.strip() else "L'audio contiene solo musica o rumore"
+    print("DEBUGGGGGGGG -------------------------------- ", safe_transcription)
     return (
         f"Dato il video, considera anche la trascrizione del suo audio: {safe_transcription}.\n"
         "Scegli la descrizione corretta rispetto al contenuto del video:\n"

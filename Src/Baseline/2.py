@@ -203,11 +203,11 @@ def load_transcript_map(transcription_json: JsonDict) -> Dict[str, str]:
 
     for video_id, payload in transcription_json.items():
         if not isinstance(payload, dict):
-            transcript_map[video_id] = "Trascrizione non disponibile."
+            transcript_map[video_id] = "L\'audio contiene solo musica o rumore"
             continue
 
-        transcript = str(payload.get("generated_transcription", "")).strip()
-        transcript_map[video_id] = transcript if transcript else "Trascrizione non disponibile."
+        transcript = str(payload.get("generated_transcription", "L\'audio contiene solo musica o rumore"))
+        transcript_map[video_id] = transcript 
 
     print(f"[INFO] Transcript map built for {len(transcript_map)} videos.")
     return transcript_map
@@ -217,6 +217,7 @@ def build_prompt(answer_0: str, answer_1: str, transcript: str) -> str:
     """
     Build the text prompt for experiment 2.
     """
+    print("DEBUGGGGGGGG -------------------------------- ", transcript)
     return (
         f"Dato il video, considera anche la trascrizione del suo audio: {transcript}.\n"
         "Scegli la descrizione corretta rispetto al contenuto del video:\n"
@@ -795,7 +796,7 @@ def main() -> None:
     model_name = "Qwen/Qwen2.5-VL-7B-Instruct"
 
     # Input files
-    transcripts_path = Path("Data/TranscriptionData/final_classification/final_results.json")
+    transcripts_path = Path("Data/TranscriptionData/final_classification/manual_revision.json")
     dataset_path = Path("Data/Dataset/maia_ita_mc_by_video_category_pool.json")
 
     # Output files

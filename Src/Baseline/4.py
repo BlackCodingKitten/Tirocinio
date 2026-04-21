@@ -201,8 +201,8 @@ def get_video_metadata(final_results: JsonDict, video_id: str) -> JsonDict:
 
 def get_transcript_for_video(final_results: JsonDict, video_id: str) -> str:
     video_data = get_video_metadata(final_results, video_id)
-    transcript = str(video_data.get("generated_transcription", "")).strip()
-    return transcript if transcript else "Trascrizione non disponibile."
+    transcript = str(video_data.get("generated_transcription", "L'audio contiene solo musica o rumore"))
+    return transcript 
 
 
 def resolve_video_path(video_root_dir: str | Path, video_id: str) -> Path:
@@ -221,9 +221,9 @@ def path_to_file_uri(path: str | Path) -> str:
 
 
 def build_prompt(choice_0: str, choice_1: str, transcript: str) -> str:
-    transcription = transcript.strip() if transcript.strip() else "Trascrizione non disponibile."
+    # transcription = transcript.strip() if transcript.strip() else "Trascrizione non disponibile."
     prompt = (
-        f"Dato il video, considera anche la trascrizione del suo audio: {transcription}.\n"
+        f"Dato il video, considera anche la trascrizione del suo audio: {transcript}.\n"
         "Scegli la descrizione corretta rispetto al contenuto del video:\n"
         f"0:{choice_0}\n"
         f"1:{choice_1}\n"
@@ -841,9 +841,6 @@ def build_results_json(
         if record.video_id not in results:
             results[record.video_id] = {
                 "classification": video_metadata.get("classification"),
-                "score": video_metadata.get("score"),
-                "score_meaning": video_metadata.get("score_meaning"),
-                "selected_model": video_metadata.get("selected_model"),
                 "generated_transcription": video_metadata.get("generated_transcription"),
                 "metrics": metrics_summary["by_video"].get(record.video_id, {}),
                 "prompt_template_version": PROMPT_TEMPLATE_VERSION,
@@ -983,7 +980,7 @@ def main() -> None:
     print("[INFO] Script started.")
     model_name = "Qwen/Qwen2.5-VL-7B-Instruct"
 
-    final_results_path = Path("Data/TranscriptionData/final_classification/final_results.json")
+    final_results_path = Path("Data/TranscriptionData/final_classification/manual_revision.json")
     dataset_path = Path("Data/Dataset/maia_ita_mc_by_video_category_pool.json")
     video_root_dir = Path("Data/Videos")
 
@@ -991,7 +988,7 @@ def main() -> None:
     metrics_report_output_path = Path("Data/ModelResponse/4/qwen_mc_video_transcript_metrics_report.txt")
     evaluation_output_dir = Path("Data/ModelResponse/4/evaluation")
 
-    batch_size = 2
+    batch_size = 8
     max_pixels = 512 * 512
     fps = 2.0
     debug_visual_inputs = True
