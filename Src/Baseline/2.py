@@ -203,11 +203,17 @@ def load_transcript_map(transcription_json: JsonDict) -> Dict[str, str]:
 
     for video_id, payload in transcription_json.items():
         if not isinstance(payload, dict):
-            transcript_map[video_id] = "L\'audio contiene solo musica o rumore"
+            transcript_map[video_id] = "L'audio contiene solo musica o rumore"
             continue
 
-        transcript = str(payload.get("generated_transcription", "L\'audio contiene solo musica o rumore"))
-        transcript_map[video_id] = transcript 
+        transcript = str(
+            payload.get("generated_transcription", "L'audio contiene solo musica o rumore")
+        ).strip()
+
+        if not transcript:
+            transcript = "L'audio contiene solo musica o rumore"
+
+        transcript_map[video_id] = transcript
 
     print(f"[INFO] Transcript map built for {len(transcript_map)} videos.")
     return transcript_map
@@ -217,7 +223,6 @@ def build_prompt(answer_0: str, answer_1: str, transcript: str) -> str:
     """
     Build the text prompt for experiment 2.
     """
-    print("DEBUGGGGGGGG -------------------------------- ", transcript)
     return (
         f"Dato il video, considera anche la trascrizione del suo audio: {transcript}.\n"
         "Scegli la descrizione corretta rispetto al contenuto del video:\n"
@@ -427,22 +432,34 @@ def compute_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
 
 def compute_all_metrics(records: Sequence[PredictionRecord]) -> JsonDict:
     """
-    Compute global metrics and metrics by normalized question category.
+    Compute global metrics, metrics by normalized question category,
+    and metrics by video.
     """
     print("[INFO] Computing aggregated metrics...")
     by_category: Dict[str, List[PredictionRecord]] = {}
+    by_video: Dict[str, List[PredictionRecord]] = {}
 
     for record in records:
         by_category.setdefault(record.normalized_question_category, []).append(record)
+        by_video.setdefault(record.video_id, []).append(record)
 
     category_metrics = {
         category_name: compute_metrics(category_records)
         for category_name, category_records in sorted(by_category.items())
     }
 
+    video_metrics = {
+        video_id: compute_metrics(video_records)
+        for video_id, video_records in sorted(
+            by_video.items(),
+            key=lambda item: natural_numeric_sort_key(item[0]),
+        )
+    }
+
     return {
         "global": compute_metrics(records),
         "by_normalized_question_category": category_metrics,
+        "by_video": video_metrics,
     }
 
 
@@ -505,6 +522,21 @@ def build_category_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def build_video_metrics_dataframe(metrics_summary: JsonDict) -> pd.DataFrame:
+    """
+    DataFrame with one row per video.
+    """
+    rows = [
+        metric_row_from_summary(
+            entity_name=video_id,
+            metrics=video_metrics,
+            entity_column_name="video_id",
+        )
+        for video_id, video_metrics in metrics_summary["by_video"].items()
+    ]
+    return pd.DataFrame(rows)
+
+
 def build_confusion_matrix_dataframe(metrics: JsonDict) -> pd.DataFrame:
     """
     Build a 2x2 confusion matrix DataFrame.
@@ -538,6 +570,7 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
     """
     global_df = build_global_metrics_dataframe(metrics_summary)
     category_df = build_category_metrics_dataframe(metrics_summary)
+    video_df = build_video_metrics_dataframe(metrics_summary)
     global_conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
 
     report_parts: List[str] = [
@@ -555,6 +588,10 @@ def build_metrics_report(metrics_summary: JsonDict) -> str:
         "METRICS BY NORMALIZED QUESTION CATEGORY",
         "--------------------------------------",
         dataframe_to_string(category_df, index=False),
+        "",
+        "METRICS BY VIDEO",
+        "----------------",
+        dataframe_to_string(video_df, index=False),
     ]
 
     return "\n".join(report_parts)
@@ -637,19 +674,23 @@ def save_evaluation_artifacts(metrics_summary: JsonDict, output_dir: str | Path)
 
     global_df = build_global_metrics_dataframe(metrics_summary)
     category_df = build_category_metrics_dataframe(metrics_summary)
+    video_df = build_video_metrics_dataframe(metrics_summary)
     global_conf_df = build_confusion_matrix_dataframe(metrics_summary["global"])
 
     workbook_path = output_dir / "2_evaluation_summary.xlsx"
     global_csv_path = output_dir / "global_metrics.csv"
     category_csv_path = output_dir / "normalized_question_category_metrics.csv"
+    video_csv_path = output_dir / "video_metrics.csv"
 
     with pd.ExcelWriter(workbook_path) as writer:
         global_df.to_excel(writer, sheet_name="global_metrics", index=False)
         category_df.to_excel(writer, sheet_name="category_metrics", index=False)
+        video_df.to_excel(writer, sheet_name="video_metrics", index=False)
         global_conf_df.to_excel(writer, sheet_name="global_confusion")
 
     save_dataframe_csv(global_df, global_csv_path)
     save_dataframe_csv(category_df, category_csv_path)
+    save_dataframe_csv(video_df, video_csv_path)
 
     plot_global_confusion_matrix(
         metrics_summary,
@@ -700,6 +741,7 @@ def build_results_json(
         if record.video_id not in results:
             results[record.video_id] = {
                 "transcript": transcript_map.get(record.video_id, "Trascrizione non disponibile."),
+                "video_metrics": metrics_summary["by_video"].get(record.video_id, {}),
                 "questions": {},
             }
 
@@ -805,7 +847,7 @@ def main() -> None:
     evaluation_output_dir = Path("Data/ModelResponse/2/evaluation")
 
     # Inference configuration
-    batch_size = 1
+    batch_size = 16
 
     transcription_json = load_json_file(transcripts_path)
     dataset_json = load_json_file(dataset_path)
