@@ -1,12 +1,16 @@
 
 from __future__ import annotations
 
+import gc
 import json
 import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple, cast
+
+# os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -15,7 +19,7 @@ from transformers import AutoProcessor, PreTrainedTokenizerBase, Qwen2_5_VLForCo
 from qwen_vl_utils import process_vision_info
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -48,10 +52,35 @@ class PredictionRecord:
     is_correct: bool
 
 
+def log_cuda_memory(tag: str, device: torch.device) -> None:
+    if device.type != "cuda":
+        return
+
+    torch.cuda.synchronize(device)
+    allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)
+    reserved = torch.cuda.memory_reserved(device) / (1024 ** 3)
+    peak_allocated = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+    peak_reserved = torch.cuda.max_memory_reserved(device) / (1024 ** 3)
+
+    print(
+        f"[CUDA] {tag} | "
+        f"allocated={allocated:.2f} GiB | "
+        f"reserved={reserved:.2f} GiB | "
+        f"peak_allocated={peak_allocated:.2f} GiB | "
+        f"peak_reserved={peak_reserved:.2f} GiB"
+    )
+
+
+def cleanup_cuda(device: torch.device) -> None:
+    gc.collect()
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+        torch.cuda.empty_cache()
+
 def load_model(
     model_name: str,
     torch_dtype: torch.dtype = torch.bfloat16,
-    device_map: str = "cuda:0",
+    device_map: str = "cuda:7",
     attn_implementation: str = "flash_attention_2",
 ) -> tuple[
     Qwen2_5_VLForConditionalGeneration,
@@ -364,71 +393,137 @@ def generate_answers_batch(
     if len(prompts) != len(video_paths):
         raise ValueError("prompts and video_paths must have the same length.")
 
-    messages = build_messages(
-        prompts=prompts,
-        video_paths=video_paths,
-        max_pixels=max_pixels,
-        fps=fps,
-    )
-
-    rendered_texts = [
-        processor.apply_chat_template(
-            message,
-            tokenize=False,
-            add_generation_prompt=True,
-        )
-        for message in messages
-    ]
-
-    image_inputs, video_inputs, video_kwargs = process_visual_batch_strict(messages)
-
-    processor_kwargs: Dict[str, Any] = {
-        "text": rendered_texts,
-        "padding": True,
-        "return_tensors": "pt",
-    }
-
-    if image_inputs is not None:
-        processor_kwargs["images"] = image_inputs
-
-    if video_inputs is not None:
-        processor_kwargs["videos"] = video_inputs
-        processor_kwargs["fps"] = fps
-
-    if video_kwargs:
-        processor_kwargs.update(video_kwargs)
-
-    inputs = processor(**processor_kwargs)
-
-    if any(message_contains_video(message) for message in messages):
-        assert_video_features_present(inputs, video_paths)
-
     target_device = get_model_input_device(model)
-    inputs = move_inputs_to_device(inputs, target_device)
 
-    if debug_visual_inputs:
-        log_prompt_debug_info(prompts)
+    messages: List[List[Dict[str, Any]]] = []
+    rendered_texts: List[str] = []
+    image_inputs: Any = None
+    video_inputs: Any = None
+    video_kwargs: Dict[str, Any] = {}
+    processor_kwargs: Dict[str, Any] = {}
+    inputs: Optional[Dict[str, Any]] = None
+    generated_ids: Any = None
+    trimmed_ids: Any = None
+    output_texts: Optional[List[str]] = None
 
-    with torch.no_grad():
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            do_sample=False,
-            use_cache=True,
+    try:
+        messages = build_messages(
+            prompts=prompts,
+            video_paths=video_paths,
+            max_pixels=max_pixels,
+            fps=fps,
         )
 
-    trimmed_ids = [
-        output_ids[len(input_ids):]
-        for input_ids, output_ids in zip(inputs["input_ids"], generated_ids)
-    ]
+        rendered_texts = [
+            processor.apply_chat_template(
+                message,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+            for message in messages
+        ]
 
-    output_texts = processor.batch_decode(
-        trimmed_ids,
-        skip_special_tokens=True,
-        clean_up_tokenization_spaces=False,
-    )
+        image_inputs, video_inputs, video_kwargs = process_visual_batch_strict(messages)
 
-    return [text.strip() for text in output_texts]
+        processor_kwargs = {
+            "text": rendered_texts,
+            "padding": True,
+            "return_tensors": "pt",
+        }
+
+        if image_inputs is not None:
+            processor_kwargs["images"] = image_inputs
+
+        if video_inputs is not None:
+            processor_kwargs["videos"] = video_inputs
+            processor_kwargs["fps"] = fps
+
+        if video_kwargs:
+            processor_kwargs.update(video_kwargs)
+
+        inputs = processor(**processor_kwargs)
+
+        if any(message_contains_video(message) for message in messages):
+            assert_video_features_present(inputs, video_paths)
+
+        inputs = move_inputs_to_device(inputs, target_device)
+
+        if debug_visual_inputs:
+            log_prompt_debug_info(prompts)
+            log_cuda_memory("before generate", target_device)
+
+        with torch.inference_mode():
+            generated_ids = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=False,
+                use_cache=True,
+            )
+
+        trimmed_ids = [
+            output_ids[len(input_ids):]
+            for input_ids, output_ids in zip(inputs["input_ids"], generated_ids)
+        ]
+
+        output_texts = processor.batch_decode(
+            trimmed_ids,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False,
+        )
+
+        decoded = [text.strip() for text in output_texts]
+
+        if debug_visual_inputs:
+            log_cuda_memory("after decode", target_device)
+
+        return decoded
+
+    finally:
+        # libera esplicitamente i riferimenti pesanti
+        del messages
+        del rendered_texts
+        del image_inputs
+        del video_inputs
+        del video_kwargs
+        del processor_kwargs
+        del inputs
+        del generated_ids
+        del trimmed_ids
+        del output_texts
+
+        cleanup_cuda(target_device)
+
+
+def generate_answers_for_examples(
+    batch_examples: Sequence[Example],
+    model: Qwen2_5_VLForConditionalGeneration,
+    processor: AutoProcessor,
+    video_root_dir: str | Path,
+    max_pixels: int,
+    fps: float,
+    debug_visual_inputs: bool,
+) -> List[str]:
+    prompts: List[str] = []
+    video_paths: List[Path] = []
+
+    for example in batch_examples:
+        prompts.append(build_prompt(example.choice_0, example.choice_1))
+        video_paths.append(resolve_video_path(video_root_dir, example.video_id))
+
+    try:
+        return generate_answers_batch(
+            model=model,
+            processor=processor,
+            prompts=prompts,
+            video_paths=video_paths,
+            max_new_tokens=4,
+            max_pixels=max_pixels,
+            fps=fps,
+            debug_visual_inputs=debug_visual_inputs,
+        )
+    finally:
+        del prompts
+        del video_paths
 
 
 def normalize_raw_output(raw_output: Optional[str]) -> str:
@@ -875,20 +970,53 @@ def run_inference(
     model: Qwen2_5_VLForConditionalGeneration,
     processor: AutoProcessor,
     video_root_dir: str | Path,
-    batch_size: int = 8,
+    batch_size: int = 6,
     max_pixels: int = 512 * 512,
-    fps: float = 8.0,
+    fps: float = 1.1,
     debug_visual_inputs: bool = True,
 ) -> List[PredictionRecord]:
     records: List[PredictionRecord] = []
     total_examples = len(examples)
     total_batches = (total_examples + batch_size - 1) // batch_size
+    target_device = get_model_input_device(model)
+
+    if target_device.type == "cuda":
+        torch.cuda.reset_peak_memory_stats(target_device)
 
     print(f"[INFO] Total examples: {total_examples}")
     print(f"[INFO] Batch size: {batch_size}")
     print(f"[INFO] Total batches: {total_batches}")
     print(f"[INFO] Video fps used for sampling: {fps}")
     print(f"[INFO] Video max_pixels: {max_pixels}")
+
+    def infer_batch_examples(batch_examples: Sequence[Example]) -> Tuple[List[str], List[str]]:
+        prompts: List[str] = []
+        video_paths: List[Path] = []
+
+        try:
+            for example in batch_examples:
+                prompt = build_prompt(
+                    choice_0=example.choice_0,
+                    choice_1=example.choice_1,
+                )
+                video_path = resolve_video_path(video_root_dir, example.video_id)
+                prompts.append(prompt)
+                video_paths.append(video_path)
+
+            raw_outputs = generate_answers_batch(
+                model=model,
+                processor=processor,
+                prompts=prompts,
+                video_paths=video_paths,
+                max_new_tokens=4,
+                max_pixels=max_pixels,
+                fps=fps,
+                debug_visual_inputs=debug_visual_inputs,
+            )
+            return prompts, raw_outputs
+
+        finally:
+            del video_paths
 
     for start_idx in range(0, total_examples, batch_size):
         batch_examples = examples[start_idx:start_idx + batch_size]
@@ -899,29 +1027,54 @@ def run_inference(
             f"(examples {start_idx + 1}-{start_idx + len(batch_examples)} of {total_examples})"
         )
 
+        if target_device.type == "cuda":
+            log_cuda_memory(f"batch {batch_number} - start", target_device)
+
         prompts: List[str] = []
-        video_paths: List[Path] = []
+        raw_outputs: List[str] = []
 
-        for example in batch_examples:
-            prompt = build_prompt(
-                choice_0=example.choice_0,
-                choice_1=example.choice_1,
+        try:
+            prompts, raw_outputs = infer_batch_examples(batch_examples)
+
+        except torch.OutOfMemoryError:
+            print(
+                f"[WARN] CUDA OOM on batch {batch_number}. "
+                "Retrying the same examples one by one."
             )
-            video_path = resolve_video_path(video_root_dir, example.video_id)
+            cleanup_cuda(target_device)
 
-            prompts.append(prompt)
-            video_paths.append(video_path)
+            prompts = []
+            raw_outputs = []
 
-        raw_outputs = generate_answers_batch(
-            model=model,
-            processor=processor,
-            prompts=prompts,
-            video_paths=video_paths,
-            max_new_tokens=4,
-            max_pixels=max_pixels,
-            fps=fps,
-            debug_visual_inputs=debug_visual_inputs,
-        )
+            for local_idx, single_example in enumerate(batch_examples, start=1):
+                if target_device.type == "cuda":
+                    log_cuda_memory(
+                        f"batch {batch_number} - single retry {local_idx}/{len(batch_examples)} - before",
+                        target_device,
+                    )
+
+                try:
+                    single_prompts, single_outputs = infer_batch_examples([single_example])
+                except torch.OutOfMemoryError as exc:
+                    cleanup_cuda(target_device)
+                    raise RuntimeError(
+                        f"[FATAL] Example {single_example.video_id} / "
+                        f"{single_example.question_category} / {single_example.pool_key} "
+                        "goes OOM even alone. Reduce fps, max_pixels, or use a freer GPU."
+                    ) from exc
+
+                prompts.extend(single_prompts)
+                raw_outputs.extend(single_outputs)
+
+                del single_prompts
+                del single_outputs
+                cleanup_cuda(target_device)
+
+                if target_device.type == "cuda":
+                    log_cuda_memory(
+                        f"batch {batch_number} - single retry {local_idx}/{len(batch_examples)} - after",
+                        target_device,
+                    )
 
         for example, prompt, raw_output in zip(batch_examples, prompts, raw_outputs):
             safe_raw_output = normalize_raw_output(raw_output)
@@ -944,7 +1097,16 @@ def run_inference(
             records.append(record)
             print_example_result(record)
 
-        print(f"[INFO] Processed {min(start_idx + len(batch_examples), total_examples)}/{total_examples}")
+        del prompts
+        del raw_outputs
+        del batch_examples
+
+        cleanup_cuda(target_device)
+
+        if target_device.type == "cuda":
+            log_cuda_memory(f"batch {batch_number} - end", target_device)
+
+        print(f"[INFO] Processed {min(start_idx + batch_size, total_examples)}/{total_examples}")
 
     return records
 
@@ -960,9 +1122,9 @@ def main() -> None:
     metrics_report_output_path = Path("Data/ModelResponse/3/qwen_mc_video_only_metrics_report.txt")
     evaluation_output_dir = Path("Data/ModelResponse/3/evaluation")
 
-    batch_size = 8
+    batch_size = 16
     max_pixels = 512 * 512
-    fps = 2.0
+    fps = 1.1
     debug_visual_inputs = True
 
     if predictions_output_path.exists():
@@ -975,7 +1137,12 @@ def main() -> None:
     examples = extract_examples(dataset_json)
     if not examples:
         raise ValueError("No examples were found in the dataset JSON.")
-
+    #DEBUG: 
+    print("CUDA_VISIBLE_DEVICES =", os.environ.get("CUDA_VISIBLE_DEVICES"))
+    print("device_count =", torch.cuda.device_count())
+    for i in range(torch.cuda.device_count()):
+        print(i, torch.cuda.get_device_name(i))
+    #------------------------------------------
     model, processor, tokenizer = load_model(model_name)
     print(f"[INFO] Tokenizer loaded: {type(tokenizer).__name__}")
     print(f"[INFO] Prompt template version: {PROMPT_TEMPLATE_VERSION}")

@@ -341,7 +341,7 @@ def build_message(frames: Sequence[Image.Image], prompt_text: str) -> List[Dict[
             "content": [
                 {
                     "type": "text",
-                    "text": "You are a precise visual assistant. Reply with a single digit only: 0 or 1.",
+                    "text": "You are a precise binary assistant. Answer only with 0 or 1.",
                 }
             ],
         },

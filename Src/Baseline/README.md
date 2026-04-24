@@ -1,4 +1,4 @@
-## 🔗 Final Comparison Overview
+## 🔗 Experiment Overview
 
 | Experiment | Video | Transcription | Role |
 |----------|------|--------------|------|

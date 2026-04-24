@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "5")
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -24,7 +25,6 @@ except Exception as exc:  # pragma: no cover
 
 
 # The physical GPU selected here becomes logical cuda:0 inside the process.
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "5")
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -119,7 +119,7 @@ def load_model(
 
     processor = AutoProcessor.from_pretrained(
         model_name,
-        use_fast=True,
+        use_fast=True, #to-remove
         padding_side="left",
         min_pixels=min_pixels,
         max_pixels=max_pixels,
@@ -405,7 +405,7 @@ def build_message(frames: Sequence[Image.Image], prompt_text: str) -> List[Dict[
             "content": [
                 {
                     "type": "text",
-                    "text": "You are a precise visual assistant. Reply with a single digit only: 0 or 1.",
+                    "text": "You are a precise binary assistant. Answer only with 0 or 1.",
                 }
             ],
         },

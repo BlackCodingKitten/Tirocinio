@@ -1,8 +1,11 @@
 
 from __future__ import annotations
 
+import gc
 import json
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -15,7 +18,6 @@ from transformers import AutoProcessor, PreTrainedTokenizerBase, Qwen2_5_VLForCo
 from qwen_vl_utils import process_vision_info
 
 # Select the GPU to use.
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 JsonDict = Dict[str, Any]
 EMPTY_RAW_OUTPUT_TOKEN = "[[EMPTY_OUTPUT]]"
@@ -48,6 +50,31 @@ class PredictionRecord:
     predicted_label: Optional[int]
     is_correct: bool
 
+
+def log_cuda_memory(tag: str, device: torch.device) -> None:
+    if device.type != "cuda":
+        return
+
+    torch.cuda.synchronize(device)
+    allocated = torch.cuda.memory_allocated(device) / (1024 ** 3)
+    reserved = torch.cuda.memory_reserved(device) / (1024 ** 3)
+    peak_allocated = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+    peak_reserved = torch.cuda.max_memory_reserved(device) / (1024 ** 3)
+
+    print(
+        f"[CUDA] {tag} | "
+        f"allocated={allocated:.2f} GiB | "
+        f"reserved={reserved:.2f} GiB | "
+        f"peak_allocated={peak_allocated:.2f} GiB | "
+        f"peak_reserved={peak_reserved:.2f} GiB"
+    )
+
+
+def cleanup_cuda(device: torch.device) -> None:
+    gc.collect()
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+        torch.cuda.empty_cache()
 
 def load_model(
     model_name: str,
@@ -369,71 +396,104 @@ def generate_answers_batch(
     if len(prompts) != len(video_paths):
         raise ValueError("prompts and video_paths must have the same length.")
 
-    messages = build_messages(
-        prompts=prompts,
-        video_paths=video_paths,
-        max_pixels=max_pixels,
-        fps=fps,
-    )
-
-    rendered_texts = [
-        processor.apply_chat_template(
-            message,
-            tokenize=False,
-            add_generation_prompt=True,
-        )
-        for message in messages
-    ]
-
-    image_inputs, video_inputs, video_kwargs = process_visual_batch_strict(messages)
-
-    processor_kwargs: Dict[str, Any] = {
-        "text": rendered_texts,
-        "padding": True,
-        "return_tensors": "pt",
-    }
-
-    if image_inputs is not None:
-        processor_kwargs["images"] = image_inputs
-
-    if video_inputs is not None:
-        processor_kwargs["videos"] = video_inputs
-        processor_kwargs["fps"] = fps
-
-    if video_kwargs:
-        processor_kwargs.update(video_kwargs)
-
-    inputs = processor(**processor_kwargs)
-
-    if any(message_contains_video(message) for message in messages):
-        assert_video_features_present(inputs, video_paths)
-
     target_device = get_model_input_device(model)
-    inputs = move_inputs_to_device(inputs, target_device)
 
-    if debug_visual_inputs:
-        log_prompt_debug_info(prompts)
+    messages: List[List[Dict[str, Any]]] = []
+    rendered_texts: List[str] = []
+    image_inputs: Any = None
+    video_inputs: Any = None
+    video_kwargs: Dict[str, Any] = {}
+    processor_kwargs: Dict[str, Any] = {}
+    inputs: Optional[Dict[str, Any]] = None
+    generated_ids: Optional[torch.Tensor] = None
+    trimmed_ids: Optional[List[torch.Tensor]] = None
+    output_texts: Optional[List[str]] = None
 
-    with torch.no_grad():
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            do_sample=False,
-            use_cache=True,
+    try:
+        messages = build_messages(
+            prompts=prompts,
+            video_paths=video_paths,
+            max_pixels=max_pixels,
+            fps=fps,
         )
 
-    trimmed_ids = [
-        output_ids[len(input_ids):]
-        for input_ids, output_ids in zip(inputs["input_ids"], generated_ids)
-    ]
+        rendered_texts = [
+            processor.apply_chat_template(
+                message,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+            for message in messages
+        ]
 
-    output_texts = processor.batch_decode(
-        trimmed_ids,
-        skip_special_tokens=True,
-        clean_up_tokenization_spaces=False,
-    )
+        image_inputs, video_inputs, video_kwargs = process_visual_batch_strict(messages)
 
-    return [text.strip() for text in output_texts]
+        processor_kwargs = {
+            "text": rendered_texts,
+            "padding": True,
+            "return_tensors": "pt",
+        }
+
+        if image_inputs is not None:
+            processor_kwargs["images"] = image_inputs
+
+        if video_inputs is not None:
+            processor_kwargs["videos"] = video_inputs
+            processor_kwargs["fps"] = fps
+
+        if video_kwargs:
+            processor_kwargs.update(video_kwargs)
+
+        inputs = processor(**processor_kwargs)
+
+        if any(message_contains_video(message) for message in messages):
+            assert_video_features_present(inputs, video_paths)
+
+        inputs = move_inputs_to_device(inputs, target_device)
+
+        if debug_visual_inputs:
+            log_prompt_debug_info(prompts)
+            log_cuda_memory("before generate", target_device)
+
+        with torch.no_grad():
+            generated_ids = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=False,
+                use_cache=True,
+            )
+
+        trimmed_ids = [
+            output_ids[len(input_ids):]
+            for input_ids, output_ids in zip(inputs["input_ids"], generated_ids)
+        ]
+
+        output_texts = processor.batch_decode(
+            trimmed_ids,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False,
+        )
+
+        decoded_outputs = [text.strip() for text in output_texts]
+
+        if debug_visual_inputs:
+            log_cuda_memory("after decode", target_device)
+
+        return decoded_outputs
+
+    finally:
+        del messages
+        del rendered_texts
+        del image_inputs
+        del video_inputs
+        del video_kwargs
+        del processor_kwargs
+        del inputs
+        del generated_ids
+        del trimmed_ids
+        del output_texts
+
+        cleanup_cuda(target_device)
 
 
 def normalize_raw_output(raw_output: Optional[str]) -> str:
@@ -894,18 +954,25 @@ def run_inference(
     model: Qwen2_5_VLForConditionalGeneration,
     processor: AutoProcessor,
     video_root_dir: str | Path,
-    batch_size: int = 8,
+    batch_size: int = 6,
     max_pixels: int = 360 * 420,
-    fps: float = 2.0,
+    fps: float = 1.1,
     debug_visual_inputs: bool = True,
 ) -> List[PredictionRecord]:
     records: List[PredictionRecord] = []
     total_examples = len(examples)
     total_batches = (total_examples + batch_size - 1) // batch_size
+    target_device = get_model_input_device(model)
 
     print(f"[INFO] Total examples: {total_examples}")
     print(f"[INFO] Batch size: {batch_size}")
     print(f"[INFO] Total batches: {total_batches}")
+    print(f"[INFO] Video fps used for sampling: {fps}")
+    print(f"[INFO] Video max_pixels: {max_pixels}")
+
+    if target_device.type == "cuda":
+        torch.cuda.reset_peak_memory_stats(target_device)
+        log_cuda_memory("start of inference", target_device)
 
     for start_idx in range(0, total_examples, batch_size):
         batch_examples = examples[start_idx:start_idx + batch_size]
@@ -915,6 +982,9 @@ def run_inference(
             f"[INFO] Processing batch {batch_number}/{total_batches} "
             f"(examples {start_idx + 1}-{start_idx + len(batch_examples)} of {total_examples})"
         )
+
+        if target_device.type == "cuda":
+            log_cuda_memory(f"batch {batch_number} - start", target_device)
 
         prompts: List[str] = []
         transcripts: List[str] = []
@@ -971,7 +1041,18 @@ def run_inference(
             records.append(record)
             print_example_result(record)
 
-        print(f"[INFO] Processed {min(start_idx + len(batch_examples), total_examples)}/{total_examples}")
+        del raw_outputs
+        del prompts
+        del transcripts
+        del video_paths
+        del batch_examples
+
+        cleanup_cuda(target_device)
+
+        if target_device.type == "cuda":
+            log_cuda_memory(f"batch {batch_number} - end", target_device)
+
+        print(f"[INFO] Processed {min(start_idx + batch_size, total_examples)}/{total_examples}")
 
     return records
 
@@ -988,9 +1069,9 @@ def main() -> None:
     metrics_report_output_path = Path("Data/ModelResponse/4/qwen_mc_video_transcript_metrics_report.txt")
     evaluation_output_dir = Path("Data/ModelResponse/4/evaluation")
 
-    batch_size = 8
+    batch_size = 6
     max_pixels = 512 * 512
-    fps = 2.0
+    fps = 1.1
     debug_visual_inputs = True
 
     if predictions_output_path.exists():

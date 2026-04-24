@@ -1,0 +1,2 @@
+scope,n_samples,valid_predictions,invalid_predictions,empty_raw_outputs,Accuracy,Accuracy_valid_only,Support_0,Predicted_as_0,Precision_0,Recall_0,F1_0,Support_1,Predicted_as_1,Precision_1,Recall_1,F1_1,actual_0_pred_0,actual_0_pred_1,actual_1_pred_0,actual_1_pred_1
+GLOBAL,19200,19200,0,0,0.74625,0.74625,9554,12732,0.6838674206723218,0.9113460330751517,0.7813874181100242,9646,6468,0.8690476190476191,0.5827285921625545,0.6976542137271937,8707,847,4025,5621
