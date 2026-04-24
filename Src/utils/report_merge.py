@@ -13,9 +13,9 @@ from openpyxl.worksheet.worksheet import Worksheet
 
 JsonDict = Dict[str, Any]
 
-DEFAULT_CLASSIFICATION_JSON = Path("Data/TranscriptionData/final_classification/final_results.json")
-STANDARD_OUTPUT_NAME = "experiment_metrics_merge.xlsx"
-LOGPROB_OUTPUT_NAME = "1_logprob_merge.xlsx"
+DEFAULT_CLASSIFICATION_JSON = Path("Data/TranscriptionData/final_classification/manual_revision.json")
+STANDARD_OUTPUT_NAME = "1A_2_3_4_merge.xlsx"
+LOGPROB_OUTPUT_NAME = "1A_1B_logprob_merge.xlsx"
 HEADER_FILL = PatternFill(fill_type="solid", fgColor="1F4E78")
 HEADER_FONT = Font(color="FFFFFF", bold=True)
 SUBHEADER_FILL = PatternFill(fill_type="solid", fgColor="D9EAF7")
